@@ -29,8 +29,6 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build
-        env:
-          VITE_SITE_URL: ${{ vars.VITE_SITE_URL }}
         run: yarn build
 
       - name: Copy 404 fallback

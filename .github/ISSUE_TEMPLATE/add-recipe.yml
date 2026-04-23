@@ -1,0 +1,219 @@
+name: Add a recipe
+description: Share a dish you actually cook — a maintainer will turn it into a PR.
+title: "[Recipe] <dish name here>"
+labels: ["recipe", "contribution"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing a recipe! Fill every field. If something doesn't apply,
+        write "N/A". See the [canonical tag list](../../blob/main/CONTRIBUTING.md#canonical-tags) for valid tag values.
+
+  - type: input
+    id: name
+    attributes:
+      label: Recipe name
+      placeholder: Kosha Mangsho
+    validations:
+      required: true
+
+  - type: input
+    id: nameLocal
+    attributes:
+      label: Local-script name (optional)
+      placeholder: কষা মাংস
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: 1–3 sentences — what the dish is, and what's special about it.
+      placeholder: Slow-braised Bengali mutton curry with a deep, dry masala…
+    validations:
+      required: true
+
+  - type: dropdown
+    id: cuisine
+    attributes:
+      label: Cuisine
+      options:
+        - Bengali
+        - North Indian
+        - South Indian
+        - Continental
+        - Chinese
+        - Asian
+        - Mediterranean
+        - Mexican
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: mealTypes
+    attributes:
+      label: Meal type(s) — check all that apply
+      options:
+        - label: breakfast
+        - label: lunch
+        - label: dinner
+        - label: snacks
+    validations:
+      required: true
+
+  - type: dropdown
+    id: style
+    attributes:
+      label: Style
+      description: Pick one that's valid for your meal type(s) — see CONTRIBUTING.md
+      options:
+        - Curry
+        - Dry
+        - Rice Bowl
+        - Bread Meal
+        - One Pot
+        - Grilled
+        - Soup
+        - Light
+        - Hearty
+        - Sweet
+        - Savory
+        - Fried
+        - Baked
+        - Chaat
+    validations:
+      required: true
+
+  - type: dropdown
+    id: proteinBase
+    attributes:
+      label: Protein base
+      options:
+        - Chicken
+        - Fish
+        - Mutton
+        - Prawn
+        - Egg
+        - Paneer
+        - Lentils
+        - Veggies
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dietary
+    attributes:
+      label: Dietary flags — check all true
+      options:
+        - label: Vegetarian
+        - label: Vegan
+        - label: Non-vegetarian
+        - label: Contains egg
+        - label: Gluten-free
+        - label: Dairy-free
+
+  - type: input
+    id: prepTime
+    attributes:
+      label: Prep time (minutes)
+      placeholder: "20"
+    validations:
+      required: true
+
+  - type: input
+    id: cookTime
+    attributes:
+      label: Cook time (minutes)
+      placeholder: "90"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - easy
+        - medium
+        - hard
+    validations:
+      required: true
+
+  - type: input
+    id: servings
+    attributes:
+      label: Servings
+      placeholder: "4"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: spiceLevel
+    attributes:
+      label: Spice level (1 = none, 5 = very spicy)
+      options: ["1", "2", "3", "4", "5"]
+    validations:
+      required: true
+
+  - type: textarea
+    id: ingredients
+    attributes:
+      label: Ingredients (one per line, with quantity)
+      placeholder: |
+        1 kg mutton, cut into chunks
+        2 large onions, sliced
+        1 cup yogurt
+    validations:
+      required: true
+
+  - type: textarea
+    id: keyIngredients
+    attributes:
+      label: Key ingredients (3–5 headline items, comma-separated)
+      placeholder: mutton, onion, yogurt, mustard oil
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps (one per line)
+      placeholder: |
+        Marinate the mutton with yogurt, ginger-garlic and spices for 30 min.
+        Fry sliced onions till deep brown…
+        Add the marinated mutton and cook on low heat…
+    validations:
+      required: true
+
+  - type: textarea
+    id: tips
+    attributes:
+      label: Tips (optional, one per line)
+      placeholder: Use shoulder cut for best texture.
+
+  - type: input
+    id: youtubeUrl
+    attributes:
+      label: YouTube video URL (optional but appreciated)
+      placeholder: https://www.youtube.com/watch?v=…
+
+  - type: input
+    id: articleUrl
+    attributes:
+      label: Recipe article URL (optional)
+      placeholder: https://…
+
+  - type: textarea
+    id: tags
+    attributes:
+      label: Tags (comma-separated, from canonical list)
+      description: See CONTRIBUTING.md for the full list.
+      placeholder: slow-cooked, celebration, spicy
+    validations:
+      required: true
+
+  - type: input
+    id: region
+    attributes:
+      label: Region (optional)
+      placeholder: West Bengal

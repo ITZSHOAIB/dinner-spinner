@@ -115,6 +115,11 @@ const migration: Record<string, CanonicalTag[]> = {
   'bitter-sweet': [], 'luchi-pair': [], 'stuffed': [], 'customisable': [],
 }
 
+// Tags recognised by the migration map (mapped to canonical, or explicitly
+// dropped as redundant with typed fields). Useful for the validator to tell
+// "recognised-but-dropped" apart from "unknown-bad-tag".
+export const KNOWN_LEGACY_TAGS: ReadonlySet<string> = new Set(Object.keys(migration))
+
 export function normalizeTags(raw: string[]): string[] {
   const out = new Set<CanonicalTag>()
   for (const tag of raw) {

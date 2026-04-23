@@ -1,0 +1,42 @@
+name: Bug report
+description: Something's broken in the app
+title: "[Bug] "
+labels: ["bug"]
+
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      placeholder: I tightened the Under-20-min filter and…
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open the home page
+        2. Tighten filter to …
+        3. Click spin
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Browser & device
+      placeholder: Safari 17 on iPhone 14 / Chrome 120 on macOS
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot or recording (optional)

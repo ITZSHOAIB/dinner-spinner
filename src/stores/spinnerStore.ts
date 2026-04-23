@@ -1,6 +1,8 @@
 import { create } from 'zustand'
 import type { MealType, SpinResult } from '../data/types'
 
+export type TimeFilter = 'any' | 20 | 45 | 90
+
 interface SpinnerState {
   activeMealType: MealType
   setActiveMealType: (type: MealType) => void
@@ -12,7 +14,12 @@ interface SpinnerState {
   // Lock states
   lockedReels: [boolean, boolean, boolean]
   toggleLock: (index: 0 | 1 | 2) => void
+  setLocks: (locks: [boolean, boolean, boolean]) => void
   resetLocks: () => void
+
+  // Time filter
+  timeFilter: TimeFilter
+  setTimeFilter: (tf: TimeFilter) => void
 
   // Spinning state
   isSpinning: boolean
@@ -46,7 +53,11 @@ export const useSpinnerStore = create<SpinnerState>()((set) => ({
       newLocked[index] = !newLocked[index]
       return { lockedReels: newLocked }
     }),
+  setLocks: (locks) => set({ lockedReels: locks }),
   resetLocks: () => set({ lockedReels: [false, false, false] }),
+
+  timeFilter: 'any',
+  setTimeFilter: (tf) => set({ timeFilter: tf }),
 
   isSpinning: false,
   setSpinning: (spinning) => set({ isSpinning: spinning }),

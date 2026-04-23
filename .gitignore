@@ -12,6 +12,23 @@ dist
 dist-ssr
 *.local
 
+# Environment files — commit .env.example only
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# Test / coverage / misc
+coverage
+.cache
+.parcel-cache
+.eslintcache
+.turbo
+
+# OS
+Thumbs.db
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

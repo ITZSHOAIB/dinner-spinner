@@ -19,8 +19,8 @@
   --color-border: #E7E5E4;
   --color-border-subtle: #F5F5F4;
 
-  --font-heading: 'Playfair Display', serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 @layer base {
@@ -30,11 +30,19 @@
 
   body {
     font-family: var(--font-body);
+    font-feature-settings: 'ss01', 'cv11';
+    letter-spacing: -0.01em;
     background-color: var(--color-surface);
     color: var(--color-text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     margin: 0;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
   }
 
   .dark {
@@ -57,6 +65,8 @@
 
 @utility font-heading {
   font-family: var(--font-heading);
+  font-optical-sizing: auto;
+  letter-spacing: -0.02em;
 }
 
 @utility glow-amber {

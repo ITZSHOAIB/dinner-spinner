@@ -3,8 +3,16 @@ import { Heart } from 'lucide-react'
 import { useRecipeStore } from '../stores/recipeStore'
 import { useUserStore } from '../stores/userStore'
 import { RecipeCard } from '../components/recipe/RecipeCard'
+import { useSeo } from '../lib/useSeo'
 
 export function FavoritesPage() {
+  useSeo({
+    title: 'Favorites — Dinner Spinner',
+    description: 'Your saved recipes. Favorites are stored locally on this device.',
+    path: '/favorites',
+    noIndex: true, // personal state, not worth indexing
+  })
+
   const recipes = useRecipeStore((s) => s.recipes)
   const favorites = useUserStore((s) => s.favorites)
 

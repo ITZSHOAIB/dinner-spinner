@@ -1,13 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App'
 
+// Strip trailing slash from Vite's BASE_URL (e.g. "/dinner-spinner/") so
+// React Router doesn't double-up on slashes.
+const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <HashRouter>
+    <BrowserRouter basename={basename}>
       <App />
-    </HashRouter>
+    </BrowserRouter>
   </StrictMode>,
 )

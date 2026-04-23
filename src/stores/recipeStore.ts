@@ -1,5 +1,11 @@
 import { create } from 'zustand'
 import type { MealType, Recipe } from '../data/types'
+import { spinAlignment } from '../lib/similarity'
+
+export interface MatchOptions {
+  maxTimeMinutes?: number
+  dietaryFilters?: string[]
+}
 
 interface RecipeState {
   recipes: Recipe[]
@@ -18,7 +24,27 @@ interface RecipeState {
   // Derived
   getFilteredRecipes: () => Recipe[]
   getRecipeById: (id: string) => Recipe | undefined
-  getMatchingRecipes: (cuisine: string, style: string, protein: string, mealType: MealType) => Recipe[]
+  getMatchingRecipes: (
+    cuisine: string,
+    style: string,
+    protein: string,
+    mealType: MealType,
+    options?: MatchOptions,
+  ) => Recipe[]
+}
+
+function passesDietary(r: Recipe, filters: string[]): boolean {
+  for (const f of filters) {
+    switch (f) {
+      case 'vegetarian': if (!r.dietary.isVegetarian) return false; break
+      case 'vegan': if (!r.dietary.isVegan) return false; break
+      case 'non-veg': if (!r.dietary.isNonVeg) return false; break
+      case 'egg': if (!r.dietary.isEgg) return false; break
+      case 'gluten-free': if (!r.dietary.isGlutenFree) return false; break
+      case 'dairy-free': if (!r.dietary.isDairyFree) return false; break
+    }
+  }
+  return true
 }
 
 export const useRecipeStore = create<RecipeState>()((set, get) => ({
@@ -87,29 +113,45 @@ export const useRecipeStore = create<RecipeState>()((set, get) => ({
 
   getRecipeById: (id) => get().recipes.find((r) => r.id === id),
 
-  getMatchingRecipes: (cuisine, style, protein, mealType) => {
+  getMatchingRecipes: (cuisine, style, protein, mealType, options = {}) => {
     const { recipes } = get()
-    // Exact matches first
-    const exact = recipes.filter(
-      (r) =>
-        r.cuisine === cuisine &&
-        r.style === style &&
-        r.proteinBase === protein &&
-        r.mealTypes.includes(mealType),
-    )
-    if (exact.length > 0) return exact
+    const { maxTimeMinutes, dietaryFilters = [] } = options
+    const spin = { cuisine, style, protein, mealType }
 
-    // Partial matches (2 of 3 reel values)
-    const partial = recipes.filter(
+    // Base pool: meal type + strict filters (user's explicit constraints)
+    const pool = recipes.filter(
       (r) =>
         r.mealTypes.includes(mealType) &&
-        [r.cuisine === cuisine, r.style === style, r.proteinBase === protein].filter(Boolean).length >= 2,
+        (!maxTimeMinutes || r.totalTimeMinutes <= maxTimeMinutes) &&
+        passesDietary(r, dietaryFilters),
     )
-    if (partial.length > 0) return partial
 
-    // At least cuisine match
-    return recipes.filter(
-      (r) => r.cuisine === cuisine && r.mealTypes.includes(mealType),
+    // Within each tier, rank by spin alignment (so 2-of-3 matches on cuisine+style
+    // rank above 2-of-3 on style+protein, etc.), tiebreaking by quicker total time.
+    const rank = (list: Recipe[]): Recipe[] =>
+      [...list].sort((a, b) => {
+        const diff = spinAlignment(b, spin) - spinAlignment(a, spin)
+        if (diff !== 0) return diff
+        return a.totalTimeMinutes - b.totalTimeMinutes
+      })
+
+    const exact = pool.filter(
+      (r) => r.cuisine === cuisine && r.style === style && r.proteinBase === protein,
     )
+    if (exact.length > 0) return rank(exact)
+
+    const partial = pool.filter(
+      (r) =>
+        [r.cuisine === cuisine, r.style === style, r.proteinBase === protein].filter(Boolean)
+          .length >= 2,
+    )
+    if (partial.length > 0) return rank(partial)
+
+    const byCuisine = pool.filter((r) => r.cuisine === cuisine)
+    if (byCuisine.length > 0) return rank(byCuisine)
+
+    // Spin triple has zero relation to any filter-compliant recipe — return []
+    // so the empty-state card renders with Clear-filters / reroll actions.
+    return []
   },
 }))

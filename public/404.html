@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dinner Spinner</title>
+    <!--
+      GitHub Pages SPA redirect — encodes the requested path into a query
+      string on the app root so index.html can decode and replay it via
+      history.replaceState. Based on https://github.com/rafgraph/spa-github-pages
+    -->
+    <script>
+      (function () {
+        // Number of path segments in the app's base path. For repo-scoped
+        // Pages (e.g. username.github.io/dinner-spinner/) this is 1.
+        var segmentCount = 1
+        var l = window.location
+        l.replace(
+          l.protocol +
+            '//' +
+            l.hostname +
+            (l.port ? ':' + l.port : '') +
+            l.pathname
+              .split('/')
+              .slice(0, 1 + segmentCount)
+              .join('/') +
+            '/?/' +
+            l.pathname
+              .slice(1)
+              .split('/')
+              .slice(segmentCount)
+              .join('/')
+              .replace(/&/g, '~and~') +
+            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+            l.hash,
+        )
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>

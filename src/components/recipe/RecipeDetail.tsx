@@ -1,13 +1,52 @@
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import {
   ArrowLeft, Clock, Flame, Heart, ChefHat,
-  Users, ExternalLink, Check,
+  Users, Check, Play, BookOpen, Search, ChevronRight,
+  Sparkles, ExternalLink,
 } from 'lucide-react'
 import { cn } from '../../lib/cn'
 import { useRecipeStore } from '../../stores/recipeStore'
 import { useUserStore } from '../../stores/userStore'
+import { resourcesFor } from '../../lib/recipeLinks'
+import { rankBySimilarity, similarityScore } from '../../lib/similarity'
+import { useSeo } from '../../lib/useSeo'
 import type { Recipe } from '../../data/types'
+
+// Minutes → ISO-8601 duration (PT20M, PT1H30M) for schema.org Recipe.
+function isoDuration(mins: number): string {
+  if (mins <= 0) return 'PT0M'
+  const h = Math.floor(mins / 60)
+  const m = mins % 60
+  return `PT${h ? `${h}H` : ''}${m ? `${m}M` : ''}`
+}
+
+function recipeSchema(r: Recipe) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Recipe',
+    name: r.name,
+    description: r.description,
+    recipeCuisine: r.cuisine,
+    recipeCategory: r.mealTypes.join(', '),
+    keywords: r.tags.join(', '),
+    prepTime: isoDuration(r.prepTimeMinutes),
+    cookTime: isoDuration(r.cookTimeMinutes),
+    totalTime: isoDuration(r.totalTimeMinutes),
+    recipeYield: `${r.servings} servings`,
+    recipeIngredient: r.ingredients,
+    recipeInstructions: r.steps.map((step, i) => ({
+      '@type': 'HowToStep',
+      position: i + 1,
+      text: step,
+    })),
+    suitableForDiet: [
+      r.dietary.isVegetarian ? 'https://schema.org/VegetarianDiet' : null,
+      r.dietary.isVegan ? 'https://schema.org/VeganDiet' : null,
+      r.dietary.isGlutenFree ? 'https://schema.org/GlutenFreeDiet' : null,
+    ].filter(Boolean),
+  }
+}
 
 const spiceDots = (level: number) =>
   Array.from({ length: 5 }, (_, i) => (
@@ -34,6 +73,21 @@ export function RecipeDetail() {
   const recipe = useRecipeStore((s) => s.getRecipeById)(id || '')
   const { isFavorite, toggleFavorite, markCooked, cookedHistory } = useUserStore()
 
+  // Per-page SEO. Called unconditionally with fallback values so hook order
+  // stays stable even on the "not found" branch.
+  useSeo({
+    title: recipe
+      ? `${recipe.name} — ${recipe.cuisine} ${recipe.mealTypes[0]} recipe`
+      : 'Recipe not found — Dinner Spinner',
+    description: recipe
+      ? `${recipe.description} Ready in ${recipe.totalTimeMinutes} minutes · ${recipe.difficulty} · serves ${recipe.servings}.`
+      : 'The recipe you’re looking for could not be found.',
+    path: recipe ? `/recipes/${recipe.id}` : undefined,
+    type: recipe ? 'article' : 'website',
+    noIndex: !recipe,
+    jsonLd: recipe ? recipeSchema(recipe) : null,
+  })
+
   if (!recipe) {
     return (
       <div className="flex flex-col items-center justify-center min-h-[50vh] gap-4">
@@ -51,6 +105,18 @@ export function RecipeDetail() {
   const fav = isFavorite(recipe.id)
   const wasCooked = cookedHistory.some((h) => h.recipeId === recipe.id)
   const badges = dietaryBadges(recipe)
+  const resources = resourcesFor(recipe)
+
+  const allRecipes = useRecipeStore((s) => s.recipes)
+
+  // Similar dishes: rank everything by similarity to this recipe. Prefer
+  // same-cuisine matches, but surface a cross-cuisine dish when the score is
+  // genuinely high (shared tags, similar time/spice). Threshold 0.35 keeps
+  // out obvious mismatches.
+  const sameCuisine = allRecipes.filter((r) => r.cuisine === recipe.cuisine)
+  const crossCuisine = allRecipes
+    .filter((r) => r.cuisine !== recipe.cuisine && similarityScore(recipe, r) >= 0.35)
+  const similar = rankBySimilarity(recipe, [...sameCuisine, ...crossCuisine], 4)
 
   return (
     <motion.div
@@ -199,31 +265,70 @@ export function RecipeDetail() {
         </section>
       )}
 
-      {/* Links */}
-      {(recipe.youtubeUrl || recipe.articleUrl) && (
-        <section className="mb-8 flex gap-3">
-          {recipe.youtubeUrl && (
-            <a
-              href={recipe.youtubeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-red-500/10 text-red-500 font-medium border border-red-500/20 hover:bg-red-500/20 transition-colors no-underline"
-            >
-              <ExternalLink className="w-5 h-5" />
-              Watch Video
-            </a>
-          )}
-          {recipe.articleUrl && (
-            <a
-              href={recipe.articleUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 flex items-center justify-center gap-2 py-3 rounded-xl bg-surface-secondary text-text-secondary font-medium border border-border hover:border-turmeric/30 transition-colors no-underline"
-            >
-              <ExternalLink className="w-5 h-5" />
-              Read Recipe
-            </a>
-          )}
+      {/* Resources */}
+      <section className="mb-8">
+        <h2 className="font-heading text-lg font-bold text-text-primary mb-3">Resources</h2>
+        <ul className="rounded-xl bg-surface-secondary border border-border divide-y divide-border-subtle overflow-hidden">
+          <ResourceRow
+            href={resources.youtube.url}
+            iconBg="bg-red-500/10"
+            iconColor="text-red-500"
+            icon={<Play className="w-4 h-4" />}
+            title={resources.youtube.curated ? 'Watch the tutorial' : 'Video tutorials on YouTube'}
+            subtitle={resources.youtube.curated ? 'Curated walkthrough' : 'YouTube search for this dish'}
+            hostLabel="youtube.com"
+            external
+          />
+          <ResourceRow
+            href={resources.article.url}
+            iconBg="bg-turmeric/10"
+            iconColor="text-turmeric"
+            icon={<BookOpen className="w-4 h-4" />}
+            title={resources.article.curated ? 'Read the full recipe' : 'Written recipe articles'}
+            subtitle={resources.article.curated ? 'Curated article' : 'Google search for written recipes'}
+            hostLabel={resources.article.curated ? hostOf(resources.article.url) : 'google.com'}
+            external
+          />
+          <ResourceRow
+            href={resources.moreVariations.url}
+            iconBg="bg-coriander/10"
+            iconColor="text-coriander"
+            icon={<Search className="w-4 h-4" />}
+            title="Explore variations"
+            subtitle={`Regional twists on ${recipe.name}`}
+            hostLabel="google.com"
+            external
+          />
+        </ul>
+      </section>
+
+      {/* Similar dishes */}
+      {similar.length > 0 && (
+        <section className="mb-8">
+          <div className="flex items-center gap-2 mb-3">
+            <Sparkles className="w-4 h-4 text-turmeric" />
+            <h2 className="font-heading text-lg font-bold text-text-primary">You might also like</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            {similar.map((r) => {
+              const sameCuisine = r.cuisine === recipe.cuisine
+              return (
+                <Link
+                  key={r.id}
+                  to={`/recipes/${r.id}`}
+                  className="flex items-center justify-between p-3 rounded-xl bg-surface-secondary border border-border hover:border-turmeric/30 transition-colors no-underline group"
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium text-text-primary truncate">{r.name}</p>
+                    <p className="text-[11px] text-text-muted mt-0.5">
+                      {sameCuisine ? r.style : r.cuisine} · {r.totalTimeMinutes} min · {r.difficulty}
+                    </p>
+                  </div>
+                  <ChevronRight className="w-4 h-4 text-text-muted group-hover:text-turmeric group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-2" />
+                </Link>
+              )
+            })}
+          </div>
         </section>
       )}
 
@@ -236,5 +341,64 @@ export function RecipeDetail() {
         ))}
       </div>
     </motion.div>
+  )
+}
+
+function hostOf(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '')
+  } catch {
+    return ''
+  }
+}
+
+interface ResourceRowProps {
+  href: string
+  icon: React.ReactNode
+  iconBg: string
+  iconColor: string
+  title: string
+  subtitle: string
+  hostLabel?: string
+  external?: boolean
+}
+
+function ResourceRow({ href, icon, iconBg, iconColor, title, subtitle, hostLabel, external }: ResourceRowProps) {
+  return (
+    <li>
+      <a
+        href={href}
+        target={external ? '_blank' : undefined}
+        rel={external ? 'noopener noreferrer' : undefined}
+        className="flex items-center gap-3 px-3 py-3 hover:bg-surface-tertiary transition-colors no-underline group"
+      >
+        <div
+          className={cn(
+            'w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0',
+            iconBg,
+            iconColor,
+          )}
+        >
+          {icon}
+        </div>
+        <div className="flex-1 min-w-0">
+          <p className="text-sm font-medium text-text-primary leading-tight truncate">{title}</p>
+          <p className="text-[11px] text-text-muted mt-0.5 leading-tight flex items-center gap-1">
+            <span className="truncate">{subtitle}</span>
+            {hostLabel && (
+              <>
+                <span className="text-border">·</span>
+                <span className="truncate">{hostLabel}</span>
+              </>
+            )}
+          </p>
+        </div>
+        {external ? (
+          <ExternalLink className="w-3.5 h-3.5 text-text-muted group-hover:text-text-secondary transition-colors flex-shrink-0" />
+        ) : (
+          <ChevronRight className="w-4 h-4 text-text-muted group-hover:text-text-secondary transition-colors flex-shrink-0" />
+        )}
+      </a>
+    </li>
   )
 }

@@ -4,6 +4,7 @@ import { cn } from '../lib/cn'
 import { toggleTheme, isDarkMode } from '../lib/theme'
 import { useUserStore } from '../stores/userStore'
 import { useRecipeStore } from '../stores/recipeStore'
+import { useSeo } from '../lib/useSeo'
 import type { SpiceLevel } from '../data/types'
 
 const dietaryOptions = [
@@ -16,6 +17,13 @@ const dietaryOptions = [
 ]
 
 export function PreferencesPage() {
+  useSeo({
+    title: 'Preferences — Dinner Spinner',
+    description: 'Set your dietary preferences, spice level, and theme.',
+    path: '/preferences',
+    noIndex: true,
+  })
+
   const [dark, setDark] = useState(isDarkMode())
   const {
     dietaryFilters, toggleDietaryFilter,

@@ -1,9 +1,10 @@
-import { useState, useMemo, useCallback } from 'react'
+import { useState, useMemo } from 'react'
 import { AnimatePresence } from 'motion/react'
 import { Search, X } from 'lucide-react'
 import { useRecipeStore } from '../stores/recipeStore'
 import { RecipeCard } from '../components/recipe/RecipeCard'
 import { cn } from '../lib/cn'
+import { useSeo } from '../lib/useSeo'
 import type { MealType } from '../data/types'
 
 const dietaryFilters = [
@@ -23,6 +24,13 @@ const mealTypeFilters: { key: MealType | 'all'; label: string }[] = [
 ]
 
 export function BrowsePage() {
+  useSeo({
+    title: 'Browse Recipes — Dinner Spinner',
+    description:
+      'Browse 150+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines. Filter by dietary needs, cuisine, and meal type.',
+    path: '/recipes',
+  })
+
   const {
     searchQuery, setSearchQuery,
     activeDietaryFilters, toggleDietaryFilter,

@@ -1,8 +1,17 @@
 import { SpinnerHousing } from '../components/spinner/SpinnerHousing'
 import { QuickActions } from '../components/spinner/QuickActions'
 import { RecommendationCarousel } from '../components/recipe/RecommendationCarousel'
+import { useSeo } from '../lib/useSeo'
 
 export function HomePage() {
+  useSeo({
+    title: 'Dinner Spinner — Decide what to cook tonight',
+    description:
+      'A playful meal picker for couples and families. Spin three reels — cuisine, style, protein — or set your own filters for time and dietary needs. Get curated recipe suggestions with cook time and ingredients.',
+    path: '/',
+    type: 'website',
+  })
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-6 flex flex-col items-center gap-8">
       <div className="text-center">

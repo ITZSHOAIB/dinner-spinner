@@ -1,6 +1,16 @@
 import { create } from 'zustand'
 import type { MealType, Recipe } from '../data/types'
 import { spinAlignment } from '../lib/similarity'
+import { recipes as rawRecipes } from '../data/recipes'
+import { normalizeTags } from '../data/tagMigration'
+
+// Normalise tags through the controlled vocabulary at module load so the store
+// is populated synchronously. Avoids a render race where deep-linked pages
+// (e.g. /recipes/:id on refresh) see an empty store and show "Recipe not found".
+const initialRecipes: Recipe[] = rawRecipes.map((r) => ({
+  ...r,
+  tags: normalizeTags(r.tags),
+}))
 
 export interface MatchOptions {
   maxTimeMinutes?: number
@@ -48,7 +58,7 @@ function passesDietary(r: Recipe, filters: string[]): boolean {
 }
 
 export const useRecipeStore = create<RecipeState>()((set, get) => ({
-  recipes: [],
+  recipes: initialRecipes,
   setRecipes: (recipes) => set({ recipes }),
 
   searchQuery: '',

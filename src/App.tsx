@@ -7,9 +7,6 @@ import { BrowsePage } from './pages/BrowsePage'
 import { FavoritesPage } from './pages/FavoritesPage'
 import { PreferencesPage } from './pages/PreferencesPage'
 import { RecipeDetail } from './components/recipe/RecipeDetail'
-import { useRecipeStore } from './stores/recipeStore'
-import { recipes } from './data/recipes'
-import { normalizeTags } from './data/tagMigration'
 import './lib/theme'
 
 function ScrollToTop() {
@@ -21,14 +18,6 @@ function ScrollToTop() {
 }
 
 export default function App() {
-  const setRecipes = useRecipeStore((s) => s.setRecipes)
-
-  useEffect(() => {
-    // Normalize recipe tags through the controlled vocabulary before storing.
-    const normalized = recipes.map((r) => ({ ...r, tags: normalizeTags(r.tags) }))
-    setRecipes(normalized)
-  }, [])
-
   return (
     <>
       <ScrollToTop />

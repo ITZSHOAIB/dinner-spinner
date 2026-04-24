@@ -1,16 +1,19 @@
+import { useMemo, useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { motion } from 'motion/react'
 import {
   ArrowLeft, Clock, Flame, Heart, ChefHat,
   Users, Check, Play, BookOpen, Search, ChevronRight,
-  Sparkles, ExternalLink,
+  Sparkles, ExternalLink, ShoppingCart,
 } from 'lucide-react'
 import { cn } from '../../lib/cn'
 import { useRecipeStore } from '../../stores/recipeStore'
 import { useUserStore } from '../../stores/userStore'
 import { resourcesFor } from '../../lib/recipeLinks'
 import { rankBySimilarity, similarityScore } from '../../lib/similarity'
+import { scaleIngredient } from '../../lib/scaleQuantity'
 import { useSeo } from '../../lib/useSeo'
+import { CookMode } from './CookMode'
+import { QUICK_COMMERCE_PLATFORMS } from '../../lib/shoppingLinks'
 import type { Recipe } from '../../data/types'
 
 // Minutes → ISO-8601 duration (PT20M, PT1H30M) for schema.org Recipe.
@@ -67,11 +70,25 @@ function dietaryBadges(recipe: Recipe) {
   return badges
 }
 
+const SCALE_OPTIONS = [0.5, 1, 2, 4] as const
+
 export function RecipeDetail() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
-  const recipe = useRecipeStore((s) => s.getRecipeById)(id || '')
+  // Select the recipe directly. Selecting `getRecipeById` returns a stable
+  // function ref, which means Zustand never re-renders when `recipes` changes.
+  const recipe = useRecipeStore((s) => s.recipes.find((r) => r.id === id))
+  const allRecipes = useRecipeStore((s) => s.recipes)
   const { isFavorite, toggleFavorite, markCooked, cookedHistory } = useUserStore()
+
+  const [scale, setScale] = useState<number>(1)
+  const [checkedIngredients, setCheckedIngredients] = useState<Set<number>>(() => new Set())
+  const [cookModeOpen, setCookModeOpen] = useState(false)
+
+  const scaledIngredients = useMemo(
+    () => (recipe ? recipe.ingredients.map((l) => scaleIngredient(l, scale)) : []),
+    [recipe, scale],
+  )
 
   // Per-page SEO. Called unconditionally with fallback values so hook order
   // stays stable even on the "not found" branch.
@@ -107,7 +124,14 @@ export function RecipeDetail() {
   const badges = dietaryBadges(recipe)
   const resources = resourcesFor(recipe)
 
-  const allRecipes = useRecipeStore((s) => s.recipes)
+  const scaledServings = Math.max(1, Math.round(recipe.servings * scale))
+
+  const toggleInSet = (set: Set<number>, idx: number): Set<number> => {
+    const next = new Set(set)
+    if (next.has(idx)) next.delete(idx)
+    else next.add(idx)
+    return next
+  }
 
   // Similar dishes: rank everything by similarity to this recipe. Prefer
   // same-cuisine matches, but surface a cross-cuisine dish when the score is
@@ -119,11 +143,7 @@ export function RecipeDetail() {
   const similar = rankBySimilarity(recipe, [...sameCuisine, ...crossCuisine], 4)
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      className="max-w-2xl mx-auto px-4 py-6"
-    >
+    <div className="max-w-2xl mx-auto px-4 py-6">
       {/* Header */}
       <div className="flex items-center gap-3 mb-6">
         <button
@@ -143,7 +163,7 @@ export function RecipeDetail() {
       </div>
 
       {/* Quick stats */}
-      <div className="grid grid-cols-4 gap-3 mb-6">
+      <div className="grid grid-cols-4 gap-3 mb-2">
         <div className="flex flex-col items-center p-3 rounded-xl bg-surface-secondary">
           <Clock className="w-4 h-4 text-turmeric mb-1" />
           <span className="text-sm font-medium text-text-primary">{recipe.totalTimeMinutes}m</span>
@@ -156,7 +176,12 @@ export function RecipeDetail() {
         </div>
         <div className="flex flex-col items-center p-3 rounded-xl bg-surface-secondary">
           <Users className="w-4 h-4 text-turmeric mb-1" />
-          <span className="text-sm font-medium text-text-primary">{recipe.servings}</span>
+          <span className="text-sm font-medium text-text-primary">
+            {scaledServings}
+            {scale !== 1 && (
+              <span className="text-text-muted"> / {recipe.servings}</span>
+            )}
+          </span>
           <span className="text-[10px] text-text-muted">Servings</span>
         </div>
         <div className="flex flex-col items-center p-3 rounded-xl bg-surface-secondary">
@@ -164,6 +189,9 @@ export function RecipeDetail() {
           <span className="text-[10px] text-text-muted">Spice</span>
         </div>
       </div>
+      <p className="text-[11px] text-text-muted mb-6 text-center">
+        {recipe.prepTimeMinutes} min prep · {recipe.cookTimeMinutes} min cook
+      </p>
 
       {/* Badges */}
       <div className="flex flex-wrap gap-2 mb-6">
@@ -216,31 +244,99 @@ export function RecipeDetail() {
       {/* Key ingredients */}
       <section className="mb-6">
         <h2 className="font-heading text-lg font-bold text-text-primary mb-3">Key Ingredients</h2>
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 mb-3">
           {recipe.keyIngredients.map((ing) => (
             <span key={ing} className="px-3 py-1.5 rounded-lg bg-turmeric/10 text-turmeric text-sm font-medium">
               {ing}
             </span>
           ))}
         </div>
+        {recipe.keyIngredients.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="flex items-center gap-1.5 text-xs text-text-muted">
+              <ShoppingCart className="w-3.5 h-3.5" />
+              Shop on
+            </span>
+            {QUICK_COMMERCE_PLATFORMS.map((p) => (
+              <a
+                key={p.id}
+                href={p.buildUrl(recipe.keyIngredients.join(' '))}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-medium px-3 py-1 rounded-full border border-border bg-surface-secondary text-text-secondary hover:border-turmeric/40 hover:text-turmeric transition-colors no-underline"
+              >
+                {p.label}
+              </a>
+            ))}
+          </div>
+        )}
       </section>
 
       {/* Ingredients */}
       <section className="mb-6">
-        <h2 className="font-heading text-lg font-bold text-text-primary mb-3">Ingredients</h2>
-        <ul className="space-y-2">
-          {recipe.ingredients.map((ing, i) => (
-            <li key={i} className="flex items-start gap-2 text-sm text-text-secondary">
-              <span className="w-1.5 h-1.5 rounded-full bg-turmeric mt-1.5 flex-shrink-0" />
-              {ing}
-            </li>
-          ))}
+        <div className="flex items-baseline justify-between mb-3 gap-3 flex-wrap">
+          <h2 className="font-heading text-lg font-bold text-text-primary">Ingredients</h2>
+          <div className="flex gap-1 rounded-lg bg-surface-secondary p-1">
+            {SCALE_OPTIONS.map((opt) => (
+              <button
+                key={opt}
+                onClick={() => setScale(opt)}
+                className={cn(
+                  'text-xs font-medium px-2.5 py-1 rounded-md transition-colors',
+                  scale === opt
+                    ? 'bg-turmeric text-white'
+                    : 'text-text-secondary hover:text-text-primary',
+                )}
+              >
+                {opt === 0.5 ? '½×' : `${opt}×`}
+              </button>
+            ))}
+          </div>
+        </div>
+        <ul className="space-y-1">
+          {scaledIngredients.map((ing, i) => {
+            const checked = checkedIngredients.has(i)
+            return (
+              <li key={i}>
+                <button
+                  onClick={() => setCheckedIngredients((s) => toggleInSet(s, i))}
+                  className={cn(
+                    'w-full flex items-start gap-3 text-sm text-left px-2 py-1.5 rounded-md transition-colors',
+                    checked
+                      ? 'text-text-muted line-through'
+                      : 'text-text-secondary hover:bg-surface-secondary',
+                  )}
+                >
+                  <span
+                    className={cn(
+                      'w-4 h-4 rounded border flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors',
+                      checked
+                        ? 'bg-coriander border-coriander text-white'
+                        : 'border-border',
+                    )}
+                  >
+                    {checked && <Check className="w-3 h-3" strokeWidth={3} />}
+                  </span>
+                  <span className="flex-1">{highlightKey(ing, recipe.keyIngredients)}</span>
+                </button>
+              </li>
+            )
+          })}
         </ul>
       </section>
 
       {/* Steps */}
       <section className="mb-6">
-        <h2 className="font-heading text-lg font-bold text-text-primary mb-3">Steps</h2>
+        <div className="flex items-center justify-between mb-3 gap-3">
+          <h2 className="font-heading text-lg font-bold text-text-primary">Steps</h2>
+          <button
+            onClick={() => setCookModeOpen(true)}
+            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-turmeric text-white text-xs font-semibold hover:bg-turmeric/90 transition-colors"
+          >
+            <Play className="w-3.5 h-3.5 fill-current" />
+            Start Cooking
+          </button>
+        </div>
         <ol className="space-y-4">
           {recipe.steps.map((step, i) => (
             <li key={i} className="flex gap-3">
@@ -340,7 +436,15 @@ export function RecipeDetail() {
           </span>
         ))}
       </div>
-    </motion.div>
+
+      {cookModeOpen && (
+        <CookMode
+          recipeName={recipe.name}
+          steps={recipe.steps}
+          onClose={() => setCookModeOpen(false)}
+        />
+      )}
+    </div>
   )
 }
 
@@ -350,6 +454,30 @@ function hostOf(url: string): string {
   } catch {
     return ''
   }
+}
+
+// Bold the first occurrence of any keyIngredient phrase inside an ingredient
+// line. Picks the longest match so "Mustard oil" beats "Mustard" on a line
+// containing both.
+function highlightKey(line: string, keys: string[]): React.ReactNode {
+  const lower = line.toLowerCase()
+  let best: { start: number; end: number } | null = null
+  for (const k of keys) {
+    const idx = lower.indexOf(k.toLowerCase())
+    if (idx < 0) continue
+    const cand = { start: idx, end: idx + k.length }
+    if (!best || cand.end - cand.start > best.end - best.start) best = cand
+  }
+  if (!best) return line
+  return (
+    <>
+      {line.slice(0, best.start)}
+      <strong className="text-text-primary font-semibold">
+        {line.slice(best.start, best.end)}
+      </strong>
+      {line.slice(best.end)}
+    </>
+  )
 }
 
 interface ResourceRowProps {

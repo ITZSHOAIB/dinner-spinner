@@ -33,8 +33,22 @@ function ytSearch(q: string): string {
   return `https://www.youtube.com/results?search_query=${encodeURIComponent(q)}`
 }
 
-function gSearch(q: string): string {
-  return `https://www.google.com/search?q=${encodeURIComponent(q)}`
+// Recipe-focused sites — Google-searched with `site:` filter so fallback
+// results are actual recipe articles, not restaurants, Zomato, or Wikipedia.
+const RECIPE_SITES = [
+  'indianhealthyrecipes.com',
+  'hebbarskitchen.com',
+  'vegrecipesofindia.com',
+  'spiceupthecurry.com',
+  'cookwithmanali.com',
+  'bbcgoodfood.com',
+  'seriouseats.com',
+  'cooking.nytimes.com',
+]
+
+function gRecipeSearch(q: string): string {
+  const sites = RECIPE_SITES.map((s) => `site:${s}`).join(' OR ')
+  return `https://www.google.com/search?q=${encodeURIComponent(`${q} (${sites})`)}`
 }
 
 export function resourcesFor(recipe: Recipe): ResourceLinks {
@@ -46,11 +60,11 @@ export function resourcesFor(recipe: Recipe): ResourceLinks {
   const videoId = recipe.youtubeUrl ? extractYoutubeId(recipe.youtubeUrl) : null
 
   const articleCurated = !!recipe.articleUrl
-  const articleUrl = recipe.articleUrl ?? gSearch(nameQuery)
+  const articleUrl = recipe.articleUrl ?? gRecipeSearch(nameQuery)
 
   return {
     youtube: { url: youtubeUrl, curated: youtubeCurated, videoId },
     article: { url: articleUrl, curated: articleCurated },
-    moreVariations: { url: gSearch(variationQuery) },
+    moreVariations: { url: gRecipeSearch(variationQuery) },
   }
 }

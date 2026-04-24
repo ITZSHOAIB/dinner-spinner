@@ -13,6 +13,7 @@ import { rankBySimilarity, similarityScore } from '../../lib/similarity'
 import { scaleIngredient } from '../../lib/scaleQuantity'
 import { useSeo } from '../../lib/useSeo'
 import { CookMode } from './CookMode'
+import { IngredientChip } from './IngredientChip'
 import { QUICK_COMMERCE_PLATFORMS } from '../../lib/shoppingLinks'
 import { shareIngredients, canNativeShare } from '../../lib/shareIngredients'
 import type { Recipe } from '../../data/types'
@@ -279,9 +280,7 @@ export function RecipeDetail() {
         <h2 className="font-heading text-lg font-bold text-text-primary mb-3">Key Ingredients</h2>
         <div className="flex flex-wrap gap-2 mb-3">
           {recipe.keyIngredients.map((ing) => (
-            <span key={ing} className="px-3 py-1.5 rounded-lg bg-turmeric/10 text-turmeric text-sm font-medium">
-              {ing}
-            </span>
+            <IngredientChip key={ing} name={ing} />
           ))}
         </div>
         {recipe.keyIngredients.length > 0 && (

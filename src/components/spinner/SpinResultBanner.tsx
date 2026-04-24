@@ -162,7 +162,7 @@ export function SpinResultBanner({
             >
               <div className="flex items-start justify-between gap-2">
                 <div className="flex-1 min-w-0">
-                  <p className="font-medium text-text-primary truncate">{top.name}</p>
+                  <p className="font-display-italic text-lg sm:text-xl text-text-primary truncate">{top.name}</p>
                   <p className="text-xs text-text-secondary mt-1 flex items-center gap-1.5 flex-wrap">
                     <Clock className="w-3 h-3 text-turmeric flex-shrink-0" />
                     <span className="font-medium">{top.totalTimeMinutes} min</span>

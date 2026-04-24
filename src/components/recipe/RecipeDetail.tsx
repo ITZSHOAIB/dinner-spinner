@@ -133,11 +133,11 @@ export function RecipeDetail() {
           <ArrowLeft className="w-5 h-5" />
         </button>
         <div className="flex-1 min-w-0">
-          <h1 className="font-heading text-2xl sm:text-3xl font-bold text-text-primary truncate">
+          <h1 className="font-display-italic text-3xl sm:text-4xl lg:text-[2.75rem] leading-[1.05] text-text-primary truncate">
             {recipe.name}
           </h1>
           {recipe.nameLocal && (
-            <p className="text-sm text-text-muted">{recipe.nameLocal}</p>
+            <p className="text-sm text-text-muted mt-1">{recipe.nameLocal}</p>
           )}
         </div>
       </div>

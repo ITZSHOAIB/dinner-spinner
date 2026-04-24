@@ -1,4 +1,5 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { AnimatePresence } from 'motion/react'
 import { Search, X } from 'lucide-react'
 import { useRecipeStore } from '../stores/recipeStore'
@@ -14,6 +15,7 @@ const dietaryFilters = [
   { key: 'egg', label: 'Egg' },
   { key: 'gluten-free', label: 'GF' },
 ]
+const DIETARY_KEYS = new Set(dietaryFilters.map((f) => f.key))
 
 const mealTypeFilters: { key: MealType | 'all'; label: string }[] = [
   { key: 'all', label: 'All' },
@@ -22,6 +24,7 @@ const mealTypeFilters: { key: MealType | 'all'; label: string }[] = [
   { key: 'dinner', label: 'Dinner' },
   { key: 'snacks', label: 'Snacks' },
 ]
+const MEAL_TYPES: MealType[] = ['breakfast', 'lunch', 'dinner', 'snacks']
 
 export function BrowsePage() {
   useSeo({
@@ -46,6 +49,43 @@ export function BrowsePage() {
     [recipes],
   )
   const [cuisineFilter, setCuisineFilter] = useState<string | null>(null)
+
+  const [searchParams, setSearchParams] = useSearchParams()
+  const hydratedRef = useRef(false)
+
+  // Hydrate filters from URL once on mount (URL wins over persisted store state).
+  useEffect(() => {
+    if (hydratedRef.current) return
+    hydratedRef.current = true
+
+    const q = searchParams.get('q') ?? ''
+    const meal = searchParams.get('meal')
+    const diet = searchParams.get('diet')
+    const cuisine = searchParams.get('cuisine')
+
+    setSearchQuery(q)
+
+    const validMeal = meal && MEAL_TYPES.includes(meal as MealType) ? (meal as MealType) : null
+    setMealTypeFilter(validMeal)
+
+    const validDiet = diet
+      ? diet.split(',').filter((d) => DIETARY_KEYS.has(d))
+      : []
+    useRecipeStore.setState({ activeDietaryFilters: validDiet })
+
+    setCuisineFilter(cuisine && cuisines.includes(cuisine) ? cuisine : null)
+  }, [searchParams, setSearchQuery, setMealTypeFilter, cuisines])
+
+  // Keep URL in sync when filters change (replace, not push, so back button skips intermediate states).
+  useEffect(() => {
+    if (!hydratedRef.current) return
+    const next = new URLSearchParams()
+    if (searchQuery) next.set('q', searchQuery)
+    if (activeMealTypeFilter) next.set('meal', activeMealTypeFilter)
+    if (activeDietaryFilters.length > 0) next.set('diet', activeDietaryFilters.join(','))
+    if (cuisineFilter) next.set('cuisine', cuisineFilter)
+    setSearchParams(next, { replace: true })
+  }, [searchQuery, activeMealTypeFilter, activeDietaryFilters, cuisineFilter, setSearchParams])
 
   const displayRecipes = useMemo(() => {
     if (!cuisineFilter) return filtered

@@ -1,9 +1,9 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import {
   ArrowLeft, Clock, Flame, Heart, ChefHat,
   Users, Check, Play, BookOpen, Search, ChevronRight,
-  Sparkles, ExternalLink, ShoppingCart,
+  Sparkles, ExternalLink, ShoppingCart, Share2, Copy,
 } from 'lucide-react'
 import { cn } from '../../lib/cn'
 import { useRecipeStore } from '../../stores/recipeStore'
@@ -14,6 +14,7 @@ import { scaleIngredient } from '../../lib/scaleQuantity'
 import { useSeo } from '../../lib/useSeo'
 import { CookMode } from './CookMode'
 import { QUICK_COMMERCE_PLATFORMS } from '../../lib/shoppingLinks'
+import { shareIngredients, canNativeShare } from '../../lib/shareIngredients'
 import type { Recipe } from '../../data/types'
 
 // Minutes → ISO-8601 duration (PT20M, PT1H30M) for schema.org Recipe.
@@ -84,6 +85,19 @@ export function RecipeDetail() {
   const [scale, setScale] = useState<number>(1)
   const [checkedIngredients, setCheckedIngredients] = useState<Set<number>>(() => new Set())
   const [cookModeOpen, setCookModeOpen] = useState(false)
+  const [shareState, setShareState] = useState<'idle' | 'success'>('idle')
+  const shareTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  // Detected once — whether to label the button "Share" (mobile native share
+  // sheet) or "Copy" (desktop clipboard fallback).
+  const nativeShare = useMemo(() => canNativeShare(), [])
+
+  useEffect(
+    () => () => {
+      if (shareTimeoutRef.current) clearTimeout(shareTimeoutRef.current)
+    },
+    [],
+  )
 
   const scaledIngredients = useMemo(
     () => (recipe ? recipe.ingredients.map((l) => scaleIngredient(l, scale)) : []),
@@ -131,6 +145,25 @@ export function RecipeDetail() {
     if (next.has(idx)) next.delete(idx)
     else next.add(idx)
     return next
+  }
+
+  // Ingredients to share = scaled, with any the user has already ticked off
+  // excluded. Matches the shopping-list semantic of the checkboxes.
+  const uncheckedIngredients = scaledIngredients.filter((_, i) => !checkedIngredients.has(i))
+  const canShare = uncheckedIngredients.length > 0
+
+  const handleShareIngredients = async () => {
+    if (!canShare) return
+    const result = await shareIngredients({
+      recipeName: recipe.name,
+      servings: scaledServings,
+      ingredients: uncheckedIngredients,
+    })
+    if (result === 'shared' || result === 'copied') {
+      setShareState('success')
+      if (shareTimeoutRef.current) clearTimeout(shareTimeoutRef.current)
+      shareTimeoutRef.current = setTimeout(() => setShareState('idle'), 2000)
+    }
   }
 
   // Similar dishes: rank everything by similarity to this recipe. Prefer
@@ -274,23 +307,61 @@ export function RecipeDetail() {
 
       {/* Ingredients */}
       <section className="mb-6">
-        <div className="flex items-baseline justify-between mb-3 gap-3 flex-wrap">
+        <div className="flex items-center justify-between mb-3 gap-3 flex-wrap">
           <h2 className="font-heading text-lg font-bold text-text-primary">Ingredients</h2>
-          <div className="flex gap-1 rounded-lg bg-surface-secondary p-1">
-            {SCALE_OPTIONS.map((opt) => (
-              <button
-                key={opt}
-                onClick={() => setScale(opt)}
-                className={cn(
-                  'text-xs font-medium px-2.5 py-1 rounded-md transition-colors',
-                  scale === opt
-                    ? 'bg-turmeric text-white'
-                    : 'text-text-secondary hover:text-text-primary',
-                )}
-              >
-                {opt === 0.5 ? '½×' : `${opt}×`}
-              </button>
-            ))}
+          <div className="flex items-center gap-2">
+            <div className="flex gap-1 rounded-lg bg-surface-secondary p-1">
+              {SCALE_OPTIONS.map((opt) => (
+                <button
+                  key={opt}
+                  onClick={() => setScale(opt)}
+                  className={cn(
+                    'text-xs font-medium px-2.5 py-1 rounded-md transition-colors',
+                    scale === opt
+                      ? 'bg-turmeric text-white'
+                      : 'text-text-secondary hover:text-text-primary',
+                  )}
+                >
+                  {opt === 0.5 ? '½×' : `${opt}×`}
+                </button>
+              ))}
+            </div>
+            <button
+              onClick={handleShareIngredients}
+              disabled={!canShare}
+              aria-label={
+                !canShare
+                  ? 'Nothing to share — all items checked'
+                  : nativeShare
+                    ? 'Share ingredients'
+                    : 'Copy ingredients to clipboard'
+              }
+              title={!canShare ? 'Nothing to share — all items checked' : undefined}
+              className={cn(
+                'flex items-center gap-1.5 text-xs font-medium px-3 py-1.5 rounded-lg border transition-colors',
+                !canShare
+                  ? 'border-border-subtle text-text-muted cursor-not-allowed opacity-50'
+                  : shareState === 'success'
+                    ? 'border-coriander/40 bg-coriander/10 text-coriander'
+                    : 'border-border bg-surface-secondary text-text-secondary hover:border-turmeric/40 hover:text-turmeric',
+              )}
+            >
+              {shareState === 'success' ? (
+                <>
+                  <Check className="w-3.5 h-3.5" strokeWidth={3} />
+                  {nativeShare ? 'Shared!' : 'Copied!'}
+                </>
+              ) : (
+                <>
+                  {nativeShare ? (
+                    <Share2 className="w-3.5 h-3.5" />
+                  ) : (
+                    <Copy className="w-3.5 h-3.5" />
+                  )}
+                  {nativeShare ? 'Share' : 'Copy'}
+                </>
+              )}
+            </button>
           </div>
         </div>
         <ul className="space-y-1">

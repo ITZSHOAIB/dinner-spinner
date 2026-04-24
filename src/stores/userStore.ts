@@ -21,10 +21,6 @@ interface UserState {
   setSpiceLevel: (level: SpiceLevel) => void
   preferredMealType: MealType
   setPreferredMealType: (type: MealType) => void
-
-  // Settings
-  soundEnabled: boolean
-  toggleSound: () => void
 }
 
 export const useUserStore = create<UserState>()(
@@ -69,9 +65,6 @@ export const useUserStore = create<UserState>()(
 
       preferredMealType: 'dinner',
       setPreferredMealType: (type) => set({ preferredMealType: type }),
-
-      soundEnabled: false,
-      toggleSound: () => set((state) => ({ soundEnabled: !state.soundEnabled })),
     }),
     {
       name: 'dinner-spinner-user',

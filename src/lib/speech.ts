@@ -46,6 +46,11 @@ export function scoreVoice(v: SpeechSynthesisVoice): number {
   }
   if (/siri/i.test(name)) score += 25
 
+  // Moira (en-IE) is a particularly warm, natural Apple voice — make her the
+  // default on Apple platforms (macOS Safari/Chrome/Arc/etc.) where available.
+  // No-op elsewhere since she isn't installed outside Apple systems.
+  if (/\bmoira\b/i.test(name)) score += 80
+
   // --- Penalties for known-low-quality engines ---
   if (/compact|novelty|espeak|flite|fallback|pico/i.test(name)) score -= 100
   if (/compact/i.test(uri)) score -= 60
@@ -80,8 +85,14 @@ export function useVoices() {
       const list = window.speechSynthesis.getVoices()
       setVoices(list)
 
+      // Always re-resolve the selected voice against the latest list — some
+      // engines (Chrome mobile especially) invalidate the old voice object
+      // reference when voices reload, which makes `u.voice = old` a no-op.
       setSelectedState((current) => {
-        if (current && list.some((v) => v.voiceURI === current.voiceURI)) return current
+        if (current) {
+          const fresh = list.find((v) => v.voiceURI === current.voiceURI)
+          if (fresh) return fresh
+        }
         const storedURI = localStorage.getItem(VOICE_STORAGE_KEY)
         const stored = storedURI ? list.find((v) => v.voiceURI === storedURI) : null
         return stored ?? pickBestVoice(list)
@@ -105,29 +116,47 @@ export function useVoices() {
 // so the UI can show playback state and stop on unmount/step change.
 export function useSpeech(voice: SpeechSynthesisVoice | null) {
   const [isSpeaking, setIsSpeaking] = useState(false)
-  const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null)
+  const pendingRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const stop = () => {
     if (!('speechSynthesis' in window)) return
+    if (pendingRef.current) {
+      clearTimeout(pendingRef.current)
+      pendingRef.current = null
+    }
     window.speechSynthesis.cancel()
     setIsSpeaking(false)
   }
 
   const speak = (text: string, onEnd?: () => void) => {
     if (!('speechSynthesis' in window) || !text.trim()) return
+
+    // Cancel any in-flight or queued speech before starting a new one.
+    if (pendingRef.current) clearTimeout(pendingRef.current)
     window.speechSynthesis.cancel()
-    const u = new SpeechSynthesisUtterance(text)
-    if (voice) u.voice = voice
-    u.rate = 0.95
-    u.pitch = 1
-    u.onstart = () => setIsSpeaking(true)
-    u.onend = () => {
-      setIsSpeaking(false)
-      onEnd?.()
-    }
-    u.onerror = () => setIsSpeaking(false)
-    utteranceRef.current = u
-    window.speechSynthesis.speak(u)
+
+    // Chrome (especially on Android) has a race where `speak()` immediately
+    // after `cancel()` gets silently dropped. Deferring to the next tick lets
+    // cancel settle before we queue the new utterance.
+    pendingRef.current = setTimeout(() => {
+      pendingRef.current = null
+      const u = new SpeechSynthesisUtterance(text)
+      if (voice) {
+        u.voice = voice
+        // Reinforcement — some Chrome builds ignore `u.voice` unless the
+        // utterance language also matches the voice's locale.
+        u.lang = voice.lang
+      }
+      u.rate = 0.95
+      u.pitch = 1
+      u.onstart = () => setIsSpeaking(true)
+      u.onend = () => {
+        setIsSpeaking(false)
+        onEnd?.()
+      }
+      u.onerror = () => setIsSpeaking(false)
+      window.speechSynthesis.speak(u)
+    }, 80)
   }
 
   useEffect(() => stop, [])

@@ -1,4 +1,4 @@
-import { Moon, Sun, Volume2, VolumeX, History, Flame } from 'lucide-react'
+import { Moon, Sun, History, Flame } from 'lucide-react'
 import { useState } from 'react'
 import { cn } from '../lib/cn'
 import { toggleTheme, isDarkMode } from '../lib/theme'
@@ -29,7 +29,6 @@ export function PreferencesPage() {
     dietaryFilters, toggleDietaryFilter,
     cuisinePreferences, toggleCuisinePreference,
     spiceLevel, setSpiceLevel,
-    soundEnabled, toggleSound,
     cookedHistory,
   } = useUserStore()
 
@@ -47,31 +46,19 @@ export function PreferencesPage() {
         Settings
       </h1>
 
-      {/* Theme & Sound */}
+      {/* Theme */}
       <section>
         <h2 className="font-heading text-lg font-bold text-text-primary mb-3">Appearance</h2>
-        <div className="space-y-3">
-          <button
-            onClick={() => setDark(toggleTheme())}
-            className="w-full flex items-center justify-between p-4 rounded-xl bg-surface-secondary border border-border hover:border-turmeric/30 transition-colors"
-          >
-            <div className="flex items-center gap-3">
-              {dark ? <Moon className="w-5 h-5 text-turmeric" /> : <Sun className="w-5 h-5 text-turmeric" />}
-              <span className="text-sm font-medium text-text-primary">Theme</span>
-            </div>
-            <span className="text-sm text-text-muted">{dark ? 'Dark' : 'Light'}</span>
-          </button>
-          <button
-            onClick={toggleSound}
-            className="w-full flex items-center justify-between p-4 rounded-xl bg-surface-secondary border border-border hover:border-turmeric/30 transition-colors"
-          >
-            <div className="flex items-center gap-3">
-              {soundEnabled ? <Volume2 className="w-5 h-5 text-turmeric" /> : <VolumeX className="w-5 h-5 text-text-muted" />}
-              <span className="text-sm font-medium text-text-primary">Sound Effects</span>
-            </div>
-            <span className="text-sm text-text-muted">{soundEnabled ? 'On' : 'Off'}</span>
-          </button>
-        </div>
+        <button
+          onClick={() => setDark(toggleTheme())}
+          className="w-full flex items-center justify-between p-4 rounded-xl bg-surface-secondary border border-border hover:border-turmeric/30 transition-colors"
+        >
+          <div className="flex items-center gap-3">
+            {dark ? <Moon className="w-5 h-5 text-turmeric" /> : <Sun className="w-5 h-5 text-turmeric" />}
+            <span className="text-sm font-medium text-text-primary">Theme</span>
+          </div>
+          <span className="text-sm text-text-muted">{dark ? 'Dark' : 'Light'}</span>
+        </button>
       </section>
 
       {/* Spice level */}

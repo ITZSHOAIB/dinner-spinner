@@ -1,10 +1,14 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import {
   X, ChevronLeft, ChevronRight, Volume2, VolumeX,
-  Check, Settings,
+  Check, Settings, Timer, Play, Pause, RotateCcw,
 } from 'lucide-react'
 import { cn } from '../../lib/cn'
 import { useVoices, useSpeech, isSpeechSupported } from '../../lib/speech'
+import { parseDuration, formatTimerDisplay } from '../../lib/parseDuration'
+import { playChime } from '../../lib/chime'
+
+type TimerStatus = 'idle' | 'running' | 'paused' | 'done'
 
 const TTS_ENABLED_KEY = 'dinner-spinner-tts-enabled'
 
@@ -28,6 +32,22 @@ export function CookMode({ recipeName, steps, onClose }: CookModeProps) {
   const step = steps[index]
   const atStart = index === 0
   const atEnd = index === steps.length - 1
+
+  // Timer: inline on steps that mention a duration (e.g. "simmer for 10 min").
+  // One timer per step; resets automatically when the step changes.
+  const duration = useMemo(() => parseDuration(step ?? ''), [step])
+  const [timerRemaining, setTimerRemaining] = useState(duration?.seconds ?? 0)
+  const [timerStatus, setTimerStatus] = useState<TimerStatus>('idle')
+  const [timerStepIndex, setTimerStepIndex] = useState(index)
+
+  // Adjust-state-during-render pattern: when the step changes, re-seed the
+  // timer. Avoids the setState-in-effect anti-pattern that would cause a
+  // double render on every step transition.
+  if (timerStepIndex !== index) {
+    setTimerStepIndex(index)
+    setTimerRemaining(duration?.seconds ?? 0)
+    setTimerStatus('idle')
+  }
 
   // Keep the screen awake while cooking. Browser releases the lock on tab hide;
   // re-acquire it when visible again.
@@ -71,6 +91,24 @@ export function CookMode({ recipeName, steps, onClose }: CookModeProps) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [index, ttsEnabled, selected])
 
+  // Tick down while running. When we hit zero, flip to 'done' and play the
+  // chime inside the interval callback — keeping the side effect off the
+  // effect body so setState isn't called synchronously during effect setup.
+  useEffect(() => {
+    if (timerStatus !== 'running') return
+    const id = setInterval(() => {
+      setTimerRemaining((s) => {
+        const next = Math.max(0, s - 1)
+        if (next === 0) {
+          setTimerStatus('done')
+          playChime()
+        }
+        return next
+      })
+    }, 1000)
+    return () => clearInterval(id)
+  }, [timerStatus])
+
   // Keyboard shortcuts: Space / → next, ← prev, Esc exit.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -96,6 +134,13 @@ export function CookMode({ recipeName, steps, onClose }: CookModeProps) {
       if (!n) stop()
       return n
     })
+  }
+
+  const startTimer = () => setTimerStatus('running')
+  const pauseTimer = () => setTimerStatus('paused')
+  const resetTimer = () => {
+    setTimerRemaining(duration?.seconds ?? 0)
+    setTimerStatus('idle')
   }
 
   return (
@@ -188,6 +233,84 @@ export function CookMode({ recipeName, steps, onClose }: CookModeProps) {
           />
         </div>
       </div>
+
+      {/* Inline timer — only rendered when the step text contains a duration. */}
+      {duration && (
+        <div className="px-4 pt-3">
+          <div
+            className={cn(
+              'mx-auto flex max-w-sm items-center justify-between gap-3 rounded-xl border px-4 py-2.5 transition-colors',
+              timerStatus === 'running' && 'border-turmeric bg-turmeric/5',
+              timerStatus === 'done' && 'border-coriander bg-coriander/10',
+              (timerStatus === 'idle' || timerStatus === 'paused') &&
+                'border-border-subtle bg-surface-secondary',
+            )}
+            role="timer"
+            aria-live="off"
+            aria-label={`Timer for ${duration.matchText}`}
+          >
+            <div className="flex items-center gap-2 min-w-0">
+              <Timer
+                className={cn(
+                  'w-5 h-5 shrink-0',
+                  timerStatus === 'running' && 'text-turmeric animate-pulse',
+                  timerStatus === 'done' && 'text-coriander',
+                  (timerStatus === 'idle' || timerStatus === 'paused') && 'text-text-secondary',
+                )}
+              />
+              <span className="font-mono text-xl tabular-nums text-text-primary">
+                {formatTimerDisplay(timerRemaining)}
+              </span>
+              <span className="text-xs text-text-muted truncate">
+                {timerStatus === 'done' ? 'Done' : duration.matchText}
+              </span>
+            </div>
+            <div className="flex items-center gap-1 shrink-0">
+              {timerStatus === 'idle' && (
+                <button
+                  onClick={startTimer}
+                  aria-label="Start timer"
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-turmeric text-white text-sm font-medium hover:bg-turmeric-light transition-colors"
+                >
+                  <Play className="w-4 h-4" strokeWidth={2.5} />
+                  Start
+                </button>
+              )}
+              {timerStatus === 'running' && (
+                <button
+                  onClick={pauseTimer}
+                  aria-label="Pause timer"
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-surface-tertiary text-text-primary text-sm font-medium hover:bg-border transition-colors"
+                >
+                  <Pause className="w-4 h-4" strokeWidth={2.5} />
+                  Pause
+                </button>
+              )}
+              {timerStatus === 'paused' && (
+                <button
+                  onClick={startTimer}
+                  aria-label="Resume timer"
+                  className="flex items-center gap-1 px-3 py-1.5 rounded-md bg-turmeric text-white text-sm font-medium hover:bg-turmeric-light transition-colors"
+                >
+                  <Play className="w-4 h-4" strokeWidth={2.5} />
+                  Resume
+                </button>
+              )}
+              {(timerStatus === 'running' ||
+                timerStatus === 'paused' ||
+                timerStatus === 'done') && (
+                <button
+                  onClick={resetTimer}
+                  aria-label="Reset timer"
+                  className="p-1.5 rounded-md text-text-secondary hover:bg-surface-tertiary transition-colors"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                </button>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Step text — tap left half for previous, right half for next.
           On the last step, right tap completes and exits cook mode. */}

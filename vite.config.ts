@@ -37,6 +37,19 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,svg,woff2}'],
+        // Exclude SEO-critical static files from the SPA navigation
+        // fallback. Otherwise opening sitemap.xml / robots.txt / llms.txt
+        // directly in a browser returns the cached index.html shell,
+        // which renders blank. Google's crawler is unaffected (no SW),
+        // but humans verifying these files would see nothing.
+        navigateFallbackDenylist: [
+          /\/sitemap\.xml$/,
+          /\/robots\.txt$/,
+          /\/llms\.txt$/,
+          /\/llms-full\.txt$/,
+          /\/og-image\.(png|svg)$/,
+          /\/manifest\.webmanifest$/,
+        ],
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

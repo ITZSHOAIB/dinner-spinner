@@ -11,13 +11,10 @@
       name="description"
       content="A playful meal picker for couples and families. Spin three reels — cuisine, style, protein — or set your own filters, and get curated recipe suggestions with cook time, difficulty and ingredient lists."
     />
-    <meta
-      name="keywords"
-      content="meal picker, what to cook, dinner ideas, recipe randomizer, Indian recipes, Bengali recipes, meal planner, dinner roulette"
-    />
     <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="author" content="Dinner Spinner" />
-    <link rel="canonical" href="https://ITZSHOAIB.github.io/dinner-spinner/" />
+    <link rel="canonical" href="https://itzshoaib.github.io/dinner-spinner/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -27,19 +24,23 @@
       property="og:description"
       content="Spin three reels — cuisine, style, protein — or set your own filters, and get curated recipe suggestions tailored to how much time you have."
     />
-    <meta property="og:url" content="https://ITZSHOAIB.github.io/dinner-spinner/" />
-    <meta property="og:image" content="https://ITZSHOAIB.github.io/dinner-spinner/og-image.png" />
+    <meta property="og:url" content="https://itzshoaib.github.io/dinner-spinner/" />
+    <meta property="og:image" content="https://itzshoaib.github.io/dinner-spinner/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Dinner Spinner — playful meal decision app" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dinnerspinner" />
     <meta name="twitter:title" content="Dinner Spinner — Decide what to cook tonight" />
     <meta
       name="twitter:description"
       content="Spin three reels — cuisine, style, protein — or set your own filters, and get curated recipe suggestions."
     />
-    <meta name="twitter:image" content="https://ITZSHOAIB.github.io/dinner-spinner/og-image.png" />
+    <meta name="twitter:image" content="https://itzshoaib.github.io/dinner-spinner/og-image.png" />
+    <meta name="twitter:image:alt" content="Dinner Spinner — playful meal decision app" />
 
     <!-- Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -88,9 +89,29 @@
         }
       })()
     </script>
+    <meta name="google-site-verification" content="CJRTj2IWHFt41M4E6AW18OKhiWPmwZXxNmVT9jjrksY" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <noscript>
+        <h1>Dinner Spinner — Decide what to cook tonight</h1>
+        <p>
+          A playful meal picker for couples and families. Spin three reels —
+          cuisine, style, and protein — or filter by time and dietary needs to
+          get curated recipe suggestions. JavaScript is required for the
+          interactive spinner, but every recipe page is also indexed as static
+          HTML for search engines.
+        </p>
+        <p>
+          Browse the
+          <a href="/dinner-spinner/recipes">full recipe collection</a>
+          (150+ Bengali, Indian, Chinese, Asian, Continental, Mexican and
+          Mediterranean dishes) or read the
+          <a href="/dinner-spinner/llms.txt">llms.txt</a>
+          for an LLM-friendly index.
+        </p>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

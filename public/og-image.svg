@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917"/>
+      <stop offset="100%" stop-color="#0c0a09"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#DC2626"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#D97706" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#D97706" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Glow accent behind the badge -->
+  <circle cx="950" cy="315" r="320" fill="url(#glow)"/>
+
+  <!-- Decorative dotted texture (top-left) -->
+  <g fill="#D97706" opacity="0.08">
+    <circle cx="60" cy="60" r="4"/>
+    <circle cx="120" cy="60" r="4"/>
+    <circle cx="180" cy="60" r="4"/>
+    <circle cx="60" cy="120" r="4"/>
+    <circle cx="120" cy="120" r="4"/>
+    <circle cx="60" cy="180" r="4"/>
+  </g>
+
+  <!-- Brand badge (right side) — reused favicon emblem -->
+  <g transform="translate(950, 315)">
+    <circle r="180" fill="url(#badge)"/>
+    <g fill="white">
+      <g transform="translate(-40, 0) rotate(-15)">
+        <rect x="-3" y="-72" width="6" height="80" rx="3"/>
+        <rect x="-18" y="-72" width="6" height="32" rx="3"/>
+        <rect x="12" y="-72" width="6" height="32" rx="3"/>
+        <rect x="-18" y="-40" width="36" height="6" rx="3"/>
+        <rect x="-3" y="8" width="6" height="64" rx="3"/>
+      </g>
+      <g transform="translate(40, 0) rotate(15)">
+        <path d="M-3,-72 Q-5,-40 -11,-8 L-3,8 L3,8 Q5,-40 3,-72 Z"/>
+        <rect x="-3" y="8" width="6" height="64" rx="3"/>
+      </g>
+    </g>
+    <circle cx="0" cy="-110" r="6" fill="white" opacity="0.8"/>
+    <circle cx="100" cy="-60" r="5" fill="white" opacity="0.6"/>
+    <circle cx="-100" cy="-60" r="5" fill="white" opacity="0.6"/>
+  </g>
+
+  <!-- Title block (left side) -->
+  <g transform="translate(80, 200)">
+    <text x="0" y="0"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-style="italic"
+      font-weight="700"
+      font-size="92"
+      fill="#fafaf9"
+      letter-spacing="-2">
+      Dinner
+    </text>
+    <text x="0" y="100"
+      font-family="Georgia, 'Times New Roman', serif"
+      font-style="italic"
+      font-weight="700"
+      font-size="92"
+      fill="#fafaf9"
+      letter-spacing="-2">
+      Spinner.
+    </text>
+    <text x="0" y="170"
+      font-family="-apple-system, system-ui, 'Segoe UI', Roboto, sans-serif"
+      font-weight="500"
+      font-size="32"
+      fill="#a8a29e">
+      Decide what to cook tonight.
+    </text>
+
+    <!-- Reel pills -->
+    <g transform="translate(0, 220)">
+      <g>
+        <rect x="0" y="0" width="180" height="56" rx="28" fill="#292524" stroke="#D97706" stroke-width="2"/>
+        <text x="90" y="37"
+          font-family="-apple-system, system-ui, sans-serif"
+          font-weight="600"
+          font-size="22"
+          fill="#fafaf9"
+          text-anchor="middle">
+          Cuisine
+        </text>
+      </g>
+      <g transform="translate(196, 0)">
+        <rect x="0" y="0" width="160" height="56" rx="28" fill="#292524" stroke="#D97706" stroke-width="2"/>
+        <text x="80" y="37"
+          font-family="-apple-system, system-ui, sans-serif"
+          font-weight="600"
+          font-size="22"
+          fill="#fafaf9"
+          text-anchor="middle">
+          Style
+        </text>
+      </g>
+      <g transform="translate(372, 0)">
+        <rect x="0" y="0" width="180" height="56" rx="28" fill="#292524" stroke="#D97706" stroke-width="2"/>
+        <text x="90" y="37"
+          font-family="-apple-system, system-ui, sans-serif"
+          font-weight="600"
+          font-size="22"
+          fill="#fafaf9"
+          text-anchor="middle">
+          Protein
+        </text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Bottom strip -->
+  <text x="80" y="585"
+    font-family="-apple-system, system-ui, sans-serif"
+    font-weight="500"
+    font-size="20"
+    fill="#78716c">
+    150+ recipes · Bengali · Indian · Asian · Continental · Mexican · Mediterranean
+  </text>
+</svg>

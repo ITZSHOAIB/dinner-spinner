@@ -6,6 +6,7 @@ import { HomePage } from './pages/HomePage'
 import { BrowsePage } from './pages/BrowsePage'
 import { FavoritesPage } from './pages/FavoritesPage'
 import { PreferencesPage } from './pages/PreferencesPage'
+import { NotFoundPage } from './pages/NotFoundPage'
 import { RecipeDetail } from './components/recipe/RecipeDetail'
 import './lib/theme'
 
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/favorites" element={<FavoritesPage />} />
             <Route path="/history" element={<PreferencesPage />} />
             <Route path="/preferences" element={<PreferencesPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </AnimatePresence>

@@ -7,6 +7,7 @@ import { useState } from 'react'
 const navItems = [
   { path: '/', label: 'Spin' },
   { path: '/recipes', label: 'Browse' },
+  { path: '/pantry', label: 'Pantry' },
   { path: '/favorites', label: 'Favorites' },
   { path: '/preferences', label: 'Settings' },
 ]

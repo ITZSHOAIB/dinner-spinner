@@ -5,6 +5,7 @@ import { Layout } from './components/layout/Layout'
 import { HomePage } from './pages/HomePage'
 import { BrowsePage } from './pages/BrowsePage'
 import { FavoritesPage } from './pages/FavoritesPage'
+import { PantryPage } from './pages/PantryPage'
 import { PreferencesPage } from './pages/PreferencesPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { RecipeDetail } from './components/recipe/RecipeDetail'
@@ -28,6 +29,7 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/recipes" element={<BrowsePage />} />
             <Route path="/recipes/:id" element={<RecipeDetail />} />
+            <Route path="/pantry" element={<PantryPage />} />
             <Route path="/favorites" element={<FavoritesPage />} />
             <Route path="/history" element={<PreferencesPage />} />
             <Route path="/preferences" element={<PreferencesPage />} />

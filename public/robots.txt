@@ -7,6 +7,7 @@ Allow: /
 Disallow: /favorites
 Disallow: /preferences
 Disallow: /history
+Disallow: /pantry
 
 # Search engine crawlers (explicit allow for clarity)
 User-agent: Googlebot
@@ -14,12 +15,14 @@ Allow: /
 Disallow: /favorites
 Disallow: /preferences
 Disallow: /history
+Disallow: /pantry
 
 User-agent: Bingbot
 Allow: /
 Disallow: /favorites
 Disallow: /preferences
 Disallow: /history
+Disallow: /pantry
 
 User-agent: DuckDuckBot
 Allow: /

@@ -114,7 +114,7 @@ export function RecipeDetail() {
     description: recipe
       ? `${recipe.description} Ready in ${recipe.totalTimeMinutes} minutes · ${recipe.difficulty} · serves ${recipe.servings}.`
       : 'The recipe you’re looking for could not be found.',
-    path: recipe ? `/recipes/${recipe.id}` : undefined,
+    path: recipe ? `/recipes/${recipe.id}/` : undefined,
     type: recipe ? 'article' : 'website',
     noIndex: !recipe,
     jsonLd: recipe ? recipeSchema(recipe) : null,

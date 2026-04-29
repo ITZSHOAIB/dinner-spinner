@@ -9,7 +9,7 @@ This file follows the [llms.txt](https://llmstxt.org/) convention: a
 machine-readable index of the site's primary content for LLMs and AI agents.
 
 - Site: https://itzshoaib.github.io/dinner-spinner/
-- Browse: https://itzshoaib.github.io/dinner-spinner/recipes
+- Browse: https://itzshoaib.github.io/dinner-spinner/recipes/
 - Sitemap: https://itzshoaib.github.io/dinner-spinner/sitemap.xml
 - Full content (all recipes inlined as markdown): https://itzshoaib.github.io/dinner-spinner/llms-full.txt
 

@@ -31,7 +31,7 @@ export function BrowsePage() {
     title: 'Browse Recipes — Dinner Spinner',
     description:
       'Browse 150+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines. Filter by dietary needs, cuisine, and meal type.',
-    path: '/recipes',
+    path: '/recipes/',
   })
 
   const {

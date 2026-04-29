@@ -20,13 +20,17 @@ interface Entry {
 
 const today = new Date().toISOString().slice(0, 10)
 
+// Trailing slashes match GitHub Pages' canonical form. Each recipe page
+// is a directory (`recipes/<id>/index.html`), and GH Pages 301-redirects
+// the slashless variant to the slashed one. Listing the slashless URLs
+// makes the sitemap a chain of redirects, which Google can flag.
 const staticEntries: Entry[] = [
   { loc: `${SITE_URL}/`, changefreq: 'weekly', priority: 1.0 },
-  { loc: `${SITE_URL}/recipes`, changefreq: 'weekly', priority: 0.9 },
+  { loc: `${SITE_URL}/recipes/`, changefreq: 'weekly', priority: 0.9 },
 ]
 
 const recipeEntries: Entry[] = recipes.map((r) => ({
-  loc: `${SITE_URL}/recipes/${r.id}`,
+  loc: `${SITE_URL}/recipes/${r.id}/`,
   changefreq: 'monthly',
   priority: 0.7,
 }))

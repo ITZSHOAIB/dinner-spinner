@@ -9,7 +9,7 @@ This file follows the [llms.txt](https://llmstxt.org/) convention: a
 machine-readable index of the site's primary content for LLMs and AI agents.
 
 - Site: https://itzshoaib.github.io/dinner-spinner/
-- Browse: https://itzshoaib.github.io/dinner-spinner/recipes
+- Browse: https://itzshoaib.github.io/dinner-spinner/recipes/
 - Sitemap: https://itzshoaib.github.io/dinner-spinner/sitemap.xml
 - Full content (all recipes inlined as markdown): https://itzshoaib.github.io/dinner-spinner/llms-full.txt
 
@@ -24,7 +24,7 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 
 ## Macher Jhol (মাছের ঝোল)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/macher-jhol
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/macher-jhol/
 
 A light and aromatic Bengali fish curry cooked with potatoes and nigella seeds in a turmeric-laced broth.
 
@@ -62,7 +62,7 @@ A light and aromatic Bengali fish curry cooked with potatoes and nigella seeds i
 
 ## Chingri Malai Curry (চিংড়ি মালাই কারি)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chingri-malai-curry
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chingri-malai-curry/
 
 Succulent prawns simmered in a rich, creamy coconut milk gravy — a quintessential Bengali celebration dish.
 
@@ -100,7 +100,7 @@ Succulent prawns simmered in a rich, creamy coconut milk gravy — a quintessent
 
 ## Kosha Mangsho (কষা মাংস)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/kosha-mangsho
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/kosha-mangsho/
 
 Slow-cooked Bengali mutton curry with a deeply spiced, reduced onion-based gravy that clings to every piece.
 
@@ -140,7 +140,7 @@ Slow-cooked Bengali mutton curry with a deeply spiced, reduced onion-based gravy
 
 ## Shorshe Ilish (সর্ষে ইলিশ)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/shorshe-ilish
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/shorshe-ilish/
 
 Hilsa fish steamed in a pungent mustard paste sauce — the crown jewel of Bengali cuisine.
 
@@ -175,7 +175,7 @@ Hilsa fish steamed in a pungent mustard paste sauce — the crown jewel of Benga
 
 ## Aloo Posto (আলু পোস্ত)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/aloo-posto
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/aloo-posto/
 
 Potatoes cooked in a poppy seed paste with minimal spices — a beloved everyday Bengali comfort dish.
 
@@ -207,7 +207,7 @@ Potatoes cooked in a poppy seed paste with minimal spices — a beloved everyday
 
 ## Begun Bhaja (বেগুন ভাজা)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/begun-bhaja
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/begun-bhaja/
 
 Thinly sliced eggplant, coated in turmeric and salt, shallow-fried until crispy golden — a Bengali staple side.
 
@@ -233,7 +233,7 @@ Thinly sliced eggplant, coated in turmeric and salt, shallow-fried until crispy 
 
 ## Luchi-Alur Dom (লুচি-আলুর দম)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/luchi-alur-dom
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/luchi-alur-dom/
 
 Fluffy deep-fried white flour bread paired with a spicy, tangy potato curry — a classic Bengali breakfast or feast dish.
 
@@ -271,7 +271,7 @@ Fluffy deep-fried white flour bread paired with a spicy, tangy potato curry — 
 
 ## Mishti Doi (মিষ্টি দই)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/mishti-doi
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/mishti-doi/
 
 Sweetened, caramelized yogurt set in earthen pots — a silky Bengali dessert with deep jaggery notes.
 
@@ -301,7 +301,7 @@ Sweetened, caramelized yogurt set in earthen pots — a silky Bengali dessert wi
 
 ## Rasgulla (রসগোল্লা)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/rasgulla
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/rasgulla/
 
 Soft, spongy cottage cheese balls soaked in light sugar syrup — an iconic Bengali sweet.
 
@@ -334,7 +334,7 @@ Soft, spongy cottage cheese balls soaked in light sugar syrup — an iconic Beng
 
 ## Sandesh (সন্দেশ)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/sandesh
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/sandesh/
 
 Delicate Bengali sweet made from fresh cottage cheese and sugar, flavoured with cardamom or saffron.
 
@@ -363,7 +363,7 @@ Delicate Bengali sweet made from fresh cottage cheese and sugar, flavoured with 
 
 ## Bengali Fish Fry (মাছ ভাজা)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/bengali-fish-fry
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/bengali-fish-fry/
 
 Crumb-coated, spiced fish cutlets shallow-fried to a crunchy golden perfection — a Kolkata street-food legend.
 
@@ -398,7 +398,7 @@ Crumb-coated, spiced fish cutlets shallow-fried to a crunchy golden perfection �
 
 ## Doi Maach (দই মাছ)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/doi-maach
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/doi-maach/
 
 Fish simmered in a creamy, mildly spiced yogurt gravy — a rich Bengali classic served at celebrations.
 
@@ -433,7 +433,7 @@ Fish simmered in a creamy, mildly spiced yogurt gravy — a rich Bengali classic
 
 ## Mochar Ghonto (মোচার ঘণ্ট)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/mochar-ghonto
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/mochar-ghonto/
 
 Banana blossom cooked with coconut, spices and sometimes prawns — a unique and cherished Bengali preparation.
 
@@ -471,7 +471,7 @@ Banana blossom cooked with coconut, spices and sometimes prawns — a unique and
 
 ## Cholar Dal (ছোলার ডাল)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/cholar-dal
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/cholar-dal/
 
 Bengal gram lentils cooked with coconut and raisins, sweetly spiced — a festive Bengali dal like no other.
 
@@ -504,7 +504,7 @@ Bengal gram lentils cooked with coconut and raisins, sweetly spiced — a festiv
 
 ## Dhokar Dalna (ধোকার ডালনা)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/dhokar-dalna
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/dhokar-dalna/
 
 Fried lentil cakes in a spicy tomato-based gravy — a unique Bengali vegetarian dish bursting with flavour.
 
@@ -539,7 +539,7 @@ Fried lentil cakes in a spicy tomato-based gravy — a unique Bengali vegetarian
 
 ## Shukto (শুক্তো)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/shukto
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/shukto/
 
 A bitter-sweet medley of vegetables in a milk-based gravy — a traditional Bengali meal starter.
 
@@ -577,7 +577,7 @@ A bitter-sweet medley of vegetables in a milk-based gravy — a traditional Beng
 
 ## Posto Bora (পোস্ত বড়া)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/posto-bora
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/posto-bora/
 
 Deep-fried poppy seed fritters with onion and green chillies — a crispy, addictive Bengali snack.
 
@@ -604,7 +604,7 @@ Deep-fried poppy seed fritters with onion and green chillies — a crispy, addic
 
 ## Jhinge Posto (ঝিঙে পোস্ত)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/jhinge-posto
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/jhinge-posto/
 
 Ridge gourd cooked with poppy seed paste — a light, everyday Bengali vegetable dish.
 
@@ -633,7 +633,7 @@ Ridge gourd cooked with poppy seed paste — a light, everyday Bengali vegetable
 
 ## Aloor Dum (আলুর দম)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/aloor-dum
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/aloor-dum/
 
 Baby potatoes slow-cooked in a rich, spicy tomato gravy — a Bengali comfort classic.
 
@@ -666,7 +666,7 @@ Baby potatoes slow-cooked in a rich, spicy tomato gravy — a Bengali comfort cl
 
 ## Panta Bhat (পান্তা ভাত)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/panta-bhat
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/panta-bhat/
 
 Fermented rice soaked overnight in water, served with fried hilsa, green chilli, and onion — a rustic Bengali classic.
 
@@ -696,7 +696,7 @@ Fermented rice soaked overnight in water, served with fried hilsa, green chilli,
 
 ## Keema Doi (কিমার দই)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/keema-doi
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/keema-doi/
 
 Minced mutton cooked in a tangy yogurt gravy with warming spices — a hearty Bengali keema preparation.
 
@@ -731,7 +731,7 @@ Minced mutton cooked in a tangy yogurt gravy with warming spices — a hearty Be
 
 ## Chicken Kosha (চিকেন কষা)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-kosha
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-kosha/
 
 Bengali-style slow-cooked chicken in a thick, deeply spiced onion and tomato gravy.
 
@@ -767,7 +767,7 @@ Bengali-style slow-cooked chicken in a thick, deeply spiced onion and tomato gra
 
 ## Fulkopir Singara (ফুলকপির সিঙাড়া)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/fulkopir-singara
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/fulkopir-singara/
 
 Crispy, flaky pastry pockets stuffed with spiced cauliflower and peas — Kolkata s iconic teatime snack.
 
@@ -803,7 +803,7 @@ Crispy, flaky pastry pockets stuffed with spiced cauliflower and peas — Kolkat
 
 ## Ghugni (ঘুগনি)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/ghugni
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/ghugni/
 
 Spicy dried yellow peas curry topped with coconut and onion — a beloved Kolkata street snack.
 
@@ -838,7 +838,7 @@ Spicy dried yellow peas curry topped with coconut and onion — a beloved Kolkat
 
 ## Telebhaja (Beguni & Peyaji) (তেলেভাজা (বেগুনি ও পেঁয়াজি))
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/telebhaja
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/telebhaja/
 
 Crispy batter-fried eggplant slices and onion fritters — the quintessential rainy-day Bengali telebhaja platter.
 
@@ -873,7 +873,7 @@ Crispy batter-fried eggplant slices and onion fritters — the quintessential ra
 
 ## Kolkata Biryani (কলকাতা বিরিয়ানি)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/kolkata-biryani
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/kolkata-biryani/
 
 Fragrant layered rice with spiced mutton, potatoes, and eggs — Kolkata s unique take on the royal biryani.
 
@@ -913,7 +913,7 @@ Fragrant layered rice with spiced mutton, potatoes, and eggs — Kolkata s uniqu
 
 ## Lau Ghonto (লাউ ঘণ্ট)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/lau-ghonto
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/lau-ghonto/
 
 Bottle gourd cooked with tiny prawns and spices — a homestyle Bengali dish that is pure comfort.
 
@@ -944,7 +944,7 @@ Bottle gourd cooked with tiny prawns and spices — a homestyle Bengali dish tha
 
 ## Muri Ghonto (মুড়ি ঘণ্ট)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/muri-ghonto
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/muri-ghonto/
 
 A unique Bengali dish of rice cooked with fish head and spices — deeply flavourful and traditional.
 
@@ -981,7 +981,7 @@ A unique Bengali dish of rice cooked with fish head and spices — deeply flavou
 
 ## Prawn Malai Curry (চিংড়ি মালাইকারি)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/prawn-malai-curry
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/prawn-malai-curry/
 
 Juicy prawns bathed in a velvety coconut cream sauce with subtle spices — luxurious and aromatic.
 
@@ -1016,7 +1016,7 @@ Juicy prawns bathed in a velvety coconut cream sauce with subtle spices — luxu
 
 ## Chholar Dal (ছোলার ডাল)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chholar-dal
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chholar-dal/
 
 Sweetly spiced Bengal gram dal with coconut — the perfect accompaniment to luchi for any Bengali celebration.
 
@@ -1049,7 +1049,7 @@ Sweetly spiced Bengal gram dal with coconut — the perfect accompaniment to luc
 
 ## Butter Chicken
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/butter-chicken
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/butter-chicken/
 
 Tender chicken pieces in a luscious, creamy tomato-butter gravy — the undisputed king of North Indian curries.
 
@@ -1084,7 +1084,7 @@ Tender chicken pieces in a luscious, creamy tomato-butter gravy — the undisput
 
 ## Dal Makhani
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/dal-makhani
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/dal-makhani/
 
 Black lentils and kidney beans slow-simmered overnight with butter and cream — rich, smoky, and indulgent.
 
@@ -1121,7 +1121,7 @@ Black lentils and kidney beans slow-simmered overnight with butter and cream —
 
 ## Rajma
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/rajma
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/rajma/
 
 Kidney beans in a thick, hearty tomato-onion gravy — the ultimate North Indian comfort food with rice.
 
@@ -1155,7 +1155,7 @@ Kidney beans in a thick, hearty tomato-onion gravy — the ultimate North Indian
 
 ## Chole Bhature
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chole-bhature
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chole-bhature/
 
 Spicy chickpea curry paired with puffy deep-fried bread — a hearty and beloved Punjabi classic.
 
@@ -1189,7 +1189,7 @@ Spicy chickpea curry paired with puffy deep-fried bread — a hearty and beloved
 
 ## Palak Paneer
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/palak-paneer
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/palak-paneer/
 
 Cubes of paneer in a vibrant, silky spinach gravy — a nutritious and much-loved vegetarian classic.
 
@@ -1222,7 +1222,7 @@ Cubes of paneer in a vibrant, silky spinach gravy — a nutritious and much-love
 
 ## Paneer Tikka
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/paneer-tikka
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/paneer-tikka/
 
 Marinated paneer and vegetables grilled or baked to smoky perfection — a popular vegetarian appetiser.
 
@@ -1255,7 +1255,7 @@ Marinated paneer and vegetables grilled or baked to smoky perfection — a popul
 
 ## Aloo Paratha
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/aloo-paratha
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/aloo-paratha/
 
 Flaky whole-wheat flatbread stuffed with spiced mashed potatoes — a hearty North Indian breakfast staple.
 
@@ -1288,7 +1288,7 @@ Flaky whole-wheat flatbread stuffed with spiced mashed potatoes — a hearty Nor
 
 ## Rogan Josh
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/rogan-josh
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/rogan-josh/
 
 A rich Kashmiri mutton curry with deep red colour from Kashmiri chillies and aromatic whole spices.
 
@@ -1324,7 +1324,7 @@ A rich Kashmiri mutton curry with deep red colour from Kashmiri chillies and aro
 
 ## Kadai Paneer
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/kadai-paneer
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/kadai-paneer/
 
 Paneer tossed with bell peppers in a chunky tomato gravy spiced with crushed coriander and dried red chillies.
 
@@ -1358,7 +1358,7 @@ Paneer tossed with bell peppers in a chunky tomato gravy spiced with crushed cor
 
 ## Baingan Bharta
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/baingan-bharta
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/baingan-bharta/
 
 Fire-roasted and mashed eggplant cooked with tomatoes, onions, and bold spices — smoky and deeply satisfying.
 
@@ -1393,7 +1393,7 @@ Fire-roasted and mashed eggplant cooked with tomatoes, onions, and bold spices �
 
 ## Tandoori Chicken
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/tandoori-chicken
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/tandoori-chicken/
 
 Chicken marinated in yogurt and spices, cooked at high heat until smoky and charred — an iconic Indian dish.
 
@@ -1426,7 +1426,7 @@ Chicken marinated in yogurt and spices, cooked at high heat until smoky and char
 
 ## Shahi Paneer
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/shahi-paneer
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/shahi-paneer/
 
 Paneer cubes in a rich, creamy cashew and tomato gravy fit for royalty — indulgent and aromatic.
 
@@ -1459,7 +1459,7 @@ Paneer cubes in a rich, creamy cashew and tomato gravy fit for royalty — indul
 
 ## Malai Kofta
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/malai-kofta
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/malai-kofta/
 
 Soft paneer and potato dumplings in a velvety, mildly spiced tomato-cream gravy — pure indulgence.
 
@@ -1498,7 +1498,7 @@ Soft paneer and potato dumplings in a velvety, mildly spiced tomato-cream gravy 
 
 ## Pav Bhaji
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/pav-bhaji
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/pav-bhaji/
 
 A spicy mash of mixed vegetables served with buttery, toasted pav buns — Mumbai s favourite street food.
 
@@ -1533,7 +1533,7 @@ A spicy mash of mixed vegetables served with buttery, toasted pav buns — Mumba
 
 ## Dal Tadka
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/dal-tadka
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/dal-tadka/
 
 Yellow lentils tempered with cumin, garlic, and ghee — an everyday Indian comfort dal served in every home.
 
@@ -1567,7 +1567,7 @@ Yellow lentils tempered with cumin, garlic, and ghee — an everyday Indian comf
 
 ## Masala Dosa
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/masala-dosa
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/masala-dosa/
 
 Crispy fermented rice-lentil crepe filled with spiced potato masala — South India s most iconic breakfast.
 
@@ -1600,7 +1600,7 @@ Crispy fermented rice-lentil crepe filled with spiced potato masala — South In
 
 ## Idli Sambar
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/idli-sambar
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/idli-sambar/
 
 Soft, fluffy steamed rice cakes served with a tangy lentil-vegetable stew — a wholesome South Indian meal.
 
@@ -1634,7 +1634,7 @@ Soft, fluffy steamed rice cakes served with a tangy lentil-vegetable stew — a 
 
 ## Upma
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/upma
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/upma/
 
 Savoury semolina porridge tempered with mustard seeds, curry leaves, and vegetables — a quick South Indian breakfast.
 
@@ -1668,7 +1668,7 @@ Savoury semolina porridge tempered with mustard seeds, curry leaves, and vegetab
 
 ## Chicken Chettinad
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-chettinad
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-chettinad/
 
 Fiery South Indian chicken curry with freshly ground spice paste — bold, aromatic, and intensely flavourful.
 
@@ -1704,7 +1704,7 @@ Fiery South Indian chicken curry with freshly ground spice paste — bold, aroma
 
 ## Fish Moilee
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/fish-moilee
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/fish-moilee/
 
 Delicate fish fillets in a light coconut milk curry with curry leaves — a gentle and fragrant Kerala classic.
 
@@ -1737,7 +1737,7 @@ Delicate fish fillets in a light coconut milk curry with curry leaves — a gent
 
 ## Medu Vada
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/medu-vada
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/medu-vada/
 
 Crispy, golden urad dal doughnuts with a fluffy interior — a beloved South Indian breakfast and snack.
 
@@ -1770,7 +1770,7 @@ Crispy, golden urad dal doughnuts with a fluffy interior — a beloved South Ind
 
 ## Uttapam
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/uttapam
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/uttapam/
 
 Thick, soft dosa pancakes topped with onions, tomatoes, and chillies — a quick and filling South Indian meal.
 
@@ -1799,7 +1799,7 @@ Thick, soft dosa pancakes topped with onions, tomatoes, and chillies — a quick
 
 ## Pesarattu
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/pesarattu
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/pesarattu/
 
 Green moong dal crepes from Andhra Pradesh — protein-rich, healthy, and wonderfully crispy.
 
@@ -1828,7 +1828,7 @@ Green moong dal crepes from Andhra Pradesh — protein-rich, healthy, and wonder
 
 ## Avial
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/avial
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/avial/
 
 Mixed vegetables in a thick coconut and yogurt sauce — a creamy, subtly spiced Kerala classic.
 
@@ -1862,7 +1862,7 @@ Mixed vegetables in a thick coconut and yogurt sauce — a creamy, subtly spiced
 
 ## Rasam Rice
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/rasam-rice
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/rasam-rice/
 
 Peppery, tangy tomato-tamarind soup served over steamed rice — a soothing South Indian comfort meal.
 
@@ -1897,7 +1897,7 @@ Peppery, tangy tomato-tamarind soup served over steamed rice — a soothing Sout
 
 ## Chicken Manchurian
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-manchurian
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-manchurian/
 
 Crispy fried chicken balls tossed in a tangy, spicy soy-chilli sauce — Indo-Chinese comfort at its best.
 
@@ -1933,7 +1933,7 @@ Crispy fried chicken balls tossed in a tangy, spicy soy-chilli sauce — Indo-Ch
 
 ## Veg Hakka Noodles
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/veg-hakka-noodles
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/veg-hakka-noodles/
 
 Stir-fried noodles with colourful vegetables and soy sauce — a quick Indo-Chinese weeknight favourite.
 
@@ -1967,7 +1967,7 @@ Stir-fried noodles with colourful vegetables and soy sauce — a quick Indo-Chin
 
 ## Chilli Chicken
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chilli-chicken
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chilli-chicken/
 
 Crispy battered chicken tossed with peppers in a hot, sweet, and sour sauce — the Indo-Chinese classic.
 
@@ -2003,7 +2003,7 @@ Crispy battered chicken tossed with peppers in a hot, sweet, and sour sauce — 
 
 ## Veg Fried Rice
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/veg-fried-rice
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/veg-fried-rice/
 
 Day-old rice stir-fried with vegetables, soy sauce, and a hint of vinegar — fast, satisfying, and versatile.
 
@@ -2038,7 +2038,7 @@ Day-old rice stir-fried with vegetables, soy sauce, and a hint of vinegar — fa
 
 ## Gobi Manchurian
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/gobi-manchurian
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/gobi-manchurian/
 
 Crispy cauliflower florets drenched in a spicy, sweet, tangy Indo-Chinese sauce — totally addictive.
 
@@ -2073,7 +2073,7 @@ Crispy cauliflower florets drenched in a spicy, sweet, tangy Indo-Chinese sauce 
 
 ## Chilli Paneer
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chilli-paneer
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chilli-paneer/
 
 Crispy paneer cubes stir-fried with peppers in a hot soy-chilli sauce — a vegetarian Indo-Chinese favourite.
 
@@ -2108,7 +2108,7 @@ Crispy paneer cubes stir-fried with peppers in a hot soy-chilli sauce — a vege
 
 ## Schezwan Noodles
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/schezwan-noodles
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/schezwan-noodles/
 
 Hakka noodles tossed in a fiery Schezwan sauce with vegetables — bold, spicy Indo-Chinese street food.
 
@@ -2140,7 +2140,7 @@ Hakka noodles tossed in a fiery Schezwan sauce with vegetables — bold, spicy I
 
 ## Momos
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/momos
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/momos/
 
 Steamed or fried dumplings filled with spiced chicken or vegetables — a hugely popular Tibetan-Indian street snack.
 
@@ -2174,7 +2174,7 @@ Steamed or fried dumplings filled with spiced chicken or vegetables — a hugely
 
 ## Pasta Arrabiata
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/pasta-arrabiata
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/pasta-arrabiata/
 
 Penne in a fiery garlic and red chilli tomato sauce — simple Italian comfort with a spicy kick.
 
@@ -2204,7 +2204,7 @@ Penne in a fiery garlic and red chilli tomato sauce — simple Italian comfort w
 
 ## Grilled Chicken Salad
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/grilled-chicken-salad
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/grilled-chicken-salad/
 
 Juicy grilled chicken breast over mixed greens with a tangy vinaigrette — fresh, light, and protein-packed.
 
@@ -2236,7 +2236,7 @@ Juicy grilled chicken breast over mixed greens with a tangy vinaigrette — fres
 
 ## Mac & Cheese
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/mac-and-cheese
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/mac-and-cheese/
 
 Elbow macaroni baked in a creamy, gooey cheddar cheese sauce — the ultimate comfort food for all ages.
 
@@ -2267,7 +2267,7 @@ Elbow macaroni baked in a creamy, gooey cheddar cheese sauce — the ultimate co
 
 ## Mushroom Risotto
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/mushroom-risotto
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/mushroom-risotto/
 
 Creamy Italian rice slowly stirred with mushrooms, white wine, and Parmesan — luxurious and deeply savoury.
 
@@ -2305,7 +2305,7 @@ Creamy Italian rice slowly stirred with mushrooms, white wine, and Parmesan — 
 
 ## Pancakes
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/pancakes
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/pancakes/
 
 Fluffy, golden breakfast pancakes served with maple syrup and fresh berries — a weekend morning treat.
 
@@ -2337,7 +2337,7 @@ Fluffy, golden breakfast pancakes served with maple syrup and fresh berries — 
 
 ## French Toast
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/french-toast
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/french-toast/
 
 Thick bread slices soaked in cinnamon-egg custard and pan-fried golden — a decadent breakfast classic.
 
@@ -2367,7 +2367,7 @@ Thick bread slices soaked in cinnamon-egg custard and pan-fried golden — a dec
 
 ## Caesar Salad
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/caesar-salad
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/caesar-salad/
 
 Crisp romaine lettuce with creamy Caesar dressing, croutons, and Parmesan — the classic salad done right.
 
@@ -2399,7 +2399,7 @@ Crisp romaine lettuce with creamy Caesar dressing, croutons, and Parmesan — th
 
 ## Garlic Bread Pizza
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/garlic-bread-pizza
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/garlic-bread-pizza/
 
 Quick flatbread pizza loaded with garlic butter, mozzarella, and your favourite toppings — easy and crowd-pleasing.
 
@@ -2431,7 +2431,7 @@ Quick flatbread pizza loaded with garlic butter, mozzarella, and your favourite 
 
 ## Pad Thai
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/pad-thai
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/pad-thai/
 
 Stir-fried rice noodles with tamarind sauce, peanuts, and fresh lime — Thailand s most famous street dish.
 
@@ -2465,7 +2465,7 @@ Stir-fried rice noodles with tamarind sauce, peanuts, and fresh lime — Thailan
 
 ## Thai Green Curry
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/thai-green-curry
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/thai-green-curry/
 
 Creamy coconut curry with green chilli paste, vegetables, and basil — fragrant, spicy, and comforting.
 
@@ -2498,7 +2498,7 @@ Creamy coconut curry with green chilli paste, vegetables, and basil — fragrant
 
 ## Ramen
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/ramen
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/ramen/
 
 Japanese noodle soup with a rich broth, soft-boiled egg, and toppings — warming and deeply satisfying.
 
@@ -2532,7 +2532,7 @@ Japanese noodle soup with a rich broth, soft-boiled egg, and toppings — warmin
 
 ## Bibimbap
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/bibimbap
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/bibimbap/
 
 Korean rice bowl topped with sautéed vegetables, a fried egg, and spicy gochujang sauce — colourful and balanced.
 
@@ -2566,7 +2566,7 @@ Korean rice bowl topped with sautéed vegetables, a fried egg, and spicy gochuja
 
 ## Egg Fried Rice
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/egg-fried-rice
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/egg-fried-rice/
 
 Simple wok-fried rice with fluffy scrambled eggs and spring onions — fast, delicious, and endlessly adaptable.
 
@@ -2598,7 +2598,7 @@ Simple wok-fried rice with fluffy scrambled eggs and spring onions — fast, del
 
 ## Tacos
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/tacos
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/tacos/
 
 Crunchy corn tortillas loaded with spiced chicken, salsa, and fresh toppings — fun, flavourful, and hands-on.
 
@@ -2633,7 +2633,7 @@ Crunchy corn tortillas loaded with spiced chicken, salsa, and fresh toppings —
 
 ## Burrito Bowl
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/burrito-bowl
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/burrito-bowl/
 
 A deconstructed burrito with rice, beans, grilled chicken, corn, and all the fixings — hearty and customisable.
 
@@ -2668,7 +2668,7 @@ A deconstructed burrito with rice, beans, grilled chicken, corn, and all the fix
 
 ## Falafel Wrap
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/falafel-wrap
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/falafel-wrap/
 
 Crispy chickpea fritters wrapped in warm pita with tahini, salad, and pickles — a satisfying Mediterranean meal.
 
@@ -2704,7 +2704,7 @@ Crispy chickpea fritters wrapped in warm pita with tahini, salad, and pickles �
 
 ## Hummus Platter
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/hummus-platter
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/hummus-platter/
 
 Silky smooth chickpea-tahini dip with olive oil, served with warm pita and crunchy veggies — a perfect sharing plate.
 
@@ -2738,7 +2738,7 @@ Silky smooth chickpea-tahini dip with olive oil, served with warm pita and crunc
 
 ## Khaman Dhokla (ખમણ ઢોકળા)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/khaman-dhokla
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/khaman-dhokla/
 
 Soft, spongy steamed savoury cakes made from gram flour, tempered with mustard seeds, curry leaves and green chillies — a quintessential Gujarati snack.
 
@@ -2781,7 +2781,7 @@ Soft, spongy steamed savoury cakes made from gram flour, tempered with mustard s
 
 ## Undhiyu (ઊંધિયું)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/undhiyu
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/undhiyu/
 
 A rich winter-special mixed vegetable casserole from Surat, cooked with surti papdi, yam, baby potatoes, and spiced methi muthia in a fragrant masala.
 
@@ -2826,7 +2826,7 @@ A rich winter-special mixed vegetable casserole from Surat, cooked with surti pa
 
 ## Gujarati Kadhi (ગુજરાતી કઢી)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/gujarati-kadhi
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/gujarati-kadhi/
 
 Silky yogurt-and-besan soup tempered with ghee, cloves, and curry leaves, balanced with a gentle hit of sweetness — the soul of a Gujarati thali.
 
@@ -2868,7 +2868,7 @@ Silky yogurt-and-besan soup tempered with ghee, cloves, and curry leaves, balanc
 
 ## Methi Thepla (મેથી થેપલા)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/methi-thepla
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/methi-thepla/
 
 Soft, spiced flatbreads kneaded with fresh fenugreek leaves, yogurt, and gentle spices — a beloved travel food from Gujarati kitchens.
 
@@ -2906,7 +2906,7 @@ Soft, spiced flatbreads kneaded with fresh fenugreek leaves, yogurt, and gentle 
 
 ## Khandvi (ખાંડવી)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/khandvi
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/khandvi/
 
 Delicate gram-flour rolls cooked with buttermilk and tempered with mustard seeds — a fragrant, melt-in-mouth Gujarati teatime treat.
 
@@ -2946,7 +2946,7 @@ Delicate gram-flour rolls cooked with buttermilk and tempered with mustard seeds
 
 ## Handvo (હાંડવો)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/handvo
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/handvo/
 
 A savoury, oven-baked lentil and rice cake loaded with bottle gourd, carrots, and a crunchy sesame crust — hearty Gujarati comfort food.
 
@@ -2992,7 +2992,7 @@ A savoury, oven-baked lentil and rice cake loaded with bottle gourd, carrots, an
 
 ## Gujarati Toor Dal (ગુજરાતી દાળ)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/gujarati-dal
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/gujarati-dal/
 
 A signature sweet-sour-spicy toor dal with jaggery, kokum, peanuts, and a ghee tempering — the gentle backbone of a Gujarati meal.
 
@@ -3038,7 +3038,7 @@ A signature sweet-sour-spicy toor dal with jaggery, kokum, peanuts, and a ghee t
 
 ## Fafda (ફાફડા)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/fafda-jalebi
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/fafda-jalebi/
 
 Crisp, ribbon-shaped gram flour fritters seasoned with ajwain and black pepper — the weekend breakfast icon of Gujarat, usually paired with jalebi.
 
@@ -3074,7 +3074,7 @@ Crisp, ribbon-shaped gram flour fritters seasoned with ajwain and black pepper �
 
 ## Sev Tameta nu Shaak (સેવ ટમેટા નું શાક)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/sev-tameta-nu-shaak
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/sev-tameta-nu-shaak/
 
 A tangy, quick tomato curry topped with crunchy sev — a beloved everyday Gujarati sabzi that comes together in minutes.
 
@@ -3115,7 +3115,7 @@ A tangy, quick tomato curry topped with crunchy sev — a beloved everyday Gujar
 
 ## Misal Pav (मिसळ पाव)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/misal-pav
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/misal-pav/
 
 A fiery Pune-born sprouted moth bean curry topped with crunchy farsan, onions, and coriander — served with soft pav for scooping.
 
@@ -3159,7 +3159,7 @@ A fiery Pune-born sprouted moth bean curry topped with crunchy farsan, onions, a
 
 ## Vada Pav (वडा पाव)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/vada-pav
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/vada-pav/
 
 Mumbai's beloved potato fritter sandwiched in a buttered pav with garlic chutney and green chilli — the original Indian burger.
 
@@ -3200,7 +3200,7 @@ Mumbai's beloved potato fritter sandwiched in a buttered pav with garlic chutney
 
 ## Puran Poli (पुरण पोळी)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/puran-poli
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/puran-poli/
 
 A festive sweet flatbread stuffed with sweetened chana dal and cardamom, cooked on a griddle with ghee — Maharashtrian celebration food.
 
@@ -3236,7 +3236,7 @@ A festive sweet flatbread stuffed with sweetened chana dal and cardamom, cooked 
 
 ## Bharli Vangi (भरली वांगी)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/bharli-vangi
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/bharli-vangi/
 
 Baby brinjals stuffed with a peanut-coconut-jaggery masala and slow-cooked — a signature Maharashtrian sabzi with a sweet-sour-nutty profile.
 
@@ -3278,7 +3278,7 @@ Baby brinjals stuffed with a peanut-coconut-jaggery masala and slow-cooked — a
 
 ## Fish Moilee (മീൻ മോയിലി)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/fish-moilee-kerala
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/fish-moilee-kerala/
 
 A gentle Kerala fish stew in a creamy coconut milk gravy with ginger, green chillies, and curry leaves — delicate, coastal, and deeply fragrant.
 
@@ -3317,7 +3317,7 @@ A gentle Kerala fish stew in a creamy coconut milk gravy with ginger, green chil
 
 ## Puttu (പുട്ട്)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/puttu
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/puttu/
 
 Steamed cylinders of rice flour layered with fresh coconut — a classic Kerala breakfast served with kadala curry or ripe bananas and sugar.
 
@@ -3346,7 +3346,7 @@ Steamed cylinders of rice flour layered with fresh coconut — a classic Kerala 
 
 ## Cabbage Thoran (തോരൻ)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/thoran
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/thoran/
 
 Finely shredded cabbage stir-fried with freshly ground coconut, green chilli, and curry leaves — a dry, aromatic Kerala side dish.
 
@@ -3383,7 +3383,7 @@ Finely shredded cabbage stir-fried with freshly ground coconut, green chilli, an
 
 ## Nadan Kozhi Curry (നാടൻ കോഴി കറി)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/nadan-kozhi-curry
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/nadan-kozhi-curry/
 
 A robust Kerala country-style chicken curry simmered in roasted coconut, pepper, and whole spices — dark, fragrant, and deeply warming.
 
@@ -3424,7 +3424,7 @@ A robust Kerala country-style chicken curry simmered in roasted coconut, pepper,
 
 ## Chicken Vindaloo (विंदालू)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-vindaloo
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-vindaloo/
 
 A fiery Goan-Portuguese chicken curry in a vinegar-and-red-chilli masala — sharp, spicy, and unmistakably coastal.
 
@@ -3465,7 +3465,7 @@ A fiery Goan-Portuguese chicken curry in a vinegar-and-red-chilli masala — sha
 
 ## Prawn Balchão (बाल्चाव)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/prawn-balchao
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/prawn-balchao/
 
 A pickle-like Goan prawn preparation bursting with vinegar, dried red chillies, and spices — intense, bright, and best served in small spoonfuls.
 
@@ -3507,7 +3507,7 @@ A pickle-like Goan prawn preparation bursting with vinegar, dried red chillies, 
 
 ## Chicken Xacuti (शाकूती)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-xacuti
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-xacuti/
 
 A complex Goan chicken curry in a roasted coconut-and-whole-spice masala with star anise, nutmeg, and poppy seeds — deep, nutty, and warming.
 
@@ -3551,7 +3551,7 @@ A complex Goan chicken curry in a roasted coconut-and-whole-spice masala with st
 
 ## Dal Baati Churma (दाल बाटी चूरमा)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/dal-baati-churma
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/dal-baati-churma/
 
 Rajasthan's legendary trio — hard-baked wheat dumplings served with five-lentil dal and a sweet crumbled wheat pudding drenched in ghee.
 
@@ -3592,7 +3592,7 @@ Rajasthan's legendary trio — hard-baked wheat dumplings served with five-lenti
 
 ## Gatte ki Sabzi (गट्टे की सब्ज़ी)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/gatte-ki-sabzi
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/gatte-ki-sabzi/
 
 Spiced besan dumplings simmered in a tangy yogurt gravy — a desert-state classic born out of necessity and now beloved everywhere.
 
@@ -3635,7 +3635,7 @@ Spiced besan dumplings simmered in a tangy yogurt gravy — a desert-state class
 
 ## Laal Maas (लाल मांस)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/laal-maas
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/laal-maas/
 
 A blazing red Rajasthani mutton curry built on Mathania chillies, garlic, and smoky ghee — fierce, elegant, and famously royal.
 
@@ -3678,7 +3678,7 @@ A blazing red Rajasthani mutton curry built on Mathania chillies, garlic, and sm
 
 ## Hyderabadi Chicken Biryani (حیدرآبادی بریانی)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/hyderabadi-chicken-biryani
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/hyderabadi-chicken-biryani/
 
 Layered basmati rice and saffron-kissed marinated chicken sealed and slow-cooked dum-style — the Nizam-era heirloom of Indian biryanis.
 
@@ -3724,7 +3724,7 @@ Layered basmati rice and saffron-kissed marinated chicken sealed and slow-cooked
 
 ## Mirchi ka Salan (مرچی کا سالن)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/mirchi-ka-salan
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/mirchi-ka-salan/
 
 Long green chillies simmered in a creamy peanut, sesame, and tamarind gravy — Hyderabad's signature biryani accompaniment, sweet-tangy-spicy all at once.
 
@@ -3767,7 +3767,7 @@ Long green chillies simmered in a creamy peanut, sesame, and tamarind gravy — 
 
 ## Haleem (حلیم)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/haleem
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/haleem/
 
 A Ramadan-special slow-cooked porridge of wheat, lentils, and mutton pounded to a silky, rich stew — garnished with fried onions, lemon, and mint.
 
@@ -3813,7 +3813,7 @@ A Ramadan-special slow-cooked porridge of wheat, lentils, and mutton pounded to 
 
 ## Rogan Josh (روغن جوش)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/rogan-josh-kashmiri
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/rogan-josh-kashmiri/
 
 A deep crimson Kashmiri lamb curry with Kashmiri chillies, fennel, and dried ginger — aromatic, delicate, and unmistakable.
 
@@ -3856,7 +3856,7 @@ A deep crimson Kashmiri lamb curry with Kashmiri chillies, fennel, and dried gin
 
 ## Mutton Yakhni (یخنی)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/kashmiri-yakhni
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/kashmiri-yakhni/
 
 A white Kashmiri mutton curry in a gentle yogurt, fennel, and cardamom gravy — subtle, fragrant, and soul-warming.
 
@@ -3896,7 +3896,7 @@ A white Kashmiri mutton curry in a gentle yogurt, fennel, and cardamom gravy —
 
 ## Dum Aloo Kashmiri (दम आलू)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/dum-aloo-kashmiri
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/dum-aloo-kashmiri/
 
 Baby potatoes pricked and simmered in a velvety yogurt, fennel, and Kashmiri chilli gravy — vegetarian but unmistakably Kashmiri.
 
@@ -3939,7 +3939,7 @@ Baby potatoes pricked and simmered in a velvety yogurt, fennel, and Kashmiri chi
 
 ## Pad Thai (ผัดไทย)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/pad-thai-prawn
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/pad-thai-prawn/
 
 Wok-tossed rice noodles with prawns, tofu, egg, and crushed peanuts in a tamarind-fish-sauce glaze — Thailand's most iconic street food.
 
@@ -3980,7 +3980,7 @@ Wok-tossed rice noodles with prawns, tofu, egg, and crushed peanuts in a tamarin
 
 ## Thai Green Curry (แกงเขียวหวาน)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/thai-green-curry-chicken
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/thai-green-curry-chicken/
 
 A fragrant coconut-milk curry with green chillies, lemongrass, and Thai basil — creamy, herbal, and bright with lime and galangal.
 
@@ -4021,7 +4021,7 @@ A fragrant coconut-milk curry with green chillies, lemongrass, and Thai basil �
 
 ## Tom Yum Goong (ต้มยำกุ้ง)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/tom-yum-goong
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/tom-yum-goong/
 
 Thailand's legendary hot-and-sour prawn soup with lemongrass, galangal, kaffir lime, and chillies — sharp, bracing, and instantly warming.
 
@@ -4061,7 +4061,7 @@ Thailand's legendary hot-and-sour prawn soup with lemongrass, galangal, kaffir l
 
 ## Chicken Teriyaki Donburi (照り焼き丼)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-teriyaki-donburi
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-teriyaki-donburi/
 
 Pan-seared chicken glazed in a sweet-savoury teriyaki sauce, sliced and served over steaming rice with scallions and sesame.
 
@@ -4098,7 +4098,7 @@ Pan-seared chicken glazed in a sweet-savoury teriyaki sauce, sliced and served o
 
 ## Shoyu Ramen (醤油ラーメン)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/shoyu-ramen
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/shoyu-ramen/
 
 A classic Tokyo-style ramen: springy noodles in a soy-sauce-seasoned chicken broth, topped with marinated egg, chashu, nori, and scallions.
 
@@ -4139,7 +4139,7 @@ A classic Tokyo-style ramen: springy noodles in a soy-sauce-seasoned chicken bro
 
 ## Chicken Katsu Curry (カツカレー)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/katsu-curry
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/katsu-curry/
 
 Crisp panko-crumbed chicken cutlet sliced over rice, bathed in Japanese curry sauce — a golden, nostalgic weeknight classic.
 
@@ -4182,7 +4182,7 @@ Crisp panko-crumbed chicken cutlet sliced over rice, bathed in Japanese curry sa
 
 ## Spaghetti Aglio e Olio (Spaghetti aglio e olio)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/spaghetti-aglio-e-olio
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/spaghetti-aglio-e-olio/
 
 The Neapolitan pantry classic: spaghetti tossed with olive oil, slivered garlic, chilli, and parsley — five ingredients, one perfect dinner.
 
@@ -4216,7 +4216,7 @@ The Neapolitan pantry classic: spaghetti tossed with olive oil, slivered garlic,
 
 ## Margherita Pizza (Pizza Margherita)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/margherita-pizza
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/margherita-pizza/
 
 The original Neapolitan pizza: blistered dough, crushed San Marzano tomato, fresh mozzarella, basil, and olive oil — red, white, and green for the Italian flag.
 
@@ -4251,7 +4251,7 @@ The original Neapolitan pizza: blistered dough, crushed San Marzano tomato, fres
 
 ## Chicken Parmigiana (Pollo alla parmigiana)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-parmigiana
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-parmigiana/
 
 Crisp breaded chicken cutlets topped with tomato sauce, mozzarella, and parmesan, then baked until golden and bubbling — hearty Italian-American comfort food.
 
@@ -4288,7 +4288,7 @@ Crisp breaded chicken cutlets topped with tomato sauce, mozzarella, and parmesan
 
 ## Mushroom Risotto (Risotto ai funghi)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/mushroom-risotto-italian
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/mushroom-risotto-italian/
 
 Creamy Arborio rice cooked slowly with mushrooms, white wine, and parmesan — the quintessential Northern Italian primo.
 
@@ -4327,7 +4327,7 @@ Creamy Arborio rice cooked slowly with mushrooms, white wine, and parmesan — t
 
 ## Chicken Shawarma (شاورما الدجاج)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-shawarma
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-shawarma/
 
 Lebanese-style chicken marinated in warm spices, roasted until crisp at the edges, and wrapped in pita with garlic toum and pickles.
 
@@ -4370,7 +4370,7 @@ Lebanese-style chicken marinated in warm spices, roasted until crisp at the edge
 
 ## Falafel (فلافل)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/falafel
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/falafel/
 
 Crisp chickpea-and-herb fritters, deep green inside and deeply golden outside — the iconic Middle Eastern street food.
 
@@ -4410,7 +4410,7 @@ Crisp chickpea-and-herb fritters, deep green inside and deeply golden outside �
 
 ## Fattoush (فتوش)
 
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/fattoush
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/fattoush/
 
 A bright Levantine salad of romaine, cucumber, tomato, herbs, and crisp toasted pita, dressed with sumac, lemon, and olive oil.
 

@@ -31,7 +31,7 @@ function recipeMarkdown(r: Recipe): string {
   const lines: string[] = []
   lines.push(`## ${r.name}${r.nameLocal ? ` (${r.nameLocal})` : ''}`)
   lines.push('')
-  lines.push(`URL: ${SITE_URL}/recipes/${r.id}`)
+  lines.push(`URL: ${SITE_URL}/recipes/${r.id}/`)
   lines.push('')
   lines.push(r.description)
   lines.push('')
@@ -68,7 +68,7 @@ This file follows the [llms.txt](https://llmstxt.org/) convention: a
 machine-readable index of the site's primary content for LLMs and AI agents.
 
 - Site: ${SITE_URL}/
-- Browse: ${SITE_URL}/recipes
+- Browse: ${SITE_URL}/recipes/
 - Sitemap: ${SITE_URL}/sitemap.xml
 - Full content (all recipes inlined as markdown): ${SITE_URL}/llms-full.txt
 

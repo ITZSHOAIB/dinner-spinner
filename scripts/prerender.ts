@@ -75,7 +75,7 @@ function recipeJsonLd(r: Recipe): object {
       r.dietary.isVegan ? 'https://schema.org/VeganDiet' : null,
       r.dietary.isGlutenFree ? 'https://schema.org/GlutenFreeDiet' : null,
     ].filter(Boolean),
-    url: `${SITE_URL}/recipes/${r.id}`,
+    url: `${SITE_URL}/recipes/${r.id}/`,
   }
 }
 
@@ -156,7 +156,10 @@ const routes: RouteMeta[] = [
     },
   },
   {
-    routePath: '/recipes',
+    // Trailing slash matches what GH Pages serves (recipes/index.html
+    // → /recipes/). Keeps canonical aligned with the actual served URL
+    // and with what's in the sitemap.
+    routePath: '/recipes/',
     outFile: 'recipes/index.html',
     title: 'Browse Recipes — Dinner Spinner',
     description: `Browse ${recipes.length}+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines. Filter by dietary needs, cuisine, and meal type.`,
@@ -164,7 +167,7 @@ const routes: RouteMeta[] = [
     bodyHtml: browseBodyHtml(),
   },
   ...recipes.map((r): RouteMeta => ({
-    routePath: `/recipes/${r.id}`,
+    routePath: `/recipes/${r.id}/`,
     outFile: `recipes/${r.id}/index.html`,
     title: `${r.name} — ${r.cuisine} ${r.mealTypes[0]} recipe`,
     description: `${r.description} Ready in ${r.totalTimeMinutes} minutes · ${r.difficulty} · serves ${r.servings}.`,

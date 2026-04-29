@@ -213,7 +213,7 @@ Thinly sliced eggplant, coated in turmeric and salt, shallow-fried until crispy 
 
 **Cuisine:** Bengali (West Bengal) · **Style:** Fried · **Protein:** Veggies
 **Time:** 15 min total (5 prep + 10 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 1/5
-**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+**Meal:** lunch, dinner, snacks · **Dietary:** Vegan · Gluten-free · Dairy-free
 
 **Ingredients:**
 - 1 large eggplant, sliced into rounds
@@ -367,9 +367,9 @@ URL: https://itzshoaib.github.io/dinner-spinner/recipes/bengali-fish-fry/
 
 Crumb-coated, spiced fish cutlets shallow-fried to a crunchy golden perfection — a Kolkata street-food legend.
 
-**Cuisine:** Bengali (West Bengal) · **Style:** Fried · **Protein:** Fish
+**Cuisine:** Bengali (West Bengal) · **Style:** Dry · **Protein:** Fish
 **Time:** 35 min total (20 prep + 15 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 3/5
-**Meal:** snacks, dinner · **Dietary:** Non-Veg · Contains egg · Dairy-free
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Contains egg · Dairy-free
 
 **Ingredients:**
 - 4 bhetki or any firm fish fillets
@@ -672,7 +672,7 @@ Fermented rice soaked overnight in water, served with fried hilsa, green chilli,
 
 **Cuisine:** Bengali (West Bengal) · **Style:** Rice Bowl · **Protein:** Fish
 **Time:** 15 min total (5 prep + 10 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 2/5
-**Meal:** breakfast · **Dietary:** Non-Veg · Gluten-free · Dairy-free
+**Meal:** breakfast, lunch · **Dietary:** Non-Veg · Gluten-free · Dairy-free
 
 **Ingredients:**
 - 2 cups leftover cooked rice
@@ -798,41 +798,6 @@ Crispy, flaky pastry pockets stuffed with spiced cauliflower and peas — Kolkat
 
 **Tips:**
 - Fry on low heat for even cooking and flaky layers.
-
----
-
-## Ghugni (ঘুগনি)
-
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/ghugni/
-
-Spicy dried yellow peas curry topped with coconut and onion — a beloved Kolkata street snack.
-
-**Cuisine:** Bengali (West Bengal) · **Style:** Curry · **Protein:** Lentils
-**Time:** 40 min total (10 prep + 30 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 3/5
-**Meal:** snacks, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
-
-**Ingredients:**
-- 1 cup dried yellow peas, soaked overnight
-- 1 onion, chopped
-- 1 tomato, chopped
-- 1 tsp cumin seeds
-- 1 bay leaf
-- 1 tsp ginger paste
-- 1 tsp red chilli powder
-- 1/2 tsp turmeric
-- 2 tbsp grated coconut
-- 2 tbsp mustard oil
-- Salt to taste
-- Tamarind pulp (optional)
-
-**Steps:**
-1. Boil soaked yellow peas until tender but not mushy. Drain.
-2. Heat mustard oil, temper cumin and bay leaf.
-3. Add onion and fry until golden. Add ginger paste.
-4. Add tomato, turmeric, chilli powder, and salt. Cook 3 minutes.
-5. Add cooked peas and mix well.
-6. Simmer for 10 minutes. Add tamarind pulp if desired.
-7. Serve topped with coconut, chopped onion, and green chillies.
 
 ---
 
@@ -1153,40 +1118,6 @@ Kidney beans in a thick, hearty tomato-onion gravy — the ultimate North Indian
 
 ---
 
-## Chole Bhature
-
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/chole-bhature/
-
-Spicy chickpea curry paired with puffy deep-fried bread — a hearty and beloved Punjabi classic.
-
-**Cuisine:** North Indian (Punjab) · **Style:** Bread Meal · **Protein:** Lentils
-**Time:** 55 min total (20 prep + 35 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 3/5
-**Meal:** breakfast, lunch · **Dietary:** Vegetarian
-
-**Ingredients:**
-- 2 cups chickpeas, soaked overnight
-- 2 onions, chopped
-- 2 tomatoes, pureed
-- 1 tbsp chole masala
-- 1 tsp cumin seeds
-- 1 tea bag (for colour)
-- 2 cups maida
-- 1/2 cup yogurt
-- Oil for frying
-- 1 tsp amchur
-- Salt to taste
-
-**Steps:**
-1. Pressure cook chickpeas with a tea bag until soft. Discard tea bag.
-2. Heat oil, temper cumin, fry onions until golden.
-3. Add tomato puree, chole masala, and cook until thick.
-4. Add chickpeas and simmer 15 minutes.
-5. Knead maida with yogurt and water for bhatura dough. Rest 1 hour.
-6. Roll into ovals and deep fry until puffed and golden.
-7. Serve chole with hot bhature, onion rings, and pickle.
-
----
-
 ## Palak Paneer
 
 URL: https://itzshoaib.github.io/dinner-spinner/recipes/palak-paneer/
@@ -1250,39 +1181,6 @@ Marinated paneer and vegetables grilled or baked to smoky perfection — a popul
 4. Grill in oven at 220°C or on a tandoor for 12-15 minutes.
 5. Sprinkle chaat masala and lemon juice.
 6. Serve with mint chutney.
-
----
-
-## Aloo Paratha
-
-URL: https://itzshoaib.github.io/dinner-spinner/recipes/aloo-paratha/
-
-Flaky whole-wheat flatbread stuffed with spiced mashed potatoes — a hearty North Indian breakfast staple.
-
-**Cuisine:** North Indian (Punjab) · **Style:** Bread Meal · **Protein:** Veggies
-**Time:** 40 min total (20 prep + 20 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 2/5
-**Meal:** breakfast, lunch, dinner · **Dietary:** Vegetarian
-
-**Ingredients:**
-- 2 cups whole wheat flour
-- 3 large potatoes, boiled and mashed
-- 1 tsp cumin seeds
-- 2 green chillies, chopped
-- 1/2 tsp amchur
-- 1/2 tsp garam masala
-- Fresh coriander, chopped
-- Ghee for cooking
-- Salt to taste
-
-**Steps:**
-1. Knead wheat flour with water and salt into soft dough. Rest 15 minutes.
-2. Mix mashed potatoes with all spices and coriander for filling.
-3. Roll dough into small discs, place filling, seal and roll gently.
-4. Cook on a hot tawa with ghee until golden on both sides.
-5. Serve with yogurt, pickle, and butter.
-
-**Tips:**
-- Roll gently so the filling does not burst out.
 
 ---
 
@@ -1803,7 +1701,7 @@ URL: https://itzshoaib.github.io/dinner-spinner/recipes/pesarattu/
 
 Green moong dal crepes from Andhra Pradesh — protein-rich, healthy, and wonderfully crispy.
 
-**Cuisine:** South Indian (Andhra Pradesh) · **Style:** Bread Meal · **Protein:** Lentils
+**Cuisine:** South Indian (Andhra Pradesh) · **Style:** Savory · **Protein:** Lentils
 **Time:** 25 min total (10 prep + 15 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 2/5
 **Meal:** breakfast · **Dietary:** Vegan · Gluten-free · Dairy-free
 
@@ -2240,7 +2138,7 @@ URL: https://itzshoaib.github.io/dinner-spinner/recipes/mac-and-cheese/
 
 Elbow macaroni baked in a creamy, gooey cheddar cheese sauce — the ultimate comfort food for all ages.
 
-**Cuisine:** Continental · **Style:** Baked · **Protein:** Veggies
+**Cuisine:** Continental · **Style:** One Pot · **Protein:** Veggies
 **Time:** 35 min total (10 prep + 25 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
 **Meal:** lunch, dinner · **Dietary:** Vegetarian
 
@@ -2708,7 +2606,7 @@ URL: https://itzshoaib.github.io/dinner-spinner/recipes/hummus-platter/
 
 Silky smooth chickpea-tahini dip with olive oil, served with warm pita and crunchy veggies — a perfect sharing plate.
 
-**Cuisine:** Mediterranean · **Style:** Light · **Protein:** Lentils
+**Cuisine:** Middle Eastern · **Style:** Light · **Protein:** Lentils
 **Time:** 10 min total (10 prep + 0 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
 **Meal:** snacks · **Dietary:** Vegan · Dairy-free
 
@@ -4445,3 +4343,1015 @@ A bright Levantine salad of romaine, cucumber, tomato, herbs, and crisp toasted 
 **Tips:**
 - Add the pita at the very end so it stays crunchy.
 - Pomegranate molasses gives the signature tang — worth buying.
+
+---
+
+## Luchi & Aloor Dom (লুচি ও আলুর দম)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/luchi-aloor-dom/
+
+Pillowy deep-fried maida bread paired with a fragrant Bengali baby-potato curry — the iconic Sunday-morning Calcutta breakfast.
+
+**Cuisine:** Bengali (West Bengal) · **Style:** Hearty · **Protein:** Veggies
+**Time:** 45 min total (20 prep + 25 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 2/5
+**Meal:** breakfast · **Dietary:** Vegetarian
+
+**Ingredients:**
+- 2 cups maida (all-purpose flour)
+- 2 tbsp ghee
+- 1/2 tsp salt
+- Warm water to knead
+- 500g baby potatoes, peeled
+- 1 tsp panch phoron
+- 2 bay leaves
+- 1 tsp ginger paste
+- 1 tsp cumin powder
+- 1 tsp coriander powder
+- 1/2 tsp turmeric powder
+- 1 tsp Kashmiri chilli powder
+- 2 tomatoes, pureed
+- 1 tsp sugar
+- 1 tbsp ghee for finishing
+- Salt to taste
+- Oil for deep-frying
+
+**Steps:**
+1. Knead maida with salt, ghee, and warm water into a smooth, slightly stiff dough. Rest 20 minutes.
+2. Boil baby potatoes until just tender, peel, and prick all over with a fork.
+3. Heat ghee in a kadai and shallow-fry the potatoes until lightly golden. Set aside.
+4. Temper panch phoron and bay leaves in the same ghee until fragrant.
+5. Add ginger paste, cumin, coriander, turmeric, and Kashmiri chilli powder. Cook for 30 seconds.
+6. Pour in tomato puree and cook until oil separates. Add potatoes, sugar, and a splash of water.
+7. Simmer covered for 10 minutes until the gravy clings to the potatoes.
+8. Meanwhile, divide the dough into small balls, roll into 4-inch discs, and fry one at a time in hot oil until they puff up. Flip once and drain.
+9. Finish the curry with a teaspoon of fresh ghee. Serve hot with the luchis.
+
+**Tips:**
+- The oil for the luchi should be hot enough that the dough sizzles immediately — too cool and they soak up oil instead of puffing.
+- A pinch of sugar in the aloor dom gravy is the Bengali signature — do not skip it.
+
+---
+
+## Ghugni (ঘুগনি)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/ghugni/
+
+A warming Bengali dried-pea curry tempered with whole spices, finished with chopped onion, green chilli, and a squeeze of lime — equally at home at Sunday breakfast or as Calcutta-street teatime fare.
+
+**Cuisine:** Bengali (West Bengal) · **Style:** Hearty · **Protein:** Lentils
+**Time:** 30 min total (10 prep + 20 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 2/5
+**Meal:** breakfast, snacks · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 1 cup dried yellow peas, soaked overnight
+- 1 tbsp mustard oil
+- 1 bay leaf
+- 1 dried red chilli
+- 1 tsp cumin seeds
+- 1 large onion, finely chopped (plus extra for garnish)
+- 1 tsp ginger paste
+- 1 tomato, finely chopped
+- 1/2 tsp turmeric powder
+- 1 tsp Kashmiri chilli powder
+- 1 tsp cumin-coriander powder
+- 1/2 tsp roasted bhaja masala
+- 1 tsp tamarind pulp
+- Salt to taste
+- Lime wedges, chopped coriander, green chilli to serve
+
+**Steps:**
+1. Pressure-cook the soaked yellow peas with salt and turmeric until tender but not mushy (about 4-5 whistles).
+2. Heat mustard oil and temper bay leaf, dried chilli, and cumin seeds.
+3. Add chopped onion and saute until golden.
+4. Stir in ginger paste, tomato, Kashmiri chilli, and cumin-coriander powder. Cook until oil separates.
+5. Add the cooked peas with their water, tamarind, and adjust salt.
+6. Simmer for 10 minutes until the curry thickens slightly.
+7. Sprinkle bhaja masala, top with raw onion, coriander, green chilli, and serve with lime wedges.
+
+**Tips:**
+- Soak the peas overnight — quick-soak methods make ghugni gritty.
+- A toasted bhaja masala (cumin + chilli + bay) sprinkled at the end gives it the unmistakable Calcutta flavour.
+
+---
+
+## Aloo Paratha (आलू पराठा)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/aloo-paratha/
+
+Whole-wheat flatbreads stuffed with spiced mashed potato and pan-fried with ghee — the Punjabi breakfast that fuels half of north India on weekend mornings.
+
+**Cuisine:** North Indian (Punjab) · **Style:** Hearty · **Protein:** Veggies
+**Time:** 40 min total (20 prep + 20 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 2/5
+**Meal:** breakfast, lunch · **Dietary:** Vegetarian
+
+**Ingredients:**
+- 2 cups whole wheat flour (atta)
+- 1 tbsp oil
+- Warm water to knead
+- 4 medium potatoes, boiled and mashed
+- 1 green chilli, finely chopped
+- 1 tsp ginger, grated
+- 1/2 tsp ajwain
+- 1 tsp amchur
+- 1/2 tsp red chilli powder
+- 1/2 tsp garam masala
+- 2 tbsp coriander leaves, chopped
+- Salt to taste
+- 4 tbsp ghee for cooking
+- Yogurt and pickle to serve
+
+**Steps:**
+1. Knead atta with oil, salt, and warm water into a soft pliable dough. Rest 15 minutes.
+2. Mix mashed potato with green chilli, ginger, ajwain, amchur, chilli powder, garam masala, coriander, and salt. Taste — it should be punchy.
+3. Divide dough into 8 balls. Roll one out into a 4-inch disc, place a heaped tablespoon of filling, and pleat the edges over to seal.
+4. Dust with flour and gently roll out into a 7-inch paratha, easing the rolling pin so the filling does not break through.
+5. Cook on a hot tawa, flipping when bubbles appear. Brush both sides with ghee and press lightly with a spatula until golden brown spots form.
+6. Stack covered with a kitchen towel and serve hot with thick yogurt and pickle.
+
+**Tips:**
+- The filling must be at room temperature and dry — wet potato will tear the paratha.
+- Roll gently and evenly; pressing too hard near the edges pushes the filling out.
+
+---
+
+## Poha (पोहा)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/poha/
+
+Flattened rice tossed with curry leaves, mustard seeds, peanuts, and a squeeze of lime — light, gluten-free, and on the table in twenty minutes.
+
+**Cuisine:** North Indian (Madhya Pradesh / Maharashtra) · **Style:** Light · **Protein:** Veggies
+**Time:** 20 min total (10 prep + 10 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 1/5
+**Meal:** breakfast, snacks · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 2 cups thick poha (flattened rice)
+- 2 tbsp oil
+- 1 tsp mustard seeds
+- 1/2 tsp turmeric powder
+- 12 curry leaves
+- 1/4 cup peanuts
+- 1 onion, finely chopped
+- 2 green chillies, slit
+- 1 medium potato, finely diced (optional)
+- 1 tsp sugar
+- Juice of 1 lime
+- Salt to taste
+- Coriander leaves and sev to garnish
+
+**Steps:**
+1. Rinse poha gently in a colander under running water for 10 seconds. Drain — the flakes should be just damp, not soggy.
+2. Heat oil and crackle the mustard seeds. Add peanuts and fry until deep golden.
+3. Drop in curry leaves and green chillies — let them sputter for 5 seconds.
+4. Add onion and potato. Saute covered for 5-6 minutes until the potato is tender.
+5. Stir in turmeric, sugar, and salt. Mix well.
+6. Fold in the rinsed poha gently — too much stirring breaks the flakes.
+7. Cover and steam for 2 minutes on the lowest heat. Switch off, squeeze in lime juice, and toss.
+8. Garnish with coriander and a handful of crisp sev. Serve immediately.
+
+**Tips:**
+- Use thick poha (jada poha) — thin poha turns to mush when rinsed.
+- A pinch of sugar balances the lime — it is the Indore touch.
+
+---
+
+## Chole Bhature (छोले भटूरे)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chole-bhature/
+
+Punjab's iconic weekend feast — chickpeas slow-simmered to a deep mahogany with chai-leaf darkness, served with golden-puffed leavened bhature.
+
+**Cuisine:** North Indian (Punjab) · **Style:** Bread Meal · **Protein:** Lentils
+**Time:** 75 min total (30 prep + 45 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 3/5
+**Meal:** breakfast, lunch · **Dietary:** Vegetarian
+
+**Ingredients:**
+- 1.5 cups dried chickpeas, soaked overnight
+- 2 tea bags
+- 2 bay leaves
+- 4 green cardamoms
+- 1 cinnamon stick
+- 3 tbsp oil
+- 2 onions, finely chopped
+- 2 tomatoes, pureed
+- 1 tbsp ginger-garlic paste
+- 2 tsp chole masala
+- 1 tsp Kashmiri chilli powder
+- 1 tsp cumin powder
+- 1 tsp amchur
+- Salt to taste
+- 2 cups maida
+- 1/4 cup yogurt
+- 1 tsp sugar
+- 1/2 tsp baking soda
+- Warm water to knead
+- Oil for deep-frying
+
+**Steps:**
+1. Pressure-cook soaked chickpeas with the tea bags (in a muslin pouch), bay leaves, cardamoms, cinnamon, and salt for 25 minutes. The tea is what gives chole its dark colour — discard the bags.
+2. Heat oil and saute onions until deep brown.
+3. Add ginger-garlic paste, then tomato puree, and cook until oil separates.
+4. Stir in chole masala, Kashmiri chilli, cumin, and amchur. Cook 1 minute.
+5. Add chickpeas with their cooking liquid and simmer for 15 minutes, mashing some chickpeas against the side to thicken the gravy.
+6. For the bhature, knead maida with yogurt, sugar, baking soda, and warm water into a soft elastic dough. Rest covered for at least 30 minutes (longer is better).
+7. Divide into 8 balls and roll each into an oval, about 6 inches long.
+8. Slip one at a time into hot oil. Press gently with the back of a slotted spoon — it should puff up immediately. Flip once and drain.
+9. Serve the chole hot, topped with sliced onion, green chilli, and a wedge of lime, with hot bhature on the side.
+
+**Tips:**
+- The tea bags are the secret — without them you get pale chana, not chole.
+- Bhature dough wants warmth and time; let it rest at least an hour for the best puff.
+
+---
+
+## Congee (粥)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/congee/
+
+A silky, savoury rice porridge simmered until the grains break down — gentle on the stomach, endlessly customisable with toppings like soy, ginger, scallion, and chilli oil.
+
+**Cuisine:** Chinese (Southern China) · **Style:** Light · **Protein:** Veggies
+**Time:** 45 min total (5 prep + 40 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
+**Meal:** breakfast · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 1 cup short-grain rice (or jasmine rice)
+- 8 cups water or vegetable stock
+- 1-inch ginger, julienned
+- 1 tsp salt
+- White pepper to taste
+- 4 spring onions, finely sliced
+- 2 tbsp soy sauce
+- 1 tbsp toasted sesame oil
+- Chilli oil to serve
+- Crispy fried shallots or peanuts to garnish
+
+**Steps:**
+1. Rinse the rice until the water runs almost clear.
+2. Combine rice, water, ginger, and salt in a heavy pot. Bring to a boil, then reduce to a gentle simmer.
+3. Cook uncovered, stirring every 5-7 minutes, for 35-40 minutes until the rice has broken down into a creamy porridge. Add more water if it gets too thick.
+4. Taste and season with white pepper and more salt if needed.
+5. Ladle into bowls and dress with soy, sesame oil, spring onions, chilli oil, and crispy shallots or peanuts at the table.
+
+**Tips:**
+- Stirring occasionally is what releases the starch and gives congee its silky texture — do not skip it.
+- The toppings are the dish — set out a few options and let everyone build their own bowl.
+
+---
+
+## Scallion Pancake (葱油饼)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/scallion-pancake/
+
+Layered, pan-fried wheat dough rolled with sesame oil and finely chopped scallion — flaky on the edges, chewy in the centre.
+
+**Cuisine:** Chinese (Northern China) · **Style:** Savory · **Protein:** Veggies
+**Time:** 30 min total (15 prep + 15 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 1/5
+**Meal:** breakfast, snacks · **Dietary:** Vegan · Dairy-free
+
+**Ingredients:**
+- 2 cups maida (all-purpose flour)
+- 3/4 cup boiling water
+- 1/4 cup cold water
+- 1/2 tsp salt
+- 3 tbsp toasted sesame oil
+- 2 tbsp neutral oil
+- 6 spring onions, finely sliced
+- 1 tsp salt for filling
+- 2 tbsp white sesame seeds
+- Oil for pan-frying
+- Soy + black vinegar dipping sauce to serve
+
+**Steps:**
+1. Mix flour and salt. Pour in boiling water while stirring with chopsticks. Add cold water and knead into a smooth dough. Cover and rest 30 minutes — this hot-water dough is what gives the chew.
+2. Divide into 4 balls. Roll one out into a 9-inch thin round.
+3. Brush with sesame oil, sprinkle salt, scatter spring onions and sesame seeds across the surface.
+4. Roll the dough up into a tight log, then coil the log into a snail. Tuck the end underneath. Flatten gently with your palm.
+5. Roll out into a 7-inch round about 1/4 inch thick — the layers will show through.
+6. Heat oil in a non-stick pan over medium. Cook each pancake for 2-3 minutes per side, pressing with a spatula until deeply golden and crisp.
+7. Cut into wedges and serve hot with the dipping sauce.
+
+**Tips:**
+- Boiling water in the dough is non-negotiable — cold-water dough turns out tough and bready.
+- Roll thin and pan-fry slowly: the flakiness comes from the layered fat between the leaves of dough.
+
+---
+
+## Paneer Bhurji
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/paneer-bhurji/
+
+Crumbled paneer scrambled with onion, tomato, green chilli, and turmeric — a fifteen-minute protein hit that pairs with anything from toast to roti.
+
+**Cuisine:** North Indian (Punjab / Delhi) · **Style:** Dry · **Protein:** Paneer
+**Time:** 15 min total (5 prep + 10 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 2/5
+**Meal:** breakfast, lunch, dinner · **Dietary:** Vegetarian · Gluten-free
+
+**Ingredients:**
+- 250g paneer, crumbled
+- 2 tbsp oil
+- 1 tsp cumin seeds
+- 1 large onion, finely chopped
+- 2 green chillies, finely chopped
+- 1 tsp ginger-garlic paste
+- 2 tomatoes, finely chopped
+- 1/2 tsp turmeric powder
+- 1 tsp Kashmiri chilli powder
+- 1/2 tsp garam masala
+- 1/2 tsp cumin powder
+- Salt to taste
+- 2 tbsp coriander leaves, chopped
+
+**Steps:**
+1. Heat oil and crackle cumin seeds.
+2. Add onion and green chilli. Saute until the onion turns translucent.
+3. Stir in ginger-garlic paste and cook for 30 seconds.
+4. Add tomatoes, turmeric, Kashmiri chilli, cumin powder, and salt. Cook until the tomatoes break down completely, about 4 minutes.
+5. Tip in the crumbled paneer and toss gently to coat — overworking turns the paneer rubbery.
+6. Cook for 2 more minutes, sprinkle garam masala, and finish with coriander.
+7. Serve hot with toast, roti, or stuffed in a pav.
+
+**Tips:**
+- Use fresh paneer — frozen tends to stay grainy in the bhurji.
+- Stop cooking the moment paneer is heated through; the longer it sits in the pan the chewier it gets.
+
+---
+
+## Phodnicha Bhaat (फोडणीचा भात)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/phodnicha-bhaat/
+
+Maharashtra's clever fix for leftover rice — tempered with mustard, curry leaves, asafoetida, and turmeric, finished with peanuts and a squeeze of lime.
+
+**Cuisine:** Maharashtrian (Maharashtra) · **Style:** Rice Bowl · **Protein:** Veggies
+**Time:** 15 min total (5 prep + 10 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 2/5
+**Meal:** lunch · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 3 cups cooked, cooled rice
+- 2 tbsp oil
+- 1 tsp mustard seeds
+- 1/2 tsp cumin seeds
+- 1/4 tsp asafoetida
+- 10 curry leaves
+- 2 green chillies, slit
+- 1/4 cup peanuts
+- 1/2 tsp turmeric powder
+- 1/2 tsp red chilli powder
+- Salt to taste
+- Juice of 1/2 lime
+- 2 tbsp coriander leaves, chopped
+
+**Steps:**
+1. Loosen the cooked rice with your fingers so the grains separate without breaking.
+2. Heat oil and crackle mustard seeds. Add cumin, asafoetida, curry leaves, green chillies, and peanuts. Fry until peanuts turn deep golden.
+3. Stir in turmeric, chilli powder, and salt.
+4. Add the rice and toss gently with a flat spoon to coat every grain in the tempering.
+5. Cover for 1 minute on the lowest heat to warm through.
+6. Switch off, squeeze in lime juice, and finish with coriander. Serve with thick yogurt or pickle.
+
+**Tips:**
+- Day-old rice from the fridge works best — fresh hot rice clumps and breaks.
+- Hold back on extra water; this is a dry tempered rice, not a pulao.
+
+---
+
+## Bagara Khana (بگارا کھانا)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/bagara-khana/
+
+Hyderabad's fragrant everyday rice — basmati simmered with whole spices, fried onions, and a hint of ghee, traditionally served alongside a thin daal or shorba.
+
+**Cuisine:** Hyderabadi (Hyderabad) · **Style:** Rice Bowl · **Protein:** Veggies
+**Time:** 25 min total (5 prep + 20 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Gluten-free
+
+**Ingredients:**
+- 1.5 cups basmati rice, soaked 20 minutes
+- 2 tbsp ghee
+- 1 tbsp oil
+- 1 bay leaf
+- 4 cloves
+- 4 green cardamoms
+- 1 black cardamom
+- 1-inch cinnamon stick
+- 1 tsp cumin seeds
+- 1 large onion, thinly sliced
+- 1 tsp ginger-garlic paste
+- 15 curry leaves
+- 2 green chillies, slit
+- 3 cups water
+- 1 tsp salt
+- 1 tbsp lime juice
+- 2 tbsp coriander leaves, chopped
+
+**Steps:**
+1. Heat ghee and oil. Crackle cumin, bay leaf, cloves, cardamoms, and cinnamon.
+2. Add sliced onion and fry until deeply golden — this colour and aroma is what bagara means.
+3. Stir in ginger-garlic paste, curry leaves, and green chillies. Cook 30 seconds.
+4. Drain the soaked rice and add to the pot. Toss gently for 1 minute to coat each grain.
+5. Pour in water, lime juice, and salt. Bring to a rolling boil.
+6. Cover, drop heat to the lowest setting, and steam for 12-14 minutes until the rice is just done.
+7. Switch off, rest covered for 5 minutes, then fluff with a fork.
+8. Garnish with coriander and serve hot with daal or a thin shorba.
+
+**Tips:**
+- Soaking and proper rest are the difference between fluffy and gummy basmati — do not skip either.
+- A pinch of saffron in warm milk drizzled over the top elevates this from everyday to wedding-worthy.
+
+---
+
+## Hak (Kashmiri Greens) (हाक)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/hak-kashmiri-greens/
+
+Kashmir's everyday leafy-greens stew — collards or spinach simmered with mustard oil, asafoetida, and a single dried Kashmiri chilli for warmth, served over rice.
+
+**Cuisine:** Kashmiri (Kashmir Valley) · **Style:** Curry · **Protein:** Veggies
+**Time:** 25 min total (5 prep + 20 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 600g collard greens (or spinach), washed and torn
+- 3 tbsp mustard oil
+- 1/4 tsp asafoetida
+- 2 dried Kashmiri chillies, halved
+- 1 tsp ginger powder (saunth)
+- 1/2 tsp fennel powder
+- 2 cups water
+- Salt to taste
+- Steamed rice to serve
+
+**Steps:**
+1. Heat mustard oil in a heavy pot until it just begins to smoke, then reduce the heat.
+2. Drop in asafoetida and the dried chillies. Let them sizzle for 10 seconds — do not let them burn.
+3. Add the greens and toss in the oil to coat.
+4. Sprinkle in ginger powder, fennel, and salt. Pour in the water.
+5. Cover and simmer for 12-15 minutes until the greens are completely tender.
+6. Uncover and reduce until the broth tightens slightly but stays brothy.
+7. Serve over steamed rice.
+
+**Tips:**
+- Authentic hak is brothy, not thick — the cooking liquid is the dish, not a leftover.
+- A single Kashmiri chilli is for colour and gentle heat; do not substitute with hotter varieties.
+
+---
+
+## Lemon-Garlic Roast Chicken
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/lemon-garlic-roast-chicken/
+
+A whole chicken brined briefly with lemon, garlic, and oregano, then roasted until the skin is mahogany-crisp and the juices run clear — Mediterranean Sunday-lunch territory.
+
+**Cuisine:** Mediterranean (Greece / Mediterranean coast) · **Style:** Grilled · **Protein:** Chicken
+**Time:** 75 min total (15 prep + 60 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 1/5
+**Meal:** dinner · **Dietary:** Non-Veg · Gluten-free
+
+**Ingredients:**
+- 1.5 kg whole chicken
+- 2 lemons (1 halved, 1 zested + juiced)
+- 8 garlic cloves, smashed
+- 2 tbsp olive oil
+- 2 tbsp butter, softened
+- 1 tbsp dried oregano
+- 1 tsp smoked paprika
+- 1 tsp sea salt
+- 1 tsp black pepper
+- 4 sprigs fresh thyme
+- 500g baby potatoes, halved
+- 1 red onion, quartered
+
+**Steps:**
+1. Preheat oven to 200°C. Pat the chicken completely dry with paper towels — dry skin is the secret to crispness.
+2. Mix softened butter with lemon zest, half the oregano, paprika, and salt. Rub all over and under the skin.
+3. Stuff the cavity with the halved lemon, smashed garlic, and thyme.
+4. Toss potatoes and onion with olive oil, salt, remaining oregano, and lemon juice. Spread in a roasting tray and place the chicken on top.
+5. Roast for 50-60 minutes, basting twice, until the juices run clear and the skin is deeply golden. A thigh probe should read 75°C.
+6. Rest the chicken under foil for 10 minutes before carving. Spoon the pan juices over the potatoes.
+7. Serve with a wedge of fresh lemon and a scatter of olives if you have them.
+
+**Tips:**
+- Brine the bird for an hour in salty lemon water if you have time — even better skin, juicier meat.
+- Save the carcass and pan drippings for stock — Mediterranean cooks waste nothing.
+
+---
+
+## Levantine Chopped Salad
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/levantine-chopped-salad/
+
+Sun-warm tomatoes, cucumber, red onion, kalamata olives, and crumbled feta tossed in a sharp lemon-olive-oil dressing — the bowl that anchors every Mediterranean lunch table.
+
+**Cuisine:** Middle Eastern (Levantine Mediterranean) · **Style:** Light · **Protein:** Veggies
+**Time:** 15 min total (15 prep + 0 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
+**Meal:** lunch · **Dietary:** Vegetarian · Gluten-free
+
+**Ingredients:**
+- 4 ripe tomatoes, cut into wedges
+- 2 Persian cucumbers, sliced thick
+- 1/2 red onion, very thinly sliced
+- 150g feta, broken into chunks
+- 1/2 cup kalamata olives
+- 3 tbsp extra-virgin olive oil
+- 2 tbsp red wine vinegar
+- 1 tbsp lemon juice
+- 1 tsp dried oregano
+- Salt and black pepper to taste
+- A handful of fresh mint leaves
+
+**Steps:**
+1. Soak the sliced red onion in cold water for 5 minutes to soften its bite, then drain well.
+2. In a wide shallow bowl, combine tomatoes, cucumber, drained onion, and olives.
+3. Whisk olive oil, vinegar, lemon juice, oregano, salt, and pepper into a brisk dressing.
+4. Pour over the vegetables and toss gently — you want chunks intact, not bruised.
+5. Crumble the feta over the top and scatter the mint leaves.
+6. Serve immediately, ideally outdoors with bread to mop up the juices.
+
+**Tips:**
+- Use the ripest tomatoes you can find — under-ripe ones make the salad watery and flat.
+- Drizzle the olive oil with a generous hand; this dish lives or dies on its dressing.
+
+---
+
+## Greek Lamb Stifado
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/greek-lamb-stifado/
+
+A slow-simmered Peloponnesian lamb stew with pearl onions, red wine, cinnamon, and tomato — sweet, deep, and built for cold-weather Sundays.
+
+**Cuisine:** Mediterranean (Peloponnese, Greece) · **Style:** One Pot · **Protein:** Mutton
+**Time:** 130 min total (20 prep + 110 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 1/5
+**Meal:** dinner · **Dietary:** Non-Veg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 800g lamb shoulder, cut into 4cm chunks
+- 500g pearl onions or shallots, peeled
+- 4 tbsp olive oil
+- 4 garlic cloves, smashed
+- 2 bay leaves
+- 1 cinnamon stick
+- 4 cloves
+- 1/2 tsp allspice
+- 400g tinned tomatoes, crushed
+- 2 tbsp tomato paste
+- 1 cup dry red wine
+- 2 tbsp red wine vinegar
+- 1 tbsp brown sugar
+- 1 cup beef or lamb stock
+- 1 sprig rosemary
+- Salt and pepper to taste
+- Crumbled feta and parsley to serve
+
+**Steps:**
+1. Pat the lamb dry, season with salt and pepper. Brown in batches in olive oil until deeply coloured. Set aside.
+2. In the same pot, soften the pearl onions whole until lightly golden. Add the smashed garlic for the last minute.
+3. Tip in the bay leaves, cinnamon, cloves, and allspice. Toast for 30 seconds.
+4. Stir in tomato paste and cook for 1 minute. Deglaze with red wine, scraping up the fond.
+5. Return the lamb. Add tinned tomatoes, vinegar, sugar, stock, and rosemary. Salt to taste.
+6. Cover and simmer on the lowest heat for 90 minutes, or transfer to a 160°C oven, until the lamb falls apart and the sauce is glossy.
+7. Adjust seasoning. Rest off heat for 10 minutes — the dish improves as it sits.
+8. Serve in deep bowls with crumbled feta, parsley, and crusty bread.
+
+**Tips:**
+- Pearl onions are the soul of stifado — keep them whole; they should hold their shape and turn translucent.
+- Make it a day ahead if you can. The flavours deepen overnight in the fridge.
+
+---
+
+## Tabbouleh
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/tabbouleh/
+
+A Lebanese herb salad more parsley than grain — finely chopped flat-leaf parsley, mint, tomato, and cucumber bound by lemon and olive oil with just a whisper of bulgur.
+
+**Cuisine:** Middle Eastern (Lebanon / Levant) · **Style:** Light · **Protein:** Veggies
+**Time:** 20 min total (20 prep + 0 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
+**Meal:** lunch · **Dietary:** Vegan · Dairy-free
+
+**Ingredients:**
+- 1/4 cup fine bulgur (cracked wheat)
+- 4 cups flat-leaf parsley, very finely chopped (about 4 large bunches)
+- 1 cup fresh mint leaves, finely chopped
+- 4 ripe tomatoes, finely diced
+- 1 cucumber, finely diced
+- 4 spring onions, finely sliced
+- 1/3 cup extra-virgin olive oil
+- 1/4 cup lemon juice (about 2 lemons)
+- 1/2 tsp ground allspice
+- Salt to taste
+- Romaine lettuce leaves for scooping
+
+**Steps:**
+1. Soak the bulgur in 1/2 cup boiling water for 10 minutes until softened, then drain and squeeze dry.
+2. Combine the parsley, mint, diced tomato, cucumber, and spring onion in a wide bowl.
+3. Add the bulgur, allspice, and salt.
+4. Whisk olive oil and lemon juice together, pour over the salad, and toss thoroughly.
+5. Taste and adjust — tabbouleh should be sharp with lemon and bright with herbs.
+6. Let it sit for 10 minutes so the bulgur drinks the dressing.
+7. Serve with romaine leaves on the side; scoop the salad into the leaves like little cups.
+
+**Tips:**
+- Tabbouleh is a parsley salad with bulgur, not the other way round. Keep grain quantities low and herb quantities high.
+- Use a sharp knife and chop by hand — the food processor turns the parsley into baby food.
+
+---
+
+## Shorbat Adas (Lentil Soup) (شوربة عدس)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/shorbat-adas/
+
+The most-loved soup of the Levant — red lentils simmered with cumin and onion until silky, finished with lemon and a swirl of olive oil. The bowl that breaks Ramadan fasts across the region.
+
+**Cuisine:** Middle Eastern (Lebanon / Egypt) · **Style:** Soup · **Protein:** Lentils
+**Time:** 40 min total (10 prep + 30 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
+**Meal:** dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 1.5 cups red lentils (masoor dal), rinsed
+- 6 cups water or vegetable stock
+- 1 large onion, chopped
+- 4 garlic cloves, minced
+- 2 carrots, diced
+- 3 tbsp olive oil
+- 2 tsp ground cumin
+- 1 tsp turmeric
+- 1/2 tsp paprika
+- 2 lemons, juiced
+- Salt and black pepper
+- Crispy fried pita and chopped parsley to serve
+
+**Steps:**
+1. Heat olive oil in a heavy pot. Soften the onion until just translucent.
+2. Add garlic, carrot, cumin, turmeric, and paprika. Cook 2 minutes until aromatic.
+3. Tip in the rinsed lentils, then pour over the stock. Bring to a boil.
+4. Reduce heat and simmer uncovered for 25-30 minutes, stirring occasionally, until the lentils have collapsed into a silky soup.
+5. Blend until smooth (or partially blend for texture). Loosen with hot water if it has thickened too much.
+6. Stir in lemon juice, salt, and pepper. Taste — it should be bright and savoury, never flat.
+7. Ladle into bowls and top with crispy pita pieces, parsley, and a generous drizzle of olive oil.
+
+**Tips:**
+- Add the lemon juice off the heat — boiling kills its brightness.
+- Sumac on top is non-traditional but adds a beautiful tart finish.
+
+---
+
+## Tacos al Pastor
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/tacos-al-pastor/
+
+Mexico City's answer to shawarma — chicken (or pork) marinated in achiote, dried chillies, and pineapple juice, charred and tucked into corn tortillas with onion, coriander, and a wedge of lime.
+
+**Cuisine:** Mexican (Mexico City) · **Style:** Grilled · **Protein:** Chicken
+**Time:** 60 min total (30 prep + 25 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 3/5
+**Meal:** dinner · **Dietary:** Non-Veg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 600g boneless chicken thigh, sliced thin
+- 4 dried guajillo chillies, soaked
+- 2 dried ancho chillies, soaked
+- 1 cup fresh pineapple, diced (half for marinade, half for grilling)
+- 4 garlic cloves
+- 1 tbsp achiote paste
+- 2 tbsp white vinegar
+- 1 tbsp lime juice
+- 1 tsp ground cumin
+- 1 tsp dried oregano
+- 1 tsp salt
+- 12 small corn tortillas
+- 1 white onion, finely diced
+- 1 cup chopped coriander leaves
+- 4 limes, cut into wedges
+- Salsa verde to serve
+
+**Steps:**
+1. Drain the soaked chillies. Blend with half the pineapple, garlic, achiote paste, vinegar, lime juice, cumin, oregano, and salt into a thick marinade.
+2. Coat the chicken in the marinade and refrigerate for at least 2 hours, ideally overnight.
+3. Heat a heavy pan or grill over high heat. Cook the chicken in batches, charring the edges. Set aside to rest.
+4. In the same pan, char the remaining pineapple chunks until edges blacken. Slice into smaller pieces.
+5. Slice the rested chicken into thin strips.
+6. Warm the corn tortillas directly on the flame or in a dry pan until pliable.
+7. Build each taco with chicken, charred pineapple, diced onion, and coriander.
+8. Serve with lime wedges and salsa verde.
+
+**Tips:**
+- Char the marinade onto the meat — that crusty edge is the al pastor signature.
+- The pineapple is non-negotiable. Its enzymes tenderise the meat and balance the chilli heat.
+
+---
+
+## Pozole Rojo
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/pozole-rojo/
+
+A celebratory red Mexican stew of hominy and chicken in a guajillo-chilli broth, finished at the table with shredded lettuce, radish, oregano, and lime — the soup of national holidays.
+
+**Cuisine:** Mexican (Jalisco, Mexico) · **Style:** Soup · **Protein:** Chicken
+**Time:** 90 min total (20 prep + 70 cook) · **Difficulty:** medium · **Servings:** 6 · **Spice:** 2/5
+**Meal:** dinner · **Dietary:** Non-Veg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 1 kg bone-in chicken thighs
+- 8 cups water
+- 1 large onion, halved
+- 6 garlic cloves
+- 2 bay leaves
+- 1 tsp Mexican oregano
+- 600g cooked hominy (or 2 tins, drained)
+- 6 dried guajillo chillies
+- 3 dried ancho chillies
+- 2 dried chiles de arbol (optional, for heat)
+- 2 tsp cumin
+- Salt to taste
+- 1/4 head romaine lettuce, shredded
+- 6 radishes, thinly sliced
+- 1 white onion, finely diced (to serve)
+- 4 limes, wedged
+- Tostadas and dried oregano to serve
+
+**Steps:**
+1. Simmer chicken with water, halved onion, 4 garlic cloves, bay leaves, and a teaspoon of oregano for 35 minutes until tender. Strain and reserve the broth. Shred the chicken.
+2. Toast the dried chillies in a dry pan until fragrant — do not burn. Soak in hot water for 15 minutes.
+3. Drain the chillies and blend with remaining garlic, cumin, a splash of soaking liquid, and salt into a smooth paste. Strain through a sieve for silkiness.
+4. Heat a tablespoon of oil in the cleaned pot. Fry the chilli paste for 5 minutes until it darkens.
+5. Pour in the reserved broth, add the hominy, and bring to a gentle simmer for 20 minutes.
+6. Return the shredded chicken. Adjust salt. The broth should be deep red, savoury, and gently spiced.
+7. Ladle into deep bowls. Set out lettuce, radish, raw onion, lime wedges, oregano, and tostadas at the table. Each diner builds their own bowl.
+
+**Tips:**
+- Hominy is non-negotiable — its chewy bite is what makes pozole pozole. Tinned is fine.
+- The garnishes are the dish. Serve them generously and let everyone customise.
+
+---
+
+## Spaghetti Aglio e Olio
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/aglio-e-olio/
+
+Roman dinner-after-the-bar pasta — spaghetti tossed with slowly bloomed garlic, olive oil, chilli flakes, and parsley. Five ingredients, fifteen minutes, no apologies.
+
+**Cuisine:** Italian (Rome / Naples) · **Style:** One Pot · **Protein:** Veggies
+**Time:** 15 min total (5 prep + 10 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 1/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Dairy-free
+
+**Ingredients:**
+- 200g spaghetti
+- 1/3 cup good olive oil
+- 6 garlic cloves, very thinly sliced
+- 1 tsp red chilli flakes (peperoncino)
+- 1/4 cup flat-leaf parsley, finely chopped
+- 1 tsp salt for the water (plus extra)
+- Black pepper
+- A wedge of lemon (optional)
+
+**Steps:**
+1. Bring a wide pot of water to a boil and salt it well — it should taste like the sea. Drop the spaghetti.
+2. While the pasta cooks, warm the olive oil in a wide pan over the lowest heat. Add the sliced garlic and let it bloom slowly for 3-4 minutes until just barely golden — never brown, or it turns bitter.
+3. Stir in the chilli flakes and toast for 10 seconds.
+4. When the pasta is 1 minute shy of al dente, scoop out 1/2 cup of the starchy cooking water before draining.
+5. Tip the drained pasta into the garlic oil pan. Add a splash of pasta water and toss vigorously for 1 minute — the starch will emulsify the oil into a glossy sauce that clings.
+6. Off the heat, fold in the parsley and a generous grind of pepper. Taste and adjust salt.
+7. Plate immediately. A squeeze of lemon at the end is non-Italian but very welcome.
+
+**Tips:**
+- The garlic must bloom, not brown. If it browns, start over — bitter garlic ruins the dish.
+- Pasta water is the secret sauce. Without it, the oil sits on top instead of coating.
+
+---
+
+## Pad Krapow Gai (ผัดกะเพราไก่)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/pad-krapow-gai/
+
+Bangkok's ultimate hawker-stall street food — minced chicken stir-fried hot and fast with garlic, bird's eye chillies, fish sauce, and a fistful of holy basil, crowned with a crisp-edged fried egg.
+
+**Cuisine:** Thai (Bangkok) · **Style:** Dry · **Protein:** Chicken
+**Time:** 15 min total (5 prep + 10 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Contains egg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 400g chicken mince (or finely chopped thigh)
+- 6 garlic cloves
+- 4-6 bird's eye chillies (Thai chillies)
+- 2 tbsp neutral oil
+- 2 tbsp oyster sauce
+- 1.5 tbsp fish sauce
+- 1 tbsp light soy sauce
+- 1 tsp dark soy sauce
+- 1 tsp palm sugar (or brown sugar)
+- 2 cups holy basil leaves (Thai basil if you can find it)
+- 2 eggs
+- Steamed jasmine rice to serve
+
+**Steps:**
+1. Pound or pulse the garlic and chillies into a coarse paste using a mortar or food processor.
+2. Heat oil in a wok over the highest heat. Add the garlic-chilli paste and stir for 15 seconds until aromatic.
+3. Tip in the chicken mince. Break it up with the spatula and stir-fry for 2 minutes until it loses its raw colour.
+4. Add oyster sauce, both soy sauces, fish sauce, and palm sugar. Toss for 1 minute — the chicken should glaze.
+5. Switch off the heat and fold in the basil leaves; they should wilt from residual heat, not cook.
+6. In a separate pan, fry the eggs in hot oil so the edges go crispy and lacy while the yolk stays runny.
+7. Pile the chicken over rice, slide a fried egg on top, and serve with extra fish sauce on the side.
+
+**Tips:**
+- Holy basil is the right herb if you can find it. Thai basil is the close substitute. Italian basil will not taste like krapow.
+- The wok must be screaming hot — this dish lives or dies on speed.
+
+---
+
+## Oyakodon (親子丼)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/oyakodon/
+
+Japan's tender "parent and child" rice bowl — chicken simmered in a sweet-savoury dashi-soy broth, then bound in just-set egg, slid over hot rice. Twenty minutes, one pan, zero fuss.
+
+**Cuisine:** Japanese (Japan) · **Style:** Rice Bowl · **Protein:** Chicken
+**Time:** 20 min total (5 prep + 15 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 1/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Contains egg · Dairy-free
+
+**Ingredients:**
+- 300g boneless chicken thigh, sliced bite-sized
+- 1 medium onion, sliced into half-moons
+- 4 large eggs, lightly beaten
+- 1 cup dashi stock (or chicken stock)
+- 3 tbsp soy sauce
+- 2 tbsp mirin
+- 1 tbsp sake
+- 1 tbsp sugar
+- 2 cups freshly cooked Japanese short-grain rice
+- 2 spring onions, finely sliced
+- Shichimi togarashi or nori strips to garnish
+
+**Steps:**
+1. In a small wide pan (a donburi pan or 20cm skillet), combine dashi, soy sauce, mirin, sake, and sugar. Bring to a gentle simmer.
+2. Add the sliced onion and cook for 3-4 minutes until softened.
+3. Lay in the chicken pieces in a single layer. Simmer 4-5 minutes until just cooked through — do not overcrowd or boil hard.
+4. Pour two-thirds of the beaten egg over the chicken in a slow drizzle. Cover and cook for 30 seconds.
+5. Drizzle the remaining egg over and cover again for 20-30 seconds — the top should be just barely set, the centre still glossy and trembling.
+6. Slide the whole thing carefully onto a bowl of hot rice.
+7. Top with spring onion and a sprinkle of shichimi or nori. Eat immediately.
+
+**Tips:**
+- The eggs should be barely cooked — Japanese oyakodon is meant to be loose and silky. If it sets firm, you have overcooked it.
+- Use thigh, not breast. Breast turns dry in the simmer.
+
+---
+
+## Chicken Quesadilla
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/chicken-quesadilla/
+
+Crisp-edged tortillas griddled around melted cheese, smoky chipotle chicken, and charred peppers — a fifteen-minute weeknight rescue dish that everyone at the table will eat.
+
+**Cuisine:** Mexican (Mexico / Tex-Mex) · **Style:** Bread Meal · **Protein:** Chicken
+**Time:** 15 min total (5 prep + 10 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 2/5
+**Meal:** lunch · **Dietary:** Non-Veg · Gluten-free
+
+**Ingredients:**
+- 200g cooked shredded chicken
+- 4 corn tortillas (8-inch)
+- 1.5 cups shredded Monterey Jack or mozzarella
+- 1 red bell pepper, thinly sliced
+- 1/2 onion, thinly sliced
+- 1 chipotle in adobo, minced (plus 1 tsp adobo sauce)
+- 1 tsp ground cumin
+- 2 tbsp butter
+- Salt to taste
+- Sour cream, salsa, and lime wedges to serve
+
+**Steps:**
+1. Toss the shredded chicken with chipotle, adobo sauce, cumin, and salt.
+2. Heat 1 tsp butter in a large pan. Cook the bell pepper and onion until just charred at the edges, about 4 minutes. Set aside.
+3. Wipe the pan and add another knob of butter. Lay one tortilla flat.
+4. Sprinkle a quarter of the cheese over the tortilla, then top with chicken, peppers, onions, and another quarter of the cheese.
+5. Cover with a second tortilla. Press gently with a spatula. Cook 2 minutes per side until the tortillas are deeply golden and the cheese has melted right through.
+6. Slide onto a board, rest 1 minute, then cut into 4 wedges.
+7. Repeat with the second quesadilla. Serve hot with sour cream, salsa, and a wedge of lime.
+
+**Tips:**
+- Do not overstuff — too much filling means the cheese never seals the two tortillas together.
+- Press lightly with a spatula while cooking — it forces the cheese into every gap and crisps the outside.
+
+---
+
+## Aloo Tikki Chaat
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/aloo-tikki-chaat/
+
+Delhi's crisp golden potato patties soaked in cold yogurt, drizzled with sweet tamarind and green coriander chutneys, and showered with sev, pomegranate, and chaat masala — every bite a different texture.
+
+**Cuisine:** North Indian (Delhi) · **Style:** Chaat · **Protein:** Veggies
+**Time:** 30 min total (15 prep + 15 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 3/5
+**Meal:** snacks · **Dietary:** Vegetarian · Gluten-free
+
+**Ingredients:**
+- 5 medium potatoes, boiled and grated
+- 3 tbsp cornflour
+- 1 green chilli, finely chopped
+- 1 tbsp ginger, grated
+- 1 tsp roasted cumin powder
+- 1 tsp chaat masala
+- Salt to taste
+- 4 tbsp ghee or oil for shallow-frying
+- 1.5 cups thick yogurt, whisked smooth
+- 1/3 cup tamarind chutney
+- 1/4 cup green coriander-mint chutney
+- 1/2 cup sev
+- 1/4 cup pomegranate seeds
+- 2 tbsp coriander leaves, chopped
+- Extra chaat masala and roasted cumin powder for sprinkling
+
+**Steps:**
+1. Mix grated potato with cornflour, green chilli, ginger, cumin powder, chaat masala, and salt. The mixture should hold its shape when pressed.
+2. Shape into 8 flat patties about 7cm wide.
+3. Heat ghee in a flat pan and shallow-fry the tikkis on medium heat for 4-5 minutes per side until deeply golden and crisp.
+4. Place 2 tikkis on each plate. Lightly crush them with the back of a spoon.
+5. Pour cold whisked yogurt over the top — generously, it should pool around the edges.
+6. Drizzle tamarind chutney and green chutney in zig-zag lines.
+7. Shower with sev, pomegranate seeds, coriander, and a final dust of chaat masala and roasted cumin.
+8. Serve immediately — chaat is a now-or-never dish.
+
+**Tips:**
+- Cornflour (not regular flour) is what makes the crust shatter-crisp. Do not substitute.
+- Whisk the yogurt cold and runny — thick yogurt sits on top instead of soaking in.
+
+---
+
+## Besan Cheela (बेसन चीला)
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/besan-cheela/
+
+A savoury chickpea-flour pancake, batter-thin and lacy at the edges, studded with onion, tomato, and green chilli — vegan, gluten-free, ready in twenty minutes.
+
+**Cuisine:** North Indian (Punjab / North India) · **Style:** Light · **Protein:** Lentils
+**Time:** 20 min total (5 prep + 15 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 2/5
+**Meal:** breakfast · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 1.5 cups besan (gram flour)
+- 1.5 cups water
+- 1 onion, finely chopped
+- 1 tomato, finely chopped
+- 2 green chillies, finely chopped
+- 1 tbsp ginger, grated
+- 1/4 cup coriander leaves, chopped
+- 1/2 tsp turmeric
+- 1 tsp ajwain (carom seeds)
+- 1/2 tsp red chilli powder
+- 1/2 tsp cumin powder
+- Salt to taste
+- 3 tbsp oil for cooking
+- Green coriander chutney to serve
+
+**Steps:**
+1. Whisk besan with water until completely smooth. The batter should be the consistency of single cream — pourable but not watery.
+2. Stir in onion, tomato, green chilli, ginger, coriander, turmeric, ajwain, red chilli powder, cumin powder, and salt.
+3. Let the batter rest for 5 minutes — this lets the besan hydrate and the spices bloom.
+4. Heat a non-stick tawa over medium. Brush with oil.
+5. Pour a ladle of batter and spread thin in concentric circles. Drizzle a little oil around the edges.
+6. Cook 2 minutes until the underside is golden and the top has set. Flip and cook 1 more minute.
+7. Serve hot with green chutney. Repeat with remaining batter.
+
+**Tips:**
+- Whisk the batter aggressively before resting to avoid lumps. A few seconds of effort spares you a sad cheela.
+- A thin batter and a hot tawa give you the lacy edges. Thick batter = stodgy pancake.
+
+---
+
+## Goan Chicken Cafreal
+
+URL: https://itzshoaib.github.io/dinner-spinner/recipes/goan-chicken-cafreal/
+
+Goa's emerald-green Portuguese-Indian fusion — chicken marinated in a fresh-pounded paste of coriander, green chilli, garlic, and vinegar, then pan-seared until the marinade caramelises into a deep crust.
+
+**Cuisine:** Goan (Goa) · **Style:** Dry · **Protein:** Chicken
+**Time:** 35 min total (15 prep + 20 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 800g chicken thighs, bone-in, skin-on, slashed
+- 2 cups coriander leaves and tender stems
+- 6 green chillies (adjust to taste)
+- 8 garlic cloves
+- 1.5-inch piece ginger
+- 1 tsp cumin seeds
+- 6 black peppercorns
+- 4 cloves
+- 1-inch cinnamon stick
+- 3 tbsp white vinegar (Goan palm vinegar if you can find it)
+- 1 tsp sugar
+- 1 tsp salt
+- 3 tbsp neutral oil
+- 1 lemon, wedged
+- Pao or steamed rice to serve
+
+**Steps:**
+1. Toast cumin, peppercorns, cloves, and cinnamon in a dry pan for 30 seconds until fragrant. Cool.
+2. Blend the toasted spices with coriander, green chillies, garlic, ginger, vinegar, sugar, and salt into a thick bright-green paste.
+3. Coat the chicken thoroughly in the cafreal paste, getting into every slash. Marinate for at least 30 minutes (overnight is better).
+4. Heat oil in a wide heavy pan over medium heat. Lay the chicken skin-side down — do not crowd the pan.
+5. Cook for 6-7 minutes per side, basting with any escaping marinade, until the skin is deeply caramelised and the meat is cooked through.
+6. Reduce the heat and cover for the last 2 minutes if the chicken is thick — this finishes the inside without burning the outside.
+7. Rest for 5 minutes. Serve with lemon wedges and pao to mop up the green-stained pan juices.
+
+**Tips:**
+- Use the herbs whole — coriander stems carry as much flavour as the leaves.
+- A splash of vinegar at the end revives the green colour and the dish's signature sour kick.

@@ -151,12 +151,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/ghugni/</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://itzshoaib.github.io/dinner-spinner/recipes/telebhaja/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -211,12 +205,6 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/chole-bhature/</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://itzshoaib.github.io/dinner-spinner/recipes/palak-paneer/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -224,12 +212,6 @@
   </url>
   <url>
     <loc>https://itzshoaib.github.io/dinner-spinner/recipes/paneer-tikka/</loc>
-    <lastmod>2026-04-29</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/aloo-paratha/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -740,6 +722,156 @@
   </url>
   <url>
     <loc>https://itzshoaib.github.io/dinner-spinner/recipes/fattoush/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/luchi-aloor-dom/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/ghugni/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/aloo-paratha/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/poha/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/chole-bhature/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/congee/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/scallion-pancake/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/paneer-bhurji/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/phodnicha-bhaat/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/bagara-khana/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/hak-kashmiri-greens/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/lemon-garlic-roast-chicken/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/levantine-chopped-salad/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/greek-lamb-stifado/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/tabbouleh/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/shorbat-adas/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/tacos-al-pastor/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/pozole-rojo/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/aglio-e-olio/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/pad-krapow-gai/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/oyakodon/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/chicken-quesadilla/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/aloo-tikki-chaat/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/besan-cheela/</loc>
+    <lastmod>2026-04-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://itzshoaib.github.io/dinner-spinner/recipes/goan-chicken-cafreal/</loc>
     <lastmod>2026-04-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

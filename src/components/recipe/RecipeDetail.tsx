@@ -14,44 +14,10 @@ import { scaleIngredient } from '../../lib/scaleQuantity'
 import { useSeo } from '../../lib/useSeo'
 import { CookMode } from './CookMode'
 import { IngredientChip } from './IngredientChip'
+import { recipeJsonLd } from '../../lib/seo'
 import { QUICK_COMMERCE_PLATFORMS } from '../../lib/shoppingLinks'
 import { shareIngredients, canNativeShare } from '../../lib/shareIngredients'
 import type { Recipe } from '../../data/types'
-
-// Minutes → ISO-8601 duration (PT20M, PT1H30M) for schema.org Recipe.
-function isoDuration(mins: number): string {
-  if (mins <= 0) return 'PT0M'
-  const h = Math.floor(mins / 60)
-  const m = mins % 60
-  return `PT${h ? `${h}H` : ''}${m ? `${m}M` : ''}`
-}
-
-function recipeSchema(r: Recipe) {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Recipe',
-    name: r.name,
-    description: r.description,
-    recipeCuisine: r.cuisine,
-    recipeCategory: r.mealTypes.join(', '),
-    keywords: r.tags.join(', '),
-    prepTime: isoDuration(r.prepTimeMinutes),
-    cookTime: isoDuration(r.cookTimeMinutes),
-    totalTime: isoDuration(r.totalTimeMinutes),
-    recipeYield: `${r.servings} servings`,
-    recipeIngredient: r.ingredients,
-    recipeInstructions: r.steps.map((step, i) => ({
-      '@type': 'HowToStep',
-      position: i + 1,
-      text: step,
-    })),
-    suitableForDiet: [
-      r.dietary.isVegetarian ? 'https://schema.org/VegetarianDiet' : null,
-      r.dietary.isVegan ? 'https://schema.org/VeganDiet' : null,
-      r.dietary.isGlutenFree ? 'https://schema.org/GlutenFreeDiet' : null,
-    ].filter(Boolean),
-  }
-}
 
 const spiceDots = (level: number) =>
   Array.from({ length: 5 }, (_, i) => (
@@ -117,7 +83,7 @@ export function RecipeDetail() {
     path: recipe ? `/recipes/${recipe.id}/` : undefined,
     type: recipe ? 'article' : 'website',
     noIndex: !recipe,
-    jsonLd: recipe ? recipeSchema(recipe) : null,
+    jsonLd: recipe ? recipeJsonLd(import.meta.env.VITE_SITE_URL, recipe) : null,
   })
 
   if (!recipe) {

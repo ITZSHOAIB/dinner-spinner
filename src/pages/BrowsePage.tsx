@@ -5,6 +5,7 @@ import { Search, X } from 'lucide-react'
 import { useRecipeStore } from '../stores/recipeStore'
 import { RecipeCard } from '../components/recipe/RecipeCard'
 import { cn } from '../lib/cn'
+import { browseJsonLd, normalizeSiteUrl } from '../lib/seo'
 import { useSeo } from '../lib/useSeo'
 import type { MealType } from '../data/types'
 
@@ -25,15 +26,9 @@ const mealTypeFilters: { key: MealType | 'all'; label: string }[] = [
   { key: 'snacks', label: 'Snacks' },
 ]
 const MEAL_TYPES: MealType[] = ['breakfast', 'lunch', 'dinner', 'snacks']
+const SITE_URL = normalizeSiteUrl(import.meta.env.VITE_SITE_URL)
 
 export function BrowsePage() {
-  useSeo({
-    title: 'Browse Recipes — Dinner Spinner',
-    description:
-      'Browse 150+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines. Filter by dietary needs, cuisine, and meal type.',
-    path: '/recipes/',
-  })
-
   const {
     searchQuery, setSearchQuery,
     activeDietaryFilters, toggleDietaryFilter,
@@ -91,6 +86,42 @@ export function BrowsePage() {
     if (!cuisineFilter) return filtered
     return filtered.filter((r) => r.cuisine === cuisineFilter)
   }, [filtered, cuisineFilter])
+
+  const seoTitle = useMemo(() => {
+    const segments: string[] = []
+    if (searchQuery) segments.push(`Search: ${searchQuery}`)
+    if (cuisineFilter) segments.push(`${cuisineFilter} recipes`)
+    if (activeMealTypeFilter) {
+      segments.push(`${activeMealTypeFilter[0].toUpperCase()}${activeMealTypeFilter.slice(1)} ideas`)
+    }
+    if (activeDietaryFilters.length > 0) segments.push(activeDietaryFilters.join(', '))
+
+    return segments.length > 0
+      ? `${segments.join(' | ')} — Dinner Spinner`
+      : 'Browse Recipes — Dinner Spinner'
+  }, [activeDietaryFilters, activeMealTypeFilter, cuisineFilter, searchQuery])
+
+  const seoDescription = useMemo(() => {
+    const qualifiers = [
+      cuisineFilter,
+      activeMealTypeFilter,
+      activeDietaryFilters.length > 0 ? activeDietaryFilters.join(', ') : null,
+      searchQuery ? `matching "${searchQuery}"` : null,
+    ].filter(Boolean)
+
+    if (qualifiers.length === 0) {
+      return 'Browse 150+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines. Filter by dietary needs, cuisine, and meal type.'
+    }
+
+    return `${displayRecipes.length} recipes ${qualifiers.join(', ')} on Dinner Spinner. Filter by cuisine, meal type, ingredients, and dietary needs.`
+  }, [activeDietaryFilters, activeMealTypeFilter, cuisineFilter, displayRecipes.length, searchQuery])
+
+  useSeo({
+    title: seoTitle,
+    description: seoDescription,
+    path: '/recipes/',
+    jsonLd: browseJsonLd(SITE_URL, recipes),
+  })
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">

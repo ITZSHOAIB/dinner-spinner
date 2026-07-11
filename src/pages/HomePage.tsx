@@ -1,7 +1,10 @@
 import { SpinnerHousing } from '../components/spinner/SpinnerHousing'
 import { QuickActions } from '../components/spinner/QuickActions'
 import { RecommendationCarousel } from '../components/recipe/RecommendationCarousel'
+import { homeJsonLd, normalizeSiteUrl } from '../lib/seo'
 import { useSeo } from '../lib/useSeo'
+
+const SITE_URL = normalizeSiteUrl(import.meta.env.VITE_SITE_URL)
 
 export function HomePage() {
   useSeo({
@@ -10,6 +13,7 @@ export function HomePage() {
       'A playful meal picker for couples and families. Spin three reels — cuisine, style, protein — or set your own filters for time and dietary needs. Get curated recipe suggestions with cook time and ingredients.',
     path: '/',
     type: 'website',
+    jsonLd: homeJsonLd(SITE_URL),
   })
 
   return (

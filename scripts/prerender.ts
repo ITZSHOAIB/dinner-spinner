@@ -16,12 +16,22 @@ import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { recipes } from '../src/data/recipes'
 import type { Recipe } from '../src/data/types'
+import {
+  browseJsonLd,
+  homeJsonLd,
+  INDEX_GOOGLEBOT,
+  INDEX_ROBOTS,
+  NOINDEX_ROBOTS,
+  normalizeSiteUrl,
+  recipeJsonLd,
+  isoDuration,
+} from '../src/lib/seo'
 
 const root = resolve(import.meta.dirname, '..')
 const distDir = resolve(root, 'dist')
 const baseTemplate = readFileSync(resolve(distDir, 'index.html'), 'utf8')
 
-const SITE_URL = (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.sohab.dev').replace(/\/$/, '')
+const SITE_URL = normalizeSiteUrl(process.env.VITE_SITE_URL)
 
 interface RouteMeta {
   routePath: string // app-relative path, e.g. "/recipes" or "/recipes/macher-jhol"
@@ -41,57 +51,6 @@ function escapeHtml(s: string): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;')
-}
-
-function isoDuration(mins: number): string {
-  if (mins <= 0) return 'PT0M'
-  const h = Math.floor(mins / 60)
-  const m = mins % 60
-  return `PT${h ? `${h}H` : ''}${m ? `${m}M` : ''}`
-}
-
-function recipeJsonLd(r: Recipe): object[] {
-  const url = `${SITE_URL}/recipes/${r.id}/`
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'Recipe',
-      name: r.name,
-      description: r.description,
-      recipeCuisine: r.cuisine,
-      recipeCategory: r.mealTypes.join(', '),
-      keywords: r.tags.join(', '),
-      prepTime: isoDuration(r.prepTimeMinutes),
-      cookTime: isoDuration(r.cookTimeMinutes),
-      totalTime: isoDuration(r.totalTimeMinutes),
-      recipeYield: `${r.servings} servings`,
-      recipeIngredient: r.ingredients,
-      recipeInstructions: r.steps.map((step, i) => ({
-        '@type': 'HowToStep',
-        position: i + 1,
-        text: step,
-      })),
-      suitableForDiet: [
-        r.dietary.isVegetarian ? 'https://schema.org/VegetarianDiet' : null,
-        r.dietary.isVegan ? 'https://schema.org/VeganDiet' : null,
-        r.dietary.isGlutenFree ? 'https://schema.org/GlutenFreeDiet' : null,
-      ].filter(Boolean),
-      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
-      url,
-      inLanguage: 'en',
-      isAccessibleForFree: true,
-      author: { '@type': 'Organization', name: 'Dinner Spinner' },
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
-        { '@type': 'ListItem', position: 2, name: 'Recipes', item: `${SITE_URL}/recipes/` },
-        { '@type': 'ListItem', position: 3, name: r.name, item: url },
-      ],
-    },
-  ]
 }
 
 function recipeBodyHtml(r: Recipe): string {
@@ -157,34 +116,7 @@ const routes: RouteMeta[] = [
       'A playful meal picker for couples and families. Spin three reels — cuisine, style, protein — or set your own filters for time and dietary needs. Get curated recipe suggestions with cook time and ingredients.',
     type: 'website',
     bodyHtml: homeBodyHtml(),
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@graph': [
-        {
-          '@type': 'WebSite',
-          name: 'Dinner Spinner',
-          url: `${SITE_URL}/`,
-          inLanguage: 'en',
-          potentialAction: {
-            '@type': 'SearchAction',
-            target: `${SITE_URL}/recipes/?q={search_term_string}`,
-            'query-input': 'required name=search_term_string',
-          },
-        },
-        {
-          '@type': 'WebApplication',
-          name: 'Dinner Spinner',
-          url: `${SITE_URL}/`,
-          description:
-            'A meal picker that helps couples and families find recipes by cuisine, style, protein, cooking time, and dietary needs.',
-          applicationCategory: 'LifestyleApplication',
-          operatingSystem: 'Any',
-          browserRequirements: 'Requires JavaScript',
-          isAccessibleForFree: true,
-          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-        },
-      ],
-    },
+    jsonLd: homeJsonLd(SITE_URL),
   },
   {
     // Trailing slash matches the prerendered `recipes/index.html` URL and
@@ -195,14 +127,7 @@ const routes: RouteMeta[] = [
     description: `Browse ${recipes.length}+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines. Filter by dietary needs, cuisine, and meal type.`,
     type: 'website',
     bodyHtml: browseBodyHtml(),
-    jsonLd: {
-      '@context': 'https://schema.org',
-      '@type': 'CollectionPage',
-      name: 'Browse Recipes',
-      url: `${SITE_URL}/recipes/`,
-      description: `Browse ${recipes.length}+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines.`,
-      isPartOf: { '@type': 'WebSite', name: 'Dinner Spinner', url: `${SITE_URL}/` },
-    },
+    jsonLd: browseJsonLd(SITE_URL, recipes),
   },
   ...recipes.map((r): RouteMeta => ({
     routePath: `/recipes/${r.id}/`,
@@ -211,7 +136,7 @@ const routes: RouteMeta[] = [
     description: `${r.description} Ready in ${r.totalTimeMinutes} minutes · ${r.difficulty} · serves ${r.servings}.`,
     type: 'article',
     bodyHtml: recipeBodyHtml(r),
-    jsonLd: recipeJsonLd(r),
+    jsonLd: recipeJsonLd(SITE_URL, r),
   })),
 ]
 
@@ -232,7 +157,20 @@ function buildHtml(template: string, route: RouteMeta): string {
   if (route.noIndex) {
     html = html.replace(
       /<meta[\s\n]+name="robots"[^>]*\/>/,
-      `<meta name="robots" content="noindex, nofollow" />`,
+      `<meta name="robots" content="${NOINDEX_ROBOTS}" />`,
+    )
+    html = html.replace(
+      /<meta[\s\n]+name="googlebot"[^>]*\/>/,
+      `<meta name="googlebot" content="${NOINDEX_ROBOTS}" />`,
+    )
+  } else {
+    html = html.replace(
+      /<meta[\s\n]+name="robots"[^>]*\/>/,
+      `<meta name="robots" content="${INDEX_ROBOTS}" />`,
+    )
+    html = html.replace(
+      /<meta[\s\n]+name="googlebot"[^>]*\/>/,
+      `<meta name="googlebot" content="${INDEX_GOOGLEBOT}" />`,
     )
   }
 
@@ -273,7 +211,7 @@ function buildHtml(template: string, route: RouteMeta): string {
   // Replace the existing JSON-LD block (the WebApplication one) with a
   // route-specific schema. There may be only one default block in the template.
   const newJsonLd = route.jsonLd
-    ? `<script type="application/ld+json">\n${JSON.stringify(route.jsonLd, null, 2)}\n    </script>`
+    ? `<script type="application/ld+json" data-seo="page">\n${JSON.stringify(route.jsonLd, null, 2)}\n    </script>`
     : ''
   html = html.replace(
     /<script[\s\n]+type="application\/ld\+json"[^>]*>[\s\S]*?<\/script>/,

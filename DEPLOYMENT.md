@@ -17,12 +17,19 @@ Wrangler command is required.
 | Build command | `yarn build` |
 | Build output directory | `dist` |
 | Root directory | `/` |
-| Node.js version | `24` |
 
 4. Under **Custom domains**, add `dinner-spinner.sohab.dev` and complete the DNS
    verification shown by Cloudflare.
-5. Under **Settings** -> **Environment variables**, add `VITE_SITE_URL` with
-   `https://dinner-spinner.sohab.dev` for the production environment.
+5. Under **Settings** -> **Environment variables**, add these production variables:
+
+| Variable | Value |
+| --- | --- |
+| `NODE_VERSION` | `24` |
+| `YARN_VERSION` | `1.22.22` |
+| `VITE_SITE_URL` | `https://dinner-spinner.sohab.dev` |
+
+   `YARN_VERSION` is required because the project uses a Yarn 1 lockfile while
+   Cloudflare Pages currently defaults to Yarn 4.
 6. Deploy and submit `https://dinner-spinner.sohab.dev/sitemap.xml` in Search
    Console. Cloudflare also creates preview deployments for pull requests.
 

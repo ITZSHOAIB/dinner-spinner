@@ -13,7 +13,7 @@ Wrangler command is required.
 
 | Setting | Value |
 | --- | --- |
-| Framework preset | `Vite` |
+| Framework preset | `None` (configure manually) |
 | Build command | `yarn build` |
 | Build output directory | `dist` |
 | Root directory | `/` |

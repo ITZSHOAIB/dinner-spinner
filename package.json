@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://itzshoaib.github.io/dinner-spinner",
+  "homepage": "https://dinner-spinner.pages.dev",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -15,7 +15,7 @@
     "generate-llms": "tsx scripts/generate-llms.ts",
     "prebuild": "yarn generate-sitemap && yarn generate-llms",
     "postbuild": "tsx scripts/prerender.ts",
-    "deploy": "yarn build && gh-pages -d dist"
+    "verify": "yarn validate-recipes && yarn build"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",
@@ -37,7 +37,6 @@
     "eslint": "^10.2.1",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
-    "gh-pages": "^6.3.0",
     "globals": "^17.5.0",
     "tsx": "^4.19.2",
     "typescript": "~6.0.2",

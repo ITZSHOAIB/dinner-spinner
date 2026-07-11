@@ -1,0 +1,40 @@
+# Cloudflare Pages deployment
+
+This project deploys through Cloudflare Pages Git integration. Cloudflare builds the
+`main` branch and publishes the `dist` directory; no GitHub Actions deployment or
+Wrangler command is required.
+
+## Cloudflare dashboard
+
+1. Open **Workers & Pages** and select **Create application** -> **Pages** ->
+   **Import an existing Git repository**.
+2. Choose this repository and use `dinner-spinner` as the Pages project name.
+3. Set the production branch to `main` and use these build settings:
+
+| Setting | Value |
+| --- | --- |
+| Framework preset | `Vite` |
+| Build command | `yarn build` |
+| Build output directory | `dist` |
+| Root directory | `/` |
+| Node.js version | `24` |
+
+4. Under **Settings** -> **Environment variables**, add `VITE_SITE_URL` with
+   `https://dinner-spinner.pages.dev` for the production environment.
+5. Deploy. Cloudflare will publish `https://dinner-spinner.pages.dev` and create
+   preview deployments for pull requests.
+
+If you use a custom domain, change `VITE_SITE_URL` to its canonical HTTPS URL,
+redeploy, and submit `<your-domain>/sitemap.xml` in Search Console. This variable
+sets canonical URLs, Open Graph image URLs, the generated sitemap, structured data,
+and the LLM indexes.
+
+## Migration from GitHub Pages
+
+The repository no longer contains a GitHub Pages workflow or the `gh-pages`
+dependency. After the first Cloudflare deployment succeeds, disable GitHub Pages in
+the repository's **Settings** -> **Pages** to avoid serving the retired site.
+
+There is intentionally no top-level `404.html`. Cloudflare Pages then uses its
+native SPA fallback for unknown client-side routes, while prerendered recipe pages,
+`robots.txt`, `sitemap.xml`, and other static SEO files are still served directly.

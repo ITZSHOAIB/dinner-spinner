@@ -14,7 +14,8 @@
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
     <meta name="author" content="Dinner Spinner" />
-    <link rel="canonical" href="https://itzshoaib.github.io/dinner-spinner/" />
+    <meta name="keywords" content="meal picker, dinner ideas, recipe finder, Bengali recipes, Indian recipes, family meal planner" />
+    <link rel="canonical" href="https://dinner-spinner.pages.dev/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -24,8 +25,9 @@
       property="og:description"
       content="Spin three reels — cuisine, style, protein — or set your own filters, and get curated recipe suggestions tailored to how much time you have."
     />
-    <meta property="og:url" content="https://itzshoaib.github.io/dinner-spinner/" />
-    <meta property="og:image" content="https://itzshoaib.github.io/dinner-spinner/og-image.png" />
+    <meta property="og:url" content="https://dinner-spinner.pages.dev/" />
+    <meta property="og:image" content="https://dinner-spinner.pages.dev/og-image.png" />
+    <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Dinner Spinner — playful meal decision app" />
@@ -33,13 +35,12 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@dinnerspinner" />
     <meta name="twitter:title" content="Dinner Spinner — Decide what to cook tonight" />
     <meta
       name="twitter:description"
       content="Spin three reels — cuisine, style, protein — or set your own filters, and get curated recipe suggestions."
     />
-    <meta name="twitter:image" content="https://itzshoaib.github.io/dinner-spinner/og-image.png" />
+    <meta name="twitter:image" content="https://dinner-spinner.pages.dev/og-image.png" />
     <meta name="twitter:image:alt" content="Dinner Spinner — playful meal decision app" />
 
     <!-- Icons -->
@@ -55,39 +56,35 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "Dinner Spinner",
-        "description": "A playful meal picker for couples and families. Spin reels for cuisine, style, and protein or filter by time and dietary needs to get curated recipe suggestions.",
-        "applicationCategory": "LifestyleApplication",
-        "operatingSystem": "Any",
-        "browserRequirements": "Requires JavaScript",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Dinner Spinner",
+            "url": "https://dinner-spinner.pages.dev/",
+            "inLanguage": "en",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://dinner-spinner.pages.dev/recipes/?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "WebApplication",
+            "name": "Dinner Spinner",
+            "url": "https://dinner-spinner.pages.dev/",
+            "description": "A meal picker that helps couples and families find recipes by cuisine, style, protein, cooking time, and dietary needs.",
+            "applicationCategory": "LifestyleApplication",
+            "operatingSystem": "Any",
+            "browserRequirements": "Requires JavaScript",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          }
+        ]
       }
-    </script>
-
-    <!--
-      GitHub Pages SPA redirect decoder. If we were sent here from 404.html
-      with an encoded ?/foo/bar path, decode it back into a real path before
-      React mounts so BrowserRouter sees the intended route.
-    -->
-    <script>
-      (function () {
-        var l = window.location
-        if (l.search[1] === '/') {
-          var decoded = l.search
-            .slice(1)
-            .split('&')
-            .map(function (s) {
-              return s.replace(/~and~/g, '&')
-            })
-            .join('?')
-          window.history.replaceState(null, '', l.pathname.slice(0, -1) + decoded + l.hash)
-        }
-      })()
     </script>
     <meta name="google-site-verification" content="CJRTj2IWHFt41M4E6AW18OKhiWPmwZXxNmVT9jjrksY" />
   </head>
@@ -104,10 +101,10 @@
         </p>
         <p>
           Browse the
-          <a href="/dinner-spinner/recipes">full recipe collection</a>
+          <a href="/recipes/">full recipe collection</a>
           (150+ Bengali, Indian, Chinese, Asian, Continental, Mexican and
           Mediterranean dishes) or read the
-          <a href="/dinner-spinner/llms.txt">llms.txt</a>
+          <a href="/llms.txt">llms.txt</a>
           for an LLM-friendly index.
         </p>
       </noscript>

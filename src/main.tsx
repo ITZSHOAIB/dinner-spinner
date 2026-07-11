@@ -4,8 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App'
 
-// Strip trailing slash from Vite's BASE_URL (e.g. "/dinner-spinner/") so
-// React Router doesn't double-up on slashes.
+// Strip Vite's trailing slash so React Router receives a stable basename.
 const basename = import.meta.env.BASE_URL.replace(/\/$/, '') || '/'
 
 createRoot(document.getElementById('root')!).render(

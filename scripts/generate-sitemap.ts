@@ -10,7 +10,7 @@ import { resolve } from 'node:path'
 import { recipes } from '../src/data/recipes'
 
 const SITE_URL =
-  (process.env.VITE_SITE_URL ?? 'https://itzshoaib.github.io/dinner-spinner').replace(/\/$/, '')
+  (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.pages.dev').replace(/\/$/, '')
 
 interface Entry {
   loc: string
@@ -20,10 +20,7 @@ interface Entry {
 
 const today = new Date().toISOString().slice(0, 10)
 
-// Trailing slashes match GitHub Pages' canonical form. Each recipe page
-// is a directory (`recipes/<id>/index.html`), and GH Pages 301-redirects
-// the slashless variant to the slashed one. Listing the slashless URLs
-// makes the sitemap a chain of redirects, which Google can flag.
+// Trailing slashes match the prerendered directory URLs (`recipes/<id>/index.html`).
 const staticEntries: Entry[] = [
   { loc: `${SITE_URL}/`, changefreq: 'weekly', priority: 1.0 },
   { loc: `${SITE_URL}/recipes/`, changefreq: 'weekly', priority: 0.9 },

@@ -14,7 +14,7 @@ import { recipes } from '../src/data/recipes'
 import type { Recipe } from '../src/data/types'
 
 const SITE_URL =
-  (process.env.VITE_SITE_URL ?? 'https://itzshoaib.github.io/dinner-spinner').replace(/\/$/, '')
+  (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.pages.dev').replace(/\/$/, '')
 
 function dietaryLabels(r: Recipe): string {
   const parts: string[] = []
@@ -85,7 +85,7 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 
 // llms.txt — index only (recipe links, no body)
 const indexBody = recipes
-  .map((r) => `- [${r.name}${r.nameLocal ? ` (${r.nameLocal})` : ''}](${SITE_URL}/recipes/${r.id}) — ${r.cuisine} ${r.style.toLowerCase()}, ${r.totalTimeMinutes} min, ${r.difficulty}`)
+  .map((r) => `- [${r.name}${r.nameLocal ? ` (${r.nameLocal})` : ''}](${SITE_URL}/recipes/${r.id}/) — ${r.cuisine} ${r.style.toLowerCase()}, ${r.totalTimeMinutes} min, ${r.difficulty}`)
   .join('\n')
 
 const llmsTxt = `${intro}\n${indexBody}\n`

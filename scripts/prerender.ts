@@ -7,12 +7,12 @@
 // content of #root on hydration. So the fallback HTML we inject here is
 // safe — users get the full SPA, crawlers get rich content.
 //
-// Why route-by-route HTML files instead of relying on the GH Pages 404.html
-// SPA redirect: search engines and most LLM crawlers don't execute JS, so
+// Why route-by-route HTML files instead of relying on an SPA fallback:
+// search engines and most LLM crawlers don't execute JS, so
 // they'd see the SPA shell with no page-specific content. Static per-route
 // HTML solves that without needing a real SSR runtime.
 
-import { readFileSync, writeFileSync, mkdirSync, copyFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { recipes } from '../src/data/recipes'
 import type { Recipe } from '../src/data/types'
@@ -21,8 +21,7 @@ const root = resolve(import.meta.dirname, '..')
 const distDir = resolve(root, 'dist')
 const baseTemplate = readFileSync(resolve(distDir, 'index.html'), 'utf8')
 
-const SITE_URL = (process.env.VITE_SITE_URL ?? 'https://itzshoaib.github.io/dinner-spinner').replace(/\/$/, '')
-const BASE_PATH = '/dinner-spinner'
+const SITE_URL = (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.pages.dev').replace(/\/$/, '')
 
 interface RouteMeta {
   routePath: string // app-relative path, e.g. "/recipes" or "/recipes/macher-jhol"
@@ -51,32 +50,48 @@ function isoDuration(mins: number): string {
   return `PT${h ? `${h}H` : ''}${m ? `${m}M` : ''}`
 }
 
-function recipeJsonLd(r: Recipe): object {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Recipe',
-    name: r.name,
-    description: r.description,
-    recipeCuisine: r.cuisine,
-    recipeCategory: r.mealTypes.join(', '),
-    keywords: r.tags.join(', '),
-    prepTime: isoDuration(r.prepTimeMinutes),
-    cookTime: isoDuration(r.cookTimeMinutes),
-    totalTime: isoDuration(r.totalTimeMinutes),
-    recipeYield: `${r.servings} servings`,
-    recipeIngredient: r.ingredients,
-    recipeInstructions: r.steps.map((step, i) => ({
-      '@type': 'HowToStep',
-      position: i + 1,
-      text: step,
-    })),
-    suitableForDiet: [
-      r.dietary.isVegetarian ? 'https://schema.org/VegetarianDiet' : null,
-      r.dietary.isVegan ? 'https://schema.org/VeganDiet' : null,
-      r.dietary.isGlutenFree ? 'https://schema.org/GlutenFreeDiet' : null,
-    ].filter(Boolean),
-    url: `${SITE_URL}/recipes/${r.id}/`,
-  }
+function recipeJsonLd(r: Recipe): object[] {
+  const url = `${SITE_URL}/recipes/${r.id}/`
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Recipe',
+      name: r.name,
+      description: r.description,
+      recipeCuisine: r.cuisine,
+      recipeCategory: r.mealTypes.join(', '),
+      keywords: r.tags.join(', '),
+      prepTime: isoDuration(r.prepTimeMinutes),
+      cookTime: isoDuration(r.cookTimeMinutes),
+      totalTime: isoDuration(r.totalTimeMinutes),
+      recipeYield: `${r.servings} servings`,
+      recipeIngredient: r.ingredients,
+      recipeInstructions: r.steps.map((step, i) => ({
+        '@type': 'HowToStep',
+        position: i + 1,
+        text: step,
+      })),
+      suitableForDiet: [
+        r.dietary.isVegetarian ? 'https://schema.org/VegetarianDiet' : null,
+        r.dietary.isVegan ? 'https://schema.org/VeganDiet' : null,
+        r.dietary.isGlutenFree ? 'https://schema.org/GlutenFreeDiet' : null,
+      ].filter(Boolean),
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      url,
+      inLanguage: 'en',
+      isAccessibleForFree: true,
+      author: { '@type': 'Organization', name: 'Dinner Spinner' },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'Recipes', item: `${SITE_URL}/recipes/` },
+        { '@type': 'ListItem', position: 3, name: r.name, item: url },
+      ],
+    },
+  ]
 }
 
 function recipeBodyHtml(r: Recipe): string {
@@ -103,7 +118,7 @@ function recipeBodyHtml(r: Recipe): string {
       <ol>
         ${steps}
       </ol>
-      <p><a href="${BASE_PATH}/">← Back to Dinner Spinner</a></p>
+      <p><a href="/">Back to Dinner Spinner</a></p>
     </article>
   `.trim()
 }
@@ -113,14 +128,14 @@ function homeBodyHtml(): string {
     <main>
       <h1>Dinner Spinner — Decide what to cook tonight</h1>
       <p>A playful meal picker for couples and families. Spin three reels — cuisine, style, and protein — or filter by time and dietary needs to get curated recipe suggestions.</p>
-      <p>Browse the <a href="${BASE_PATH}/recipes">full recipe collection</a> (${recipes.length}+ Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean dishes).</p>
+      <p>Browse the <a href="/recipes/">full recipe collection</a> (${recipes.length}+ Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean dishes).</p>
     </main>
   `.trim()
 }
 
 function browseBodyHtml(): string {
   const items = recipes
-    .map((r) => `      <li><a href="${BASE_PATH}/recipes/${r.id}">${escapeHtml(r.name)}</a> — ${escapeHtml(r.cuisine)}, ${r.totalTimeMinutes} min, ${escapeHtml(r.difficulty)}</li>`)
+    .map((r) => `      <li><a href="/recipes/${r.id}/">${escapeHtml(r.name)}</a> — ${escapeHtml(r.cuisine)}, ${r.totalTimeMinutes} min, ${escapeHtml(r.difficulty)}</li>`)
     .join('\n')
   return `
     <main>
@@ -144,27 +159,50 @@ const routes: RouteMeta[] = [
     bodyHtml: homeBodyHtml(),
     jsonLd: {
       '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      name: 'Dinner Spinner',
-      description:
-        'A playful meal picker for couples and families. Spin reels for cuisine, style, and protein or filter by time and dietary needs to get curated recipe suggestions.',
-      applicationCategory: 'LifestyleApplication',
-      operatingSystem: 'Any',
-      browserRequirements: 'Requires JavaScript',
-      url: `${SITE_URL}/`,
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+      '@graph': [
+        {
+          '@type': 'WebSite',
+          name: 'Dinner Spinner',
+          url: `${SITE_URL}/`,
+          inLanguage: 'en',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: `${SITE_URL}/recipes/?q={search_term_string}`,
+            'query-input': 'required name=search_term_string',
+          },
+        },
+        {
+          '@type': 'WebApplication',
+          name: 'Dinner Spinner',
+          url: `${SITE_URL}/`,
+          description:
+            'A meal picker that helps couples and families find recipes by cuisine, style, protein, cooking time, and dietary needs.',
+          applicationCategory: 'LifestyleApplication',
+          operatingSystem: 'Any',
+          browserRequirements: 'Requires JavaScript',
+          isAccessibleForFree: true,
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        },
+      ],
     },
   },
   {
-    // Trailing slash matches what GH Pages serves (recipes/index.html
-    // → /recipes/). Keeps canonical aligned with the actual served URL
-    // and with what's in the sitemap.
+    // Trailing slash matches the prerendered `recipes/index.html` URL and
+    // keeps the canonical aligned with the sitemap.
     routePath: '/recipes/',
     outFile: 'recipes/index.html',
     title: 'Browse Recipes — Dinner Spinner',
     description: `Browse ${recipes.length}+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines. Filter by dietary needs, cuisine, and meal type.`,
     type: 'website',
     bodyHtml: browseBodyHtml(),
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      name: 'Browse Recipes',
+      url: `${SITE_URL}/recipes/`,
+      description: `Browse ${recipes.length}+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines.`,
+      isPartOf: { '@type': 'WebSite', name: 'Dinner Spinner', url: `${SITE_URL}/` },
+    },
   },
   ...recipes.map((r): RouteMeta => ({
     routePath: `/recipes/${r.id}/`,
@@ -266,14 +304,6 @@ for (const route of routes) {
   mkdirSync(dirname(out), { recursive: true })
   writeFileSync(out, buildHtml(baseTemplate, route))
   count++
-}
-
-// Ensure 404.html stays in place (Vite already copied it from public/)
-const fourOhFour = resolve(distDir, '404.html')
-try {
-  readFileSync(fourOhFour)
-} catch {
-  copyFileSync(resolve(root, 'public/404.html'), fourOhFour)
 }
 
 console.log(`Prerendered ${count} routes (1 home + 1 browse + ${recipes.length} recipes)`)

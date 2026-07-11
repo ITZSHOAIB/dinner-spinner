@@ -18,8 +18,8 @@ export default defineConfig({
         background_color: '#0C0A09',
         display: 'standalone',
         orientation: 'portrait',
-        start_url: '/dinner-spinner/',
-        scope: '/dinner-spinner/',
+        start_url: '/',
+        scope: '/',
         icons: [
           {
             src: 'favicon.svg',
@@ -83,5 +83,5 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/dinner-spinner/',
+  base: '/',
 })

@@ -2,7 +2,7 @@
 
 A playful meal picker for couples and families. Spin three reels — **cuisine / style / protein** — or set your own filters (time, dietary), and the app hands back recipe suggestions with cook time, difficulty, and ingredient lists.
 
-🔗 **Live:** https://ITZSHOAIB.github.io/dinner-spinner/
+🔗 **Live:** https://dinner-spinner.pages.dev/
 
 ---
 
@@ -31,14 +31,9 @@ yarn dev
 
 Open http://localhost:5173 and start spinning.
 
-## Deploy to GitHub Pages
+## Deploy to Cloudflare Pages
 
-1. Copy `.env.example` → `.env`, set `VITE_SITE_URL` to your live URL
-2. In your GitHub repo Settings → Pages, set Source to **GitHub Actions**
-3. Add a repo variable `VITE_SITE_URL` (Settings → Variables → Actions) with the same value
-4. Push to `main` — the workflow in `.github/workflows/deploy.yml` builds and publishes
-
-(Or manually: `yarn deploy`)
+See [DEPLOYMENT.md](DEPLOYMENT.md) for the Cloudflare dashboard settings and the migration checklist.
 
 ## Contributing
 
@@ -80,7 +75,7 @@ Used on recipe-detail "You might also like" — surfaces cross-cuisine dishes wh
 - **Vite** + **React 19** + **TypeScript**
 - **Tailwind CSS 4** (with a small custom theme in `src/index.css`)
 - **Zustand** for state (persists favorites / preferences / cooked history to localStorage)
-- **React Router 7** + `BrowserRouter` + SPA 404 redirect for GH Pages deep links
+- **React Router 7** + `BrowserRouter` + Cloudflare Pages SPA fallback for deep links
 - **Motion** (Framer Motion) for reel spinning + banner transitions
 - **vite-plugin-pwa** for service worker + manifest
 - **tsx** for the recipe validator script
@@ -110,7 +105,6 @@ src/
 scripts/
   validate-recipes.ts  Runs locally (`yarn validate-recipes`) + in CI on PRs
 public/
-  404.html           SPA fallback for GitHub Pages deep links
   robots.txt
   sitemap.xml
   favicon.svg

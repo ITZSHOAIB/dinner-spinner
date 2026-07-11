@@ -21,7 +21,7 @@ const root = resolve(import.meta.dirname, '..')
 const distDir = resolve(root, 'dist')
 const baseTemplate = readFileSync(resolve(distDir, 'index.html'), 'utf8')
 
-const SITE_URL = (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.pages.dev').replace(/\/$/, '')
+const SITE_URL = (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.sohab.dev').replace(/\/$/, '')
 
 interface RouteMeta {
   routePath: string // app-relative path, e.g. "/recipes" or "/recipes/macher-jhol"

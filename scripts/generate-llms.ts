@@ -14,7 +14,7 @@ import { recipes } from '../src/data/recipes'
 import type { Recipe } from '../src/data/types'
 
 const SITE_URL =
-  (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.pages.dev').replace(/\/$/, '')
+  (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.sohab.dev').replace(/\/$/, '')
 
 function dietaryLabels(r: Recipe): string {
   const parts: string[] = []

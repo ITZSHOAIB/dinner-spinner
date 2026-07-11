@@ -90,4 +90,4 @@ Allow: /
 User-agent: MistralAI-User
 Allow: /
 
-Sitemap: https://dinner-spinner.pages.dev/sitemap.xml
+Sitemap: https://dinner-spinner.sohab.dev/sitemap.xml

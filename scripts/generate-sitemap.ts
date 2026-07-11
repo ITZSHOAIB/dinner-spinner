@@ -10,7 +10,7 @@ import { resolve } from 'node:path'
 import { recipes } from '../src/data/recipes'
 
 const SITE_URL =
-  (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.pages.dev').replace(/\/$/, '')
+  (process.env.VITE_SITE_URL ?? 'https://dinner-spinner.sohab.dev').replace(/\/$/, '')
 
 interface Entry {
   loc: string

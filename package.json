@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://dinner-spinner.pages.dev",
+  "homepage": "https://dinner-spinner.sohab.dev",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

@@ -8,10 +8,10 @@
 This file follows the [llms.txt](https://llmstxt.org/) convention: a
 machine-readable index of the site's primary content for LLMs and AI agents.
 
-- Site: https://dinner-spinner.pages.dev/
-- Browse: https://dinner-spinner.pages.dev/recipes/
-- Sitemap: https://dinner-spinner.pages.dev/sitemap.xml
-- Full content (all recipes inlined as markdown): https://dinner-spinner.pages.dev/llms-full.txt
+- Site: https://dinner-spinner.sohab.dev/
+- Browse: https://dinner-spinner.sohab.dev/recipes/
+- Sitemap: https://dinner-spinner.sohab.dev/sitemap.xml
+- Full content (all recipes inlined as markdown): https://dinner-spinner.sohab.dev/llms-full.txt
 
 ## How recipes are organised
 
@@ -23,147 +23,147 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 
 ## Recipes
 
-- [Macher Jhol (মাছের ঝোল)](https://dinner-spinner.pages.dev/recipes/macher-jhol/) — Bengali curry, 40 min, easy
-- [Chingri Malai Curry (চিংড়ি মালাই কারি)](https://dinner-spinner.pages.dev/recipes/chingri-malai-curry/) — Bengali curry, 45 min, medium
-- [Kosha Mangsho (কষা মাংস)](https://dinner-spinner.pages.dev/recipes/kosha-mangsho/) — Bengali curry, 80 min, medium
-- [Shorshe Ilish (সর্ষে ইলিশ)](https://dinner-spinner.pages.dev/recipes/shorshe-ilish/) — Bengali curry, 35 min, medium
-- [Aloo Posto (আলু পোস্ত)](https://dinner-spinner.pages.dev/recipes/aloo-posto/) — Bengali dry, 30 min, easy
-- [Begun Bhaja (বেগুন ভাজা)](https://dinner-spinner.pages.dev/recipes/begun-bhaja/) — Bengali fried, 15 min, easy
-- [Luchi-Alur Dom (লুচি-আলুর দম)](https://dinner-spinner.pages.dev/recipes/luchi-alur-dom/) — Bengali bread meal, 50 min, medium
-- [Mishti Doi (মিষ্টি দই)](https://dinner-spinner.pages.dev/recipes/mishti-doi/) — Bengali sweet, 385 min, easy
-- [Rasgulla (রসগোল্লা)](https://dinner-spinner.pages.dev/recipes/rasgulla/) — Bengali sweet, 50 min, hard
-- [Sandesh (সন্দেশ)](https://dinner-spinner.pages.dev/recipes/sandesh/) — Bengali sweet, 30 min, medium
-- [Bengali Fish Fry (মাছ ভাজা)](https://dinner-spinner.pages.dev/recipes/bengali-fish-fry/) — Bengali dry, 35 min, medium
-- [Doi Maach (দই মাছ)](https://dinner-spinner.pages.dev/recipes/doi-maach/) — Bengali curry, 40 min, medium
-- [Mochar Ghonto (মোচার ঘণ্ট)](https://dinner-spinner.pages.dev/recipes/mochar-ghonto/) — Bengali dry, 55 min, hard
-- [Cholar Dal (ছোলার ডাল)](https://dinner-spinner.pages.dev/recipes/cholar-dal/) — Bengali curry, 40 min, easy
-- [Dhokar Dalna (ধোকার ডালনা)](https://dinner-spinner.pages.dev/recipes/dhokar-dalna/) — Bengali curry, 60 min, hard
-- [Shukto (শুক্তো)](https://dinner-spinner.pages.dev/recipes/shukto/) — Bengali curry, 45 min, medium
-- [Posto Bora (পোস্ত বড়া)](https://dinner-spinner.pages.dev/recipes/posto-bora/) — Bengali fried, 25 min, easy
-- [Jhinge Posto (ঝিঙে পোস্ত)](https://dinner-spinner.pages.dev/recipes/jhinge-posto/) — Bengali dry, 25 min, easy
-- [Aloor Dum (আলুর দম)](https://dinner-spinner.pages.dev/recipes/aloor-dum/) — Bengali curry, 35 min, easy
-- [Panta Bhat (পান্তা ভাত)](https://dinner-spinner.pages.dev/recipes/panta-bhat/) — Bengali rice bowl, 15 min, easy
-- [Keema Doi (কিমার দই)](https://dinner-spinner.pages.dev/recipes/keema-doi/) — Bengali curry, 50 min, medium
-- [Chicken Kosha (চিকেন কষা)](https://dinner-spinner.pages.dev/recipes/chicken-kosha/) — Bengali curry, 55 min, medium
-- [Fulkopir Singara (ফুলকপির সিঙাড়া)](https://dinner-spinner.pages.dev/recipes/fulkopir-singara/) — Bengali fried, 50 min, hard
-- [Telebhaja (Beguni & Peyaji) (তেলেভাজা (বেগুনি ও পেঁয়াজি))](https://dinner-spinner.pages.dev/recipes/telebhaja/) — Bengali fried, 30 min, easy
-- [Kolkata Biryani (কলকাতা বিরিয়ানি)](https://dinner-spinner.pages.dev/recipes/kolkata-biryani/) — Bengali rice bowl, 100 min, hard
-- [Lau Ghonto (লাউ ঘণ্ট)](https://dinner-spinner.pages.dev/recipes/lau-ghonto/) — Bengali dry, 30 min, easy
-- [Muri Ghonto (মুড়ি ঘণ্ট)](https://dinner-spinner.pages.dev/recipes/muri-ghonto/) — Bengali rice bowl, 45 min, medium
-- [Prawn Malai Curry (চিংড়ি মালাইকারি)](https://dinner-spinner.pages.dev/recipes/prawn-malai-curry/) — Bengali curry, 35 min, medium
-- [Chholar Dal (ছোলার ডাল)](https://dinner-spinner.pages.dev/recipes/chholar-dal/) — Bengali curry, 35 min, easy
-- [Butter Chicken](https://dinner-spinner.pages.dev/recipes/butter-chicken/) — North Indian curry, 50 min, medium
-- [Dal Makhani](https://dinner-spinner.pages.dev/recipes/dal-makhani/) — North Indian curry, 75 min, medium
-- [Rajma](https://dinner-spinner.pages.dev/recipes/rajma/) — North Indian curry, 50 min, easy
-- [Palak Paneer](https://dinner-spinner.pages.dev/recipes/palak-paneer/) — North Indian curry, 35 min, easy
-- [Paneer Tikka](https://dinner-spinner.pages.dev/recipes/paneer-tikka/) — North Indian grilled, 35 min, easy
-- [Rogan Josh](https://dinner-spinner.pages.dev/recipes/rogan-josh/) — North Indian curry, 90 min, hard
-- [Kadai Paneer](https://dinner-spinner.pages.dev/recipes/kadai-paneer/) — North Indian curry, 30 min, easy
-- [Baingan Bharta](https://dinner-spinner.pages.dev/recipes/baingan-bharta/) — North Indian dry, 35 min, easy
-- [Tandoori Chicken](https://dinner-spinner.pages.dev/recipes/tandoori-chicken/) — North Indian grilled, 45 min, medium
-- [Shahi Paneer](https://dinner-spinner.pages.dev/recipes/shahi-paneer/) — North Indian curry, 35 min, medium
-- [Malai Kofta](https://dinner-spinner.pages.dev/recipes/malai-kofta/) — North Indian curry, 55 min, hard
-- [Pav Bhaji](https://dinner-spinner.pages.dev/recipes/pav-bhaji/) — North Indian bread meal, 40 min, easy
-- [Dal Tadka](https://dinner-spinner.pages.dev/recipes/dal-tadka/) — North Indian curry, 35 min, easy
-- [Masala Dosa](https://dinner-spinner.pages.dev/recipes/masala-dosa/) — South Indian bread meal, 40 min, medium
-- [Idli Sambar](https://dinner-spinner.pages.dev/recipes/idli-sambar/) — South Indian light, 30 min, easy
-- [Upma](https://dinner-spinner.pages.dev/recipes/upma/) — South Indian savory, 20 min, easy
-- [Chicken Chettinad](https://dinner-spinner.pages.dev/recipes/chicken-chettinad/) — South Indian curry, 55 min, medium
-- [Fish Moilee](https://dinner-spinner.pages.dev/recipes/fish-moilee/) — South Indian curry, 30 min, easy
-- [Medu Vada](https://dinner-spinner.pages.dev/recipes/medu-vada/) — South Indian fried, 30 min, medium
-- [Uttapam](https://dinner-spinner.pages.dev/recipes/uttapam/) — South Indian bread meal, 20 min, easy
-- [Pesarattu](https://dinner-spinner.pages.dev/recipes/pesarattu/) — South Indian savory, 25 min, easy
-- [Avial](https://dinner-spinner.pages.dev/recipes/avial/) — South Indian curry, 35 min, easy
-- [Rasam Rice](https://dinner-spinner.pages.dev/recipes/rasam-rice/) — South Indian soup, 25 min, easy
-- [Chicken Manchurian](https://dinner-spinner.pages.dev/recipes/chicken-manchurian/) — Chinese fried, 40 min, medium
-- [Veg Hakka Noodles](https://dinner-spinner.pages.dev/recipes/veg-hakka-noodles/) — Chinese one pot, 25 min, easy
-- [Chilli Chicken](https://dinner-spinner.pages.dev/recipes/chilli-chicken/) — Chinese fried, 35 min, medium
-- [Veg Fried Rice](https://dinner-spinner.pages.dev/recipes/veg-fried-rice/) — Chinese rice bowl, 20 min, easy
-- [Gobi Manchurian](https://dinner-spinner.pages.dev/recipes/gobi-manchurian/) — Chinese fried, 35 min, medium
-- [Chilli Paneer](https://dinner-spinner.pages.dev/recipes/chilli-paneer/) — Chinese fried, 30 min, easy
-- [Schezwan Noodles](https://dinner-spinner.pages.dev/recipes/schezwan-noodles/) — Chinese one pot, 25 min, easy
-- [Momos](https://dinner-spinner.pages.dev/recipes/momos/) — Chinese light, 45 min, medium
-- [Pasta Arrabiata](https://dinner-spinner.pages.dev/recipes/pasta-arrabiata/) — Continental one pot, 25 min, easy
-- [Grilled Chicken Salad](https://dinner-spinner.pages.dev/recipes/grilled-chicken-salad/) — Continental light, 27 min, easy
-- [Mac & Cheese](https://dinner-spinner.pages.dev/recipes/mac-and-cheese/) — Continental one pot, 35 min, easy
-- [Mushroom Risotto](https://dinner-spinner.pages.dev/recipes/mushroom-risotto/) — Continental rice bowl, 40 min, medium
-- [Pancakes](https://dinner-spinner.pages.dev/recipes/pancakes/) — Continental sweet, 25 min, easy
-- [French Toast](https://dinner-spinner.pages.dev/recipes/french-toast/) — Continental sweet, 15 min, easy
-- [Caesar Salad](https://dinner-spinner.pages.dev/recipes/caesar-salad/) — Continental light, 20 min, easy
-- [Garlic Bread Pizza](https://dinner-spinner.pages.dev/recipes/garlic-bread-pizza/) — Continental baked, 30 min, easy
-- [Pad Thai](https://dinner-spinner.pages.dev/recipes/pad-thai/) — Asian one pot, 25 min, medium
-- [Thai Green Curry](https://dinner-spinner.pages.dev/recipes/thai-green-curry/) — Asian curry, 30 min, easy
-- [Ramen](https://dinner-spinner.pages.dev/recipes/ramen/) — Asian soup, 35 min, medium
-- [Bibimbap](https://dinner-spinner.pages.dev/recipes/bibimbap/) — Asian rice bowl, 35 min, medium
-- [Egg Fried Rice](https://dinner-spinner.pages.dev/recipes/egg-fried-rice/) — Asian rice bowl, 15 min, easy
-- [Tacos](https://dinner-spinner.pages.dev/recipes/tacos/) — Mexican bread meal, 30 min, easy
-- [Burrito Bowl](https://dinner-spinner.pages.dev/recipes/burrito-bowl/) — Mexican rice bowl, 35 min, easy
-- [Falafel Wrap](https://dinner-spinner.pages.dev/recipes/falafel-wrap/) — Mediterranean bread meal, 35 min, medium
-- [Hummus Platter](https://dinner-spinner.pages.dev/recipes/hummus-platter/) — Middle Eastern light, 10 min, easy
-- [Khaman Dhokla (ખમણ ઢોકળા)](https://dinner-spinner.pages.dev/recipes/khaman-dhokla/) — Gujarati sweet, 35 min, easy
-- [Undhiyu (ઊંધિયું)](https://dinner-spinner.pages.dev/recipes/undhiyu/) — Gujarati one pot, 90 min, hard
-- [Gujarati Kadhi (ગુજરાતી કઢી)](https://dinner-spinner.pages.dev/recipes/gujarati-kadhi/) — Gujarati curry, 30 min, easy
-- [Methi Thepla (મેથી થેપલા)](https://dinner-spinner.pages.dev/recipes/methi-thepla/) — Gujarati bread meal, 35 min, easy
-- [Khandvi (ખાંડવી)](https://dinner-spinner.pages.dev/recipes/khandvi/) — Gujarati light, 30 min, hard
-- [Handvo (હાંડવો)](https://dinner-spinner.pages.dev/recipes/handvo/) — Gujarati savory, 60 min, medium
-- [Gujarati Toor Dal (ગુજરાતી દાળ)](https://dinner-spinner.pages.dev/recipes/gujarati-dal/) — Gujarati curry, 35 min, easy
-- [Fafda (ફાફડા)](https://dinner-spinner.pages.dev/recipes/fafda-jalebi/) — Gujarati fried, 40 min, medium
-- [Sev Tameta nu Shaak (સેવ ટમેટા નું શાક)](https://dinner-spinner.pages.dev/recipes/sev-tameta-nu-shaak/) — Gujarati curry, 25 min, easy
-- [Misal Pav (मिसळ पाव)](https://dinner-spinner.pages.dev/recipes/misal-pav/) — Maharashtrian curry, 60 min, medium
-- [Vada Pav (वडा पाव)](https://dinner-spinner.pages.dev/recipes/vada-pav/) — Maharashtrian fried, 40 min, medium
-- [Puran Poli (पुरण पोळी)](https://dinner-spinner.pages.dev/recipes/puran-poli/) — Maharashtrian sweet, 60 min, hard
-- [Bharli Vangi (भरली वांगी)](https://dinner-spinner.pages.dev/recipes/bharli-vangi/) — Maharashtrian curry, 50 min, medium
-- [Fish Moilee (മീൻ മോയിലി)](https://dinner-spinner.pages.dev/recipes/fish-moilee-kerala/) — Kerala curry, 40 min, easy
-- [Puttu (പുട്ട്)](https://dinner-spinner.pages.dev/recipes/puttu/) — Kerala light, 25 min, easy
-- [Cabbage Thoran (തോരൻ)](https://dinner-spinner.pages.dev/recipes/thoran/) — Kerala dry, 25 min, easy
-- [Nadan Kozhi Curry (നാടൻ കോഴി കറി)](https://dinner-spinner.pages.dev/recipes/nadan-kozhi-curry/) — Kerala curry, 60 min, medium
-- [Chicken Vindaloo (विंदालू)](https://dinner-spinner.pages.dev/recipes/chicken-vindaloo/) — Goan curry, 65 min, medium
-- [Prawn Balchão (बाल्चाव)](https://dinner-spinner.pages.dev/recipes/prawn-balchao/) — Goan dry, 45 min, medium
-- [Chicken Xacuti (शाकूती)](https://dinner-spinner.pages.dev/recipes/chicken-xacuti/) — Goan curry, 70 min, hard
-- [Dal Baati Churma (दाल बाटी चूरमा)](https://dinner-spinner.pages.dev/recipes/dal-baati-churma/) — Rajasthani bread meal, 90 min, hard
-- [Gatte ki Sabzi (गट्टे की सब्ज़ी)](https://dinner-spinner.pages.dev/recipes/gatte-ki-sabzi/) — Rajasthani curry, 45 min, medium
-- [Laal Maas (लाल मांस)](https://dinner-spinner.pages.dev/recipes/laal-maas/) — Rajasthani curry, 100 min, hard
-- [Hyderabadi Chicken Biryani (حیدرآبادی بریانی)](https://dinner-spinner.pages.dev/recipes/hyderabadi-chicken-biryani/) — Hyderabadi rice bowl, 90 min, hard
-- [Mirchi ka Salan (مرچی کا سالن)](https://dinner-spinner.pages.dev/recipes/mirchi-ka-salan/) — Hyderabadi curry, 45 min, medium
-- [Haleem (حلیم)](https://dinner-spinner.pages.dev/recipes/haleem/) — Hyderabadi one pot, 210 min, hard
-- [Rogan Josh (روغن جوش)](https://dinner-spinner.pages.dev/recipes/rogan-josh-kashmiri/) — Kashmiri curry, 95 min, medium
-- [Mutton Yakhni (یخنی)](https://dinner-spinner.pages.dev/recipes/kashmiri-yakhni/) — Kashmiri curry, 85 min, medium
-- [Dum Aloo Kashmiri (दम आलू)](https://dinner-spinner.pages.dev/recipes/dum-aloo-kashmiri/) — Kashmiri curry, 50 min, medium
-- [Pad Thai (ผัดไทย)](https://dinner-spinner.pages.dev/recipes/pad-thai-prawn/) — Thai one pot, 30 min, medium
-- [Thai Green Curry (แกงเขียวหวาน)](https://dinner-spinner.pages.dev/recipes/thai-green-curry-chicken/) — Thai curry, 40 min, easy
-- [Tom Yum Goong (ต้มยำกุ้ง)](https://dinner-spinner.pages.dev/recipes/tom-yum-goong/) — Thai soup, 35 min, easy
-- [Chicken Teriyaki Donburi (照り焼き丼)](https://dinner-spinner.pages.dev/recipes/chicken-teriyaki-donburi/) — Japanese rice bowl, 25 min, easy
-- [Shoyu Ramen (醤油ラーメン)](https://dinner-spinner.pages.dev/recipes/shoyu-ramen/) — Japanese soup, 60 min, medium
-- [Chicken Katsu Curry (カツカレー)](https://dinner-spinner.pages.dev/recipes/katsu-curry/) — Japanese curry, 50 min, medium
-- [Spaghetti Aglio e Olio (Spaghetti aglio e olio)](https://dinner-spinner.pages.dev/recipes/spaghetti-aglio-e-olio/) — Italian one pot, 20 min, easy
-- [Margherita Pizza (Pizza Margherita)](https://dinner-spinner.pages.dev/recipes/margherita-pizza/) — Italian baked, 35 min, medium
-- [Chicken Parmigiana (Pollo alla parmigiana)](https://dinner-spinner.pages.dev/recipes/chicken-parmigiana/) — Italian grilled, 50 min, medium
-- [Mushroom Risotto (Risotto ai funghi)](https://dinner-spinner.pages.dev/recipes/mushroom-risotto-italian/) — Italian one pot, 45 min, medium
-- [Chicken Shawarma (شاورما الدجاج)](https://dinner-spinner.pages.dev/recipes/chicken-shawarma/) — Middle Eastern grilled, 45 min, easy
-- [Falafel (فلافل)](https://dinner-spinner.pages.dev/recipes/falafel/) — Middle Eastern fried, 35 min, medium
-- [Fattoush (فتوش)](https://dinner-spinner.pages.dev/recipes/fattoush/) — Middle Eastern light, 25 min, easy
-- [Luchi & Aloor Dom (লুচি ও আলুর দম)](https://dinner-spinner.pages.dev/recipes/luchi-aloor-dom/) — Bengali hearty, 45 min, medium
-- [Ghugni (ঘুগনি)](https://dinner-spinner.pages.dev/recipes/ghugni/) — Bengali hearty, 30 min, easy
-- [Aloo Paratha (आलू पराठा)](https://dinner-spinner.pages.dev/recipes/aloo-paratha/) — North Indian hearty, 40 min, medium
-- [Poha (पोहा)](https://dinner-spinner.pages.dev/recipes/poha/) — North Indian light, 20 min, easy
-- [Chole Bhature (छोले भटूरे)](https://dinner-spinner.pages.dev/recipes/chole-bhature/) — North Indian bread meal, 75 min, medium
-- [Congee (粥)](https://dinner-spinner.pages.dev/recipes/congee/) — Chinese light, 45 min, easy
-- [Scallion Pancake (葱油饼)](https://dinner-spinner.pages.dev/recipes/scallion-pancake/) — Chinese savory, 30 min, medium
-- [Paneer Bhurji](https://dinner-spinner.pages.dev/recipes/paneer-bhurji/) — North Indian dry, 15 min, easy
-- [Phodnicha Bhaat (फोडणीचा भात)](https://dinner-spinner.pages.dev/recipes/phodnicha-bhaat/) — Maharashtrian rice bowl, 15 min, easy
-- [Bagara Khana (بگارا کھانا)](https://dinner-spinner.pages.dev/recipes/bagara-khana/) — Hyderabadi rice bowl, 25 min, easy
-- [Hak (Kashmiri Greens) (हाक)](https://dinner-spinner.pages.dev/recipes/hak-kashmiri-greens/) — Kashmiri curry, 25 min, easy
-- [Lemon-Garlic Roast Chicken](https://dinner-spinner.pages.dev/recipes/lemon-garlic-roast-chicken/) — Mediterranean grilled, 75 min, medium
-- [Levantine Chopped Salad](https://dinner-spinner.pages.dev/recipes/levantine-chopped-salad/) — Middle Eastern light, 15 min, easy
-- [Greek Lamb Stifado](https://dinner-spinner.pages.dev/recipes/greek-lamb-stifado/) — Mediterranean one pot, 130 min, medium
-- [Tabbouleh](https://dinner-spinner.pages.dev/recipes/tabbouleh/) — Middle Eastern light, 20 min, easy
-- [Shorbat Adas (Lentil Soup) (شوربة عدس)](https://dinner-spinner.pages.dev/recipes/shorbat-adas/) — Middle Eastern soup, 40 min, easy
-- [Tacos al Pastor](https://dinner-spinner.pages.dev/recipes/tacos-al-pastor/) — Mexican grilled, 60 min, medium
-- [Pozole Rojo](https://dinner-spinner.pages.dev/recipes/pozole-rojo/) — Mexican soup, 90 min, medium
-- [Spaghetti Aglio e Olio](https://dinner-spinner.pages.dev/recipes/aglio-e-olio/) — Italian one pot, 15 min, easy
-- [Pad Krapow Gai (ผัดกะเพราไก่)](https://dinner-spinner.pages.dev/recipes/pad-krapow-gai/) — Thai dry, 15 min, easy
-- [Oyakodon (親子丼)](https://dinner-spinner.pages.dev/recipes/oyakodon/) — Japanese rice bowl, 20 min, easy
-- [Chicken Quesadilla](https://dinner-spinner.pages.dev/recipes/chicken-quesadilla/) — Mexican bread meal, 15 min, easy
-- [Aloo Tikki Chaat](https://dinner-spinner.pages.dev/recipes/aloo-tikki-chaat/) — North Indian chaat, 30 min, medium
-- [Besan Cheela (बेसन चीला)](https://dinner-spinner.pages.dev/recipes/besan-cheela/) — North Indian light, 20 min, easy
-- [Goan Chicken Cafreal](https://dinner-spinner.pages.dev/recipes/goan-chicken-cafreal/) — Goan dry, 35 min, easy
+- [Macher Jhol (মাছের ঝোল)](https://dinner-spinner.sohab.dev/recipes/macher-jhol/) — Bengali curry, 40 min, easy
+- [Chingri Malai Curry (চিংড়ি মালাই কারি)](https://dinner-spinner.sohab.dev/recipes/chingri-malai-curry/) — Bengali curry, 45 min, medium
+- [Kosha Mangsho (কষা মাংস)](https://dinner-spinner.sohab.dev/recipes/kosha-mangsho/) — Bengali curry, 80 min, medium
+- [Shorshe Ilish (সর্ষে ইলিশ)](https://dinner-spinner.sohab.dev/recipes/shorshe-ilish/) — Bengali curry, 35 min, medium
+- [Aloo Posto (আলু পোস্ত)](https://dinner-spinner.sohab.dev/recipes/aloo-posto/) — Bengali dry, 30 min, easy
+- [Begun Bhaja (বেগুন ভাজা)](https://dinner-spinner.sohab.dev/recipes/begun-bhaja/) — Bengali fried, 15 min, easy
+- [Luchi-Alur Dom (লুচি-আলুর দম)](https://dinner-spinner.sohab.dev/recipes/luchi-alur-dom/) — Bengali bread meal, 50 min, medium
+- [Mishti Doi (মিষ্টি দই)](https://dinner-spinner.sohab.dev/recipes/mishti-doi/) — Bengali sweet, 385 min, easy
+- [Rasgulla (রসগোল্লা)](https://dinner-spinner.sohab.dev/recipes/rasgulla/) — Bengali sweet, 50 min, hard
+- [Sandesh (সন্দেশ)](https://dinner-spinner.sohab.dev/recipes/sandesh/) — Bengali sweet, 30 min, medium
+- [Bengali Fish Fry (মাছ ভাজা)](https://dinner-spinner.sohab.dev/recipes/bengali-fish-fry/) — Bengali dry, 35 min, medium
+- [Doi Maach (দই মাছ)](https://dinner-spinner.sohab.dev/recipes/doi-maach/) — Bengali curry, 40 min, medium
+- [Mochar Ghonto (মোচার ঘণ্ট)](https://dinner-spinner.sohab.dev/recipes/mochar-ghonto/) — Bengali dry, 55 min, hard
+- [Cholar Dal (ছোলার ডাল)](https://dinner-spinner.sohab.dev/recipes/cholar-dal/) — Bengali curry, 40 min, easy
+- [Dhokar Dalna (ধোকার ডালনা)](https://dinner-spinner.sohab.dev/recipes/dhokar-dalna/) — Bengali curry, 60 min, hard
+- [Shukto (শুক্তো)](https://dinner-spinner.sohab.dev/recipes/shukto/) — Bengali curry, 45 min, medium
+- [Posto Bora (পোস্ত বড়া)](https://dinner-spinner.sohab.dev/recipes/posto-bora/) — Bengali fried, 25 min, easy
+- [Jhinge Posto (ঝিঙে পোস্ত)](https://dinner-spinner.sohab.dev/recipes/jhinge-posto/) — Bengali dry, 25 min, easy
+- [Aloor Dum (আলুর দম)](https://dinner-spinner.sohab.dev/recipes/aloor-dum/) — Bengali curry, 35 min, easy
+- [Panta Bhat (পান্তা ভাত)](https://dinner-spinner.sohab.dev/recipes/panta-bhat/) — Bengali rice bowl, 15 min, easy
+- [Keema Doi (কিমার দই)](https://dinner-spinner.sohab.dev/recipes/keema-doi/) — Bengali curry, 50 min, medium
+- [Chicken Kosha (চিকেন কষা)](https://dinner-spinner.sohab.dev/recipes/chicken-kosha/) — Bengali curry, 55 min, medium
+- [Fulkopir Singara (ফুলকপির সিঙাড়া)](https://dinner-spinner.sohab.dev/recipes/fulkopir-singara/) — Bengali fried, 50 min, hard
+- [Telebhaja (Beguni & Peyaji) (তেলেভাজা (বেগুনি ও পেঁয়াজি))](https://dinner-spinner.sohab.dev/recipes/telebhaja/) — Bengali fried, 30 min, easy
+- [Kolkata Biryani (কলকাতা বিরিয়ানি)](https://dinner-spinner.sohab.dev/recipes/kolkata-biryani/) — Bengali rice bowl, 100 min, hard
+- [Lau Ghonto (লাউ ঘণ্ট)](https://dinner-spinner.sohab.dev/recipes/lau-ghonto/) — Bengali dry, 30 min, easy
+- [Muri Ghonto (মুড়ি ঘণ্ট)](https://dinner-spinner.sohab.dev/recipes/muri-ghonto/) — Bengali rice bowl, 45 min, medium
+- [Prawn Malai Curry (চিংড়ি মালাইকারি)](https://dinner-spinner.sohab.dev/recipes/prawn-malai-curry/) — Bengali curry, 35 min, medium
+- [Chholar Dal (ছোলার ডাল)](https://dinner-spinner.sohab.dev/recipes/chholar-dal/) — Bengali curry, 35 min, easy
+- [Butter Chicken](https://dinner-spinner.sohab.dev/recipes/butter-chicken/) — North Indian curry, 50 min, medium
+- [Dal Makhani](https://dinner-spinner.sohab.dev/recipes/dal-makhani/) — North Indian curry, 75 min, medium
+- [Rajma](https://dinner-spinner.sohab.dev/recipes/rajma/) — North Indian curry, 50 min, easy
+- [Palak Paneer](https://dinner-spinner.sohab.dev/recipes/palak-paneer/) — North Indian curry, 35 min, easy
+- [Paneer Tikka](https://dinner-spinner.sohab.dev/recipes/paneer-tikka/) — North Indian grilled, 35 min, easy
+- [Rogan Josh](https://dinner-spinner.sohab.dev/recipes/rogan-josh/) — North Indian curry, 90 min, hard
+- [Kadai Paneer](https://dinner-spinner.sohab.dev/recipes/kadai-paneer/) — North Indian curry, 30 min, easy
+- [Baingan Bharta](https://dinner-spinner.sohab.dev/recipes/baingan-bharta/) — North Indian dry, 35 min, easy
+- [Tandoori Chicken](https://dinner-spinner.sohab.dev/recipes/tandoori-chicken/) — North Indian grilled, 45 min, medium
+- [Shahi Paneer](https://dinner-spinner.sohab.dev/recipes/shahi-paneer/) — North Indian curry, 35 min, medium
+- [Malai Kofta](https://dinner-spinner.sohab.dev/recipes/malai-kofta/) — North Indian curry, 55 min, hard
+- [Pav Bhaji](https://dinner-spinner.sohab.dev/recipes/pav-bhaji/) — North Indian bread meal, 40 min, easy
+- [Dal Tadka](https://dinner-spinner.sohab.dev/recipes/dal-tadka/) — North Indian curry, 35 min, easy
+- [Masala Dosa](https://dinner-spinner.sohab.dev/recipes/masala-dosa/) — South Indian bread meal, 40 min, medium
+- [Idli Sambar](https://dinner-spinner.sohab.dev/recipes/idli-sambar/) — South Indian light, 30 min, easy
+- [Upma](https://dinner-spinner.sohab.dev/recipes/upma/) — South Indian savory, 20 min, easy
+- [Chicken Chettinad](https://dinner-spinner.sohab.dev/recipes/chicken-chettinad/) — South Indian curry, 55 min, medium
+- [Fish Moilee](https://dinner-spinner.sohab.dev/recipes/fish-moilee/) — South Indian curry, 30 min, easy
+- [Medu Vada](https://dinner-spinner.sohab.dev/recipes/medu-vada/) — South Indian fried, 30 min, medium
+- [Uttapam](https://dinner-spinner.sohab.dev/recipes/uttapam/) — South Indian bread meal, 20 min, easy
+- [Pesarattu](https://dinner-spinner.sohab.dev/recipes/pesarattu/) — South Indian savory, 25 min, easy
+- [Avial](https://dinner-spinner.sohab.dev/recipes/avial/) — South Indian curry, 35 min, easy
+- [Rasam Rice](https://dinner-spinner.sohab.dev/recipes/rasam-rice/) — South Indian soup, 25 min, easy
+- [Chicken Manchurian](https://dinner-spinner.sohab.dev/recipes/chicken-manchurian/) — Chinese fried, 40 min, medium
+- [Veg Hakka Noodles](https://dinner-spinner.sohab.dev/recipes/veg-hakka-noodles/) — Chinese one pot, 25 min, easy
+- [Chilli Chicken](https://dinner-spinner.sohab.dev/recipes/chilli-chicken/) — Chinese fried, 35 min, medium
+- [Veg Fried Rice](https://dinner-spinner.sohab.dev/recipes/veg-fried-rice/) — Chinese rice bowl, 20 min, easy
+- [Gobi Manchurian](https://dinner-spinner.sohab.dev/recipes/gobi-manchurian/) — Chinese fried, 35 min, medium
+- [Chilli Paneer](https://dinner-spinner.sohab.dev/recipes/chilli-paneer/) — Chinese fried, 30 min, easy
+- [Schezwan Noodles](https://dinner-spinner.sohab.dev/recipes/schezwan-noodles/) — Chinese one pot, 25 min, easy
+- [Momos](https://dinner-spinner.sohab.dev/recipes/momos/) — Chinese light, 45 min, medium
+- [Pasta Arrabiata](https://dinner-spinner.sohab.dev/recipes/pasta-arrabiata/) — Continental one pot, 25 min, easy
+- [Grilled Chicken Salad](https://dinner-spinner.sohab.dev/recipes/grilled-chicken-salad/) — Continental light, 27 min, easy
+- [Mac & Cheese](https://dinner-spinner.sohab.dev/recipes/mac-and-cheese/) — Continental one pot, 35 min, easy
+- [Mushroom Risotto](https://dinner-spinner.sohab.dev/recipes/mushroom-risotto/) — Continental rice bowl, 40 min, medium
+- [Pancakes](https://dinner-spinner.sohab.dev/recipes/pancakes/) — Continental sweet, 25 min, easy
+- [French Toast](https://dinner-spinner.sohab.dev/recipes/french-toast/) — Continental sweet, 15 min, easy
+- [Caesar Salad](https://dinner-spinner.sohab.dev/recipes/caesar-salad/) — Continental light, 20 min, easy
+- [Garlic Bread Pizza](https://dinner-spinner.sohab.dev/recipes/garlic-bread-pizza/) — Continental baked, 30 min, easy
+- [Pad Thai](https://dinner-spinner.sohab.dev/recipes/pad-thai/) — Asian one pot, 25 min, medium
+- [Thai Green Curry](https://dinner-spinner.sohab.dev/recipes/thai-green-curry/) — Asian curry, 30 min, easy
+- [Ramen](https://dinner-spinner.sohab.dev/recipes/ramen/) — Asian soup, 35 min, medium
+- [Bibimbap](https://dinner-spinner.sohab.dev/recipes/bibimbap/) — Asian rice bowl, 35 min, medium
+- [Egg Fried Rice](https://dinner-spinner.sohab.dev/recipes/egg-fried-rice/) — Asian rice bowl, 15 min, easy
+- [Tacos](https://dinner-spinner.sohab.dev/recipes/tacos/) — Mexican bread meal, 30 min, easy
+- [Burrito Bowl](https://dinner-spinner.sohab.dev/recipes/burrito-bowl/) — Mexican rice bowl, 35 min, easy
+- [Falafel Wrap](https://dinner-spinner.sohab.dev/recipes/falafel-wrap/) — Mediterranean bread meal, 35 min, medium
+- [Hummus Platter](https://dinner-spinner.sohab.dev/recipes/hummus-platter/) — Middle Eastern light, 10 min, easy
+- [Khaman Dhokla (ખમણ ઢોકળા)](https://dinner-spinner.sohab.dev/recipes/khaman-dhokla/) — Gujarati sweet, 35 min, easy
+- [Undhiyu (ઊંધિયું)](https://dinner-spinner.sohab.dev/recipes/undhiyu/) — Gujarati one pot, 90 min, hard
+- [Gujarati Kadhi (ગુજરાતી કઢી)](https://dinner-spinner.sohab.dev/recipes/gujarati-kadhi/) — Gujarati curry, 30 min, easy
+- [Methi Thepla (મેથી થેપલા)](https://dinner-spinner.sohab.dev/recipes/methi-thepla/) — Gujarati bread meal, 35 min, easy
+- [Khandvi (ખાંડવી)](https://dinner-spinner.sohab.dev/recipes/khandvi/) — Gujarati light, 30 min, hard
+- [Handvo (હાંડવો)](https://dinner-spinner.sohab.dev/recipes/handvo/) — Gujarati savory, 60 min, medium
+- [Gujarati Toor Dal (ગુજરાતી દાળ)](https://dinner-spinner.sohab.dev/recipes/gujarati-dal/) — Gujarati curry, 35 min, easy
+- [Fafda (ફાફડા)](https://dinner-spinner.sohab.dev/recipes/fafda-jalebi/) — Gujarati fried, 40 min, medium
+- [Sev Tameta nu Shaak (સેવ ટમેટા નું શાક)](https://dinner-spinner.sohab.dev/recipes/sev-tameta-nu-shaak/) — Gujarati curry, 25 min, easy
+- [Misal Pav (मिसळ पाव)](https://dinner-spinner.sohab.dev/recipes/misal-pav/) — Maharashtrian curry, 60 min, medium
+- [Vada Pav (वडा पाव)](https://dinner-spinner.sohab.dev/recipes/vada-pav/) — Maharashtrian fried, 40 min, medium
+- [Puran Poli (पुरण पोळी)](https://dinner-spinner.sohab.dev/recipes/puran-poli/) — Maharashtrian sweet, 60 min, hard
+- [Bharli Vangi (भरली वांगी)](https://dinner-spinner.sohab.dev/recipes/bharli-vangi/) — Maharashtrian curry, 50 min, medium
+- [Fish Moilee (മീൻ മോയിലി)](https://dinner-spinner.sohab.dev/recipes/fish-moilee-kerala/) — Kerala curry, 40 min, easy
+- [Puttu (പുട്ട്)](https://dinner-spinner.sohab.dev/recipes/puttu/) — Kerala light, 25 min, easy
+- [Cabbage Thoran (തോരൻ)](https://dinner-spinner.sohab.dev/recipes/thoran/) — Kerala dry, 25 min, easy
+- [Nadan Kozhi Curry (നാടൻ കോഴി കറി)](https://dinner-spinner.sohab.dev/recipes/nadan-kozhi-curry/) — Kerala curry, 60 min, medium
+- [Chicken Vindaloo (विंदालू)](https://dinner-spinner.sohab.dev/recipes/chicken-vindaloo/) — Goan curry, 65 min, medium
+- [Prawn Balchão (बाल्चाव)](https://dinner-spinner.sohab.dev/recipes/prawn-balchao/) — Goan dry, 45 min, medium
+- [Chicken Xacuti (शाकूती)](https://dinner-spinner.sohab.dev/recipes/chicken-xacuti/) — Goan curry, 70 min, hard
+- [Dal Baati Churma (दाल बाटी चूरमा)](https://dinner-spinner.sohab.dev/recipes/dal-baati-churma/) — Rajasthani bread meal, 90 min, hard
+- [Gatte ki Sabzi (गट्टे की सब्ज़ी)](https://dinner-spinner.sohab.dev/recipes/gatte-ki-sabzi/) — Rajasthani curry, 45 min, medium
+- [Laal Maas (लाल मांस)](https://dinner-spinner.sohab.dev/recipes/laal-maas/) — Rajasthani curry, 100 min, hard
+- [Hyderabadi Chicken Biryani (حیدرآبادی بریانی)](https://dinner-spinner.sohab.dev/recipes/hyderabadi-chicken-biryani/) — Hyderabadi rice bowl, 90 min, hard
+- [Mirchi ka Salan (مرچی کا سالن)](https://dinner-spinner.sohab.dev/recipes/mirchi-ka-salan/) — Hyderabadi curry, 45 min, medium
+- [Haleem (حلیم)](https://dinner-spinner.sohab.dev/recipes/haleem/) — Hyderabadi one pot, 210 min, hard
+- [Rogan Josh (روغن جوش)](https://dinner-spinner.sohab.dev/recipes/rogan-josh-kashmiri/) — Kashmiri curry, 95 min, medium
+- [Mutton Yakhni (یخنی)](https://dinner-spinner.sohab.dev/recipes/kashmiri-yakhni/) — Kashmiri curry, 85 min, medium
+- [Dum Aloo Kashmiri (दम आलू)](https://dinner-spinner.sohab.dev/recipes/dum-aloo-kashmiri/) — Kashmiri curry, 50 min, medium
+- [Pad Thai (ผัดไทย)](https://dinner-spinner.sohab.dev/recipes/pad-thai-prawn/) — Thai one pot, 30 min, medium
+- [Thai Green Curry (แกงเขียวหวาน)](https://dinner-spinner.sohab.dev/recipes/thai-green-curry-chicken/) — Thai curry, 40 min, easy
+- [Tom Yum Goong (ต้มยำกุ้ง)](https://dinner-spinner.sohab.dev/recipes/tom-yum-goong/) — Thai soup, 35 min, easy
+- [Chicken Teriyaki Donburi (照り焼き丼)](https://dinner-spinner.sohab.dev/recipes/chicken-teriyaki-donburi/) — Japanese rice bowl, 25 min, easy
+- [Shoyu Ramen (醤油ラーメン)](https://dinner-spinner.sohab.dev/recipes/shoyu-ramen/) — Japanese soup, 60 min, medium
+- [Chicken Katsu Curry (カツカレー)](https://dinner-spinner.sohab.dev/recipes/katsu-curry/) — Japanese curry, 50 min, medium
+- [Spaghetti Aglio e Olio (Spaghetti aglio e olio)](https://dinner-spinner.sohab.dev/recipes/spaghetti-aglio-e-olio/) — Italian one pot, 20 min, easy
+- [Margherita Pizza (Pizza Margherita)](https://dinner-spinner.sohab.dev/recipes/margherita-pizza/) — Italian baked, 35 min, medium
+- [Chicken Parmigiana (Pollo alla parmigiana)](https://dinner-spinner.sohab.dev/recipes/chicken-parmigiana/) — Italian grilled, 50 min, medium
+- [Mushroom Risotto (Risotto ai funghi)](https://dinner-spinner.sohab.dev/recipes/mushroom-risotto-italian/) — Italian one pot, 45 min, medium
+- [Chicken Shawarma (شاورما الدجاج)](https://dinner-spinner.sohab.dev/recipes/chicken-shawarma/) — Middle Eastern grilled, 45 min, easy
+- [Falafel (فلافل)](https://dinner-spinner.sohab.dev/recipes/falafel/) — Middle Eastern fried, 35 min, medium
+- [Fattoush (فتوش)](https://dinner-spinner.sohab.dev/recipes/fattoush/) — Middle Eastern light, 25 min, easy
+- [Luchi & Aloor Dom (লুচি ও আলুর দম)](https://dinner-spinner.sohab.dev/recipes/luchi-aloor-dom/) — Bengali hearty, 45 min, medium
+- [Ghugni (ঘুগনি)](https://dinner-spinner.sohab.dev/recipes/ghugni/) — Bengali hearty, 30 min, easy
+- [Aloo Paratha (आलू पराठा)](https://dinner-spinner.sohab.dev/recipes/aloo-paratha/) — North Indian hearty, 40 min, medium
+- [Poha (पोहा)](https://dinner-spinner.sohab.dev/recipes/poha/) — North Indian light, 20 min, easy
+- [Chole Bhature (छोले भटूरे)](https://dinner-spinner.sohab.dev/recipes/chole-bhature/) — North Indian bread meal, 75 min, medium
+- [Congee (粥)](https://dinner-spinner.sohab.dev/recipes/congee/) — Chinese light, 45 min, easy
+- [Scallion Pancake (葱油饼)](https://dinner-spinner.sohab.dev/recipes/scallion-pancake/) — Chinese savory, 30 min, medium
+- [Paneer Bhurji](https://dinner-spinner.sohab.dev/recipes/paneer-bhurji/) — North Indian dry, 15 min, easy
+- [Phodnicha Bhaat (फोडणीचा भात)](https://dinner-spinner.sohab.dev/recipes/phodnicha-bhaat/) — Maharashtrian rice bowl, 15 min, easy
+- [Bagara Khana (بگارا کھانا)](https://dinner-spinner.sohab.dev/recipes/bagara-khana/) — Hyderabadi rice bowl, 25 min, easy
+- [Hak (Kashmiri Greens) (हाक)](https://dinner-spinner.sohab.dev/recipes/hak-kashmiri-greens/) — Kashmiri curry, 25 min, easy
+- [Lemon-Garlic Roast Chicken](https://dinner-spinner.sohab.dev/recipes/lemon-garlic-roast-chicken/) — Mediterranean grilled, 75 min, medium
+- [Levantine Chopped Salad](https://dinner-spinner.sohab.dev/recipes/levantine-chopped-salad/) — Middle Eastern light, 15 min, easy
+- [Greek Lamb Stifado](https://dinner-spinner.sohab.dev/recipes/greek-lamb-stifado/) — Mediterranean one pot, 130 min, medium
+- [Tabbouleh](https://dinner-spinner.sohab.dev/recipes/tabbouleh/) — Middle Eastern light, 20 min, easy
+- [Shorbat Adas (Lentil Soup) (شوربة عدس)](https://dinner-spinner.sohab.dev/recipes/shorbat-adas/) — Middle Eastern soup, 40 min, easy
+- [Tacos al Pastor](https://dinner-spinner.sohab.dev/recipes/tacos-al-pastor/) — Mexican grilled, 60 min, medium
+- [Pozole Rojo](https://dinner-spinner.sohab.dev/recipes/pozole-rojo/) — Mexican soup, 90 min, medium
+- [Spaghetti Aglio e Olio](https://dinner-spinner.sohab.dev/recipes/aglio-e-olio/) — Italian one pot, 15 min, easy
+- [Pad Krapow Gai (ผัดกะเพราไก่)](https://dinner-spinner.sohab.dev/recipes/pad-krapow-gai/) — Thai dry, 15 min, easy
+- [Oyakodon (親子丼)](https://dinner-spinner.sohab.dev/recipes/oyakodon/) — Japanese rice bowl, 20 min, easy
+- [Chicken Quesadilla](https://dinner-spinner.sohab.dev/recipes/chicken-quesadilla/) — Mexican bread meal, 15 min, easy
+- [Aloo Tikki Chaat](https://dinner-spinner.sohab.dev/recipes/aloo-tikki-chaat/) — North Indian chaat, 30 min, medium
+- [Besan Cheela (बेसन चीला)](https://dinner-spinner.sohab.dev/recipes/besan-cheela/) — North Indian light, 20 min, easy
+- [Goan Chicken Cafreal](https://dinner-spinner.sohab.dev/recipes/goan-chicken-cafreal/) — Goan dry, 35 min, easy

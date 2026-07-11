@@ -10,7 +10,7 @@ interface SeoOptions {
   noIndex?: boolean
 }
 
-const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://dinner-spinner.pages.dev').replace(/\/$/, '')
+const SITE_URL = (import.meta.env.VITE_SITE_URL ?? 'https://dinner-spinner.sohab.dev').replace(/\/$/, '')
 const BASE_URL = import.meta.env.BASE_URL.replace(/\/$/, '')
 
 function fullUrl(path?: string): string {

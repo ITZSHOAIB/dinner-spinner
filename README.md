@@ -2,7 +2,7 @@
 
 A playful meal picker for couples and families. Spin three reels — **cuisine / style / protein** — or set your own filters (time, dietary), and the app hands back recipe suggestions with cook time, difficulty, and ingredient lists.
 
-🔗 **Live:** https://dinner-spinner.pages.dev/
+🔗 **Live:** https://dinner-spinner.sohab.dev/
 
 ---
 

@@ -19,15 +19,15 @@ Wrangler command is required.
 | Root directory | `/` |
 | Node.js version | `24` |
 
-4. Under **Settings** -> **Environment variables**, add `VITE_SITE_URL` with
-   `https://dinner-spinner.pages.dev` for the production environment.
-5. Deploy. Cloudflare will publish `https://dinner-spinner.pages.dev` and create
-   preview deployments for pull requests.
+4. Under **Custom domains**, add `dinner-spinner.sohab.dev` and complete the DNS
+   verification shown by Cloudflare.
+5. Under **Settings** -> **Environment variables**, add `VITE_SITE_URL` with
+   `https://dinner-spinner.sohab.dev` for the production environment.
+6. Deploy and submit `https://dinner-spinner.sohab.dev/sitemap.xml` in Search
+   Console. Cloudflare also creates preview deployments for pull requests.
 
-If you use a custom domain, change `VITE_SITE_URL` to its canonical HTTPS URL,
-redeploy, and submit `<your-domain>/sitemap.xml` in Search Console. This variable
-sets canonical URLs, Open Graph image URLs, the generated sitemap, structured data,
-and the LLM indexes.
+`VITE_SITE_URL` sets canonical URLs, Open Graph image URLs, the generated sitemap,
+structured data, and the LLM indexes.
 
 ## Migration from GitHub Pages
 

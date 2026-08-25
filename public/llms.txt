@@ -96,11 +96,13 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Ramen](https://dinner-spinner.sohab.dev/recipes/ramen/) — Asian soup, 35 min, medium
 - [Bibimbap](https://dinner-spinner.sohab.dev/recipes/bibimbap/) — Asian rice bowl, 35 min, medium
 - [Egg Fried Rice](https://dinner-spinner.sohab.dev/recipes/egg-fried-rice/) — Asian rice bowl, 15 min, easy
+- [Kimchi Fried Rice](https://dinner-spinner.sohab.dev/recipes/kimchi-fried-rice/) — Asian rice bowl, 20 min, easy
 - [Masala Anda Bhurji (मसाला अंडा भुर्जी)](https://dinner-spinner.sohab.dev/recipes/masala-anda-bhurji/) — North Indian savory, 15 min, easy
 - [Chettinad Muttai Masala (செட்டிநாடு முட்டை மசாலா)](https://dinner-spinner.sohab.dev/recipes/chettinad-muttai-masala/) — South Indian curry, 50 min, medium
 - [Shakshuka](https://dinner-spinner.sohab.dev/recipes/shakshuka/) — Middle Eastern one pot, 30 min, easy
 - [Tacos](https://dinner-spinner.sohab.dev/recipes/tacos/) — Mexican bread meal, 30 min, easy
 - [Burrito Bowl](https://dinner-spinner.sohab.dev/recipes/burrito-bowl/) — Mexican rice bowl, 35 min, easy
+- [Rice & Bean Enchiladas](https://dinner-spinner.sohab.dev/recipes/rice-bean-enchiladas/) — Mexican bread meal, 40 min, easy
 - [Falafel Wrap](https://dinner-spinner.sohab.dev/recipes/falafel-wrap/) — Mediterranean bread meal, 35 min, medium
 - [Hummus Platter](https://dinner-spinner.sohab.dev/recipes/hummus-platter/) — Middle Eastern light, 10 min, easy
 - [Khaman Dhokla (ખમણ ઢોકળા)](https://dinner-spinner.sohab.dev/recipes/khaman-dhokla/) — Gujarati sweet, 35 min, easy
@@ -207,8 +209,11 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Tofu Bhurji](https://dinner-spinner.sohab.dev/recipes/tofu-bhurji/) — North Indian dry, 30 min, easy
 - [Paneer Ghee Roast](https://dinner-spinner.sohab.dev/recipes/paneer-ghee-roast/) — South Indian dry, 45 min, medium
 - [Gambas al Ajillo](https://dinner-spinner.sohab.dev/recipes/gambas-al-ajillo/) — Mediterranean dry, 20 min, easy
+- [Pad See Ew](https://dinner-spinner.sohab.dev/recipes/pad-see-ew/) — Thai noodles, 30 min, medium
 - [Greek Briam](https://dinner-spinner.sohab.dev/recipes/greek-briam/) — Mediterranean one pot, 75 min, easy
 - [Gigantes Plaki](https://dinner-spinner.sohab.dev/recipes/gigantes-plaki/) — Mediterranean one pot, 100 min, medium
 - [Ker Sangri](https://dinner-spinner.sohab.dev/recipes/ker-sangri/) — Rajasthani dry, 50 min, medium
 - [Papad ki Sabzi](https://dinner-spinner.sohab.dev/recipes/papad-ki-sabzi/) — Rajasthani curry, 25 min, easy
 - [Panchmel Dal](https://dinner-spinner.sohab.dev/recipes/panchmel-dal/) — Rajasthani curry, 60 min, medium
+- [Bajre ki Khichdi](https://dinner-spinner.sohab.dev/recipes/bajre-ki-khichdi/) — Rajasthani one pot, 30 min, easy
+- [Rajasthani Kadhi](https://dinner-spinner.sohab.dev/recipes/rajasthani-kadhi/) — Rajasthani curry, 40 min, easy

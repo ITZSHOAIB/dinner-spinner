@@ -451,6 +451,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dinner-spinner.sohab.dev/recipes/kimchi-fried-rice/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dinner-spinner.sohab.dev/recipes/masala-anda-bhurji/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -476,6 +482,12 @@
   </url>
   <url>
     <loc>https://dinner-spinner.sohab.dev/recipes/burrito-bowl/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dinner-spinner.sohab.dev/recipes/rice-bean-enchiladas/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -1117,6 +1129,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dinner-spinner.sohab.dev/recipes/pad-see-ew/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dinner-spinner.sohab.dev/recipes/greek-briam/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
@@ -1142,6 +1160,18 @@
   </url>
   <url>
     <loc>https://dinner-spinner.sohab.dev/recipes/panchmel-dal/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dinner-spinner.sohab.dev/recipes/bajre-ki-khichdi/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dinner-spinner.sohab.dev/recipes/rajasthani-kadhi/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

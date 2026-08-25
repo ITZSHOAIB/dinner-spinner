@@ -2494,6 +2494,45 @@ Simple wok-fried rice with fluffy scrambled eggs and spring onions — fast, del
 
 ---
 
+## Kimchi Fried Rice
+
+URL: https://dinner-spinner.sohab.dev/recipes/kimchi-fried-rice/
+
+Fermented kimchi stir-fried with rice, broccoli, carrots, and a fried egg for a punchy Korean-style weeknight bowl.
+
+**Cuisine:** Asian (Korea) · **Style:** Rice Bowl · **Protein:** Egg
+**Time:** 20 min total (10 prep + 10 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Contains egg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 3 cups cold cooked rice
+- 1 tbsp oil
+- 2 garlic cloves, minced
+- 1 tsp ginger, grated
+- 1 cup broccoli florets, chopped small
+- 1 carrot, julienned
+- 1/2 cup kimchi, chopped
+- 2 eggs
+- 1 tbsp tamari or soy sauce
+- 1 tsp sesame oil
+- 2 spring onions, sliced
+- 1 lime wedge
+- Sesame seeds to finish
+
+**Steps:**
+1. Heat oil in a wok or wide pan and sauté garlic, ginger, broccoli, and carrot until just tender.
+2. Add chopped kimchi and stir-fry for a minute so it turns fragrant.
+3. Tip in the rice and break up any clumps, tossing until the grains are well coated.
+4. Push the rice to one side, crack in the eggs, and scramble them until just set.
+5. Season with tamari, sesame oil, and spring onions.
+6. Serve hot with a squeeze of lime and a scattering of sesame seeds.
+
+**Tips:**
+- Use cold rice for the best texture; warm rice tends to clump and turn sticky.
+- If your kimchi is very salty, add the tamari gradually and taste as you go.
+
+---
+
 ## Masala Anda Bhurji (मसाला अंडा भुर्जी)
 
 URL: https://dinner-spinner.sohab.dev/recipes/masala-anda-bhurji/
@@ -2684,6 +2723,40 @@ A deconstructed burrito with rice, beans, grilled chicken, corn, and all the fix
 4. Warm black beans and corn.
 5. Assemble bowls: rice, beans, corn, chicken, lettuce.
 6. Top with avocado, salsa, sour cream, and lime.
+
+---
+
+## Rice & Bean Enchiladas
+
+URL: https://dinner-spinner.sohab.dev/recipes/rice-bean-enchiladas/
+
+Flour tortillas filled with rice, refried beans, salsa, and cheese, then baked until bubbling and golden.
+
+**Cuisine:** Mexican (Mexico) · **Style:** Bread Meal · **Protein:** Lentils
+**Time:** 40 min total (10 prep + 30 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian
+
+**Ingredients:**
+- 250g microwave rice
+- 1 tsp Cajun seasoning
+- 1 bunch spring onions, chopped
+- 2 large flour tortillas
+- 415g can refried beans
+- 200g tomato salsa
+- 150g yogurt or sour cream
+- 25g cheese, grated
+
+**Steps:**
+1. Heat the rice and stir through the Cajun seasoning and most of the spring onions.
+2. Heat the oven to 200°C and spread a little salsa over the base of a baking dish.
+3. Spread the tortillas with refried beans, then top with seasoned rice.
+4. Roll up tightly, arrange in the dish, dot with yogurt or sour cream, and sprinkle over the cheese.
+5. Bake for 30 minutes until golden and bubbling.
+6. Finish with the remaining spring onions and serve with extra salsa on the side.
+
+**Tips:**
+- Warm the tortillas briefly before filling so they roll without tearing.
+- A spoonful of hot sauce in the beans is an easy way to lift the flavour.
 
 ---
 
@@ -6726,6 +6799,45 @@ Spanish-style prawns quickly sizzled with sliced garlic, olive oil, chilli, and 
 
 ---
 
+## Pad See Ew
+
+URL: https://dinner-spinner.sohab.dev/recipes/pad-see-ew/
+
+Chewy wide rice noodles stir-fried with chicken, Chinese broccoli, egg, and dark soy sauce — a Thai street-food favourite.
+
+**Cuisine:** Thai (Thailand) · **Style:** Noodles · **Protein:** Chicken
+**Time:** 30 min total (20 prep + 10 cook) · **Difficulty:** medium · **Servings:** 3 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Contains egg · Dairy-free
+
+**Ingredients:**
+- 300g wide rice noodles
+- 250g chicken thighs, thinly sliced
+- 2 eggs
+- 3 garlic cloves, chopped
+- 2 cups Chinese broccoli or broccoli, chopped
+- 1 tbsp oyster sauce
+- 1 tbsp light soy sauce
+- 1 tbsp dark soy sauce
+- 1 tsp fish sauce
+- 1/2 tsp sugar
+- 3 tbsp water
+- 2 tbsp oil
+- White pepper to taste
+
+**Steps:**
+1. Mix the oyster sauce, light soy sauce, dark soy sauce, fish sauce, sugar, and water into a bowl.
+2. Heat oil in a very hot wok and sear the chicken until nearly cooked through. Remove and set aside.
+3. Add garlic and broccoli, then stir-fry briefly until bright green.
+4. Add the noodles and sauce, tossing quickly so the noodles absorb the colour and flavour.
+5. Push everything aside, scramble the eggs in the empty space, then fold the chicken back in.
+6. Keep tossing until the noodles are lightly caramelised at the edges. Serve immediately with white pepper if you like more heat.
+
+**Tips:**
+- High heat is the difference between silky noodles and soggy noodles here.
+- If the noodles are stuck together, loosen them with a brief steam or a splash of water before cooking.
+
+---
+
 ## Greek Briam
 
 URL: https://dinner-spinner.sohab.dev/recipes/greek-briam/
@@ -6887,3 +6999,79 @@ Five lentils cooked together with cumin, whole spices, and a bright tempering in
 
 **Tips:**
 - Do not over-purée the cooked lentils; a little texture from the five varieties makes the dal more interesting.
+
+---
+
+## Bajre ki Khichdi
+
+URL: https://dinner-spinner.sohab.dev/recipes/bajre-ki-khichdi/
+
+Pearl millet and moong dal cooked together with cumin, ginger, and green chilli into a simple Rajasthani one-pot meal.
+
+**Cuisine:** Rajasthani (Rajasthan) · **Style:** One Pot · **Protein:** Lentils
+**Time:** 30 min total (10 prep + 20 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 2 tbsp oil
+- 1 tsp cumin seeds
+- 1 tsp ginger, finely chopped
+- 1 green chilli, chopped
+- 1/2 cup bajra
+- 1/4 cup split moong dal
+- 1/4 tsp turmeric
+- 1 pinch asafoetida
+- 1 tsp salt
+- 4 cups water
+- Coriander to finish
+
+**Steps:**
+1. Rinse the bajra and moong dal well, then soak briefly if you have time.
+2. Heat oil in a pressure cooker or deep pot and crackle cumin seeds.
+3. Add ginger and green chilli, then stir in bajra, dal, turmeric, asafoetida, salt, and water.
+4. Pressure cook until soft, or simmer covered until the millet and dal collapse into a thick khichdi.
+5. Adjust with a splash more water if needed and finish with coriander. Serve hot with ghee, curd, or pickle.
+
+**Tips:**
+- This khichdi is especially good in winter, when the millet feels extra warming.
+- A little extra water at the end helps keep leftovers spoonable when reheated.
+
+---
+
+## Rajasthani Kadhi
+
+URL: https://dinner-spinner.sohab.dev/recipes/rajasthani-kadhi/
+
+A spiced yogurt and besan kadhi tempered with mustard seeds, fenugreek, garlic, and curry leaves.
+
+**Cuisine:** Rajasthani (Rajasthan) · **Style:** Curry · **Protein:** Lentils
+**Time:** 40 min total (10 prep + 30 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Gluten-free
+
+**Ingredients:**
+- 1 cup yogurt
+- 3 tbsp besan
+- 2.5 cups water
+- 1/2 tsp turmeric
+- 1/2 tsp red chilli powder
+- Salt to taste
+- 2 tbsp ghee
+- 1/2 tsp mustard seeds
+- 1/4 tsp fenugreek seeds
+- 1/2 tsp cumin seeds
+- 1 pinch asafoetida
+- 2 dried red chillies
+- 2 sprigs curry leaves
+- 5 garlic cloves, crushed
+- 2 green chillies, crushed
+
+**Steps:**
+1. Whisk yogurt, besan, water, turmeric, red chilli powder, and salt until perfectly smooth.
+2. Simmer the kadhi on low heat, stirring often, until the raw besan smell disappears and the mixture thickens slightly.
+3. Heat ghee in a small pan. Add mustard seeds, fenugreek, cumin, asafoetida, dried chillies, curry leaves, garlic, and green chillies.
+4. Let the garlic soften and the spices bloom, then pour the tempering into the kadhi.
+5. Simmer a few minutes more so the flavours meld. Serve hot with rice or roti.
+
+**Tips:**
+- Keep the heat low while simmering so the yogurt does not split.
+- If you want a thinner kadhi, loosen it with a little hot water before serving.

@@ -15,10 +15,11 @@ const TTS_ENABLED_KEY = 'dinner-spinner-tts-enabled'
 interface CookModeProps {
   recipeName: string
   steps: string[]
+  stepIngredients?: string[][]
   onClose: () => void
 }
 
-export function CookMode({ recipeName, steps, onClose }: CookModeProps) {
+export function CookMode({ recipeName, steps, stepIngredients = [], onClose }: CookModeProps) {
   const [index, setIndex] = useState(0)
   const [ttsEnabled, setTtsEnabled] = useState<boolean>(
     () => isSpeechSupported() && localStorage.getItem(TTS_ENABLED_KEY) !== 'false',
@@ -30,6 +31,7 @@ export function CookMode({ recipeName, steps, onClose }: CookModeProps) {
   const { speak, stop, isSpeaking } = useSpeech(selected)
 
   const step = steps[index]
+  const ingredients = stepIngredients[index] ?? []
   const atStart = index === 0
   const atEnd = index === steps.length - 1
 
@@ -316,9 +318,17 @@ export function CookMode({ recipeName, steps, onClose }: CookModeProps) {
           On the last step, right tap completes and exits cook mode. */}
       <div className="relative flex-1 min-h-0">
         <div className="absolute inset-0 flex items-center justify-center px-6 py-8 overflow-y-auto pointer-events-none">
-          <p className="font-heading text-2xl sm:text-3xl leading-relaxed text-text-primary text-center max-w-2xl">
-            {step}
-          </p>
+          <div className="max-w-2xl text-center">
+            <p className="font-heading text-2xl sm:text-3xl leading-relaxed text-text-primary">
+              {step}
+            </p>
+            {ingredients.length > 0 && (
+              <p className="mt-5 text-sm leading-relaxed text-text-secondary">
+                <span className="font-medium text-turmeric">Use:</span>{' '}
+                {ingredients.join(' · ')}
+              </p>
+            )}
+          </div>
         </div>
         <div className="absolute inset-0 flex">
           <button

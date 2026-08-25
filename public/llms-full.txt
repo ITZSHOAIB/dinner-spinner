@@ -1835,7 +1835,7 @@ URL: https://dinner-spinner.sohab.dev/recipes/veg-hakka-noodles/
 
 Stir-fried noodles with colourful vegetables and soy sauce — a quick Indo-Chinese weeknight favourite.
 
-**Cuisine:** Chinese · **Style:** One Pot · **Protein:** Veggies
+**Cuisine:** Chinese · **Style:** Noodles · **Protein:** Veggies
 **Time:** 25 min total (10 prep + 15 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 2/5
 **Meal:** lunch, dinner · **Dietary:** Vegan · Dairy-free
 
@@ -3580,7 +3580,7 @@ URL: https://dinner-spinner.sohab.dev/recipes/hyderabadi-chicken-biryani/
 
 Layered basmati rice and saffron-kissed marinated chicken sealed and slow-cooked dum-style — the Nizam-era heirloom of Indian biryanis.
 
-**Cuisine:** Hyderabadi (Hyderabad) · **Style:** Rice Bowl · **Protein:** Chicken
+**Cuisine:** Hyderabadi (Hyderabad) · **Style:** Biryani · **Protein:** Chicken
 **Time:** 90 min total (40 prep + 50 cook) · **Difficulty:** hard · **Servings:** 6 · **Spice:** 3/5
 **Meal:** lunch, dinner · **Dietary:** Non-Veg · Gluten-free
 
@@ -5355,3 +5355,693 @@ Goa's emerald-green Portuguese-Indian fusion — chicken marinated in a fresh-po
 **Tips:**
 - Use the herbs whole — coriander stems carry as much flavour as the leaves.
 - A splash of vinegar at the end revives the green colour and the dish's signature sour kick.
+
+---
+
+## Tofu Tikka Masala
+
+URL: https://dinner-spinner.sohab.dev/recipes/tofu-tikka-masala/
+
+Spiced, browned tofu cubes simmered in a silky tomato-coconut masala — a plant-based weeknight curry with deep restaurant-style flavour.
+
+**Cuisine:** North Indian (North India) · **Style:** Curry · **Protein:** Tofu
+**Time:** 45 min total (15 prep + 30 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 400g firm tofu, pressed and cubed
+- 1 onion, finely chopped
+- 3 tomatoes, blended
+- 1 tbsp ginger-garlic paste
+- 1/2 cup coconut milk
+- 1 tsp cumin seeds
+- 1 tsp coriander powder
+- 1 tsp garam masala
+- 1/2 tsp turmeric
+- 1 tsp Kashmiri chilli powder
+- 1 tbsp neutral oil
+- 1 tsp dried fenugreek leaves
+- Salt and coriander leaves
+
+**Steps:**
+1. Toss tofu with a little oil, turmeric, chilli powder, and salt. Pan-sear on medium-high heat until golden on several sides; set aside.
+2. Cook cumin in the remaining oil, then soften onion and ginger-garlic paste until fragrant. Add tomato puree, coriander powder, garam masala, and salt; cook until thick and glossy.
+3. Stir in coconut milk and a splash of water. Simmer gently for 8 minutes, then fold in tofu and crushed fenugreek leaves. Cook 3 minutes and finish with coriander.
+
+**Tips:**
+- Pressing firm tofu first helps it brown and keeps it from watering down the sauce.
+
+---
+
+## Palak Tofu
+
+URL: https://dinner-spinner.sohab.dev/recipes/palak-tofu/
+
+Pan-seared tofu in a bright spinach and tomato gravy — a dairy-free, weeknight-friendly take on the familiar North Indian palak format.
+
+**Cuisine:** North Indian (North India) · **Style:** Curry · **Protein:** Tofu
+**Time:** 35 min total (15 prep + 20 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 350g firm tofu, cubed
+- 500g spinach, washed
+- 1 onion, chopped
+- 2 tomatoes, chopped
+- 1 tbsp ginger-garlic paste
+- 1 green chilli
+- 1 tsp cumin seeds
+- 1/2 tsp turmeric
+- 1 tsp ground coriander
+- 1 tbsp oil
+- 1 tsp lemon juice
+- Salt to taste
+
+**Steps:**
+1. Blanch spinach for 1 minute, cool it quickly, and blend with green chilli into a smooth puree.
+2. Brown tofu in a wide pan with a little oil and set aside. In the same pan, temper cumin, then cook onion, ginger-garlic paste, tomatoes, turmeric, and coriander until the tomatoes collapse.
+3. Add spinach puree with a splash of water and simmer 5 minutes. Fold in tofu, season with lemon and salt, and warm through without boiling hard.
+
+**Tips:**
+- Cooling the spinach before blending keeps the gravy greener.
+
+---
+
+## Chilli Tofu
+
+URL: https://dinner-spinner.sohab.dev/recipes/chilli-tofu/
+
+Crisp tofu cubes tossed with peppers, onion, garlic, soy, and chilli in a glossy Indo-Chinese sauce.
+
+**Cuisine:** Chinese (Indo-Chinese) · **Style:** Dry · **Protein:** Tofu
+**Time:** 40 min total (20 prep + 20 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Dairy-free
+
+**Ingredients:**
+- 400g firm tofu, pressed and cubed
+- 3 tbsp cornflour
+- 1 onion, cubed
+- 1 green capsicum, cubed
+- 4 garlic cloves, chopped
+- 1 tbsp ginger, chopped
+- 2 green chillies, slit
+- 2 tbsp soy sauce
+- 1 tbsp chilli sauce
+- 1 tbsp vinegar
+- 1 tsp sugar
+- 2 spring onions, sliced
+- 3 tbsp neutral oil
+- Salt and black pepper
+
+**Steps:**
+1. Coat dry tofu cubes lightly in cornflour, then shallow-fry in a hot wide pan until crisp and golden; lift out.
+2. Add garlic, ginger, chillies, onion, and capsicum to the same pan. Stir-fry on high heat until the edges char but the vegetables stay crisp.
+3. Add soy, chilli sauce, vinegar, sugar, pepper, and a small splash of water. Toss in tofu just long enough to coat, then finish with spring onion.
+
+**Tips:**
+- Add the crisp tofu at the end so the coating stays textured.
+
+---
+
+## Tofu Fried Rice
+
+URL: https://dinner-spinner.sohab.dev/recipes/tofu-fried-rice/
+
+Wok-tossed rice with crisp tofu, vegetables, ginger, and soy — a fast, filling plant-based rice bowl.
+
+**Cuisine:** Chinese (Chinese-inspired) · **Style:** Rice Bowl · **Protein:** Tofu
+**Time:** 30 min total (15 prep + 15 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Dairy-free
+
+**Ingredients:**
+- 300g cooked cold rice
+- 250g firm tofu, crumbled
+- 1 carrot, finely diced
+- 1/2 cup peas
+- 2 spring onions, sliced
+- 2 garlic cloves, minced
+- 1 tsp ginger, minced
+- 1.5 tbsp soy sauce
+- 1 tsp toasted sesame oil
+- 1 tbsp neutral oil
+- Black pepper and salt to taste
+
+**Steps:**
+1. Heat a wok until very hot. Stir-fry crumbled tofu in neutral oil until dry-edged and golden; set aside.
+2. Cook carrot, peas, garlic, ginger, and spring onion whites for 2 minutes. Add cold rice and break up clumps while tossing over high heat.
+3. Return tofu, season with soy, sesame oil, and pepper, then toss for another minute. Scatter spring onion greens before serving.
+
+**Tips:**
+- Cold, day-old rice fries more cleanly than freshly cooked rice.
+
+---
+
+## Thai Green Curry Tofu
+
+URL: https://dinner-spinner.sohab.dev/recipes/thai-green-curry-tofu/
+
+Tofu and crisp vegetables in a fragrant coconut green curry with basil and lime — bright, spicy, and ready for rice.
+
+**Cuisine:** Thai (Thailand) · **Style:** Curry · **Protein:** Tofu
+**Time:** 35 min total (15 prep + 20 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 400g firm tofu, cubed
+- 2 tbsp vegan green curry paste
+- 400ml coconut milk
+- 1 cup green beans, trimmed
+- 1 zucchini, sliced
+- 1 red bell pepper, sliced
+- 1 tbsp tamari
+- 1 tsp brown sugar
+- 1 lime
+- 1 cup Thai basil leaves
+- 1 tbsp oil
+
+**Steps:**
+1. Brown tofu in oil until lightly crisp and set aside.
+2. Fry curry paste for 1 minute until fragrant. Add coconut milk, tamari, sugar, green beans, zucchini, and pepper; simmer until the vegetables are tender-crisp.
+3. Return tofu, simmer gently for 3 minutes, then turn off the heat. Add lime juice and basil just before serving.
+
+**Tips:**
+- Check that the curry paste is vegan; many brands include shrimp paste.
+
+---
+
+## Vegan Mapo Tofu
+
+URL: https://dinner-spinner.sohab.dev/recipes/vegan-mapo-tofu/
+
+Soft tofu and finely chopped mushrooms in a fiery, numbing Sichuan-style bean-chilli sauce — silky, savoury, and made for steamed rice.
+
+**Cuisine:** Chinese (Sichuan, China) · **Style:** Curry · **Protein:** Tofu
+**Time:** 40 min total (15 prep + 25 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 5/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Dairy-free
+
+**Ingredients:**
+- 400g soft tofu, cubed
+- 150g shiitake mushrooms, minced
+- 2 tbsp doubanjiang (chilli bean paste)
+- 1 tbsp fermented black beans, rinsed and chopped
+- 1 tbsp ginger, minced
+- 3 garlic cloves, minced
+- 1 tsp ground Sichuan peppercorns, plus more to finish
+- 1 tbsp soy sauce
+- 1.5 cups vegetable stock
+- 1 tbsp cornflour
+- 2 spring onions, sliced
+- 2 tbsp neutral oil
+
+**Steps:**
+1. Warm tofu cubes gently in salted water for 3 minutes, then drain carefully. Mix cornflour with 3 tbsp cold water.
+2. Fry Sichuan pepper, ginger, garlic, mushrooms, black beans, and doubanjiang in oil until aromatic. Add stock and soy, then bring to a simmer.
+3. Slide in tofu and shake the pan rather than stirring hard. Drizzle in slurry until the sauce clings, then finish with spring onion and more Sichuan pepper.
+
+**Tips:**
+- Use a vegan-labelled doubanjiang and soy sauce if avoiding animal ingredients.
+
+---
+
+## Mushroom Masala
+
+URL: https://dinner-spinner.sohab.dev/recipes/mushroom-masala/
+
+Button mushrooms simmered in a warmly spiced onion-tomato gravy — an everyday North Indian curry for roti or rice.
+
+**Cuisine:** North Indian (North India) · **Style:** Curry · **Protein:** Mushroom
+**Time:** 40 min total (15 prep + 25 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 400g button mushrooms, quartered
+- 2 onions, finely chopped
+- 3 tomatoes, pureed
+- 1 tbsp ginger-garlic paste
+- 1 tsp cumin seeds
+- 1 tsp coriander powder
+- 1/2 tsp turmeric
+- 1 tsp Kashmiri chilli powder
+- 1 tsp garam masala
+- 1 tbsp oil
+- 1 tsp dried fenugreek leaves
+- Salt and coriander leaves
+
+**Steps:**
+1. Brown mushrooms in a wide pan over high heat until their moisture evaporates; set aside.
+2. Temper cumin in oil, then cook onion and ginger-garlic paste until golden. Add tomato puree and ground spices; cook until the masala is thick and leaves a sheen of oil.
+3. Add mushrooms with a splash of water, simmer 8 minutes, then crush in dried fenugreek and finish with coriander.
+
+**Tips:**
+- Brown mushrooms before adding them to the gravy so they stay savoury instead of steamed.
+
+---
+
+## Mushroom Pepper Fry
+
+URL: https://dinner-spinner.sohab.dev/recipes/mushroom-pepper-fry/
+
+A quick South Indian dry fry of mushrooms, curry leaves, garlic, tomato, and plenty of cracked black pepper.
+
+**Cuisine:** South Indian (South India) · **Style:** Dry · **Protein:** Mushroom
+**Time:** 30 min total (10 prep + 20 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 400g mushrooms, sliced
+- 1 onion, sliced
+- 1 tomato, chopped
+- 5 garlic cloves, chopped
+- 1 sprig curry leaves
+- 1 tsp mustard seeds
+- 1 tbsp coarsely cracked black pepper
+- 1/2 tsp turmeric
+- 1 tbsp oil
+- 1 tsp lemon juice
+- Salt to taste
+
+**Steps:**
+1. Heat oil and crackle mustard seeds with curry leaves. Add onion and garlic; cook until softened at the edges.
+2. Add mushrooms, turmeric, salt, and tomato. Cook uncovered on high heat until the mushrooms brown and the tomato clings to them.
+3. Stir in black pepper and lemon juice, then cook for one final minute. Serve hot with rice or paratha.
+
+**Tips:**
+- Use freshly cracked pepper; pre-ground pepper will not give the same sharp finish.
+
+---
+
+## Mushroom Stroganoff
+
+URL: https://dinner-spinner.sohab.dev/recipes/mushroom-stroganoff/
+
+Golden mushrooms folded into a creamy mustard and paprika sauce — a comforting Continental dinner over noodles or rice.
+
+**Cuisine:** Continental (Continental) · **Style:** One Pot · **Protein:** Mushroom
+**Time:** 40 min total (15 prep + 25 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian
+
+**Ingredients:**
+- 500g mixed mushrooms, sliced
+- 1 onion, thinly sliced
+- 2 garlic cloves, minced
+- 1 tbsp butter
+- 1 tsp sweet paprika
+- 1 tsp Dijon mustard
+- 1 tbsp flour
+- 1 cup vegetable stock
+- 1/2 cup sour cream
+- 1 tsp soy sauce
+- 1 tbsp parsley, chopped
+- Salt and black pepper
+
+**Steps:**
+1. Sear mushrooms in batches in butter until deeply golden; set aside so they do not steam.
+2. Cook onion and garlic in the same pan, then stir in paprika and flour. Gradually add stock, mustard, and soy, whisking until smooth.
+3. Return mushrooms and simmer until the sauce lightly coats them. Take off the heat, stir in sour cream, season, and finish with parsley.
+
+**Tips:**
+- Do not boil after adding sour cream or the sauce can split.
+
+---
+
+## Creamy Mushroom Soup
+
+URL: https://dinner-spinner.sohab.dev/recipes/creamy-mushroom-soup/
+
+Earthy mushrooms and thyme blended into a smooth, savoury soup with a little cream for a comforting bowl.
+
+**Cuisine:** Continental (Continental) · **Style:** Soup · **Protein:** Mushroom
+**Time:** 45 min total (15 prep + 30 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Gluten-free
+
+**Ingredients:**
+- 500g mixed mushrooms, sliced
+- 1 onion, chopped
+- 2 garlic cloves, chopped
+- 1 small potato, diced
+- 4 cups vegetable stock
+- 1 tsp fresh thyme leaves
+- 1 tbsp butter or olive oil
+- 1/3 cup cream
+- 1 tsp lemon juice
+- Salt and black pepper
+
+**Steps:**
+1. Cook mushrooms in batches until browned. Reserve a handful for topping.
+2. Soften onion, garlic, and potato in butter, then return most mushrooms with thyme and stock. Simmer until the potato is tender.
+3. Blend until smooth, stir in cream and lemon juice, and warm gently. Top each bowl with the reserved mushrooms and black pepper.
+
+**Tips:**
+- A small potato gives body without needing flour.
+
+---
+
+## Mushroom Fried Rice
+
+URL: https://dinner-spinner.sohab.dev/recipes/mushroom-fried-rice/
+
+Wok-fried rice packed with browned mushrooms, vegetables, ginger, and soy for a quick, savoury Chinese-inspired meal.
+
+**Cuisine:** Chinese (Chinese-inspired) · **Style:** Rice Bowl · **Protein:** Mushroom
+**Time:** 30 min total (15 prep + 15 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Dairy-free
+
+**Ingredients:**
+- 300g cooked cold rice
+- 300g mushrooms, chopped
+- 1 carrot, finely diced
+- 1/2 cup peas
+- 2 spring onions, sliced
+- 2 garlic cloves, minced
+- 1 tsp ginger, minced
+- 1.5 tbsp soy sauce
+- 1 tsp toasted sesame oil
+- 1 tbsp neutral oil
+- Black pepper
+
+**Steps:**
+1. Sear mushrooms in a very hot wok until deeply browned and set aside.
+2. Stir-fry carrot, peas, garlic, ginger, and spring onion whites for 2 minutes. Add cold rice and toss hard over high heat to separate every grain.
+3. Return mushrooms, season with soy, sesame oil, and pepper, then fold through spring onion greens.
+
+**Tips:**
+- Give mushrooms room in the wok; crowding makes them release water instead of browning.
+
+---
+
+## Mushroom Tacos
+
+URL: https://dinner-spinner.sohab.dev/recipes/mushroom-tacos/
+
+Smoky, lime-bright mushrooms piled into warm tortillas with beans, onion, and fresh coriander for an easy Mexican-style meal.
+
+**Cuisine:** Mexican (Mexican-inspired) · **Style:** Bread Meal · **Protein:** Mushroom
+**Time:** 35 min total (15 prep + 20 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 450g mushrooms, sliced
+- 8 corn tortillas
+- 1 cup cooked black beans
+- 1 onion, thinly sliced
+- 1 red bell pepper, sliced
+- 2 garlic cloves, minced
+- 1 tsp ground cumin
+- 1 tsp smoked paprika
+- 1 lime
+- 2 tbsp oil
+- Fresh coriander
+- Salt and chilli flakes
+
+**Steps:**
+1. Cook mushrooms in a hot wide pan until browned. Add onion, pepper, garlic, cumin, paprika, salt, and chilli flakes; cook until the vegetables soften.
+2. Warm black beans with a splash of water and lime juice, then heat tortillas in a dry pan until pliable.
+3. Fill tortillas with beans and mushroom mixture. Finish with coriander and more lime.
+
+**Tips:**
+- Use corn tortillas labelled gluten-free if that dietary flag matters.
+
+---
+
+## Ambur Mutton Biryani
+
+URL: https://dinner-spinner.sohab.dev/recipes/ambur-mutton-biryani/
+
+A Tamil Nadu-style mutton biryani with tender goat, tangy chilli paste, fragrant seeraga samba rice, and a lighter spice profile.
+
+**Cuisine:** South Indian (Ambur, Tamil Nadu) · **Style:** Biryani · **Protein:** Mutton
+**Time:** 120 min total (25 prep + 95 cook) · **Difficulty:** hard · **Servings:** 5 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Gluten-free
+
+**Ingredients:**
+- 750g mutton, bone-in
+- 2 cups seeraga samba rice
+- 2 onions, sliced
+- 2 tomatoes, chopped
+- 2 tbsp red chilli paste
+- 1 cup yoghurt
+- Mint, coriander, ginger-garlic paste, and whole spices
+
+**Steps:**
+1. Pressure-cook mutton with yoghurt, ginger-garlic paste, chilli paste, tomatoes, and spices until almost tender.
+2. Cook rice separately until three-quarters done. Layer it over the mutton masala with fried onions and herbs.
+3. Cover and steam on low heat until the rice finishes and the flavours marry.
+
+**Tips:**
+- Seeraga samba gives Ambur biryani its characteristic compact, aromatic grain.
+
+---
+
+## Egg Biryani
+
+URL: https://dinner-spinner.sohab.dev/recipes/egg-biryani/
+
+Spiced boiled eggs tucked into saffron rice and a tomato-yoghurt masala for a satisfying, lower-effort biryani night.
+
+**Cuisine:** Hyderabadi (Hyderabad-inspired) · **Style:** Biryani · **Protein:** Egg
+**Time:** 60 min total (20 prep + 40 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Contains egg · Gluten-free
+
+**Ingredients:**
+- 6 eggs, hard-boiled
+- 2 cups basmati rice
+- 2 onions, sliced
+- 2 tomatoes, chopped
+- 1/2 cup yoghurt
+- Biryani masala, saffron milk, mint, and coriander
+
+**Steps:**
+1. Score boiled eggs and shallow-fry with turmeric and chilli until lightly golden.
+2. Cook a tomato-yoghurt masala with biryani spices, then coat the eggs in it.
+3. Layer with par-cooked rice, fried onions, herbs, and saffron milk; steam covered for 15 minutes.
+
+**Tips:**
+- Prick the eggs lightly so they take on the masala without breaking.
+
+---
+
+## Prawn Biryani
+
+URL: https://dinner-spinner.sohab.dev/recipes/prawn-biryani/
+
+Quick-cooking prawns layered with tomato-mint masala and fragrant rice for a seafood biryani that stays bright and tender.
+
+**Cuisine:** South Indian (South India-inspired) · **Style:** Biryani · **Protein:** Prawn
+**Time:** 65 min total (25 prep + 40 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Gluten-free
+
+**Ingredients:**
+- 500g prawns, cleaned
+- 2 cups basmati rice
+- 2 onions, sliced
+- 2 tomatoes, chopped
+- 1/2 cup yoghurt
+- 1 tbsp ginger-garlic paste
+- Mint, coriander, lemon, and biryani masala
+
+**Steps:**
+1. Marinate prawns briefly with salt, chilli, turmeric, and lemon; cook only until just pink and set aside.
+2. Make a rich onion-tomato masala with yoghurt and biryani spices, then fold in the prawns.
+3. Layer with par-cooked rice, herbs, and fried onions; steam on low heat for 12 minutes.
+
+**Tips:**
+- Do not overcook prawns before dum; they finish gently while the rice steams.
+
+---
+
+## Paneer Biryani
+
+URL: https://dinner-spinner.sohab.dev/recipes/paneer-biryani/
+
+Yoghurt-marinated paneer, golden onions, saffron, and herbs layered with basmati rice in a celebratory vegetarian dum biryani.
+
+**Cuisine:** North Indian (North India) · **Style:** Biryani · **Protein:** Paneer
+**Time:** 70 min total (25 prep + 45 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Gluten-free
+
+**Ingredients:**
+- 400g paneer, cubed
+- 2 cups basmati rice
+- 3/4 cup yoghurt
+- 2 onions, sliced
+- 1 cup mixed vegetables
+- Mint, coriander, saffron milk, and biryani masala
+
+**Steps:**
+1. Marinate paneer and vegetables in yoghurt, ginger-garlic paste, and biryani masala; sear briefly.
+2. Layer with par-cooked rice, fried onions, herbs, ghee, and saffron milk.
+3. Cover tightly and cook on low heat until aromatic and the rice is tender.
+
+**Tips:**
+- Sear paneer gently; hard frying makes it rubbery after dum.
+
+---
+
+## Ambur Mushroom Biryani
+
+URL: https://dinner-spinner.sohab.dev/recipes/ambur-mushroom-biryani/
+
+Spicy mushroom biryani in the Ambur style, with red chilli paste, mint, and short-grain rice that absorbs every bit of masala.
+
+**Cuisine:** South Indian (Ambur, Tamil Nadu) · **Style:** Biryani · **Protein:** Mushroom
+**Time:** 65 min total (20 prep + 45 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 400g mushrooms, quartered
+- 2 cups seeraga samba rice
+- 2 onions, sliced
+- 2 tomatoes, chopped
+- 2 tbsp red chilli paste
+- Mint, coriander, lemon, and whole spices
+
+**Steps:**
+1. Brown mushrooms hard to concentrate their flavour, then cook with onion, tomato, chilli paste, and spices.
+2. Add soaked rice, hot water, herbs, and lemon; bring to a gentle simmer.
+3. Cover and cook on low until the rice is tender, then rest before fluffing.
+
+**Tips:**
+- Keep the lid closed during the final steam so the short-grain rice stays aromatic.
+
+---
+
+## Schezwan Tofu Noodles
+
+URL: https://dinner-spinner.sohab.dev/recipes/schezwan-tofu-noodles/
+
+Crisp tofu and vegetables tossed through fiery Schezwan noodles for a fast, plant-based Indo-Chinese dinner.
+
+**Cuisine:** Chinese (Indo-Chinese) · **Style:** Noodles · **Protein:** Tofu
+**Time:** 40 min total (20 prep + 20 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 5/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Dairy-free
+
+**Ingredients:**
+- 200g noodles
+- 300g firm tofu, cubed
+- Cabbage, carrot, and capsicum
+- 2 tbsp Schezwan sauce
+- 1 tbsp soy sauce
+- Garlic, spring onion, and neutral oil
+
+**Steps:**
+1. Pan-fry tofu until crisp and cook noodles until al dente.
+2. Stir-fry garlic and vegetables on high heat, then fry Schezwan sauce briefly until fragrant.
+3. Toss in noodles, soy, and tofu; finish with spring onions.
+
+**Tips:**
+- Use less Schezwan sauce first, then add more at the end to control the heat.
+
+---
+
+## Chicken Hakka Noodles
+
+URL: https://dinner-spinner.sohab.dev/recipes/chicken-hakka-noodles/
+
+Tender chicken strips, crunchy vegetables, and springy noodles wok-tossed with soy, pepper, and garlic.
+
+**Cuisine:** Chinese (Indo-Chinese) · **Style:** Noodles · **Protein:** Chicken
+**Time:** 40 min total (20 prep + 20 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Dairy-free
+
+**Ingredients:**
+- 250g boneless chicken, thinly sliced
+- 200g hakka noodles
+- Cabbage, carrot, and capsicum
+- 1 tbsp soy sauce
+- 1 tsp vinegar
+- Garlic, spring onion, and black pepper
+
+**Steps:**
+1. Season chicken with salt, pepper, and a little soy; stir-fry until just cooked and set aside.
+2. Cook noodles al dente, then stir-fry garlic and vegetables over high heat.
+3. Return chicken and add noodles, soy, vinegar, pepper, and spring onion greens; toss until hot.
+
+**Tips:**
+- Slice chicken thinly across the grain so it cooks as quickly as the vegetables.
+
+---
+
+## Garlic Prawn Noodles
+
+URL: https://dinner-spinner.sohab.dev/recipes/garlic-prawn-noodles/
+
+Juicy prawns, noodles, garlic, chilli, and vegetables stir-fried into a quick, savoury seafood bowl.
+
+**Cuisine:** Chinese (Chinese-inspired) · **Style:** Noodles · **Protein:** Prawn
+**Time:** 30 min total (15 prep + 15 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Dairy-free
+
+**Ingredients:**
+- 350g prawns, cleaned
+- 200g noodles
+- 5 garlic cloves, chopped
+- 1 red chilli, sliced
+- Capsicum and spring onions
+- 1.5 tbsp soy sauce
+- 1 tsp sesame oil and lime
+
+**Steps:**
+1. Cook noodles until al dente and quickly sear prawns with salt; set aside.
+2. Stir-fry garlic, chilli, capsicum, and spring onion whites until fragrant.
+3. Toss in noodles, prawns, soy, sesame oil, and a squeeze of lime; serve immediately.
+
+**Tips:**
+- Pull the prawns off the heat the moment they turn opaque to keep them tender.
+
+---
+
+## Chilli Garlic Mushroom Noodles
+
+URL: https://dinner-spinner.sohab.dev/recipes/chilli-garlic-mushroom-noodles/
+
+Deeply browned mushrooms and noodles coated in a punchy chilli-garlic sauce with crunchy vegetables.
+
+**Cuisine:** Chinese (Indo-Chinese) · **Style:** Noodles · **Protein:** Mushroom
+**Time:** 35 min total (15 prep + 20 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Dairy-free
+
+**Ingredients:**
+- 300g mushrooms, sliced
+- 200g noodles
+- 6 garlic cloves, chopped
+- 1 tbsp chilli sauce
+- 1 tbsp soy sauce
+- Cabbage, capsicum, and spring onions
+- Sesame oil and vinegar
+
+**Steps:**
+1. Sear mushrooms in a hot wok until well browned, then set aside.
+2. Stir-fry garlic and vegetables, then add chilli sauce and soy for 30 seconds.
+3. Add cooked noodles and mushrooms, toss with sesame oil and vinegar, and finish with spring onion greens.
+
+**Tips:**
+- Brown mushrooms in batches so their moisture does not steam the wok.
+
+---
+
+## Thai Basil Tofu Noodles
+
+URL: https://dinner-spinner.sohab.dev/recipes/thai-basil-tofu-noodles/
+
+Rice noodles with crisp tofu, basil, lime, vegetables, and a savoury-spicy sauce for a bright Thai-inspired bowl.
+
+**Cuisine:** Thai (Thailand-inspired) · **Style:** Noodles · **Protein:** Tofu
+**Time:** 40 min total (20 prep + 20 cook) · **Difficulty:** easy · **Servings:** 3 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Vegan · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 200g rice noodles
+- 300g firm tofu, cubed
+- 1 red pepper, sliced
+- 1 cup beans or bok choy
+- 2 tbsp tamari
+- 1 tbsp lime juice
+- Thai basil, garlic, chilli, and brown sugar
+
+**Steps:**
+1. Soak or cook rice noodles according to the packet and pan-fry tofu until golden.
+2. Stir-fry garlic, chilli, and vegetables, then add tamari, lime, sugar, and a splash of water.
+3. Toss in noodles and tofu, then turn off the heat and fold through basil.
+
+**Tips:**
+- Add basil off the heat so its peppery perfume stays fresh.

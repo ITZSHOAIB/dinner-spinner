@@ -11,6 +11,7 @@ import { useUserStore } from '../../stores/userStore'
 import { resourcesFor } from '../../lib/recipeLinks'
 import { rankBySimilarity, similarityScore } from '../../lib/similarity'
 import { scaleIngredient } from '../../lib/scaleQuantity'
+import { ingredientsForStep } from '../../lib/stepIngredients'
 import { useSeo } from '../../lib/useSeo'
 import { CookMode } from './CookMode'
 import { IngredientChip } from './IngredientChip'
@@ -19,11 +20,13 @@ import { QUICK_COMMERCE_PLATFORMS } from '../../lib/shoppingLinks'
 import { shareIngredients, canNativeShare } from '../../lib/shareIngredients'
 import type { Recipe } from '../../data/types'
 
-const spiceDots = (level: number) =>
-  Array.from({ length: 5 }, (_, i) => (
+const spiceLabel = (level: number) => ['Mild', 'Warm', 'Medium', 'Hot', 'Fiery'][level - 1] ?? 'Spiced'
+const spiceFlames = (level: number) =>
+  Array.from({ length: 5 }, (_, index) => (
     <Flame
-      key={i}
-      className={cn('w-4 h-4', i < level ? 'text-chili fill-chili' : 'text-border')}
+      key={index}
+      className={cn('w-3.5 h-3.5', index < level ? 'text-chili fill-chili' : 'text-border')}
+      aria-hidden="true"
     />
   ))
 
@@ -69,6 +72,10 @@ export function RecipeDetail() {
   const scaledIngredients = useMemo(
     () => (recipe ? recipe.ingredients.map((l) => scaleIngredient(l, scale)) : []),
     [recipe, scale],
+  )
+  const stepIngredients = useMemo(
+    () => (recipe ? recipe.steps.map((step) => ingredientsForStep(step, scaledIngredients)) : []),
+    [recipe, scaledIngredients],
   )
 
   // Per-page SEO. Called unconditionally with fallback values so hook order
@@ -163,30 +170,38 @@ export function RecipeDetail() {
       </div>
 
       {/* Quick stats */}
-      <div className="grid grid-cols-4 gap-3 mb-2">
-        <div className="flex flex-col items-center p-3 rounded-xl bg-surface-secondary">
-          <Clock className="w-4 h-4 text-turmeric mb-1" />
-          <span className="text-sm font-medium text-text-primary">{recipe.totalTimeMinutes}m</span>
-          <span className="text-[10px] text-text-muted">Total</span>
+      <div className="grid grid-cols-4 gap-1.5 sm:gap-3 mb-2">
+        <div className="flex min-h-12 min-w-0 items-center justify-center gap-1 rounded-lg border border-border bg-surface-secondary px-1.5 py-2 text-center sm:min-h-[88px] sm:flex-col sm:gap-1 sm:rounded-xl sm:p-3">
+          <Clock className="w-4 h-4 text-turmeric shrink-0" />
+          <div className="flex min-w-0 items-baseline gap-1 sm:block">
+            <span className="text-xs leading-none font-semibold text-text-primary sm:block sm:text-base">{recipe.totalTimeMinutes}m</span>
+            <span className="hidden text-[10px] text-text-muted sm:block">Total time</span>
+          </div>
         </div>
-        <div className="flex flex-col items-center p-3 rounded-xl bg-surface-secondary">
-          <ChefHat className="w-4 h-4 text-turmeric mb-1" />
-          <span className="text-sm font-medium text-text-primary capitalize">{recipe.difficulty}</span>
-          <span className="text-[10px] text-text-muted">Difficulty</span>
+        <div className="flex min-h-12 min-w-0 items-center justify-center gap-1 rounded-lg border border-border bg-surface-secondary px-1.5 py-2 text-center sm:min-h-[88px] sm:flex-col sm:gap-1 sm:rounded-xl sm:p-3">
+          <ChefHat className="w-4 h-4 text-turmeric shrink-0" />
+          <div className="flex min-w-0 items-baseline gap-1 sm:block">
+            <span className="text-xs leading-none font-semibold text-text-primary capitalize sm:block sm:text-base">{recipe.difficulty}</span>
+            <span className="hidden text-[10px] text-text-muted sm:block">Difficulty</span>
+          </div>
         </div>
-        <div className="flex flex-col items-center p-3 rounded-xl bg-surface-secondary">
-          <Users className="w-4 h-4 text-turmeric mb-1" />
-          <span className="text-sm font-medium text-text-primary">
-            {scaledServings}
-            {scale !== 1 && (
-              <span className="text-text-muted"> / {recipe.servings}</span>
-            )}
-          </span>
-          <span className="text-[10px] text-text-muted">Servings</span>
+        <div className="flex min-h-12 min-w-0 items-center justify-center gap-1 rounded-lg border border-border bg-surface-secondary px-1.5 py-2 text-center sm:min-h-[88px] sm:flex-col sm:gap-1 sm:rounded-xl sm:p-3">
+          <Users className="w-4 h-4 text-turmeric shrink-0" />
+          <div className="flex min-w-0 items-baseline gap-1 sm:block">
+            <span className="text-xs leading-none font-semibold text-text-primary sm:block sm:text-base">
+              {scaledServings}
+              {scale !== 1 && <span className="text-text-muted"> / {recipe.servings}</span>}
+            </span>
+            <span className="hidden text-[10px] text-text-muted sm:block">Servings</span>
+          </div>
         </div>
-        <div className="flex flex-col items-center p-3 rounded-xl bg-surface-secondary">
-          <div className="flex gap-0.5 mb-1">{spiceDots(recipe.spiceLevel)}</div>
-          <span className="text-[10px] text-text-muted">Spice</span>
+        <div className="flex min-h-12 min-w-0 items-center justify-center gap-1 rounded-lg border border-border bg-surface-secondary px-1.5 py-2 text-center sm:min-h-[88px] sm:flex-col sm:gap-1 sm:rounded-xl sm:p-3">
+          <Flame className="hidden w-4 h-4 text-chili fill-chili shrink-0 sm:block" aria-hidden="true" />
+          <div className="flex min-w-0 items-center gap-1 sm:block">
+            <span className="hidden text-xs leading-none font-semibold text-chili sm:block sm:text-base">{spiceLabel(recipe.spiceLevel)}</span>
+            <span className="flex shrink-0 gap-0 sm:mt-1 sm:justify-center [&_svg]:h-3 [&_svg]:w-3 sm:[&_svg]:h-3.5 sm:[&_svg]:w-3.5" aria-hidden="true">{spiceFlames(recipe.spiceLevel)}</span>
+          </div>
+          <span className="sr-only">Spice level: {spiceLabel(recipe.spiceLevel)}, {recipe.spiceLevel} out of 5</span>
         </div>
       </div>
       <p className="text-[11px] text-text-muted mb-6 text-center">
@@ -363,15 +378,8 @@ export function RecipeDetail() {
 
       {/* Steps */}
       <section className="mb-6">
-        <div className="flex items-center justify-between mb-3 gap-3">
+        <div className="mb-3">
           <h2 className="font-heading text-lg font-bold text-text-primary">Steps</h2>
-          <button
-            onClick={() => setCookModeOpen(true)}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-turmeric text-white text-xs font-semibold hover:bg-turmeric/90 transition-colors"
-          >
-            <Play className="w-3.5 h-3.5 fill-current" />
-            Start Cooking
-          </button>
         </div>
         <ol className="space-y-4">
           {recipe.steps.map((step, i) => (
@@ -379,10 +387,26 @@ export function RecipeDetail() {
               <span className="flex-shrink-0 w-7 h-7 rounded-full bg-turmeric/10 text-turmeric text-sm font-bold flex items-center justify-center">
                 {i + 1}
               </span>
-              <p className="text-sm text-text-secondary pt-1 leading-relaxed">{step}</p>
+              <div className="min-w-0 pt-1">
+                <p className="text-sm text-text-secondary leading-relaxed">{step}</p>
+                {stepIngredients[i].length > 0 && (
+                  <p className="mt-1.5 text-[11px] leading-relaxed text-text-muted">
+                    <span className="font-medium text-turmeric">Use:</span>{' '}
+                    {stepIngredients[i].join(' · ')}
+                  </p>
+                )}
+              </div>
             </li>
           ))}
         </ol>
+        <button
+          type="button"
+          onClick={() => setCookModeOpen(true)}
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-turmeric px-4 py-3 text-sm font-semibold text-white transition-colors hover:bg-turmeric/90"
+        >
+          <Play className="w-4 h-4 fill-current" />
+          Start Cooking
+        </button>
       </section>
 
       {/* Tips */}
@@ -477,6 +501,7 @@ export function RecipeDetail() {
         <CookMode
           recipeName={recipe.name}
           steps={recipe.steps}
+          stepIngredients={stepIngredients}
           onClose={() => setCookModeOpen(false)}
         />
       )}

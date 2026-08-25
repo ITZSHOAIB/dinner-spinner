@@ -76,7 +76,7 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Avial](https://dinner-spinner.sohab.dev/recipes/avial/) — South Indian curry, 35 min, easy
 - [Rasam Rice](https://dinner-spinner.sohab.dev/recipes/rasam-rice/) — South Indian soup, 25 min, easy
 - [Chicken Manchurian](https://dinner-spinner.sohab.dev/recipes/chicken-manchurian/) — Chinese fried, 40 min, medium
-- [Veg Hakka Noodles](https://dinner-spinner.sohab.dev/recipes/veg-hakka-noodles/) — Chinese one pot, 25 min, easy
+- [Veg Hakka Noodles](https://dinner-spinner.sohab.dev/recipes/veg-hakka-noodles/) — Chinese noodles, 25 min, easy
 - [Chilli Chicken](https://dinner-spinner.sohab.dev/recipes/chilli-chicken/) — Chinese fried, 35 min, medium
 - [Veg Fried Rice](https://dinner-spinner.sohab.dev/recipes/veg-fried-rice/) — Chinese rice bowl, 20 min, easy
 - [Gobi Manchurian](https://dinner-spinner.sohab.dev/recipes/gobi-manchurian/) — Chinese fried, 35 min, medium
@@ -123,7 +123,7 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Dal Baati Churma (दाल बाटी चूरमा)](https://dinner-spinner.sohab.dev/recipes/dal-baati-churma/) — Rajasthani bread meal, 90 min, hard
 - [Gatte ki Sabzi (गट्टे की सब्ज़ी)](https://dinner-spinner.sohab.dev/recipes/gatte-ki-sabzi/) — Rajasthani curry, 45 min, medium
 - [Laal Maas (लाल मांस)](https://dinner-spinner.sohab.dev/recipes/laal-maas/) — Rajasthani curry, 100 min, hard
-- [Hyderabadi Chicken Biryani (حیدرآبادی بریانی)](https://dinner-spinner.sohab.dev/recipes/hyderabadi-chicken-biryani/) — Hyderabadi rice bowl, 90 min, hard
+- [Hyderabadi Chicken Biryani (حیدرآبادی بریانی)](https://dinner-spinner.sohab.dev/recipes/hyderabadi-chicken-biryani/) — Hyderabadi biryani, 90 min, hard
 - [Mirchi ka Salan (مرچی کا سالن)](https://dinner-spinner.sohab.dev/recipes/mirchi-ka-salan/) — Hyderabadi curry, 45 min, medium
 - [Haleem (حلیم)](https://dinner-spinner.sohab.dev/recipes/haleem/) — Hyderabadi one pot, 210 min, hard
 - [Rogan Josh (روغن جوش)](https://dinner-spinner.sohab.dev/recipes/rogan-josh-kashmiri/) — Kashmiri curry, 95 min, medium
@@ -167,3 +167,25 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Aloo Tikki Chaat](https://dinner-spinner.sohab.dev/recipes/aloo-tikki-chaat/) — North Indian chaat, 30 min, medium
 - [Besan Cheela (बेसन चीला)](https://dinner-spinner.sohab.dev/recipes/besan-cheela/) — North Indian light, 20 min, easy
 - [Goan Chicken Cafreal](https://dinner-spinner.sohab.dev/recipes/goan-chicken-cafreal/) — Goan dry, 35 min, easy
+- [Tofu Tikka Masala](https://dinner-spinner.sohab.dev/recipes/tofu-tikka-masala/) — North Indian curry, 45 min, medium
+- [Palak Tofu](https://dinner-spinner.sohab.dev/recipes/palak-tofu/) — North Indian curry, 35 min, easy
+- [Chilli Tofu](https://dinner-spinner.sohab.dev/recipes/chilli-tofu/) — Chinese dry, 40 min, medium
+- [Tofu Fried Rice](https://dinner-spinner.sohab.dev/recipes/tofu-fried-rice/) — Chinese rice bowl, 30 min, easy
+- [Thai Green Curry Tofu](https://dinner-spinner.sohab.dev/recipes/thai-green-curry-tofu/) — Thai curry, 35 min, easy
+- [Vegan Mapo Tofu](https://dinner-spinner.sohab.dev/recipes/vegan-mapo-tofu/) — Chinese curry, 40 min, medium
+- [Mushroom Masala](https://dinner-spinner.sohab.dev/recipes/mushroom-masala/) — North Indian curry, 40 min, easy
+- [Mushroom Pepper Fry](https://dinner-spinner.sohab.dev/recipes/mushroom-pepper-fry/) — South Indian dry, 30 min, easy
+- [Mushroom Stroganoff](https://dinner-spinner.sohab.dev/recipes/mushroom-stroganoff/) — Continental one pot, 40 min, easy
+- [Creamy Mushroom Soup](https://dinner-spinner.sohab.dev/recipes/creamy-mushroom-soup/) — Continental soup, 45 min, easy
+- [Mushroom Fried Rice](https://dinner-spinner.sohab.dev/recipes/mushroom-fried-rice/) — Chinese rice bowl, 30 min, easy
+- [Mushroom Tacos](https://dinner-spinner.sohab.dev/recipes/mushroom-tacos/) — Mexican bread meal, 35 min, easy
+- [Ambur Mutton Biryani](https://dinner-spinner.sohab.dev/recipes/ambur-mutton-biryani/) — South Indian biryani, 120 min, hard
+- [Egg Biryani](https://dinner-spinner.sohab.dev/recipes/egg-biryani/) — Hyderabadi biryani, 60 min, medium
+- [Prawn Biryani](https://dinner-spinner.sohab.dev/recipes/prawn-biryani/) — South Indian biryani, 65 min, medium
+- [Paneer Biryani](https://dinner-spinner.sohab.dev/recipes/paneer-biryani/) — North Indian biryani, 70 min, medium
+- [Ambur Mushroom Biryani](https://dinner-spinner.sohab.dev/recipes/ambur-mushroom-biryani/) — South Indian biryani, 65 min, medium
+- [Schezwan Tofu Noodles](https://dinner-spinner.sohab.dev/recipes/schezwan-tofu-noodles/) — Chinese noodles, 40 min, easy
+- [Chicken Hakka Noodles](https://dinner-spinner.sohab.dev/recipes/chicken-hakka-noodles/) — Chinese noodles, 40 min, easy
+- [Garlic Prawn Noodles](https://dinner-spinner.sohab.dev/recipes/garlic-prawn-noodles/) — Chinese noodles, 30 min, easy
+- [Chilli Garlic Mushroom Noodles](https://dinner-spinner.sohab.dev/recipes/chilli-garlic-mushroom-noodles/) — Chinese noodles, 35 min, easy
+- [Thai Basil Tofu Noodles](https://dinner-spinner.sohab.dev/recipes/thai-basil-tofu-noodles/) — Thai noodles, 40 min, easy

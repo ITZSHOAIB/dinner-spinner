@@ -4,6 +4,20 @@ import { spinAlignment } from '../lib/similarity'
 import { recipes as rawRecipes } from '../data/recipes'
 import { normalizeTags } from '../data/tagMigration'
 
+const mealPreferenceFilters = new Set(['veg-only', 'egg-ok', 'non-veg'])
+
+export function normalizeDietaryFilters(filters: string[]): string[] {
+  let mealPreference: string | null = null
+  const otherFilters: string[] = []
+
+  for (const filter of filters) {
+    if (mealPreferenceFilters.has(filter)) mealPreference = filter
+    else if (!otherFilters.includes(filter)) otherFilters.push(filter)
+  }
+
+  return mealPreference ? [mealPreference, ...otherFilters] : otherFilters
+}
+
 // Normalise tags through the controlled vocabulary at module load so the store
 // is populated synchronously. Avoids a render race where deep-linked pages
 // (e.g. /recipes/:id on refresh) see an empty store and show "Recipe not found".
@@ -48,6 +62,8 @@ function passesDietary(r: Recipe, filters: string[]): boolean {
   for (const f of filters) {
     switch (f) {
       case 'vegetarian': if (!r.dietary.isVegetarian) return false; break
+      case 'veg-only': if (!r.dietary.isVegetarian || r.dietary.isEgg) return false; break
+      case 'egg-ok': if (!r.dietary.isVegetarian && !r.dietary.isEgg) return false; break
       case 'vegan': if (!r.dietary.isVegan) return false; break
       case 'non-veg': if (!r.dietary.isNonVeg) return false; break
       case 'egg': if (!r.dietary.isEgg) return false; break
@@ -67,11 +83,15 @@ export const useRecipeStore = create<RecipeState>()((set, get) => ({
 
   activeDietaryFilters: [],
   toggleDietaryFilter: (filter) =>
-    set((state) => ({
-      activeDietaryFilters: state.activeDietaryFilters.includes(filter)
-        ? state.activeDietaryFilters.filter((f) => f !== filter)
-        : [...state.activeDietaryFilters, filter],
-    })),
+    set((state) => {
+      if (state.activeDietaryFilters.includes(filter)) {
+        return { activeDietaryFilters: state.activeDietaryFilters.filter((f) => f !== filter) }
+      }
+
+      return {
+        activeDietaryFilters: normalizeDietaryFilters([...state.activeDietaryFilters, filter]),
+      }
+    }),
 
   activeCuisineFilter: null,
   setCuisineFilter: (cuisine) => set({ activeCuisineFilter: cuisine }),
@@ -104,19 +124,7 @@ export const useRecipeStore = create<RecipeState>()((set, get) => ({
     }
 
     if (activeDietaryFilters.length > 0) {
-      filtered = filtered.filter((r) => {
-        return activeDietaryFilters.every((filter) => {
-          switch (filter) {
-            case 'vegetarian': return r.dietary.isVegetarian
-            case 'vegan': return r.dietary.isVegan
-            case 'non-veg': return r.dietary.isNonVeg
-            case 'egg': return r.dietary.isEgg
-            case 'gluten-free': return r.dietary.isGlutenFree
-            case 'dairy-free': return r.dietary.isDairyFree
-            default: return true
-          }
-        })
-      })
+      filtered = filtered.filter((r) => passesDietary(r, activeDietaryFilters))
     }
 
     return filtered

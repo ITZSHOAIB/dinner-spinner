@@ -8,7 +8,6 @@ import { TimeFilterChips } from './TimeFilterChips'
 import { DietaryFilterChips } from './DietaryFilterChips'
 import { useSpinnerStore } from '../../stores/spinnerStore'
 import { useRecipeStore } from '../../stores/recipeStore'
-import { useUserStore } from '../../stores/userStore'
 import { cuisineOptions, styleOptions, proteinOptions } from '../../data/reelOptions'
 import { cn } from '../../lib/cn'
 import { selectSpinTarget } from '../../lib/spinTarget'
@@ -23,10 +22,8 @@ export function SpinnerHousing() {
     lastResult, setLastResult,
     addSpinResult,
     timeFilter, setTimeFilter,
+    dietaryFilters, clearDietaryFilters,
   } = useSpinnerStore()
-
-  const dietaryFilters = useUserStore((s) => s.dietaryFilters)
-  const toggleDietaryFilter = useUserStore((s) => s.toggleDietaryFilter)
 
   const getMatchingRecipes = useRecipeStore((s) => s.getMatchingRecipes)
   const getSpinCandidates = useRecipeStore((s) => s.getSpinCandidates)
@@ -156,13 +153,12 @@ export function SpinnerHousing() {
 
   const handleClearFilters = useCallback(() => {
     setTimeFilter('any')
-    // Clear each active dietary filter
-    dietaryFilters.forEach((f) => toggleDietaryFilter(f))
-  }, [dietaryFilters, setTimeFilter, toggleDietaryFilter])
+    clearDietaryFilters()
+  }, [clearDietaryFilters, setTimeFilter])
 
   const timeLabelFor = (tf: typeof timeFilter): string | null => {
     if (tf === 'any') return null
-    return `Under ${tf} min`
+    return `Up to ${tf} min`
   }
 
   // Handle all-locked spin → instant result

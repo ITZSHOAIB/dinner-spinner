@@ -2,6 +2,9 @@ import { create } from 'zustand'
 import type { MealType, SpinResult } from '../data/types'
 
 export type TimeFilter = 'any' | 20 | 45 | 90
+export type SpinnerDietaryFilter = 'veg-only' | 'egg-ok' | 'non-veg' | 'gluten-free' | 'dairy-free'
+
+const mealPreferenceFilters = new Set<SpinnerDietaryFilter>(['veg-only', 'egg-ok', 'non-veg'])
 
 interface SpinnerState {
   activeMealType: MealType
@@ -20,6 +23,12 @@ interface SpinnerState {
   // Time filter
   timeFilter: TimeFilter
   setTimeFilter: (tf: TimeFilter) => void
+
+  // Temporary constraints for this spin session. These deliberately stay
+  // separate from the saved dietary preferences used by Browse and Pantry.
+  dietaryFilters: SpinnerDietaryFilter[]
+  toggleDietaryFilter: (filter: SpinnerDietaryFilter) => void
+  clearDietaryFilters: () => void
 
   // Spinning state
   isSpinning: boolean
@@ -58,6 +67,26 @@ export const useSpinnerStore = create<SpinnerState>()((set) => ({
 
   timeFilter: 'any',
   setTimeFilter: (tf) => set({ timeFilter: tf }),
+
+  dietaryFilters: [],
+  toggleDietaryFilter: (filter) =>
+    set((state) => {
+      if (state.dietaryFilters.includes(filter)) {
+        return { dietaryFilters: state.dietaryFilters.filter((value) => value !== filter) }
+      }
+
+      if (mealPreferenceFilters.has(filter)) {
+        return {
+          dietaryFilters: [
+            ...state.dietaryFilters.filter((value) => !mealPreferenceFilters.has(value)),
+            filter,
+          ],
+        }
+      }
+
+      return { dietaryFilters: [...state.dietaryFilters, filter] }
+    }),
+  clearDietaryFilters: () => set({ dietaryFilters: [] }),
 
   isSpinning: false,
   setSpinning: (spinning) => set({ isSpinning: spinning }),

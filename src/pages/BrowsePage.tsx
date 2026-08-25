@@ -1,8 +1,8 @@
 import { useState, useMemo, useEffect, useRef } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { AnimatePresence } from 'motion/react'
-import { Search, X } from 'lucide-react'
-import { useRecipeStore } from '../stores/recipeStore'
+import { ChevronDown, Search, X } from 'lucide-react'
+import { normalizeDietaryFilters, useRecipeStore } from '../stores/recipeStore'
 import { RecipeCard } from '../components/recipe/RecipeCard'
 import { cn } from '../lib/cn'
 import { browseJsonLd, normalizeSiteUrl } from '../lib/seo'
@@ -10,11 +10,11 @@ import { useSeo } from '../lib/useSeo'
 import type { MealType } from '../data/types'
 
 const dietaryFilters = [
-  { key: 'vegetarian', label: 'Veg' },
-  { key: 'vegan', label: 'Vegan' },
+  { key: 'veg-only', label: 'Veg only' },
+  { key: 'egg-ok', label: 'Veg + egg' },
   { key: 'non-veg', label: 'Non-Veg' },
-  { key: 'egg', label: 'Egg' },
   { key: 'gluten-free', label: 'GF' },
+  { key: 'dairy-free', label: 'DF' },
 ]
 const DIETARY_KEYS = new Set(dietaryFilters.map((f) => f.key))
 
@@ -44,6 +44,7 @@ export function BrowsePage() {
     [recipes],
   )
   const [cuisineFilter, setCuisineFilter] = useState<string | null>(null)
+  const [showAllCuisines, setShowAllCuisines] = useState(false)
 
   const [searchParams, setSearchParams] = useSearchParams()
   const hydratedRef = useRef(false)
@@ -66,7 +67,7 @@ export function BrowsePage() {
     const validDiet = diet
       ? diet.split(',').filter((d) => DIETARY_KEYS.has(d))
       : []
-    useRecipeStore.setState({ activeDietaryFilters: validDiet })
+    useRecipeStore.setState({ activeDietaryFilters: normalizeDietaryFilters(validDiet) })
 
     setCuisineFilter(cuisine && cuisines.includes(cuisine) ? cuisine : null)
   }, [searchParams, setSearchQuery, setMealTypeFilter, cuisines])
@@ -86,6 +87,18 @@ export function BrowsePage() {
     if (!cuisineFilter) return filtered
     return filtered.filter((r) => r.cuisine === cuisineFilter)
   }, [filtered, cuisineFilter])
+
+  const hasActiveFilters = Boolean(
+    searchQuery || activeMealTypeFilter || cuisineFilter || activeDietaryFilters.length > 0,
+  )
+  const visibleCuisines = showAllCuisines ? cuisines : cuisines.slice(0, 8)
+
+  const clearFilters = () => {
+    setSearchQuery('')
+    setMealTypeFilter(null)
+    setCuisineFilter(null)
+    useRecipeStore.setState({ activeDietaryFilters: [] })
+  }
 
   const seoTitle = useMemo(() => {
     const segments: string[] = []
@@ -131,8 +144,12 @@ export function BrowsePage() {
 
       {/* Search */}
       <div className="relative mb-4">
+        <label htmlFor="browse-search" className="sr-only">
+          Search recipes, ingredients, or cuisines
+        </label>
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
         <input
+          id="browse-search"
           type="text"
           placeholder="Search recipes, ingredients, cuisines..."
           value={searchQuery}
@@ -141,6 +158,7 @@ export function BrowsePage() {
         />
         {searchQuery && (
           <button
+            type="button"
             onClick={() => setSearchQuery('')}
             className="absolute right-3 top-1/2 -translate-y-1/2 p-1 hover:bg-surface-tertiary rounded"
           >
@@ -150,10 +168,12 @@ export function BrowsePage() {
       </div>
 
       {/* Meal type tabs */}
-      <div className="flex gap-1.5 mb-3 overflow-x-auto scrollbar-hide">
+      <div className="flex flex-wrap gap-1.5 mb-3">
         {mealTypeFilters.map((f) => (
           <button
             key={f.key}
+            type="button"
+            aria-pressed={(f.key === 'all' && !activeMealTypeFilter) || activeMealTypeFilter === f.key}
             onClick={() => setMealTypeFilter(f.key === 'all' ? null : f.key)}
             className={cn(
               'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors',
@@ -168,10 +188,12 @@ export function BrowsePage() {
       </div>
 
       {/* Dietary filters */}
-      <div className="flex gap-1.5 mb-3 overflow-x-auto scrollbar-hide">
+      <div className="flex flex-wrap gap-1.5 mb-3">
         {dietaryFilters.map((f) => (
           <button
             key={f.key}
+            type="button"
+            aria-pressed={activeDietaryFilters.includes(f.key)}
             onClick={() => toggleDietaryFilter(f.key)}
             className={cn(
               'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors',
@@ -186,38 +208,68 @@ export function BrowsePage() {
       </div>
 
       {/* Cuisine filters */}
-      <div className="flex gap-1.5 mb-6 overflow-x-auto scrollbar-hide">
-        <button
-          onClick={() => setCuisineFilter(null)}
-          className={cn(
-            'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors',
-            !cuisineFilter
-              ? 'bg-turmeric/10 text-turmeric border border-turmeric/30'
-              : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary border border-transparent',
-          )}
-        >
-          All Cuisines
-        </button>
-        {cuisines.map((c) => (
+      <div className="mb-6">
+        <div className="flex flex-wrap gap-1.5" id="cuisine-filters">
           <button
-            key={c}
-            onClick={() => setCuisineFilter(cuisineFilter === c ? null : c)}
+            type="button"
+            aria-pressed={!cuisineFilter}
+            onClick={() => setCuisineFilter(null)}
             className={cn(
               'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors',
-              cuisineFilter === c
+              !cuisineFilter
                 ? 'bg-turmeric/10 text-turmeric border border-turmeric/30'
                 : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary border border-transparent',
             )}
           >
-            {c}
+            All Cuisines
           </button>
-        ))}
+          {visibleCuisines.map((c) => (
+            <button
+              key={c}
+              type="button"
+              aria-pressed={cuisineFilter === c}
+              onClick={() => setCuisineFilter(cuisineFilter === c ? null : c)}
+              className={cn(
+                'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors',
+                cuisineFilter === c
+                  ? 'bg-turmeric/10 text-turmeric border border-turmeric/30'
+                  : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary border border-transparent',
+              )}
+            >
+              {c}
+            </button>
+          ))}
+        </div>
+        {cuisines.length > visibleCuisines.length && (
+          <button
+            type="button"
+            aria-expanded={showAllCuisines}
+            aria-controls="cuisine-filters"
+            onClick={() => setShowAllCuisines((value) => !value)}
+            className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-turmeric hover:text-turmeric/80"
+          >
+            {showAllCuisines ? 'Fewer cuisines' : `More cuisines (${cuisines.length - visibleCuisines.length})`}
+            <ChevronDown className={cn('w-3.5 h-3.5 transition-transform', showAllCuisines && 'rotate-180')} />
+          </button>
+        )}
       </div>
 
-      {/* Results count */}
-      <p className="text-xs text-text-muted mb-4">
-        {displayRecipes.length} recipe{displayRecipes.length !== 1 ? 's' : ''} found
-      </p>
+      {/* Results count and active-filter reset */}
+      <div className="flex items-center justify-between gap-3 mb-4">
+        <p className="text-xs text-text-muted">
+          {displayRecipes.length} recipe{displayRecipes.length !== 1 ? 's' : ''} found
+        </p>
+        {hasActiveFilters && (
+          <button
+            type="button"
+            onClick={clearFilters}
+            className="inline-flex items-center gap-1.5 text-xs font-medium text-turmeric hover:text-turmeric/80"
+          >
+            <X className="w-3.5 h-3.5" />
+            Clear filters
+          </button>
+        )}
+      </div>
 
       {/* Recipe grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -232,6 +284,15 @@ export function BrowsePage() {
         <div className="text-center py-12">
           <p className="text-text-muted text-lg mb-2">No recipes found</p>
           <p className="text-text-muted text-sm">Try adjusting your filters or search terms</p>
+          {hasActiveFilters && (
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="mt-4 inline-flex items-center gap-2 rounded-lg bg-turmeric px-4 py-2 text-sm font-medium text-white hover:bg-turmeric/90"
+            >
+              Clear filters
+            </button>
+          )}
         </div>
       )}
     </div>

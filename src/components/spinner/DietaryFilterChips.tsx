@@ -1,16 +1,16 @@
-import { useUserStore } from '../../stores/userStore'
+import { useSpinnerStore, type SpinnerDietaryFilter } from '../../stores/spinnerStore'
 import { cn } from '../../lib/cn'
 
-const options = [
-  { key: 'vegetarian', label: 'Veg', emoji: '🥬' },
+const options: { key: SpinnerDietaryFilter; label: string; emoji: string }[] = [
+  { key: 'veg-only', label: 'Veg only', emoji: '🥬' },
+  { key: 'egg-ok', label: 'Veg + egg', emoji: '🥚' },
   { key: 'non-veg', label: 'Non-veg', emoji: '🍗' },
-  { key: 'egg', label: 'Egg-ok', emoji: '🥚' },
   { key: 'gluten-free', label: 'GF', emoji: '🌾' },
   { key: 'dairy-free', label: 'DF', emoji: '🥛' },
 ]
 
 export function DietaryFilterChips() {
-  const { dietaryFilters, toggleDietaryFilter } = useUserStore()
+  const { dietaryFilters, toggleDietaryFilter } = useSpinnerStore()
   return (
     <div className="w-full">
       <p className="text-[11px] font-medium text-text-muted uppercase tracking-wider mb-2 text-center">
@@ -22,6 +22,8 @@ export function DietaryFilterChips() {
           return (
             <button
               key={opt.key}
+              type="button"
+              aria-pressed={active}
               onClick={() => toggleDietaryFilter(opt.key)}
               className={cn(
                 'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium',

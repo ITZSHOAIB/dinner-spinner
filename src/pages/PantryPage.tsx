@@ -41,6 +41,8 @@ export function PantryPage() {
     return recipes.filter((r) =>
       dietaryFilters.every((f) => {
         switch (f) {
+          case 'veg-only': return r.dietary.isVegetarian && !r.dietary.isEgg
+          case 'egg-ok': return r.dietary.isVegetarian || r.dietary.isEgg
           case 'vegetarian': return r.dietary.isVegetarian
           case 'vegan': return r.dietary.isVegan
           case 'non-veg': return r.dietary.isNonVeg

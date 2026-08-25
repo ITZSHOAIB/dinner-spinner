@@ -3,9 +3,9 @@ import { cn } from '../../lib/cn'
 
 const options: { value: TimeFilter; label: string; emoji: string }[] = [
   { value: 'any', label: 'Any time', emoji: '⏳' },
-  { value: 20, label: 'Under 20 min', emoji: '⚡' },
-  { value: 45, label: 'Under 45 min', emoji: '🕒' },
-  { value: 90, label: 'Under 90 min', emoji: '🍖' },
+  { value: 20, label: 'Up to 20 min', emoji: '⚡' },
+  { value: 45, label: 'Up to 45 min', emoji: '🕒' },
+  { value: 90, label: 'Up to 90 min', emoji: '🍖' },
 ]
 
 export function TimeFilterChips() {
@@ -21,6 +21,8 @@ export function TimeFilterChips() {
           return (
             <button
               key={String(opt.value)}
+              type="button"
+              aria-pressed={active}
               onClick={() => setTimeFilter(opt.value)}
               className={cn(
                 'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium',

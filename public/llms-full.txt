@@ -3447,6 +3447,129 @@ A complex Goan chicken curry in a roasted coconut-and-whole-spice masala with st
 
 ---
 
+## Goan Fish Curry
+
+URL: https://dinner-spinner.sohab.dev/recipes/goan-fish-curry/
+
+A classic Goan coconut fish curry with a bright tamarind tang, soft onions, and a red chilli masala that stays vivid without feeling heavy.
+
+**Cuisine:** Goan (Goa) · **Style:** Curry · **Protein:** Fish
+**Time:** 40 min total (20 prep + 20 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 500g firm white fish, cut into pieces
+- 1 tsp turmeric powder
+- 1 tbsp lime juice
+- 1 tsp salt
+- 1 tbsp oil
+- 1 onion, sliced
+- 2 green chillies, slit
+- 1 cup grated coconut
+- 1 tbsp coriander seeds
+- 1 tsp cumin seeds
+- 8 Kashmiri dried red chillies
+- 4 garlic cloves
+- 1 tbsp tamarind pulp
+- 1/2 cup water
+- Fresh coriander to finish
+
+**Steps:**
+1. Marinate the fish with turmeric, lime juice, and salt for 15 minutes.
+2. Toast the coconut, coriander seeds, cumin, chillies, and garlic until aromatic, then grind with tamarind and water to a smooth masala.
+3. Heat oil in a pan, soften the onions and green chillies, then stir in the ground paste.
+4. Simmer the masala for a few minutes until the raw edge fades and the oil begins to separate.
+5. Slip in the fish pieces and add a splash of water if needed for a light gravy.
+6. Cook gently just until the fish turns opaque and flakes cleanly. Finish with coriander and serve with rice.
+
+**Tips:**
+- Keep the simmer gentle so the fish stays in neat pieces.
+- The curry should taste bright, tangy, and coconut-rich, not thick like a stew.
+
+---
+
+## Goan Fish Recheado
+
+URL: https://dinner-spinner.sohab.dev/recipes/goan-fish-recheado/
+
+Whole fish stuffed with a fiery recheado masala, then pan-fried until the spice crust turns glossy, sharp, and deeply savoury.
+
+**Cuisine:** Goan (Goa) · **Style:** Dry · **Protein:** Fish
+**Time:** 45 min total (25 prep + 20 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 4 medium fish, cleaned and slit
+- 8 Kashmiri dried red chillies
+- 1 tbsp coriander seeds
+- 1 tsp cumin seeds
+- 6 cloves
+- 1/2 tsp black peppercorns
+- 1-inch cinnamon stick
+- 4 garlic cloves
+- 1 tsp ginger, chopped
+- 2 tbsp palm vinegar or cider vinegar
+- 1 onion, sliced
+- 1 tsp sugar
+- 1 tbsp oil
+- Salt to taste
+- Lime wedges to serve
+
+**Steps:**
+1. Soak the chillies, coriander, cumin, cloves, pepper, cinnamon, garlic, and ginger in vinegar with a little water, then grind into a thick paste.
+2. Sauté the sliced onion with sugar until browned and fold it into the paste to round out the sharpness.
+3. Season the fish lightly with salt and rub the recheado masala inside and over the slashes.
+4. Rest the fish for 10 to 15 minutes so the paste clings well.
+5. Heat oil in a wide pan and shallow-fry the fish over medium heat until crisp and cooked through on both sides.
+6. Serve hot with lime wedges and rice or poi.
+
+**Tips:**
+- A thick, clingy paste is the difference between a stuffed fish and a slide-off mess.
+- If the fish is delicate, pan-fry one side at a time with a wide spatula instead of flipping aggressively.
+
+---
+
+## Goan Egg Drop Curry
+
+URL: https://dinner-spinner.sohab.dev/recipes/goan-egg-drop-curry/
+
+A coconut and tamarind egg curry where whole eggs are cracked directly into the simmering gravy, making it quick, homely, and deeply Goan.
+
+**Cuisine:** Goan (Goa) · **Style:** Curry · **Protein:** Egg
+**Time:** 45 min total (15 prep + 30 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 3/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Contains egg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 4 eggs
+- 1 cup grated coconut
+- 1 onion, chopped
+- 3 garlic cloves
+- 1 tbsp coriander seeds
+- 1 tsp cumin seeds
+- 3 dried red chillies
+- 1/2 tsp turmeric powder
+- 1 small tamarind ball or 1 tbsp tamarind pulp
+- 1 tomato, chopped
+- 1 tbsp oil
+- 1/2 cup coconut milk
+- 2 green chillies, slit
+- Salt to taste
+- Fresh coriander to finish
+
+**Steps:**
+1. Grind the coconut, coriander seeds, cumin, chillies, garlic, turmeric, tamarind, and a little water into a smooth paste.
+2. Heat oil in a pan and sauté the onion and tomato until soft and pulpy.
+3. Add the ground masala and cook until fragrant, then loosen with a little water to make a simmering curry.
+4. Stir in coconut milk, green chillies, and salt. Bring the curry back to a gentle boil.
+5. Crack the eggs one by one into the bubbling curry, spacing them apart so they poach cleanly.
+6. Cover and cook until the whites are set and the yolks are just cooked. Finish with coriander and serve with rice.
+
+**Tips:**
+- Crack each egg into a small bowl first if you want cleaner poaching.
+- Keep the boil gentle after adding the eggs so the curry stays smooth.
+
+---
+
 ## Dal Baati Churma (दाल बाटी चूरमा)
 
 URL: https://dinner-spinner.sohab.dev/recipes/dal-baati-churma/

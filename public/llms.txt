@@ -120,6 +120,9 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Chicken Vindaloo (विंदालू)](https://dinner-spinner.sohab.dev/recipes/chicken-vindaloo/) — Goan curry, 65 min, medium
 - [Prawn Balchão (बाल्चाव)](https://dinner-spinner.sohab.dev/recipes/prawn-balchao/) — Goan dry, 45 min, medium
 - [Chicken Xacuti (शाकूती)](https://dinner-spinner.sohab.dev/recipes/chicken-xacuti/) — Goan curry, 70 min, hard
+- [Goan Fish Curry](https://dinner-spinner.sohab.dev/recipes/goan-fish-curry/) — Goan curry, 40 min, easy
+- [Goan Fish Recheado](https://dinner-spinner.sohab.dev/recipes/goan-fish-recheado/) — Goan dry, 45 min, medium
+- [Goan Egg Drop Curry](https://dinner-spinner.sohab.dev/recipes/goan-egg-drop-curry/) — Goan curry, 45 min, easy
 - [Dal Baati Churma (दाल बाटी चूरमा)](https://dinner-spinner.sohab.dev/recipes/dal-baati-churma/) — Rajasthani bread meal, 90 min, hard
 - [Gatte ki Sabzi (गट्टे की सब्ज़ी)](https://dinner-spinner.sohab.dev/recipes/gatte-ki-sabzi/) — Rajasthani curry, 45 min, medium
 - [Laal Maas (लाल मांस)](https://dinner-spinner.sohab.dev/recipes/laal-maas/) — Rajasthani curry, 100 min, hard

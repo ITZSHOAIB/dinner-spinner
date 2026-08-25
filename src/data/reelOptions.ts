@@ -75,7 +75,9 @@ export const styleOptions: Record<MealType, ReelOption[]> = {
   lunch: [
     { value: 'Curry', label: 'Curry', emoji: '🍛' },
     { value: 'Dry', label: 'Dry/Fry', emoji: '🍳' },
+    { value: 'Biryani', label: 'Biryani', emoji: '🍚' },
     { value: 'Rice Bowl', label: 'Rice Bowl', emoji: '🍚' },
+    { value: 'Noodles', label: 'Noodles', emoji: '🍜' },
     { value: 'Bread Meal', label: 'Bread Meal', emoji: '🫓' },
     { value: 'One Pot', label: 'One Pot', emoji: '🥘' },
     { value: 'Light', label: 'Light', emoji: '🥗' },
@@ -83,7 +85,9 @@ export const styleOptions: Record<MealType, ReelOption[]> = {
   dinner: [
     { value: 'Curry', label: 'Curry', emoji: '🍛' },
     { value: 'Dry', label: 'Dry/Fry', emoji: '🍳' },
+    { value: 'Biryani', label: 'Biryani', emoji: '🍚' },
     { value: 'Rice Bowl', label: 'Rice Bowl', emoji: '🍚' },
+    { value: 'Noodles', label: 'Noodles', emoji: '🍜' },
     { value: 'Bread Meal', label: 'Bread Meal', emoji: '🫓' },
     { value: 'One Pot', label: 'One Pot', emoji: '🥘' },
     { value: 'Grilled', label: 'Grilled', emoji: '🔥' },

@@ -110,8 +110,8 @@ A recipe must use a style valid for **at least one** of its declared `mealTypes`
 | mealType | Valid styles |
 |---|---|
 | breakfast | Light, Hearty, Sweet, Savory |
-| lunch | Curry, Dry, Rice Bowl, Bread Meal, One Pot, Light |
-| dinner | Curry, Dry, Rice Bowl, Bread Meal, One Pot, Grilled, Soup |
+| lunch | Curry, Dry, Biryani, Rice Bowl, Noodles, Bread Meal, One Pot, Light |
+| dinner | Curry, Dry, Biryani, Rice Bowl, Noodles, Bread Meal, One Pot, Grilled, Soup |
 | snacks | Fried, Baked, Chaat, Sweet, Light |
 
 ### Valid `proteinBase` values — depends on `mealTypes`

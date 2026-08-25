@@ -68,8 +68,7 @@ export function BrowsePage() {
   const [cuisineFilter, setCuisineFilter] = useState<string | null>(null)
   const [baseFilter, setBaseFilter] = useState<string | null>(null)
   const [dishFilter, setDishFilter] = useState<string | null>(null)
-  const [showAllCuisines, setShowAllCuisines] = useState(false)
-  const [showAdvancedFilters, setShowAdvancedFilters] = useState(false)
+  const [showFilters, setShowFilters] = useState(false)
 
   const [searchParams, setSearchParams] = useSearchParams()
   const hydratedRef = useRef(false)
@@ -139,15 +138,12 @@ export function BrowsePage() {
       dishFilter ||
       activeDietaryFilters.length > 0,
   )
-  const visibleCuisines = useMemo(() => {
-    if (showAllCuisines) return cuisines
-    const collapsed = cuisines.slice(0, 8)
-    if (cuisineFilter && !collapsed.includes(cuisineFilter)) {
-      return [...collapsed, cuisineFilter]
-    }
-    return collapsed
-  }, [cuisineFilter, cuisines, showAllCuisines])
-  const activeAdvancedCount = [baseFilter, dishFilter].filter(Boolean).length
+  const activeFilterCount =
+    (activeMealTypeFilter ? 1 : 0) +
+    activeDietaryFilters.length +
+    (cuisineFilter ? 1 : 0) +
+    (baseFilter ? 1 : 0) +
+    (dishFilter ? 1 : 0)
 
   const clearFilters = () => {
     setSearchQuery('')
@@ -155,8 +151,7 @@ export function BrowsePage() {
     setCuisineFilter(null)
     setBaseFilter(null)
     setDishFilter(null)
-    setShowAllCuisines(false)
-    setShowAdvancedFilters(false)
+    setShowFilters(false)
     useRecipeStore.setState({ activeDietaryFilters: [] })
   }
 
@@ -231,155 +226,6 @@ export function BrowsePage() {
         )}
       </div>
 
-      {/* Meal type tabs */}
-      <div className="flex flex-wrap gap-1.5 mb-3">
-        {mealTypeFilters.map((f) => (
-          <button
-            key={f.key}
-            type="button"
-            aria-pressed={(f.key === 'all' && !activeMealTypeFilter) || activeMealTypeFilter === f.key}
-            onClick={() => setMealTypeFilter(f.key === 'all' ? null : f.key)}
-            className={cn(
-              sharedChipClasses,
-              (f.key === 'all' && !activeMealTypeFilter) || activeMealTypeFilter === f.key
-                ? 'bg-turmeric text-white'
-                : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary',
-            )}
-          >
-            {f.label}
-          </button>
-        ))}
-      </div>
-
-      {/* Dietary filters */}
-      <div className="flex flex-wrap gap-1.5 mb-3">
-        {dietaryFilters.map((f) => (
-          <button
-            key={f.key}
-            type="button"
-            aria-pressed={activeDietaryFilters.includes(f.key)}
-            onClick={() => toggleDietaryFilter(f.key)}
-            className={cn(
-              sharedChipClasses,
-              activeDietaryFilters.includes(f.key)
-                ? 'bg-coriander/10 text-coriander border border-coriander/30'
-                : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary border border-transparent',
-            )}
-          >
-            {f.label}
-          </button>
-        ))}
-      </div>
-
-      <div className="mb-6 rounded-2xl border border-border/70 bg-surface-secondary/20 p-3 sm:p-4">
-        <div className="space-y-3">
-          <div className="flex flex-wrap gap-1.5" id="cuisine-filters">
-            <button
-              type="button"
-              aria-pressed={!cuisineFilter}
-              onClick={() => setCuisineFilter(null)}
-              className={chipClasses(!cuisineFilter, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
-            >
-              All Cuisines
-            </button>
-            {visibleCuisines.map((c) => (
-              <button
-                key={c}
-                type="button"
-                aria-pressed={cuisineFilter === c}
-                onClick={() => setCuisineFilter(cuisineFilter === c ? null : c)}
-                className={chipClasses(cuisineFilter === c, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
-          {cuisines.length > visibleCuisines.length && (
-            <button
-              type="button"
-              aria-expanded={showAllCuisines}
-              aria-controls="cuisine-filters"
-              onClick={() => setShowAllCuisines((value) => !value)}
-              className="inline-flex items-center gap-1 text-xs font-medium text-turmeric hover:text-turmeric/80"
-            >
-              {showAllCuisines ? 'Show fewer cuisines' : `More cuisines (${cuisines.length - visibleCuisines.length})`}
-              <ChevronDown className={cn('w-3.5 h-3.5 transition-transform', showAllCuisines && 'rotate-180')} />
-            </button>
-          )}
-          <div className="flex flex-wrap items-center gap-2">
-            <button
-              type="button"
-              aria-expanded={showAdvancedFilters}
-              aria-controls="browse-advanced-filters"
-              onClick={() => setShowAdvancedFilters((value) => !value)}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-surface-secondary px-3 py-1.5 text-xs font-medium text-text-secondary hover:bg-surface-tertiary"
-            >
-              {showAdvancedFilters ? 'Hide filters' : `More filters${activeAdvancedCount > 0 ? ` (${activeAdvancedCount} active)` : ''}`}
-              <ChevronDown className={cn('w-3.5 h-3.5 transition-transform', showAdvancedFilters && 'rotate-180')} />
-            </button>
-          </div>
-          {showAdvancedFilters && (
-            <div
-              id="browse-advanced-filters"
-              className="grid gap-4 rounded-2xl border border-border/60 bg-surface/60 p-3 sm:grid-cols-2"
-            >
-              <div>
-                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
-                  Base
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  <button
-                    type="button"
-                    aria-pressed={!baseFilter}
-                    onClick={() => setBaseFilter(null)}
-                    className={chipClasses(!baseFilter, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
-                  >
-                    Any base
-                  </button>
-                  {bases.map((base) => (
-                    <button
-                      key={base}
-                      type="button"
-                      aria-pressed={baseFilter === base}
-                      onClick={() => setBaseFilter(baseFilter === base ? null : base)}
-                      className={chipClasses(baseFilter === base, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
-                    >
-                      {base}
-                    </button>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
-                  Dish
-                </p>
-                <div className="flex flex-wrap gap-1.5">
-                  <button
-                    type="button"
-                    aria-pressed={!dishFilter}
-                    onClick={() => setDishFilter(null)}
-                    className={chipClasses(!dishFilter, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
-                  >
-                    Any dish
-                  </button>
-                  {dishes.map((dish) => (
-                    <button
-                      key={dish}
-                      type="button"
-                      aria-pressed={dishFilter === dish}
-                      onClick={() => setDishFilter(dishFilter === dish ? null : dish)}
-                      className={chipClasses(dishFilter === dish, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
-                    >
-                      {dish}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </div>
-
       <div className="mb-4 rounded-2xl border border-border/60 bg-surface-secondary/15 px-3 py-2.5 sm:px-4">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-xs text-text-muted">
@@ -396,15 +242,15 @@ export function BrowsePage() {
             </button>
           )}
         </div>
-          {hasActiveFilters && (
-            <div className="mt-2 flex flex-wrap gap-1.5">
-              <span className="mr-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
-                Active filters
-              </span>
-              {searchQuery && (
-                <button
-                  type="button"
-                  onClick={() => setSearchQuery('')}
+        {hasActiveFilters && (
+          <div className="mt-2 flex flex-wrap gap-1.5">
+            <span className="mr-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+              Applied filters
+            </span>
+            {searchQuery && (
+              <button
+                type="button"
+                onClick={() => setSearchQuery('')}
                 className="inline-flex items-center gap-1 rounded-full border border-turmeric/30 bg-turmeric/10 px-2.5 py-1 text-[11px] font-medium text-turmeric"
               >
                 Search: {searchQuery}
@@ -462,6 +308,149 @@ export function BrowsePage() {
                 <X className="h-3 w-3" />
               </button>
             ))}
+          </div>
+        )}
+      </div>
+
+      <div className="mb-6 rounded-2xl border border-border/70 bg-surface-secondary/20 p-3 sm:p-4">
+        <button
+          type="button"
+          aria-expanded={showFilters}
+          aria-controls="browse-filter-accordion"
+          onClick={() => setShowFilters((value) => !value)}
+          className="flex w-full items-center justify-between rounded-xl border border-border bg-surface-secondary px-3 py-2 text-left text-sm font-medium text-text-secondary hover:bg-surface-tertiary"
+        >
+          <span>Filters{activeFilterCount > 0 ? ` (${activeFilterCount} active)` : ''}</span>
+          <ChevronDown className={cn('w-4 h-4 transition-transform', showFilters && 'rotate-180')} />
+        </button>
+        {showFilters && (
+          <div id="browse-filter-accordion" className="mt-4 space-y-4">
+            <section>
+              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                Meal type
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {mealTypeFilters.map((f) => (
+                  <button
+                    key={f.key}
+                    type="button"
+                    aria-pressed={(f.key === 'all' && !activeMealTypeFilter) || activeMealTypeFilter === f.key}
+                    onClick={() => setMealTypeFilter(f.key === 'all' ? null : f.key)}
+                    className={cn(
+                      sharedChipClasses,
+                      (f.key === 'all' && !activeMealTypeFilter) || activeMealTypeFilter === f.key
+                        ? 'bg-turmeric text-white'
+                        : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary',
+                    )}
+                  >
+                    {f.label}
+                  </button>
+                ))}
+              </div>
+            </section>
+            <section>
+              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                Dietary
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                {dietaryFilters.map((f) => (
+                  <button
+                    key={f.key}
+                    type="button"
+                    aria-pressed={activeDietaryFilters.includes(f.key)}
+                    onClick={() => toggleDietaryFilter(f.key)}
+                    className={cn(
+                      sharedChipClasses,
+                      activeDietaryFilters.includes(f.key)
+                        ? 'bg-coriander/10 text-coriander border border-coriander/30'
+                        : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary border border-transparent',
+                    )}
+                  >
+                    {f.label}
+                  </button>
+                ))}
+              </div>
+            </section>
+            <section>
+              <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                Cuisine
+              </p>
+              <div className="flex flex-wrap gap-1.5">
+                <button
+                  type="button"
+                  aria-pressed={!cuisineFilter}
+                  onClick={() => setCuisineFilter(null)}
+                  className={chipClasses(!cuisineFilter, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                >
+                  All cuisines
+                </button>
+                {cuisines.map((c) => (
+                  <button
+                    key={c}
+                    type="button"
+                    aria-pressed={cuisineFilter === c}
+                    onClick={() => setCuisineFilter(cuisineFilter === c ? null : c)}
+                    className={chipClasses(cuisineFilter === c, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                  >
+                    {c}
+                  </button>
+                ))}
+              </div>
+            </section>
+            <div className="grid gap-4 sm:grid-cols-2">
+              <section>
+                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                  Base
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  <button
+                    type="button"
+                    aria-pressed={!baseFilter}
+                    onClick={() => setBaseFilter(null)}
+                    className={chipClasses(!baseFilter, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                  >
+                    Any base
+                  </button>
+                  {bases.map((base) => (
+                    <button
+                      key={base}
+                      type="button"
+                      aria-pressed={baseFilter === base}
+                      onClick={() => setBaseFilter(baseFilter === base ? null : base)}
+                      className={chipClasses(baseFilter === base, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                    >
+                      {base}
+                    </button>
+                  ))}
+                </div>
+              </section>
+              <section>
+                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                  Dish
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  <button
+                    type="button"
+                    aria-pressed={!dishFilter}
+                    onClick={() => setDishFilter(null)}
+                    className={chipClasses(!dishFilter, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                  >
+                    Any dish
+                  </button>
+                  {dishes.map((dish) => (
+                    <button
+                      key={dish}
+                      type="button"
+                      aria-pressed={dishFilter === dish}
+                      onClick={() => setDishFilter(dishFilter === dish ? null : dish)}
+                      className={chipClasses(dishFilter === dish, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                    >
+                      {dish}
+                    </button>
+                  ))}
+                </div>
+              </section>
+            </div>
           </div>
         )}
       </div>

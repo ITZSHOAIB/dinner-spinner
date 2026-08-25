@@ -27,6 +27,20 @@ const mealTypeFilters: { key: MealType | 'all'; label: string }[] = [
 ]
 const MEAL_TYPES: MealType[] = ['breakfast', 'lunch', 'dinner', 'snacks']
 const SITE_URL = normalizeSiteUrl(import.meta.env.VITE_SITE_URL)
+const dietaryLabelMap = new Map(dietaryFilters.map((filter) => [filter.key, filter.label]))
+const mealLabelMap = new Map(mealTypeFilters.map((filter) => [filter.key, filter.label]))
+
+const sharedChipClasses =
+  'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors'
+
+function chipClasses(active: boolean, activeClassName: string) {
+  return cn(
+    sharedChipClasses,
+    active
+      ? activeClassName
+      : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary border border-transparent',
+  )
+}
 
 export function BrowsePage() {
   const {
@@ -43,8 +57,19 @@ export function BrowsePage() {
     () => [...new Set(recipes.map((r) => r.cuisine))].sort(),
     [recipes],
   )
+  const bases = useMemo(
+    () => [...new Set(recipes.map((r) => r.proteinBase))].sort(),
+    [recipes],
+  )
+  const dishes = useMemo(
+    () => [...new Set(recipes.map((r) => r.style))].sort(),
+    [recipes],
+  )
   const [cuisineFilter, setCuisineFilter] = useState<string | null>(null)
+  const [baseFilter, setBaseFilter] = useState<string | null>(null)
+  const [dishFilter, setDishFilter] = useState<string | null>(null)
   const [showAllCuisines, setShowAllCuisines] = useState(false)
+  const [showAdvancedFilters, setShowAdvancedFilters] = useState(false)
 
   const [searchParams, setSearchParams] = useSearchParams()
   const hydratedRef = useRef(false)
@@ -58,6 +83,8 @@ export function BrowsePage() {
     const meal = searchParams.get('meal')
     const diet = searchParams.get('diet')
     const cuisine = searchParams.get('cuisine')
+    const base = searchParams.get('base')
+    const dish = searchParams.get('dish')
 
     setSearchQuery(q)
 
@@ -70,7 +97,9 @@ export function BrowsePage() {
     useRecipeStore.setState({ activeDietaryFilters: normalizeDietaryFilters(validDiet) })
 
     setCuisineFilter(cuisine && cuisines.includes(cuisine) ? cuisine : null)
-  }, [searchParams, setSearchQuery, setMealTypeFilter, cuisines])
+    setBaseFilter(base && bases.includes(base) ? base : null)
+    setDishFilter(dish && dishes.includes(dish) ? dish : null)
+  }, [searchParams, setSearchQuery, setMealTypeFilter, cuisines, bases, dishes])
 
   // Keep URL in sync when filters change (replace, not push, so back button skips intermediate states).
   useEffect(() => {
@@ -80,23 +109,54 @@ export function BrowsePage() {
     if (activeMealTypeFilter) next.set('meal', activeMealTypeFilter)
     if (activeDietaryFilters.length > 0) next.set('diet', activeDietaryFilters.join(','))
     if (cuisineFilter) next.set('cuisine', cuisineFilter)
+    if (baseFilter) next.set('base', baseFilter)
+    if (dishFilter) next.set('dish', dishFilter)
     setSearchParams(next, { replace: true })
-  }, [searchQuery, activeMealTypeFilter, activeDietaryFilters, cuisineFilter, setSearchParams])
+  }, [
+    searchQuery,
+    activeMealTypeFilter,
+    activeDietaryFilters,
+    cuisineFilter,
+    baseFilter,
+    dishFilter,
+    setSearchParams,
+  ])
 
   const displayRecipes = useMemo(() => {
-    if (!cuisineFilter) return filtered
-    return filtered.filter((r) => r.cuisine === cuisineFilter)
-  }, [filtered, cuisineFilter])
+    return filtered.filter((r) => {
+      if (cuisineFilter && r.cuisine !== cuisineFilter) return false
+      if (baseFilter && r.proteinBase !== baseFilter) return false
+      if (dishFilter && r.style !== dishFilter) return false
+      return true
+    })
+  }, [filtered, cuisineFilter, baseFilter, dishFilter])
 
   const hasActiveFilters = Boolean(
-    searchQuery || activeMealTypeFilter || cuisineFilter || activeDietaryFilters.length > 0,
+    searchQuery ||
+      activeMealTypeFilter ||
+      cuisineFilter ||
+      baseFilter ||
+      dishFilter ||
+      activeDietaryFilters.length > 0,
   )
-  const visibleCuisines = showAllCuisines ? cuisines : cuisines.slice(0, 8)
+  const visibleCuisines = useMemo(() => {
+    if (showAllCuisines) return cuisines
+    const collapsed = cuisines.slice(0, 8)
+    if (cuisineFilter && !collapsed.includes(cuisineFilter)) {
+      return [...collapsed, cuisineFilter]
+    }
+    return collapsed
+  }, [cuisineFilter, cuisines, showAllCuisines])
+  const activeAdvancedCount = [baseFilter, dishFilter].filter(Boolean).length
 
   const clearFilters = () => {
     setSearchQuery('')
     setMealTypeFilter(null)
     setCuisineFilter(null)
+    setBaseFilter(null)
+    setDishFilter(null)
+    setShowAllCuisines(false)
+    setShowAdvancedFilters(false)
     useRecipeStore.setState({ activeDietaryFilters: [] })
   }
 
@@ -104,6 +164,8 @@ export function BrowsePage() {
     const segments: string[] = []
     if (searchQuery) segments.push(`Search: ${searchQuery}`)
     if (cuisineFilter) segments.push(`${cuisineFilter} recipes`)
+    if (baseFilter) segments.push(`${baseFilter} base`)
+    if (dishFilter) segments.push(`${dishFilter} dishes`)
     if (activeMealTypeFilter) {
       segments.push(`${activeMealTypeFilter[0].toUpperCase()}${activeMealTypeFilter.slice(1)} ideas`)
     }
@@ -112,22 +174,24 @@ export function BrowsePage() {
     return segments.length > 0
       ? `${segments.join(' | ')} — Dinner Spinner`
       : 'Browse Recipes — Dinner Spinner'
-  }, [activeDietaryFilters, activeMealTypeFilter, cuisineFilter, searchQuery])
+  }, [activeDietaryFilters, activeMealTypeFilter, baseFilter, cuisineFilter, dishFilter, searchQuery])
 
   const seoDescription = useMemo(() => {
     const qualifiers = [
       cuisineFilter,
+      baseFilter,
+      dishFilter,
       activeMealTypeFilter,
       activeDietaryFilters.length > 0 ? activeDietaryFilters.join(', ') : null,
       searchQuery ? `matching "${searchQuery}"` : null,
     ].filter(Boolean)
 
     if (qualifiers.length === 0) {
-      return 'Browse 150+ recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines. Filter by dietary needs, cuisine, and meal type.'
+      return 'Browse recipes across Bengali, Indian, Chinese, Asian, Continental, Mexican and Mediterranean cuisines. Filter by dietary needs, cuisine, base, dish, and meal type.'
     }
 
-    return `${displayRecipes.length} recipes ${qualifiers.join(', ')} on Dinner Spinner. Filter by cuisine, meal type, ingredients, and dietary needs.`
-  }, [activeDietaryFilters, activeMealTypeFilter, cuisineFilter, displayRecipes.length, searchQuery])
+    return `${displayRecipes.length} recipes ${qualifiers.join(', ')} on Dinner Spinner. Filter by cuisine, base, dish, meal type, ingredients, and dietary needs.`
+  }, [activeDietaryFilters, activeMealTypeFilter, baseFilter, cuisineFilter, dishFilter, displayRecipes.length, searchQuery])
 
   useSeo({
     title: seoTitle,
@@ -176,7 +240,7 @@ export function BrowsePage() {
             aria-pressed={(f.key === 'all' && !activeMealTypeFilter) || activeMealTypeFilter === f.key}
             onClick={() => setMealTypeFilter(f.key === 'all' ? null : f.key)}
             className={cn(
-              'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors',
+              sharedChipClasses,
               (f.key === 'all' && !activeMealTypeFilter) || activeMealTypeFilter === f.key
                 ? 'bg-turmeric text-white'
                 : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary',
@@ -196,7 +260,7 @@ export function BrowsePage() {
             aria-pressed={activeDietaryFilters.includes(f.key)}
             onClick={() => toggleDietaryFilter(f.key)}
             className={cn(
-              'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors',
+              sharedChipClasses,
               activeDietaryFilters.includes(f.key)
                 ? 'bg-coriander/10 text-coriander border border-coriander/30'
                 : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary border border-transparent',
@@ -207,67 +271,198 @@ export function BrowsePage() {
         ))}
       </div>
 
-      {/* Cuisine filters */}
-      <div className="mb-6">
-        <div className="flex flex-wrap gap-1.5" id="cuisine-filters">
-          <button
-            type="button"
-            aria-pressed={!cuisineFilter}
-            onClick={() => setCuisineFilter(null)}
-            className={cn(
-              'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors',
-              !cuisineFilter
-                ? 'bg-turmeric/10 text-turmeric border border-turmeric/30'
-                : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary border border-transparent',
-            )}
-          >
-            All Cuisines
-          </button>
-          {visibleCuisines.map((c) => (
+      <div className="mb-6 rounded-2xl border border-border/70 bg-surface-secondary/20 p-3 sm:p-4">
+        <div className="space-y-3">
+          <div className="flex flex-wrap gap-1.5" id="cuisine-filters">
             <button
-              key={c}
               type="button"
-              aria-pressed={cuisineFilter === c}
-              onClick={() => setCuisineFilter(cuisineFilter === c ? null : c)}
-              className={cn(
-                'px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition-colors',
-                cuisineFilter === c
-                  ? 'bg-turmeric/10 text-turmeric border border-turmeric/30'
-                  : 'bg-surface-secondary text-text-secondary hover:bg-surface-tertiary border border-transparent',
-              )}
+              aria-pressed={!cuisineFilter}
+              onClick={() => setCuisineFilter(null)}
+              className={chipClasses(!cuisineFilter, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
             >
-              {c}
+              All Cuisines
             </button>
-          ))}
+            {visibleCuisines.map((c) => (
+              <button
+                key={c}
+                type="button"
+                aria-pressed={cuisineFilter === c}
+                onClick={() => setCuisineFilter(cuisineFilter === c ? null : c)}
+                className={chipClasses(cuisineFilter === c, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+              >
+                {c}
+              </button>
+            ))}
+          </div>
+          {cuisines.length > visibleCuisines.length && (
+            <button
+              type="button"
+              aria-expanded={showAllCuisines}
+              aria-controls="cuisine-filters"
+              onClick={() => setShowAllCuisines((value) => !value)}
+              className="inline-flex items-center gap-1 text-xs font-medium text-turmeric hover:text-turmeric/80"
+            >
+              {showAllCuisines ? 'Show fewer cuisines' : `More cuisines (${cuisines.length - visibleCuisines.length})`}
+              <ChevronDown className={cn('w-3.5 h-3.5 transition-transform', showAllCuisines && 'rotate-180')} />
+            </button>
+          )}
+          <div className="flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              aria-expanded={showAdvancedFilters}
+              aria-controls="browse-advanced-filters"
+              onClick={() => setShowAdvancedFilters((value) => !value)}
+              className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-surface-secondary px-3 py-1.5 text-xs font-medium text-text-secondary hover:bg-surface-tertiary"
+            >
+              {showAdvancedFilters ? 'Hide filters' : `More filters${activeAdvancedCount > 0 ? ` (${activeAdvancedCount} active)` : ''}`}
+              <ChevronDown className={cn('w-3.5 h-3.5 transition-transform', showAdvancedFilters && 'rotate-180')} />
+            </button>
+          </div>
+          {showAdvancedFilters && (
+            <div
+              id="browse-advanced-filters"
+              className="grid gap-4 rounded-2xl border border-border/60 bg-surface/60 p-3 sm:grid-cols-2"
+            >
+              <div>
+                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                  Base
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  <button
+                    type="button"
+                    aria-pressed={!baseFilter}
+                    onClick={() => setBaseFilter(null)}
+                    className={chipClasses(!baseFilter, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                  >
+                    Any base
+                  </button>
+                  {bases.map((base) => (
+                    <button
+                      key={base}
+                      type="button"
+                      aria-pressed={baseFilter === base}
+                      onClick={() => setBaseFilter(baseFilter === base ? null : base)}
+                      className={chipClasses(baseFilter === base, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                    >
+                      {base}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                  Dish
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  <button
+                    type="button"
+                    aria-pressed={!dishFilter}
+                    onClick={() => setDishFilter(null)}
+                    className={chipClasses(!dishFilter, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                  >
+                    Any dish
+                  </button>
+                  {dishes.map((dish) => (
+                    <button
+                      key={dish}
+                      type="button"
+                      aria-pressed={dishFilter === dish}
+                      onClick={() => setDishFilter(dishFilter === dish ? null : dish)}
+                      className={chipClasses(dishFilter === dish, 'bg-turmeric/10 text-turmeric border border-turmeric/30')}
+                    >
+                      {dish}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-        {cuisines.length > visibleCuisines.length && (
-          <button
-            type="button"
-            aria-expanded={showAllCuisines}
-            aria-controls="cuisine-filters"
-            onClick={() => setShowAllCuisines((value) => !value)}
-            className="mt-2 inline-flex items-center gap-1 text-xs font-medium text-turmeric hover:text-turmeric/80"
-          >
-            {showAllCuisines ? 'Fewer cuisines' : `More cuisines (${cuisines.length - visibleCuisines.length})`}
-            <ChevronDown className={cn('w-3.5 h-3.5 transition-transform', showAllCuisines && 'rotate-180')} />
-          </button>
-        )}
       </div>
 
-      {/* Results count and active-filter reset */}
-      <div className="flex items-center justify-between gap-3 mb-4">
-        <p className="text-xs text-text-muted">
-          {displayRecipes.length} recipe{displayRecipes.length !== 1 ? 's' : ''} found
-        </p>
-        {hasActiveFilters && (
-          <button
-            type="button"
-            onClick={clearFilters}
-            className="inline-flex items-center gap-1.5 text-xs font-medium text-turmeric hover:text-turmeric/80"
-          >
-            <X className="w-3.5 h-3.5" />
-            Clear filters
-          </button>
+      <div className="mb-4 rounded-2xl border border-border/60 bg-surface-secondary/15 px-3 py-2.5 sm:px-4">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-xs text-text-muted">
+            {displayRecipes.length} recipe{displayRecipes.length !== 1 ? 's' : ''} found
+          </p>
+          {hasActiveFilters && (
+            <button
+              type="button"
+              onClick={clearFilters}
+              className="inline-flex items-center gap-1.5 text-xs font-medium text-turmeric hover:text-turmeric/80"
+            >
+              <X className="w-3.5 h-3.5" />
+              Clear filters
+            </button>
+          )}
+        </div>
+          {hasActiveFilters && (
+            <div className="mt-2 flex flex-wrap gap-1.5">
+              <span className="mr-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                Active filters
+              </span>
+              {searchQuery && (
+                <button
+                  type="button"
+                  onClick={() => setSearchQuery('')}
+                className="inline-flex items-center gap-1 rounded-full border border-turmeric/30 bg-turmeric/10 px-2.5 py-1 text-[11px] font-medium text-turmeric"
+              >
+                Search: {searchQuery}
+                <X className="h-3 w-3" />
+              </button>
+            )}
+            {activeMealTypeFilter && (
+              <button
+                type="button"
+                onClick={() => setMealTypeFilter(null)}
+                className="inline-flex items-center gap-1 rounded-full border border-turmeric/30 bg-turmeric/10 px-2.5 py-1 text-[11px] font-medium text-turmeric"
+              >
+                Meal: {mealLabelMap.get(activeMealTypeFilter) ?? activeMealTypeFilter}
+                <X className="h-3 w-3" />
+              </button>
+            )}
+            {cuisineFilter && (
+              <button
+                type="button"
+                onClick={() => setCuisineFilter(null)}
+                className="inline-flex items-center gap-1 rounded-full border border-turmeric/30 bg-turmeric/10 px-2.5 py-1 text-[11px] font-medium text-turmeric"
+              >
+                Cuisine: {cuisineFilter}
+                <X className="h-3 w-3" />
+              </button>
+            )}
+            {baseFilter && (
+              <button
+                type="button"
+                onClick={() => setBaseFilter(null)}
+                className="inline-flex items-center gap-1 rounded-full border border-turmeric/30 bg-turmeric/10 px-2.5 py-1 text-[11px] font-medium text-turmeric"
+              >
+                Base: {baseFilter}
+                <X className="h-3 w-3" />
+              </button>
+            )}
+            {dishFilter && (
+              <button
+                type="button"
+                onClick={() => setDishFilter(null)}
+                className="inline-flex items-center gap-1 rounded-full border border-turmeric/30 bg-turmeric/10 px-2.5 py-1 text-[11px] font-medium text-turmeric"
+              >
+                Dish: {dishFilter}
+                <X className="h-3 w-3" />
+              </button>
+            )}
+            {activeDietaryFilters.map((filter) => (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => toggleDietaryFilter(filter)}
+                className="inline-flex items-center gap-1 rounded-full border border-coriander/30 bg-coriander/10 px-2.5 py-1 text-[11px] font-medium text-coriander"
+              >
+                {dietaryLabelMap.get(filter) ?? filter}
+                <X className="h-3 w-3" />
+              </button>
+            ))}
+          </div>
         )}
       </div>
 

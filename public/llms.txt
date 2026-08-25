@@ -189,3 +189,16 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Garlic Prawn Noodles](https://dinner-spinner.sohab.dev/recipes/garlic-prawn-noodles/) — Chinese noodles, 30 min, easy
 - [Chilli Garlic Mushroom Noodles](https://dinner-spinner.sohab.dev/recipes/chilli-garlic-mushroom-noodles/) — Chinese noodles, 35 min, easy
 - [Thai Basil Tofu Noodles](https://dinner-spinner.sohab.dev/recipes/thai-basil-tofu-noodles/) — Thai noodles, 40 min, easy
+- [Kerala Egg Roast](https://dinner-spinner.sohab.dev/recipes/kerala-egg-roast/) — Kerala curry, 45 min, easy
+- [Egg Kothu Parotta](https://dinner-spinner.sohab.dev/recipes/egg-kothu-parotta/) — South Indian bread meal, 35 min, easy
+- [Goan Prawn Curry](https://dinner-spinner.sohab.dev/recipes/goan-prawn-curry/) — Goan curry, 35 min, medium
+- [Meen Pollichathu](https://dinner-spinner.sohab.dev/recipes/meen-pollichathu/) — Kerala dry, 45 min, medium
+- [Mushroom Do Pyaza](https://dinner-spinner.sohab.dev/recipes/mushroom-do-pyaza/) — North Indian dry, 35 min, easy
+- [Tofu Bhurji](https://dinner-spinner.sohab.dev/recipes/tofu-bhurji/) — North Indian dry, 30 min, easy
+- [Paneer Ghee Roast](https://dinner-spinner.sohab.dev/recipes/paneer-ghee-roast/) — South Indian dry, 45 min, medium
+- [Gambas al Ajillo](https://dinner-spinner.sohab.dev/recipes/gambas-al-ajillo/) — Mediterranean dry, 20 min, easy
+- [Greek Briam](https://dinner-spinner.sohab.dev/recipes/greek-briam/) — Mediterranean one pot, 75 min, easy
+- [Gigantes Plaki](https://dinner-spinner.sohab.dev/recipes/gigantes-plaki/) — Mediterranean one pot, 100 min, medium
+- [Ker Sangri](https://dinner-spinner.sohab.dev/recipes/ker-sangri/) — Rajasthani dry, 50 min, medium
+- [Papad ki Sabzi](https://dinner-spinner.sohab.dev/recipes/papad-ki-sabzi/) — Rajasthani curry, 25 min, easy
+- [Panchmel Dal](https://dinner-spinner.sohab.dev/recipes/panchmel-dal/) — Rajasthani curry, 60 min, medium

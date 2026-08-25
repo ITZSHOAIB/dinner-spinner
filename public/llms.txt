@@ -117,6 +117,8 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Puttu (പുട്ട്)](https://dinner-spinner.sohab.dev/recipes/puttu/) — Kerala light, 25 min, easy
 - [Cabbage Thoran (തോരൻ)](https://dinner-spinner.sohab.dev/recipes/thoran/) — Kerala dry, 25 min, easy
 - [Nadan Kozhi Curry (നാടൻ കോഴി കറി)](https://dinner-spinner.sohab.dev/recipes/nadan-kozhi-curry/) — Kerala curry, 60 min, medium
+- [Avial (അവിയൽ)](https://dinner-spinner.sohab.dev/recipes/kerala-avial/) — Kerala curry, 45 min, easy
+- [Prawn Roast (ചെമ്മീൻ റോസ്റ്റ്)](https://dinner-spinner.sohab.dev/recipes/kerala-prawn-roast/) — Kerala dry, 45 min, medium
 - [Chicken Vindaloo (विंदालू)](https://dinner-spinner.sohab.dev/recipes/chicken-vindaloo/) — Goan curry, 65 min, medium
 - [Prawn Balchão (बाल्चाव)](https://dinner-spinner.sohab.dev/recipes/prawn-balchao/) — Goan dry, 45 min, medium
 - [Chicken Xacuti (शाकूती)](https://dinner-spinner.sohab.dev/recipes/chicken-xacuti/) — Goan curry, 70 min, hard
@@ -132,6 +134,8 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Rogan Josh (روغن جوش)](https://dinner-spinner.sohab.dev/recipes/rogan-josh-kashmiri/) — Kashmiri curry, 95 min, medium
 - [Mutton Yakhni (یخنی)](https://dinner-spinner.sohab.dev/recipes/kashmiri-yakhni/) — Kashmiri curry, 85 min, medium
 - [Dum Aloo Kashmiri (दम आलू)](https://dinner-spinner.sohab.dev/recipes/dum-aloo-kashmiri/) — Kashmiri curry, 50 min, medium
+- [Kashmiri Rajma](https://dinner-spinner.sohab.dev/recipes/kashmiri-rajma/) — Kashmiri curry, 50 min, easy
+- [Gushtaba (گُشتابا)](https://dinner-spinner.sohab.dev/recipes/kashmiri-gushtaba/) — Kashmiri curry, 75 min, medium
 - [Pad Thai (ผัดไทย)](https://dinner-spinner.sohab.dev/recipes/pad-thai-prawn/) — Thai one pot, 30 min, medium
 - [Thai Green Curry (แกงเขียวหวาน)](https://dinner-spinner.sohab.dev/recipes/thai-green-curry-chicken/) — Thai curry, 40 min, easy
 - [Tom Yum Goong (ต้มยำกุ้ง)](https://dinner-spinner.sohab.dev/recipes/tom-yum-goong/) — Thai soup, 35 min, easy

@@ -3320,6 +3320,85 @@ A robust Kerala country-style chicken curry simmered in roasted coconut, pepper,
 
 ---
 
+## Avial (അവിയൽ)
+
+URL: https://dinner-spinner.sohab.dev/recipes/kerala-avial/
+
+Mixed Kerala vegetables folded through a coconut-cumin paste with curd, curry leaves, and coconut oil — the backbone of a sadya plate.
+
+**Cuisine:** Kerala (Kerala) · **Style:** Curry · **Protein:** Veggies
+**Time:** 45 min total (20 prep + 25 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 1/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Gluten-free
+
+**Ingredients:**
+- 1 carrot, cut into batons
+- 1 cup beans, cut into batons
+- 1 raw banana, cut into batons
+- 1 cup ash gourd, cut into batons
+- 1 drumstick, cut into batons
+- 1 cup yam, cut into batons
+- 1/2 tsp turmeric
+- 1.5 cups grated coconut
+- 1 tsp cumin seeds
+- 4 green chillies
+- 2 tbsp curd
+- 2 tbsp coconut oil
+- 1 sprig curry leaves
+- Salt to taste
+
+**Steps:**
+1. Boil the vegetables with turmeric and salt until just tender.
+2. Grind coconut, cumin seeds, and green chillies into a coarse-smooth paste.
+3. Add the coconut paste to the vegetables and cook for a few minutes until the vegetables are coated.
+4. Remove from the heat, stir in curd and coconut oil, and finish with curry leaves.
+5. Serve with rice as part of a sadya or a simple Kerala lunch.
+
+**Tips:**
+- Keep avial loose and colourful; it should not be overcooked into a mash.
+- Add the curd off the heat so it stays bright and tangy.
+
+---
+
+## Prawn Roast (ചെമ്മീൻ റോസ്റ്റ്)
+
+URL: https://dinner-spinner.sohab.dev/recipes/kerala-prawn-roast/
+
+Prawns roasted in a shallot-heavy masala with coconut oil, curry leaves, tamarind, and black pepper — a staple Kerala short-eat.
+
+**Cuisine:** Kerala (Kerala) · **Style:** Dry · **Protein:** Prawn
+**Time:** 45 min total (20 prep + 25 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 500g prawns, cleaned and deveined
+- 2 tsp Kashmiri chilli powder
+- 1 tsp chilli powder
+- 1/4 tsp turmeric
+- 1 tbsp vinegar or lemon juice
+- 1 tbsp ginger-garlic paste
+- 25 shallots, sliced
+- 1 tomato, chopped
+- 1 tsp pepper powder
+- 1 tsp garam masala
+- 1 sprig curry leaves
+- 3 tbsp coconut oil
+- 3 small pieces kodampuli, soaked, or 1 tbsp tamarind water
+- Salt to taste
+
+**Steps:**
+1. Marinate prawns with chilli powder, turmeric, vinegar, ginger-garlic paste, and salt for 20-30 minutes.
+2. Shallow-fry the prawns quickly in coconut oil and set aside.
+3. In the same pan, sauté shallots, curry leaves, and tomato until soft and fragrant.
+4. Add pepper powder, garam masala, and the soaked kodampuli or tamarind water.
+5. Return the prawns to the pan and roast on low heat until the masala coats them tightly and the oil surfaces.
+6. Serve hot with rice, appam, or chapati.
+
+**Tips:**
+- Do not overcook the prawns — they need just enough heat to stay juicy.
+- Shallots and coconut oil carry a lot of the Kerala flavour here, so do not reduce them too much.
+
+---
+
 ## Chicken Vindaloo (विंदालू)
 
 URL: https://dinner-spinner.sohab.dev/recipes/chicken-vindaloo/
@@ -3955,6 +4034,91 @@ Baby potatoes pricked and simmered in a velvety yogurt, fennel, and Kashmiri chi
 **Tips:**
 - Pricking potatoes lets them soak up the gravy — don't skip it.
 - Kashmiri red chilli is about colour, not heat.
+
+---
+
+## Kashmiri Rajma
+
+URL: https://dinner-spinner.sohab.dev/recipes/kashmiri-rajma/
+
+Kidney beans simmered in a ghee, yogurt, and Kashmiri spice gravy — rich, soothing, and unmistakably valley-style.
+
+**Cuisine:** Kashmiri (Kashmir Valley) · **Style:** Curry · **Protein:** Lentils
+**Time:** 50 min total (10 prep + 40 cook) · **Difficulty:** easy · **Servings:** 4 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Gluten-free
+
+**Ingredients:**
+- 1.5 cups rajma (kidney beans)
+- 1 tsp soda bicarb
+- 1/2 cup ghee
+- 1/8 tsp asafoetida
+- 1 tsp cumin seeds
+- 1 tsp dry ginger powder
+- 1/2 cup yogurt
+- 1 tsp Kashmiri garam masala
+- 1 tsp ginger paste
+- 2 tsp coriander powder
+- 1 tsp Kashmiri chilli powder
+- Salt to taste
+- Green chillies, chopped
+- Fresh coriander to garnish
+
+**Steps:**
+1. Soak rajma with soda overnight, then drain and pressure cook until soft.
+2. Heat ghee, add asafoetida and cumin seeds, then stir in dry ginger, ginger paste, and yogurt over low heat.
+3. Cook until the yogurt loses its raw edge and the fat begins to separate.
+4. Add Kashmiri chilli powder, coriander powder, green chillies, salt, and the cooked rajma.
+5. Loosen with a little reserved cooking liquid and simmer until the gravy turns thick and glossy.
+6. Finish with Kashmiri garam masala and coriander. Serve with rice or paratha.
+
+**Tips:**
+- Stir the yogurt in gently and keep the heat low so it does not split.
+- The gravy should be rich and curd-based, not tomato-heavy.
+
+---
+
+## Gushtaba (گُشتابا)
+
+URL: https://dinner-spinner.sohab.dev/recipes/kashmiri-gushtaba/
+
+Soft mutton meatballs poached in a yogurt-milk gravy with fennel, cardamom, and ginger — a formal Kashmiri wazwan classic.
+
+**Cuisine:** Kashmiri (Kashmir) · **Style:** Curry · **Protein:** Mutton
+**Time:** 75 min total (20 prep + 55 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 2/5
+**Meal:** lunch, dinner · **Dietary:** Non-Veg · Gluten-free
+
+**Ingredients:**
+- 500g mutton keema
+- 1 tsp meat fat or soft lamb fat
+- 1 tsp cardamom powder
+- 1 inch ginger, finely chopped
+- 2 cups curd
+- 1 cup milk
+- 2 cups water
+- 1 bay leaf
+- 3 cloves
+- 2 green cardamoms
+- 1 black cardamom
+- 1 cinnamon stick
+- 1 tsp fennel powder
+- 1 tsp dry ginger powder
+- 1 tsp asafoetida
+- 1 tsp dried mint
+- 2 tbsp mustard oil
+- Salt to taste
+
+**Steps:**
+1. Pound the mutton keema with fat, cardamom powder, ginger, and salt until it turns smooth and cohesive.
+2. Shape the mixture into small meatballs and keep them chilled so they hold their shape.
+3. Heat mustard oil with asafoetida, bay leaf, cloves, cardamoms, and cinnamon.
+4. Whisk curd with water and milk, then add it to the pot over low heat.
+5. Add fennel powder and dry ginger, then gently lower in the meatballs.
+6. Simmer until the meatballs are cooked through and the gravy is silky. Finish with dried mint and serve hot.
+7. Use the softest heat you can manage so the meatballs stay tender.
+
+**Tips:**
+- Traditional gushtaba is about texture: the meatballs should feel light, not dense.
+- Keep the gravy at a gentle simmer once the curd goes in.
 
 ---
 

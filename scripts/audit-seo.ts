@@ -62,12 +62,35 @@ const files = [
   ...collectIndexFiles(resolve(distDir, 'recipes')),
 ]
 
+const staticSeoFiles = [
+  ['robots.txt', resolve(distDir, 'robots.txt')],
+  ['sitemap.xml', resolve(distDir, 'sitemap.xml')],
+] as const
+
+const staticFailures = staticSeoFiles.flatMap(([label, file]) => {
+  try {
+    const content = readFileSync(file, 'utf8')
+    if (label === 'robots.txt' && !content.includes(`Sitemap: ${siteUrl}/sitemap.xml`)) {
+      return [`${label}: missing sitemap directive`]
+    }
+    if (label === 'sitemap.xml' && !content.includes(`<loc>${siteUrl}/`)) {
+      return [`${label}: missing canonical site URLs`]
+    }
+    return []
+  } catch {
+    return [`${label}: missing from dist`]
+  }
+})
+
 const failures = files
   .map(auditFile)
   .filter((result) => result.missing.length > 0)
 
-if (failures.length > 0) {
-  console.error(`SEO audit failed for ${failures.length} page(s):`)
+if (failures.length > 0 || staticFailures.length > 0) {
+  console.error(`SEO audit failed for ${failures.length + staticFailures.length} check(s):`)
+  for (const failure of staticFailures) {
+    console.error(`- ${failure}`)
+  }
   for (const failure of failures.slice(0, 12)) {
     console.error(`- ${failure.file.replace(`${root}/`, '')}: ${failure.missing.join(', ')}`)
   }

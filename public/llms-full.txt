@@ -2494,6 +2494,129 @@ Simple wok-fried rice with fluffy scrambled eggs and spring onions — fast, del
 
 ---
 
+## Masala Anda Bhurji (मसाला अंडा भुर्जी)
+
+URL: https://dinner-spinner.sohab.dev/recipes/masala-anda-bhurji/
+
+Scrambled eggs tossed with butter, onions, tomatoes, curry leaves, and pav bhaji masala — fast, peppery, and perfect with toast or pav.
+
+**Cuisine:** North Indian · **Style:** Savory · **Protein:** Egg
+**Time:** 15 min total (5 prep + 10 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 3/5
+**Meal:** breakfast, lunch, dinner · **Dietary:** Vegetarian · Contains egg · Gluten-free
+
+**Ingredients:**
+- 4 eggs
+- 2 tsp oil
+- 3 tsp butter
+- 1 tsp garlic, finely chopped
+- 2 tsp green chillies, chopped
+- 2 tsp ginger, chopped
+- 6 curry leaves
+- 1/2 cup onion, chopped
+- 1/2 cup tomatoes, chopped
+- 2 tsp turmeric powder
+- 2 tsp chilli powder
+- 1 1/2 tsp pav bhaji masala
+- Salt to taste
+- Fresh coriander to garnish
+
+**Steps:**
+1. Heat oil and butter in a pan, then sauté garlic, green chillies, ginger, and curry leaves until fragrant.
+2. Add onions and cook until softened.
+3. Stir in turmeric, chilli powder, pav bhaji masala, and salt.
+4. Add tomatoes and cook until they break down and the mixture looks glossy.
+5. Crack in the eggs and scramble them through the masala until just set.
+6. Finish with coriander and serve hot with buttered toast or pav.
+
+**Tips:**
+- Pull the eggs off the heat while they still look slightly soft; they finish as they rest.
+- A little extra butter at the end gives the bhurji its street-side finish.
+
+---
+
+## Chettinad Muttai Masala (செட்டிநாடு முட்டை மசாலா)
+
+URL: https://dinner-spinner.sohab.dev/recipes/chettinad-muttai-masala/
+
+Boiled eggs simmered in a roasted coconut and Chettinad spice paste for a deeply aromatic Tamil-style curry.
+
+**Cuisine:** South Indian · **Style:** Curry · **Protein:** Egg
+**Time:** 50 min total (20 prep + 30 cook) · **Difficulty:** medium · **Servings:** 4 · **Spice:** 4/5
+**Meal:** lunch, dinner · **Dietary:** Vegetarian · Contains egg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 4 eggs, hard-boiled and halved
+- 1 cup onion, thinly sliced
+- 1 tomato, thinly sliced
+- 2 tbsp coriander seeds
+- 4 garlic cloves
+- 2 inch ginger
+- 3 tbsp grated coconut
+- 2 tsp fennel seeds
+- 1 tsp black peppercorns
+- 2 tsp poppy seeds
+- 1 tsp cumin seeds
+- 1 dry red chilli
+- 1 cinnamon stick
+- 2 cloves
+- 2 tbsp oil
+- Salt to taste
+- Coriander leaves to garnish
+
+**Steps:**
+1. Dry roast coriander seeds, garlic, ginger, coconut, fennel, peppercorns, poppy seeds, cumin, red chilli, cinnamon, and cloves until fragrant and the coconut just starts to colour.
+2. Cool and grind the roasted ingredients with a little water into a smooth paste.
+3. Heat oil in a kadai, sauté onions until translucent, then add tomatoes and cook until soft.
+4. Stir in the ground masala with salt and cook until the oil begins to separate.
+5. Add a little water for a thick curry, then slide in the halved eggs.
+6. Simmer gently for a few minutes so the eggs absorb the masala. Garnish with coriander and serve with parotta or rice.
+
+**Tips:**
+- Roast the coconut lightly; too dark and the curry turns bitter.
+- Keep the gravy thick so the eggs stay coated instead of floating.
+
+---
+
+## Shakshuka
+
+URL: https://dinner-spinner.sohab.dev/recipes/shakshuka/
+
+Eggs gently poached in a spiced tomato and pepper sauce, finished with coriander — a simple Middle Eastern one-pan breakfast.
+
+**Cuisine:** Middle Eastern · **Style:** One Pot · **Protein:** Egg
+**Time:** 30 min total (10 prep + 20 cook) · **Difficulty:** easy · **Servings:** 2 · **Spice:** 2/5
+**Meal:** breakfast, lunch, dinner · **Dietary:** Vegetarian · Contains egg · Gluten-free · Dairy-free
+
+**Ingredients:**
+- 2 tbsp olive oil
+- 2 red onions, chopped
+- 1 red chilli, finely chopped
+- 1 garlic clove, sliced
+- 1 red pepper, sliced
+- 1 yellow pepper, sliced
+- 1 tsp cumin seeds
+- 1 tsp coriander seeds, crushed
+- 1 tsp smoked paprika
+- 400g cherry tomatoes or canned tomatoes
+- 115g baby spinach
+- 4 eggs
+- Coriander and dill to finish
+- Salt to taste
+
+**Steps:**
+1. Heat oil and soften onions, chilli, garlic, and peppers until tender.
+2. Add cumin, coriander, and paprika, then stir in tomatoes and cook until the sauce thickens.
+3. Add spinach and let it wilt into the sauce.
+4. Make four wells in the sauce and crack an egg into each one.
+5. Cover and cook gently until the whites are set and the yolks are still soft.
+6. Finish with coriander and dill, then serve with crusty bread or pita.
+
+**Tips:**
+- Keep the lid on for even egg setting and a glossy sauce.
+- Shakshuka is best served straight from the pan while the yolks are still runny.
+
+---
+
 ## Tacos
 
 URL: https://dinner-spinner.sohab.dev/recipes/tacos/

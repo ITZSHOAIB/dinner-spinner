@@ -451,6 +451,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dinner-spinner.sohab.dev/recipes/masala-anda-bhurji/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dinner-spinner.sohab.dev/recipes/chettinad-muttai-masala/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dinner-spinner.sohab.dev/recipes/shakshuka/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dinner-spinner.sohab.dev/recipes/tacos/</loc>
     <lastmod>2026-08-25</lastmod>
     <changefreq>monthly</changefreq>

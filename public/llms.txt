@@ -96,6 +96,9 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Ramen](https://dinner-spinner.sohab.dev/recipes/ramen/) — Asian soup, 35 min, medium
 - [Bibimbap](https://dinner-spinner.sohab.dev/recipes/bibimbap/) — Asian rice bowl, 35 min, medium
 - [Egg Fried Rice](https://dinner-spinner.sohab.dev/recipes/egg-fried-rice/) — Asian rice bowl, 15 min, easy
+- [Masala Anda Bhurji (मसाला अंडा भुर्जी)](https://dinner-spinner.sohab.dev/recipes/masala-anda-bhurji/) — North Indian savory, 15 min, easy
+- [Chettinad Muttai Masala (செட்டிநாடு முட்டை மசாலா)](https://dinner-spinner.sohab.dev/recipes/chettinad-muttai-masala/) — South Indian curry, 50 min, medium
+- [Shakshuka](https://dinner-spinner.sohab.dev/recipes/shakshuka/) — Middle Eastern one pot, 30 min, easy
 - [Tacos](https://dinner-spinner.sohab.dev/recipes/tacos/) — Mexican bread meal, 30 min, easy
 - [Burrito Bowl](https://dinner-spinner.sohab.dev/recipes/burrito-bowl/) — Mexican rice bowl, 35 min, easy
 - [Falafel Wrap](https://dinner-spinner.sohab.dev/recipes/falafel-wrap/) — Mediterranean bread meal, 35 min, medium

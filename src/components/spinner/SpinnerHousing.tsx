@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { motion } from 'motion/react'
 import { Reel } from './Reel'
 import { SpinButton } from './SpinButton'
@@ -11,6 +11,7 @@ import { useRecipeStore } from '../../stores/recipeStore'
 import { useUserStore } from '../../stores/userStore'
 import { cuisineOptions, styleOptions, proteinOptions } from '../../data/reelOptions'
 import { cn } from '../../lib/cn'
+import { selectSpinTarget } from '../../lib/spinTarget'
 import type { MealType } from '../../data/types'
 
 export function SpinnerHousing() {
@@ -28,6 +29,8 @@ export function SpinnerHousing() {
   const toggleDietaryFilter = useUserStore((s) => s.toggleDietaryFilter)
 
   const getMatchingRecipes = useRecipeStore((s) => s.getMatchingRecipes)
+  const getSpinCandidates = useRecipeStore((s) => s.getSpinCandidates)
+  const [spinTargets, setSpinTargets] = useState<[string, string, string] | null>(null)
 
   const matchOptions = useMemo(
     () => ({
@@ -70,14 +73,35 @@ export function SpinnerHousing() {
     setReelValue(1, defaults[1])
     setReelValue(2, defaults[2])
     setLastResult(null)
+    setSpinTargets(null)
   }, [activeMealType])
 
-  const handleSpin = useCallback(() => {
+  const startSpin = useCallback((locks: [boolean, boolean, boolean]) => {
     if (isSpinning) return
+
+    const values = useSpinnerStore.getState().reelValues
+    const target = selectSpinTarget(
+      getSpinCandidates(activeMealType, matchOptions).filter(
+        (recipe) =>
+          cuisineOptions[activeMealType].some((option) => option.value === recipe.cuisine) &&
+          styleOptions[activeMealType].some((option) => option.value === recipe.style) &&
+          proteinOptions[activeMealType].some((option) => option.value === recipe.proteinBase),
+      ),
+      locks,
+      values,
+    )
+
+    // Animate toward a real, filter-compliant recipe whenever possible. This
+    // makes a locked reel a genuine constraint instead of a visual preference.
+    setSpinTargets(target)
     setLastResult(null)
     setSpinning(true)
     landedReels.current = 0
-  }, [isSpinning])
+  }, [activeMealType, getSpinCandidates, isSpinning, matchOptions])
+
+  const handleSpin = useCallback(() => {
+    startSpin(useSpinnerStore.getState().lockedReels)
+  }, [startSpin])
 
   const handleReelLand = useCallback((index: 0 | 1 | 2, value: string) => {
     setReelValue(index, value)
@@ -96,6 +120,7 @@ export function SpinnerHousing() {
       setLastResult(result)
       addSpinResult(result)
       setSpinning(false)
+      setSpinTargets(null)
     }
   }, [activeMealType])
 
@@ -115,14 +140,19 @@ export function SpinnerHousing() {
     })
   }, [activeMealType, isSpinning])
 
-  // "Different cuisine / style / protein" reroll: lock two reels, spin the third.
+  const handleCuisineLand = useCallback((value: string) => handleReelLand(0, value), [handleReelLand])
+  const handleStyleLand = useCallback((value: string) => handleReelLand(1, value), [handleReelLand])
+  const handleProteinLand = useCallback((value: string) => handleReelLand(2, value), [handleReelLand])
+  const handleCuisineSelect = useCallback((value: string) => handleReelSelect(0, value), [handleReelSelect])
+  const handleStyleSelect = useCallback((value: string) => handleReelSelect(1, value), [handleReelSelect])
+  const handleProteinSelect = useCallback((value: string) => handleReelSelect(2, value), [handleReelSelect])
+
+  // "Different cuisine / dish / base" reroll: lock two reels, spin the third.
   const handleRerollReel = useCallback((keepLocked: [boolean, boolean, boolean]) => {
     if (isSpinning) return
     setLocks(keepLocked)
-    setLastResult(null)
-    setSpinning(true)
-    landedReels.current = 0
-  }, [isSpinning])
+    startSpin(keepLocked)
+  }, [isSpinning, setLocks, startSpin])
 
   const handleClearFilters = useCallback(() => {
     setTimeFilter('any')
@@ -150,9 +180,10 @@ export function SpinnerHousing() {
         setLastResult(result)
         addSpinResult(result)
         setSpinning(false)
+        setSpinTargets(null)
       }
     }
-  }, [isSpinning])
+  }, [activeMealType, addSpinResult, isSpinning, lockedReels, reelValues, setLastResult, setSpinning])
 
   // Keyboard shortcuts
   useEffect(() => {
@@ -163,13 +194,13 @@ export function SpinnerHousing() {
         e.preventDefault()
         handleSpin()
       }
-      if (e.key === '1') toggleLock(0)
-      if (e.key === '2') toggleLock(1)
-      if (e.key === '3') toggleLock(2)
+      if (!isSpinning && e.key === '1') toggleLock(0)
+      if (!isSpinning && e.key === '2') toggleLock(1)
+      if (!isSpinning && e.key === '3') toggleLock(2)
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [handleSpin])
+  }, [handleSpin, isSpinning, toggleLock])
 
   return (
     <div className="flex flex-col items-center gap-5 w-full">
@@ -202,31 +233,34 @@ export function SpinnerHousing() {
             value={reelValues[0]}
             isLocked={lockedReels[0]}
             isSpinning={isSpinning}
+            targetValue={spinTargets?.[0] ?? null}
             onToggleLock={() => toggleLock(0)}
-            onLand={(v) => handleReelLand(0, v)}
-            onSelect={(v) => handleReelSelect(0, v)}
+            onLand={handleCuisineLand}
+            onSelect={handleCuisineSelect}
             delay={0}
           />
           <Reel
             options={styleOptions[activeMealType]}
-            label="Style"
+            label="Dish"
             value={reelValues[1]}
             isLocked={lockedReels[1]}
             isSpinning={isSpinning}
+            targetValue={spinTargets?.[1] ?? null}
             onToggleLock={() => toggleLock(1)}
-            onLand={(v) => handleReelLand(1, v)}
-            onSelect={(v) => handleReelSelect(1, v)}
+            onLand={handleStyleLand}
+            onSelect={handleStyleSelect}
             delay={400}
           />
           <Reel
             options={proteinOptions[activeMealType]}
-            label="Protein"
+            label="Base"
             value={reelValues[2]}
             isLocked={lockedReels[2]}
             isSpinning={isSpinning}
+            targetValue={spinTargets?.[2] ?? null}
             onToggleLock={() => toggleLock(2)}
-            onLand={(v) => handleReelLand(2, v)}
-            onSelect={(v) => handleReelSelect(2, v)}
+            onLand={handleProteinLand}
+            onSelect={handleProteinSelect}
             delay={800}
           />
         </div>

@@ -118,11 +118,11 @@ export function SpinResultBanner({
                         onClick={() => onRerollReel([false, true, true])}
                       />
                       <RerollChip
-                        label="Different style"
+                        label="Different dish"
                         onClick={() => onRerollReel([true, false, true])}
                       />
                       <RerollChip
-                        label="Different protein"
+                        label="Different base"
                         onClick={() => onRerollReel([true, true, false])}
                       />
                     </>
@@ -233,11 +233,11 @@ export function SpinResultBanner({
                     onClick={() => onRerollReel([false, true, true])}
                   />
                   <RerollChip
-                    label="Different style"
+                    label="Different dish"
                     onClick={() => onRerollReel([true, false, true])}
                   />
                   <RerollChip
-                    label="Different protein"
+                    label="Different base"
                     onClick={() => onRerollReel([true, true, false])}
                   />
                 </div>

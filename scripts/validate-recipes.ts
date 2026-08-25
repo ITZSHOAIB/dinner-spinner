@@ -102,7 +102,7 @@ for (const r of recipes) {
 
   // Protein ↔ dietary cross-check
   const nonVegProteins = new Set(['Chicken', 'Fish', 'Mutton', 'Prawn'])
-  const vegProteins = new Set(['Paneer', 'Lentils', 'Veggies'])
+  const vegProteins = new Set(['Paneer', 'Lentils', 'Veggies', 'Mushroom', 'Tofu'])
   if (nonVegProteins.has(r.proteinBase) && !d.isNonVeg) {
     fail(r, 'dietary', `proteinBase=${r.proteinBase} requires isNonVeg=true`)
   }

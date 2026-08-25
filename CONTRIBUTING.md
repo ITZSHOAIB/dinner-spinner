@@ -119,7 +119,7 @@ A recipe must use a style valid for **at least one** of its declared `mealTypes`
 | mealType | Valid proteins |
 |---|---|
 | breakfast | Egg, Paneer, Lentils, Veggies |
-| lunch/dinner | Chicken, Fish, Mutton, Egg, Paneer, Lentils, Veggies, Prawn |
+| lunch/dinner | Chicken, Fish, Mutton, Egg, Paneer, Lentils, Veggies, Mushroom, Tofu, Prawn |
 | snacks | Chicken, Egg, Paneer, Veggies, Lentils |
 
 ### Canonical tags
@@ -142,7 +142,7 @@ These are checked by CI:
 - `isVegan` → must also have `isVegetarian: true`, `isDairyFree: true`, and `isEgg: false`
 - `isVegetarian` and `isNonVeg` cannot both be `true`
 - If `proteinBase` is Chicken, Fish, Mutton, or Prawn → `isNonVeg: true`
-- If `proteinBase` is Paneer, Lentils, or Veggies → `isVegetarian: true`, `isNonVeg: false`
+- If `proteinBase` is Paneer, Lentils, Veggies, Mushroom, or Tofu → `isVegetarian: true`, `isNonVeg: false`
 
 ---
 

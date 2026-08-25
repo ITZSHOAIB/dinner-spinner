@@ -113,6 +113,8 @@ export const proteinOptions: Record<MealType, ReelOption[]> = {
     { value: 'Paneer', label: 'Paneer', emoji: '🧀' },
     { value: 'Lentils', label: 'Lentils', emoji: '🫘' },
     { value: 'Veggies', label: 'Veggies', emoji: '🥬' },
+    { value: 'Mushroom', label: 'Mushroom', emoji: '🍄' },
+    { value: 'Tofu', label: 'Tofu', emoji: '🧊' },
     { value: 'Prawn', label: 'Prawn', emoji: '🦐' },
   ],
   dinner: [
@@ -123,6 +125,8 @@ export const proteinOptions: Record<MealType, ReelOption[]> = {
     { value: 'Paneer', label: 'Paneer', emoji: '🧀' },
     { value: 'Lentils', label: 'Lentils', emoji: '🫘' },
     { value: 'Veggies', label: 'Veggies', emoji: '🥬' },
+    { value: 'Mushroom', label: 'Mushroom', emoji: '🍄' },
+    { value: 'Tofu', label: 'Tofu', emoji: '🧊' },
     { value: 'Prawn', label: 'Prawn', emoji: '🦐' },
   ],
   snacks: [

@@ -34,6 +34,7 @@ interface RecipeState {
   // Derived
   getFilteredRecipes: () => Recipe[]
   getRecipeById: (id: string) => Recipe | undefined
+  getSpinCandidates: (mealType: MealType, options?: MatchOptions) => Recipe[]
   getMatchingRecipes: (
     cuisine: string,
     style: string,
@@ -123,18 +124,23 @@ export const useRecipeStore = create<RecipeState>()((set, get) => ({
 
   getRecipeById: (id) => get().recipes.find((r) => r.id === id),
 
-  getMatchingRecipes: (cuisine, style, protein, mealType, options = {}) => {
+  getSpinCandidates: (mealType, options = {}) => {
     const { recipes } = get()
     const { maxTimeMinutes, dietaryFilters = [] } = options
-    const spin = { cuisine, style, protein, mealType }
 
-    // Base pool: meal type + strict filters (user's explicit constraints)
-    const pool = recipes.filter(
+    return recipes.filter(
       (r) =>
         r.mealTypes.includes(mealType) &&
         (!maxTimeMinutes || r.totalTimeMinutes <= maxTimeMinutes) &&
         passesDietary(r, dietaryFilters),
     )
+  },
+
+  getMatchingRecipes: (cuisine, style, protein, mealType, options = {}) => {
+    const spin = { cuisine, style, protein, mealType }
+
+    // Base pool: meal type + strict filters (user's explicit constraints)
+    const pool = get().getSpinCandidates(mealType, options)
 
     // Within each tier, rank by spin alignment (so 2-of-3 matches on cuisine+style
     // rank above 2-of-3 on style+protein, etc.), tiebreaking by quicker total time.

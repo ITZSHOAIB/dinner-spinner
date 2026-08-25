@@ -10,6 +10,7 @@ interface ReelProps {
   value: string
   isLocked: boolean
   isSpinning: boolean
+  targetValue: string | null
   onToggleLock: () => void
   onLand: (value: string) => void
   onSelect: (value: string) => void
@@ -25,6 +26,7 @@ export function Reel({
   value,
   isLocked,
   isSpinning,
+  targetValue,
   onToggleLock,
   onLand,
   onSelect,
@@ -50,7 +52,12 @@ export function Reel({
       const stopTimer = setTimeout(() => {
         if (intervalRef.current) clearInterval(intervalRef.current)
 
-        const landIndex = Math.floor(Math.random() * options.length)
+        const targetIndex = targetValue
+          ? options.findIndex((option) => option.value === targetValue)
+          : -1
+        const landIndex = targetIndex >= 0
+          ? targetIndex
+          : Math.floor(Math.random() * options.length)
         setCurrentIndex(landIndex)
         setSpinning(false)
 
@@ -67,7 +74,7 @@ export function Reel({
         clearTimeout(stopTimer)
       }
     }
-  }, [isSpinning])
+  }, [controls, delay, isLocked, isSpinning, onLand, options, targetValue])
 
   // Fast-scroll during spin
   useEffect(() => {
@@ -203,6 +210,7 @@ export function Reel({
         {/* Lock button */}
         <button
           onClick={onToggleLock}
+          disabled={isSpinning}
           className={cn(
             'absolute -bottom-3 left-1/2 -translate-x-1/2 z-20',
             'w-8 h-8 rounded-full flex items-center justify-center',
@@ -211,6 +219,7 @@ export function Reel({
             isLocked
               ? 'bg-turmeric border-turmeric text-white scale-110'
               : 'bg-surface border-border text-text-muted hover:border-turmeric/50 hover:text-turmeric',
+            isSpinning && 'cursor-not-allowed opacity-60',
           )}
           aria-label={isLocked ? `Unlock ${label} reel` : `Lock ${label} reel`}
         >

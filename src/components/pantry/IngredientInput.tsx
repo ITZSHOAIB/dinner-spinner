@@ -26,6 +26,10 @@ export function IngredientInput({ pantryIds, onAdd }: Props) {
   const suggestions = useMemo(() => {
     return searchCatalog(query).filter((s) => !inPantry.has(s.id))
   }, [query, inPantry])
+  const listboxId = 'pantry-ingredient-suggestions'
+  const activeSuggestionId = suggestions[highlight]
+    ? `${listboxId}-${suggestions[highlight].id}`
+    : undefined
 
   // Close on click-outside
   useEffect(() => {
@@ -47,9 +51,14 @@ export function IngredientInput({ pantryIds, onAdd }: Props) {
     <div ref={containerRef} className="relative">
       <div className="relative">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted pointer-events-none" />
+        <label htmlFor="pantry-ingredient-search" className="sr-only">
+          Add an ingredient to your pantry
+        </label>
         <input
           ref={inputRef}
+          id="pantry-ingredient-search"
           type="text"
+          role="combobox"
           value={query}
           onChange={(e) => {
             setQuery(e.target.value)
@@ -73,7 +82,11 @@ export function IngredientInput({ pantryIds, onAdd }: Props) {
             }
           }}
           placeholder="Type an ingredient (e.g. chicken, paneer, tomato)..."
-          className="w-full pl-10 pr-4 py-3.5 rounded-xl bg-surface-secondary border border-border focus:border-turmeric/60 focus:outline-none text-sm text-text-primary placeholder:text-text-muted shadow-sm"
+          aria-autocomplete="list"
+          aria-controls={listboxId}
+          aria-expanded={open && query.length > 0 && suggestions.length > 0}
+          aria-activedescendant={activeSuggestionId}
+          className="w-full pl-10 pr-4 py-3.5 rounded-xl bg-surface-secondary border border-border focus:border-turmeric/60 focus:outline-none text-base text-text-primary placeholder:text-text-muted shadow-sm"
           autoComplete="off"
           spellCheck={false}
         />
@@ -82,6 +95,9 @@ export function IngredientInput({ pantryIds, onAdd }: Props) {
       <AnimatePresence>
         {open && query && suggestions.length > 0 && (
           <motion.ul
+            id={listboxId}
+            role="listbox"
+            aria-label="Ingredient suggestions"
             initial={{ opacity: 0, y: -4 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}
@@ -94,16 +110,19 @@ export function IngredientInput({ pantryIds, onAdd }: Props) {
                 <li key={s.id}>
                   <button
                     type="button"
+                    id={`${listboxId}-${s.id}`}
+                    role="option"
+                    aria-selected={idx === highlight}
                     onMouseEnter={() => setHighlight(idx)}
                     onClick={() => handleAdd(s.id)}
                     className={cn(
-                      'w-full flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors',
+                      'w-full min-h-11 flex items-center gap-3 px-4 py-2.5 text-left text-sm transition-colors',
                       idx === highlight
                         ? 'bg-turmeric/10 text-turmeric'
                         : 'text-text-primary hover:bg-surface-tertiary',
                     )}
                   >
-                    <span className="text-lg leading-none">{ing.emoji ?? '•'}</span>
+                    <span className="text-lg leading-none" aria-hidden="true">{ing.emoji ?? '•'}</span>
                     <span className="flex-1 min-w-0 truncate">{ing.label}</span>
                     <Plus className="w-4 h-4 opacity-60" />
                   </button>
@@ -114,6 +133,7 @@ export function IngredientInput({ pantryIds, onAdd }: Props) {
         )}
         {open && query && suggestions.length === 0 && (
           <motion.div
+            role="status"
             initial={{ opacity: 0, y: -4 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -4 }}

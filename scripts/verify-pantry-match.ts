@@ -45,6 +45,15 @@ check('case-insensitive', () => {
 check('substring match (Whole roasted coconut → coconut)', () => {
   assert.equal(resolveCanonicalId('Whole roasted coconut'), 'coconut')
 })
+check('prefers the specific compound ingredient', () => {
+  assert.equal(resolveCanonicalId('Fresh coconut milk'), 'coconut-milk')
+})
+check('resolves all live key ingredients', () => {
+  const unresolved = new Set(
+    recipes.flatMap((r) => r.keyIngredients.filter((key) => !resolveCanonicalId(key))),
+  )
+  assert.equal(unresolved.size, 0, `unresolved keys: ${[...unresolved].join(', ')}`)
+})
 check('returns null for unknown', () => {
   assert.equal(resolveCanonicalId('Unobtainium'), null)
 })
@@ -73,6 +82,19 @@ check('toggling off mustard-oil staple makes it required', () => {
   })
   assert.ok(m.required.includes('mustard-oil'))
   assert.deepEqual(m.missing, ['mustard-oil'])
+})
+
+check('non-default recipe ingredients remain required', () => {
+  const shorshe = recipes.find((r) => r.id === 'shorshe-ilish')!
+  const m = scoreRecipe(shorshe, ['fish', 'green-chilli'])
+  assert.deepEqual(m.missing, ['mustard-paste'])
+})
+
+check('Ker Sangri is reachable in pantry mode', () => {
+  const kerSangri = recipes.find((r) => r.id === 'ker-sangri')!
+  const m = scoreRecipe(kerSangri, ['ker-sangri'])
+  assert.ok(m.required.includes('ker-sangri'))
+  assert.equal(m.have.length, 1)
 })
 
 console.log('\n— bucketMatches —')
@@ -118,6 +140,11 @@ check('primary pantry buckets exclude zero-overlap recipes when pantry is non-em
   )
 })
 
+check('closest fallback excludes zero-overlap recipes', () => {
+  const r = bucketMatches(recipes, ['unknown-pantry-item'])
+  assert.equal(r.closest.length, 0)
+})
+
 console.log('\n— Coverage report —')
 let resolvedCount = 0
 let totalKey = 0
@@ -131,7 +158,7 @@ for (const r of recipes) {
 }
 console.log(`  ${resolvedCount}/${totalKey} keyIngredient strings resolve to canonical (${((resolvedCount / totalKey) * 100).toFixed(1)}%)`)
 if (unresolved.size > 0) {
-  console.log(`  ${unresolved.size} unresolved keys (will be ignored, treated as staples):`)
+  console.log(`  ${unresolved.size} unresolved keys:`)
   for (const u of [...unresolved].sort()) console.log(`    - ${u}`)
 }
 

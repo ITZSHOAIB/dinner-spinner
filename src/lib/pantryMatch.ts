@@ -27,18 +27,39 @@ export function resolveCanonicalId(raw: string): string | null {
     return ingredientLookup.get(norm.slice(0, -1))!
   }
 
-  // Substring fallback: any synonym/label appears as a whole word inside
-  // the raw string (handles "Chicken thigh", "Whole roasted coconut", etc.).
-  for (const [key, id] of ingredientLookup) {
+  // Substring fallback: prefer the longest whole-word term so compound
+  // ingredients resolve specifically ("coconut milk" before "milk").
+  let best: { key: string; id: string; score: [number, number, number] } | null = null
+  for (const term of ingredientTerms) {
+    const { key, id } = term
     const re = new RegExp(`\\b${escapeRegex(key)}\\b`)
-    if (re.test(norm)) return id
+    const score: [number, number, number] = [
+      key.split(/\s+/).length,
+      term.isLabel ? 1 : 0,
+      key.length,
+    ]
+    const outranks = best == null || score.some(
+      (value, index) => value > best!.score[index] && score.slice(0, index).every((x, i) => x === best!.score[i]),
+    )
+    if (re.test(norm) && outranks) {
+      best = { key, id, score }
+    }
   }
-  return null
+  return best?.id ?? null
 }
 
 function escapeRegex(s: string): string {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
+
+const ingredientTerms = canonicalIngredients.flatMap((ing) => [
+  { key: ing.label.toLowerCase(), id: ing.id, isLabel: true },
+  ...ing.synonyms.map((synonym) => ({
+    key: synonym.toLowerCase(),
+    id: ing.id,
+    isLabel: false,
+  })),
+])
 
 export interface RecipeMatch {
   recipe: Recipe
@@ -156,8 +177,9 @@ export function bucketMatches(
   // Closest: only populated when nothing in the cookable/one-away buckets
   // — gives the user a non-empty result when their pantry is sparse.
   let closest: RecipeMatch[] = []
-  if (cookable.length === 0 && oneAway.length === 0) {
-    closest = [...all]
+  const primary = [...cookable, ...oneAway, ...twoAway, ...threePlus]
+  if (primary.length === 0) {
+    closest = [...visible]
       .sort((a, b) => {
         const ratioA = a.have.length / a.required.length
         const ratioB = b.have.length / b.required.length
@@ -178,7 +200,7 @@ export function searchCatalog(query: string): CanonicalIngredient[] {
   const prefix: CanonicalIngredient[] = []
   const contains: CanonicalIngredient[] = []
   for (const ing of canonicalIngredients) {
-    if (ing.category === 'staple' || ing.category === 'spice') continue
+    if (ing.isStapleByDefault) continue
     const all = [ing.label.toLowerCase(), ...ing.synonyms.map((s) => s.toLowerCase())]
     if (all.includes(q)) exact.push(ing)
     else if (all.some((s) => s.startsWith(q))) prefix.push(ing)

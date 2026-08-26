@@ -22,13 +22,10 @@ function MissingChips({ ids }: { ids: string[] }) {
           <button
             key={id}
             type="button"
-            onClick={(e) => {
-              e.preventDefault()
-              e.stopPropagation()
-              addIngredient(id)
-            }}
-            className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-chili/10 text-chili border border-chili/20 text-[10px] font-medium hover:bg-chili/20 transition-colors group/chip"
+            onClick={() => addIngredient(id)}
+            className="inline-flex min-h-11 items-center gap-1 px-2.5 rounded-full bg-chili/10 text-chili border border-chili/20 text-[10px] font-medium hover:bg-chili/20 transition-colors group/chip"
             title={`Add ${label} to pantry`}
+            aria-label={`Add ${label} to pantry`}
           >
             {ing?.emoji && <span className="text-[11px] leading-none">{ing.emoji}</span>}
             <span>{label}</span>
@@ -53,24 +50,23 @@ export function PantryRecipeCard({ match }: CardProps) {
   const ratio = required.length > 0 ? have.length / required.length : 0
 
   return (
-    <motion.div
+    <motion.article
       layout
       initial={{ opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.96 }}
       transition={{ duration: 0.2 }}
     >
-      <Link
-        to={`/recipes/${recipe.id}`}
+      <div
         className={cn(
-          'block p-4 rounded-2xl border bg-surface-secondary hover:shadow-lg transition-all duration-200 no-underline group',
+          'relative p-4 rounded-2xl border bg-surface-secondary hover:shadow-lg transition-all duration-200',
           cookable
             ? 'border-coriander/40 hover:border-coriander/60 shadow-coriander/5'
             : 'border-border hover:border-turmeric/30',
         )}
       >
-        <div className="flex items-start justify-between gap-2 mb-1">
-          <div className="flex-1 min-w-0">
+        <Link to={`/recipes/${recipe.id}`} className="group block pr-10 no-underline">
+          <div className="mb-1 min-w-0">
             <h3
               className={cn(
                 'font-medium text-text-primary truncate transition-colors',
@@ -83,56 +79,55 @@ export function PantryRecipeCard({ match }: CardProps) {
               <p className="text-xs text-text-muted truncate">{recipe.nameLocal}</p>
             )}
           </div>
-          <button
-            onClick={(e) => {
-              e.preventDefault()
-              e.stopPropagation()
-              toggleFavorite(recipe.id)
-            }}
-            className="p-1 -m-1 flex-shrink-0"
-            aria-label={isFav ? 'Remove from favorites' : 'Add to favorites'}
-          >
-            <Heart
-              className={cn(
-                'w-5 h-5 transition-all',
-                isFav ? 'fill-chili text-chili scale-110' : 'text-text-muted hover:text-chili',
-              )}
-            />
-          </button>
-        </div>
 
-        <div className="flex items-center gap-2 text-xs text-text-secondary mb-2">
-          <span>{recipe.cuisine}</span>
-          <span className="text-text-muted">·</span>
-          <Clock className="w-3 h-3 text-text-muted" />
-          <span>{recipe.totalTimeMinutes}m</span>
-        </div>
-
-        {/* Match progress bar */}
-        {required.length > 0 && (
-          <div className="mt-3">
-            <div className="flex items-center justify-between mb-1">
-              <span className="text-[10px] font-medium text-text-secondary uppercase tracking-wide">
-                {have.length}/{required.length} key ingredients
-              </span>
-            </div>
-            <div className="h-1 bg-surface-tertiary rounded-full overflow-hidden">
-              <motion.div
-                initial={{ width: 0 }}
-                animate={{ width: `${ratio * 100}%` }}
-                transition={{ duration: 0.4, ease: 'easeOut' }}
-                className={cn(
-                  'h-full rounded-full',
-                  cookable ? 'bg-coriander' : 'bg-turmeric',
-                )}
-              />
-            </div>
+          <div className="flex items-center gap-2 text-xs text-text-secondary mb-2">
+            <span>{recipe.cuisine}</span>
+            <span className="text-text-muted">·</span>
+            <Clock className="w-3 h-3 text-text-muted" />
+            <span>{recipe.totalTimeMinutes}m</span>
           </div>
-        )}
+
+          {/* Match progress bar */}
+          {required.length > 0 && (
+            <div className="mt-3">
+              <div className="flex items-center justify-between mb-1">
+                <span className="text-[10px] font-medium text-text-secondary uppercase tracking-wide">
+                  {have.length}/{required.length} tracked ingredients
+                </span>
+              </div>
+              <div className="h-1 bg-surface-tertiary rounded-full overflow-hidden">
+                <motion.div
+                  initial={{ width: 0 }}
+                  animate={{ width: `${ratio * 100}%` }}
+                  transition={{ duration: 0.4, ease: 'easeOut' }}
+                  className={cn(
+                    'h-full rounded-full',
+                    cookable ? 'bg-coriander' : 'bg-turmeric',
+                  )}
+                />
+              </div>
+            </div>
+          )}
+        </Link>
+
+        <button
+          type="button"
+          onClick={() => toggleFavorite(recipe.id)}
+          className="absolute right-3 top-3 inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg"
+          aria-label={isFav ? 'Remove from favorites' : 'Add to favorites'}
+          aria-pressed={isFav}
+        >
+          <Heart
+            className={cn(
+              'w-5 h-5 transition-all',
+              isFav ? 'fill-chili text-chili scale-110' : 'text-text-muted hover:text-chili',
+            )}
+          />
+        </button>
 
         <MissingChips ids={missing} />
-      </Link>
-    </motion.div>
+      </div>
+    </motion.article>
   )
 }
 

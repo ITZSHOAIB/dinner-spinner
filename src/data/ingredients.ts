@@ -5,9 +5,10 @@
 // "Chicken breast", or "Chicken mince". Built from the union of every
 // recipe's keyIngredients (see scripts/extract-ingredients-tokens snippet).
 //
-// Anything classified as a 'staple' or 'spice' is implicitly assumed to be
+// Only ingredients explicitly marked isStapleByDefault are assumed to be
 // available — these never count as "missing" in pantry-mode scoring unless
-// the user explicitly toggles them off.
+// the user explicitly toggles them off. Other pantry staples remain searchable
+// and count as required ingredients when a recipe calls for them.
 
 export type IngredientCategory =
   | 'protein'
@@ -18,6 +19,7 @@ export type IngredientCategory =
   | 'nut-seed'
   | 'herb'
   | 'fruit'
+  | 'pantry'
   | 'spice'
   | 'staple'
 
@@ -54,7 +56,7 @@ export const canonicalIngredients: CanonicalIngredient[] = [
 
   // ── Dairy ────────────────────────────────────────────────
   { id: 'yogurt', label: 'Yogurt', emoji: '🥛', category: 'dairy', popularity: 17,
-    synonyms: ['curd', 'dahi', 'yogurt starter', 'greek yogurt'] },
+    synonyms: ['curd', 'dahi', 'yoghurt', 'yogurt starter', 'greek yogurt'] },
   { id: 'milk', label: 'Milk', emoji: '🥛', category: 'dairy', popularity: 4,
     synonyms: [] },
   { id: 'cream', label: 'Cream', emoji: '🥛', category: 'dairy', popularity: 5,
@@ -136,7 +138,7 @@ export const canonicalIngredients: CanonicalIngredient[] = [
   { id: 'rice', label: 'Rice', emoji: '🍚', category: 'grain', popularity: 6,
     synonyms: ['cooked rice', 'leftover rice', 'basmati rice', 'gobindobhog rice', 'short-grain rice', 'arborio rice', 'jasmine rice'] },
   { id: 'poha', label: 'Poha (flattened rice)', emoji: '🍚', category: 'grain',
-    synonyms: ['flattened rice', 'beaten rice', 'chivda', 'aval'] },
+    synonyms: ['poha', 'flattened rice', 'beaten rice', 'chivda', 'aval'] },
   { id: 'flour', label: 'Plain flour', emoji: '🌾', category: 'grain', popularity: 5,
     synonyms: ['flour', 'maida', 'all-purpose flour', 'cornflour', 'corn flour', 'puttu flour', 'gram flour'] },
   { id: 'wheat-flour', label: 'Wheat flour', emoji: '🌾', category: 'grain', popularity: 2,
@@ -189,12 +191,66 @@ export const canonicalIngredients: CanonicalIngredient[] = [
     synonyms: ['dried oregano', 'fresh oregano'] },
 
   // ── Sweet/sour pantry items (not implicit staples) ──────
-  { id: 'jaggery', label: 'Jaggery', emoji: '🟫', category: 'staple',
+  { id: 'jaggery', label: 'Jaggery', emoji: '🟫', category: 'pantry',
     synonyms: ['gur'] },
-  { id: 'tamarind', label: 'Tamarind', emoji: '🟫', category: 'staple',
+  { id: 'tamarind', label: 'Tamarind', emoji: '🟫', category: 'pantry',
     synonyms: ['imli', 'tamarind paste', 'tamarind pulp'] },
-  { id: 'mustard-paste', label: 'Mustard paste', emoji: '🟡', category: 'staple',
+  { id: 'mustard-paste', label: 'Mustard paste', emoji: '🟡', category: 'pantry',
     synonyms: ['kasundi', 'shorsher tel paste'] },
+
+  // ── Specialty pantry ingredients ────────────────────────
+  // These are recipe-specific requirements, not implicit defaults. Keeping
+  // them canonical lets Pantry explain exactly what a user still needs.
+  { id: 'tikka-masala', label: 'Tikka masala', category: 'pantry', synonyms: [] },
+  { id: 'tandoori-masala', label: 'Tandoori masala', category: 'pantry', synonyms: [] },
+  { id: 'dosa-batter', label: 'Dosa batter', category: 'pantry', synonyms: [] },
+  { id: 'idli-batter', label: 'Idli batter', category: 'pantry', synonyms: [] },
+  { id: 'sambar-powder', label: 'Sambar powder', category: 'pantry', synonyms: [] },
+  { id: 'rasam-powder', label: 'Rasam powder', category: 'pantry', synonyms: [] },
+  { id: 'chilli-sauce', label: 'Chilli sauce', category: 'pantry', synonyms: ['chili sauce'] },
+  { id: 'schezwan-sauce', label: 'Schezwan sauce', category: 'pantry', synonyms: ['szechuan sauce'] },
+  { id: 'white-wine', label: 'White wine', category: 'pantry', synonyms: [] },
+  { id: 'caesar-dressing', label: 'Caesar dressing', category: 'pantry', synonyms: [] },
+  { id: 'pizza-sauce', label: 'Pizza sauce', category: 'pantry', synonyms: [] },
+  { id: 'green-curry-paste', label: 'Green curry paste', category: 'pantry', synonyms: [] },
+  { id: 'miso', label: 'Miso', category: 'pantry', synonyms: ['miso paste'] },
+  { id: 'gochujang', label: 'Gochujang', category: 'pantry', synonyms: [] },
+  { id: 'kimchi', label: 'Kimchi', category: 'pantry', synonyms: [] },
+  { id: 'chettinad-masala', label: 'Chettinad masala', category: 'pantry', synonyms: [] },
+  { id: 'salsa', label: 'Salsa', category: 'pantry', synonyms: [] },
+  { id: 'refried-beans', label: 'Refried beans', category: 'pantry', synonyms: [] },
+  { id: 'eno', label: 'Eno', category: 'pantry', synonyms: ['fruit salt'] },
+  { id: 'surti-papdi', label: 'Surti papdi', category: 'pantry', synonyms: ['valor papdi'] },
+  { id: 'purple-yam', label: 'Purple yam', category: 'pantry', synonyms: ['kand'] },
+  { id: 'kokum', label: 'Kokum', category: 'pantry', synonyms: [] },
+  { id: 'papad-khar', label: 'Papad khar', category: 'pantry', synonyms: [] },
+  { id: 'sev', label: 'Sev', category: 'pantry', synonyms: [] },
+  { id: 'goda-masala', label: 'Goda masala', category: 'pantry', synonyms: [] },
+  { id: 'farsan', label: 'Farsan', category: 'pantry', synonyms: [] },
+  { id: 'kodampuli', label: 'Kodampuli', category: 'pantry', synonyms: ['kudampuli'] },
+  { id: 'galangal', label: 'Galangal', category: 'pantry', synonyms: ['galanga'] },
+  { id: 'recheado-masala', label: 'Recheado masala', category: 'pantry', synonyms: [] },
+  { id: 'mirin', label: 'Mirin', category: 'pantry', synonyms: [] },
+  { id: 'japanese-curry-roux', label: 'Japanese curry roux', category: 'pantry', synonyms: [] },
+  { id: 'marinara', label: 'Marinara', category: 'pantry', synonyms: ['marinara sauce'] },
+  { id: 'doubanjiang', label: 'Doubanjiang', category: 'pantry', synonyms: ['chilli bean paste'] },
+  { id: 'sichuan-peppercorn', label: 'Sichuan peppercorn', category: 'pantry', synonyms: ['sichuan pepper'] },
+  { id: 'mustard', label: 'Mustard', category: 'pantry', synonyms: ['yellow mustard'] },
+  { id: 'paprika', label: 'Paprika', category: 'pantry', synonyms: [] },
+  { id: 'vegetable-stock', label: 'Vegetable stock', category: 'pantry', synonyms: ['vegetable broth'] },
+  { id: 'red-chilli-paste', label: 'Red chilli paste', category: 'pantry', synonyms: ['red chili paste'] },
+  { id: 'parotta', label: 'Parotta', category: 'pantry', synonyms: ['paratha'] },
+  { id: 'banana-leaf', label: 'Banana leaf', category: 'pantry', synonyms: [] },
+  { id: 'chinese-broccoli', label: 'Chinese broccoli', category: 'pantry', synonyms: ['gai lan'] },
+  { id: 'zucchini', label: 'Zucchini', category: 'pantry', synonyms: ['courgette'] },
+  { id: 'giant-beans', label: 'Giant beans', category: 'pantry', synonyms: ['gigantes beans'] },
+  { id: 'ker-sangri', label: 'Ker sangri', category: 'pantry', synonyms: ['ker berries and sangri'] },
+  { id: 'lentil-papad', label: 'Lentil papad', category: 'pantry', synonyms: ['dal papad'] },
+  { id: 'five-lentils', label: 'Five lentils', category: 'pantry', synonyms: ['panchmel dal'] },
+  { id: 'bajra', label: 'Bajra', category: 'pantry', synonyms: ['pearl millet'] },
+  { id: 'dill', label: 'Dill', emoji: '🌿', category: 'herb', synonyms: ['dill leaves'] },
+  { id: 'thyme', label: 'Thyme', emoji: '🌿', category: 'herb', synonyms: ['fresh thyme'] },
+  { id: 'red-chillies', label: 'Red chillies', emoji: '🌶️', category: 'pantry', synonyms: ['red chilli', 'red chilies', 'dried red chillies', 'dried red chilies'] },
 
   // ── Implicit staples (assumed unless toggled off) ───────
   { id: 'salt', label: 'Salt', category: 'staple', isStapleByDefault: true,
@@ -277,10 +333,10 @@ export const defaultStapleIds: string[] = canonicalIngredients
   .filter((i) => i.isStapleByDefault)
   .map((i) => i.id)
 
-/** All staple/spice ids (treated as implicit staples by the matcher). */
+/** Default staple/spice ids treated as implicit by the matcher. */
 export const allStapleIds: Set<string> = new Set(
   canonicalIngredients
-    .filter((i) => i.category === 'staple' || i.category === 'spice')
+    .filter((i) => i.isStapleByDefault)
     .map((i) => i.id),
 )
 
@@ -294,6 +350,7 @@ export const userFacingCategories: { id: IngredientCategory; label: string }[] =
   { id: 'nut-seed', label: 'Nuts & seeds' },
   { id: 'herb', label: 'Herbs' },
   { id: 'fruit', label: 'Fruit' },
+  { id: 'pantry', label: 'Sauces & extras' },
 ]
 
 /** Quick-add tiles shown on empty pantry — the 12 most useful entry points. */

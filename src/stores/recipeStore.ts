@@ -31,6 +31,22 @@ export interface MatchOptions {
   dietaryFilters?: string[]
 }
 
+export function passesDietary(r: Recipe, filters: string[]): boolean {
+  for (const f of filters) {
+    switch (f) {
+      case 'vegetarian': if (!r.dietary.isVegetarian) return false; break
+      case 'veg-only': if (!r.dietary.isVegetarian || r.dietary.isEgg) return false; break
+      case 'egg-ok': if (!r.dietary.isVegetarian && !r.dietary.isEgg) return false; break
+      case 'vegan': if (!r.dietary.isVegan) return false; break
+      case 'non-veg': if (!r.dietary.isNonVeg) return false; break
+      case 'egg': if (!r.dietary.isEgg) return false; break
+      case 'gluten-free': if (!r.dietary.isGlutenFree) return false; break
+      case 'dairy-free': if (!r.dietary.isDairyFree) return false; break
+    }
+  }
+  return true
+}
+
 interface RecipeState {
   recipes: Recipe[]
   setRecipes: (recipes: Recipe[]) => void
@@ -40,6 +56,7 @@ interface RecipeState {
   setSearchQuery: (query: string) => void
   activeDietaryFilters: string[]
   toggleDietaryFilter: (filter: string) => void
+  clearDietaryFilters: () => void
   activeCuisineFilter: string | null
   setCuisineFilter: (cuisine: string | null) => void
   activeMealTypeFilter: MealType | null
@@ -56,22 +73,6 @@ interface RecipeState {
     mealType: MealType,
     options?: MatchOptions,
   ) => Recipe[]
-}
-
-function passesDietary(r: Recipe, filters: string[]): boolean {
-  for (const f of filters) {
-    switch (f) {
-      case 'vegetarian': if (!r.dietary.isVegetarian) return false; break
-      case 'veg-only': if (!r.dietary.isVegetarian || r.dietary.isEgg) return false; break
-      case 'egg-ok': if (!r.dietary.isVegetarian && !r.dietary.isEgg) return false; break
-      case 'vegan': if (!r.dietary.isVegan) return false; break
-      case 'non-veg': if (!r.dietary.isNonVeg) return false; break
-      case 'egg': if (!r.dietary.isEgg) return false; break
-      case 'gluten-free': if (!r.dietary.isGlutenFree) return false; break
-      case 'dairy-free': if (!r.dietary.isDairyFree) return false; break
-    }
-  }
-  return true
 }
 
 export const useRecipeStore = create<RecipeState>()((set, get) => ({
@@ -92,6 +93,7 @@ export const useRecipeStore = create<RecipeState>()((set, get) => ({
         activeDietaryFilters: normalizeDietaryFilters([...state.activeDietaryFilters, filter]),
       }
     }),
+  clearDietaryFilters: () => set({ activeDietaryFilters: [] }),
 
   activeCuisineFilter: null,
   setCuisineFilter: (cuisine) => set({ activeCuisineFilter: cuisine }),

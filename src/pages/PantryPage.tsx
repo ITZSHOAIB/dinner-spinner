@@ -1,19 +1,31 @@
 import { useMemo, useState } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { X, ChefHat, Sparkles, Settings2, Trash2 } from 'lucide-react'
-import { useRecipeStore } from '../stores/recipeStore'
+import { passesDietary, useRecipeStore } from '../stores/recipeStore'
 import { usePantryStore } from '../stores/pantryStore'
 import { bucketMatches } from '../lib/pantryMatch'
 import {
   canonicalIngredients,
   ingredientById,
   quickAddIds,
+  userFacingCategories,
 } from '../data/ingredients'
 import { IngredientInput } from '../components/pantry/IngredientInput'
 import { StaplesPanel } from '../components/pantry/StaplesPanel'
 import { PantryResultsSection, PantryRecipeCard } from '../components/pantry/PantryResults'
 import { useSeo } from '../lib/useSeo'
 import { cn } from '../lib/cn'
+
+const dietaryFilterLabels: Record<string, string> = {
+  'veg-only': 'Veg only',
+  'egg-ok': 'Veg + egg',
+  'non-veg': 'Non-veg',
+  vegetarian: 'Vegetarian',
+  vegan: 'Vegan',
+  egg: 'Egg',
+  'gluten-free': 'Gluten-free',
+  'dairy-free': 'Dairy-free',
+}
 
 export function PantryPage() {
   useSeo({
@@ -26,6 +38,8 @@ export function PantryPage() {
 
   const recipes = useRecipeStore((s) => s.recipes)
   const dietaryFilters = useRecipeStore((s) => s.activeDietaryFilters)
+  const toggleDietaryFilter = useRecipeStore((s) => s.toggleDietaryFilter)
+  const clearDietaryFilters = useRecipeStore((s) => s.clearDietaryFilters)
 
   const pantryIds = usePantryStore((s) => s.pantryIds)
   const excludedStapleIds = usePantryStore((s) => s.excludedStapleIds)
@@ -38,21 +52,7 @@ export function PantryPage() {
   // Apply dietary filters before scoring so the buckets only contain relevant recipes.
   const candidateRecipes = useMemo(() => {
     if (dietaryFilters.length === 0) return recipes
-    return recipes.filter((r) =>
-      dietaryFilters.every((f) => {
-        switch (f) {
-          case 'veg-only': return r.dietary.isVegetarian && !r.dietary.isEgg
-          case 'egg-ok': return r.dietary.isVegetarian || r.dietary.isEgg
-          case 'vegetarian': return r.dietary.isVegetarian
-          case 'vegan': return r.dietary.isVegan
-          case 'non-veg': return r.dietary.isNonVeg
-          case 'egg': return r.dietary.isEgg
-          case 'gluten-free': return r.dietary.isGlutenFree
-          case 'dairy-free': return r.dietary.isDairyFree
-          default: return true
-        }
-      }),
-    )
+    return recipes.filter((r) => passesDietary(r, dietaryFilters))
   }, [recipes, dietaryFilters])
 
   const buckets = useMemo(
@@ -62,12 +62,19 @@ export function PantryPage() {
 
   const hasPantry = pantryIds.length > 0
   const hasResults =
-    buckets.cookable.length + buckets.oneAway.length + buckets.twoAway.length > 0
+    buckets.cookable.length +
+      buckets.oneAway.length +
+      buckets.twoAway.length +
+      buckets.threePlus.length >
+    0
   const totalShown =
     buckets.cookable.length +
     buckets.oneAway.length +
     buckets.twoAway.length +
     buckets.threePlus.length
+  const activeDietaryLabels = dietaryFilters.map(
+    (filter) => dietaryFilterLabels[filter] ?? filter,
+  )
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6 sm:py-10">
@@ -82,8 +89,8 @@ export function PantryPage() {
           <span className="font-display-italic text-gradient-warm">kitchen?</span>
         </h1>
         <p className="text-sm sm:text-base text-text-secondary mt-2 max-w-xl">
-          Add what you have. We'll find recipes you can make right now — and ones you're
-          just an ingredient or two away from.
+          Add what you have. We'll show recipes with all tracked key ingredients on hand,
+          followed by dishes that need one, two, or three more.
         </p>
       </div>
 
@@ -108,7 +115,8 @@ export function PantryPage() {
                 <button
                   type="button"
                   onClick={clearPantry}
-                  className="inline-flex items-center gap-1 text-xs text-text-muted hover:text-chili transition-colors"
+                  className="inline-flex min-h-11 items-center gap-1 px-2 text-xs text-text-muted hover:text-chili transition-colors"
+                  aria-label="Clear all pantry ingredients"
                 >
                   <Trash2 className="w-3 h-3" />
                   Clear
@@ -128,7 +136,8 @@ export function PantryPage() {
                         exit={{ opacity: 0, scale: 0.85 }}
                         transition={{ duration: 0.15 }}
                         onClick={() => removeIngredient(id)}
-                        className="inline-flex items-center gap-1.5 pl-2 pr-1.5 py-1.5 rounded-full bg-turmeric/10 border border-turmeric/30 text-turmeric text-xs font-medium hover:bg-turmeric/20 transition-colors"
+                        className="inline-flex min-h-11 items-center gap-1.5 pl-3 pr-2 rounded-full bg-turmeric/10 border border-turmeric/30 text-turmeric text-xs font-medium hover:bg-turmeric/20 transition-colors"
+                        aria-label={`Remove ${ing.label} from pantry`}
                       >
                         {ing.emoji && <span className="text-sm leading-none">{ing.emoji}</span>}
                         <span>{ing.label}</span>
@@ -149,7 +158,8 @@ export function PantryPage() {
           <button
             type="button"
             onClick={() => setStaplesOpen(true)}
-            className="inline-flex items-center gap-1.5 text-xs text-text-secondary hover:text-text-primary transition-colors"
+            className="inline-flex min-h-11 items-center gap-1.5 px-2 text-xs text-text-secondary hover:text-text-primary transition-colors"
+            aria-haspopup="dialog"
           >
             <Settings2 className="w-3.5 h-3.5" />
             Staples
@@ -165,6 +175,35 @@ export function PantryPage() {
             </span>
           )}
         </div>
+        {dietaryFilters.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2 rounded-xl border border-border bg-surface-secondary/60 px-3 py-2">
+            <span className="text-xs font-medium text-text-secondary">Recipe filters:</span>
+            {dietaryFilters.map((filter, index) => (
+              <button
+                key={filter}
+                type="button"
+                onClick={() => toggleDietaryFilter(filter)}
+                className="inline-flex min-h-9 items-center gap-1 rounded-full bg-turmeric/10 px-2.5 text-xs font-medium text-turmeric hover:bg-turmeric/20"
+                aria-label={`Remove ${activeDietaryLabels[index]} recipe filter`}
+              >
+                {activeDietaryLabels[index]}
+                <X className="h-3 w-3" aria-hidden="true" />
+              </button>
+            ))}
+            <button
+              type="button"
+              onClick={clearDietaryFilters}
+              className="ml-auto inline-flex min-h-9 items-center px-2 text-xs font-medium text-text-muted hover:text-chili"
+            >
+              Clear filters
+            </button>
+          </div>
+        )}
+        <div className="sr-only" role="status" aria-live="polite">
+          {hasPantry
+            ? `${totalShown} recipes within three missing ingredients of your pantry`
+            : 'Add ingredients to see matching recipes'}
+        </div>
       </div>
 
       {/* Empty state — quick add */}
@@ -174,14 +213,14 @@ export function PantryPage() {
       {hasPantry && (
         <>
           <PantryResultsSection
-            title="You can make this"
-            subtitle="All key ingredients on hand"
+            title="Ready to cook"
+            subtitle="All tracked key ingredients on hand"
             matches={buckets.cookable}
             accent="green"
           />
           <PantryResultsSection
             title="One ingredient away"
-            subtitle="Add one thing and you're cooking"
+            subtitle="Add one tracked ingredient, then check the full list"
             matches={buckets.oneAway}
             accent="amber"
           />
@@ -258,6 +297,7 @@ function QuickAddGrid() {
                 layout
                 whileTap={{ scale: 0.95 }}
                 onClick={() => toggleIngredient(ing.id)}
+                aria-pressed={active}
                 className={cn(
                   'flex flex-col items-center gap-1 px-2 py-4 rounded-2xl border transition-all',
                   active
@@ -293,22 +333,14 @@ function BrowseByCategory() {
   const inPantry = new Set(pantryIds)
   const [expanded, setExpanded] = useState(false)
 
-  const categories: { id: string; label: string }[] = [
-    { id: 'protein', label: 'Proteins' },
-    { id: 'vegetable', label: 'Vegetables' },
-    { id: 'dairy', label: 'Dairy' },
-    { id: 'legume', label: 'Legumes' },
-    { id: 'grain', label: 'Grains' },
-    { id: 'nut-seed', label: 'Nuts & seeds' },
-    { id: 'herb', label: 'Herbs' },
-  ]
-
   return (
     <div>
       <button
         type="button"
         onClick={() => setExpanded((v) => !v)}
-        className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors mb-3"
+        className="mb-3 inline-flex min-h-11 items-center px-1 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors"
+        aria-expanded={expanded}
+        aria-controls="all-pantry-ingredients"
       >
         {expanded ? '− Hide all ingredients' : '+ Browse all ingredients'}
       </button>
@@ -316,12 +348,13 @@ function BrowseByCategory() {
       <AnimatePresence>
         {expanded && (
           <motion.div
+            id="all-pantry-ingredients"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className="overflow-hidden space-y-5"
           >
-            {categories.map((cat) => {
+            {userFacingCategories.map((cat) => {
               const items = canonicalIngredients.filter(
                 (i) => i.category === cat.id,
               )
@@ -345,6 +378,7 @@ function BrowseByCategory() {
                               ? 'bg-turmeric/10 border-turmeric/40 text-turmeric'
                               : 'bg-surface-secondary border-border text-text-secondary hover:border-turmeric/30',
                           )}
+                          aria-pressed={active}
                         >
                           {ing.emoji && <span className="text-sm leading-none">{ing.emoji}</span>}
                           <span>{ing.label}</span>
@@ -366,10 +400,10 @@ function EmptyResults() {
   return (
     <div className="text-center py-16">
       <p className="font-heading text-xl font-bold text-text-primary mb-1">
-        Hmm, nothing close yet.
+        No matching recipes yet.
       </p>
       <p className="text-sm text-text-muted max-w-sm mx-auto">
-        Try adding a protein or grain — those tend to unlock the most matches.
+        Try adding another main ingredient or search for something else in your pantry.
       </p>
     </div>
   )

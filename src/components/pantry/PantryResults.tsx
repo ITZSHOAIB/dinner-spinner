@@ -7,6 +7,9 @@ import { useUserStore } from '../../stores/userStore'
 import { usePantryStore } from '../../stores/pantryStore'
 import { cn } from '../../lib/cn'
 
+const compactStatusChipClasses =
+  'inline-flex items-center gap-1 rounded-lg border px-2.5 py-1 text-[11px] font-medium transition-colors'
+
 function MissingChips({ ids }: { ids: string[] }) {
   const addIngredient = usePantryStore((s) => s.addIngredient)
   if (ids.length === 0) return null
@@ -23,13 +26,16 @@ function MissingChips({ ids }: { ids: string[] }) {
             key={id}
             type="button"
             onClick={() => addIngredient(id)}
-            className="inline-flex min-h-11 items-center gap-1 px-2.5 rounded-full bg-chili/10 text-chili border border-chili/20 text-[10px] font-medium hover:bg-chili/20 transition-colors group/chip"
+            className={cn(
+              compactStatusChipClasses,
+              'bg-chili/10 text-chili border-chili/20 hover:bg-chili/20 group/chip',
+            )}
             title={`Add ${label} to pantry`}
             aria-label={`Add ${label} to pantry`}
           >
             {ing?.emoji && <span className="text-[11px] leading-none">{ing.emoji}</span>}
             <span>{label}</span>
-            <Plus className="w-2.5 h-2.5 opacity-0 group-hover/chip:opacity-100 transition-opacity" />
+            <Plus className="w-3 h-3 opacity-0 group-hover/chip:opacity-100 transition-opacity" />
           </button>
         )
       })}

@@ -27,6 +27,14 @@ const dietaryFilterLabels: Record<string, string> = {
   'dairy-free': 'Dairy-free',
 }
 
+const pantryChipClasses =
+  'inline-flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-medium transition-colors'
+
+const pantryChipActiveClasses = 'bg-turmeric/10 border-turmeric/30 text-turmeric hover:bg-turmeric/20'
+
+const pantryChipIdleClasses =
+  'bg-surface-secondary border-border text-text-secondary hover:border-turmeric/30 hover:text-text-primary'
+
 export function PantryPage() {
   useSeo({
     title: 'Pantry — Cook from what you have · Dinner Spinner',
@@ -136,14 +144,12 @@ export function PantryPage() {
                         exit={{ opacity: 0, scale: 0.85 }}
                         transition={{ duration: 0.15 }}
                         onClick={() => removeIngredient(id)}
-                        className="inline-flex min-h-11 items-center gap-1.5 pl-3 pr-2 rounded-full bg-turmeric/10 border border-turmeric/30 text-turmeric text-xs font-medium hover:bg-turmeric/20 transition-colors"
+                        className={cn(pantryChipClasses, pantryChipActiveClasses)}
                         aria-label={`Remove ${ing.label} from pantry`}
                       >
                         {ing.emoji && <span className="text-sm leading-none">{ing.emoji}</span>}
                         <span>{ing.label}</span>
-                        <span className="w-4 h-4 rounded-full bg-turmeric/20 flex items-center justify-center">
-                          <X className="w-2.5 h-2.5" />
-                        </span>
+                        <X className="h-3.5 w-3.5 opacity-70" />
                       </motion.button>
                     )
                   })}
@@ -183,7 +189,7 @@ export function PantryPage() {
                 key={filter}
                 type="button"
                 onClick={() => toggleDietaryFilter(filter)}
-                className="inline-flex min-h-9 items-center gap-1 rounded-full bg-turmeric/10 px-2.5 text-xs font-medium text-turmeric hover:bg-turmeric/20"
+                className={cn(pantryChipClasses, pantryChipActiveClasses)}
                 aria-label={`Remove ${activeDietaryLabels[index]} recipe filter`}
               >
                 {activeDietaryLabels[index]}
@@ -373,10 +379,10 @@ function BrowseByCategory() {
                           type="button"
                           onClick={() => toggleIngredient(ing.id)}
                           className={cn(
-                            'inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-full border text-xs font-medium transition-colors',
+                            pantryChipClasses,
                             active
-                              ? 'bg-turmeric/10 border-turmeric/40 text-turmeric'
-                              : 'bg-surface-secondary border-border text-text-secondary hover:border-turmeric/30',
+                              ? pantryChipActiveClasses
+                              : pantryChipIdleClasses,
                           )}
                           aria-pressed={active}
                         >

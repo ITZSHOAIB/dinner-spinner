@@ -10,6 +10,9 @@ interface Props {
   onClose: () => void
 }
 
+const stapleChipClasses =
+  'flex min-h-10 items-center gap-2 rounded-lg border px-3 py-2 text-sm transition-colors'
+
 /**
  * Bottom-sheet (mobile) / centered modal (desktop) for toggling the
  * default staples. Excluded staples become "required" — recipes that need
@@ -124,7 +127,7 @@ export function StaplesPanel({ open, onClose }: Props) {
                         onClick={() => toggleStaple(s.id)}
                         aria-pressed={isOn}
                         className={cn(
-                          'flex min-h-11 items-center gap-2 px-3 py-2.5 rounded-xl border text-sm transition-all',
+                          stapleChipClasses,
                           isOn
                             ? 'bg-coriander/10 border-coriander/30 text-text-primary'
                             : 'bg-surface-secondary border-border text-text-muted',

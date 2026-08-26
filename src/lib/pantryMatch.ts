@@ -127,6 +127,14 @@ export function bucketMatches(
     const m = scoreRecipe(r, pantryIds, options)
     if (m.required.length === 0) continue
     all.push(m)
+  }
+
+  // When the pantry has at least one ingredient, avoid surfacing recipes that
+  // share nothing with it. They are technically "far" but not useful in the
+  // main reachability buckets, and they drown out more relevant matches.
+  const visible = pantryIds.length > 0 ? all.filter((m) => m.have.length > 0) : all
+
+  for (const m of visible) {
     const b = bucketFor(m.missing.length, m.required.length)
     if (b === 'cookable') cookable.push(m)
     else if (b === 'one-away') oneAway.push(m)

@@ -104,6 +104,20 @@ check('rich pantry surfaces cookable', () => {
   assert.ok(r.cookable.length > 5, 'expected at least 5 cookable recipes')
 })
 
+check('primary pantry buckets exclude zero-overlap recipes when pantry is non-empty', () => {
+  const r = bucketMatches(recipes, ['chicken'])
+  const primary = [...r.cookable, ...r.oneAway, ...r.twoAway, ...r.threePlus]
+  const zeroOverlap = primary.filter((m) => m.have.length === 0)
+  assert.equal(
+    zeroOverlap.length,
+    0,
+    `expected no zero-overlap recipes in primary buckets, found ${zeroOverlap
+      .slice(0, 5)
+      .map((m) => m.recipe.id)
+      .join(', ')}`,
+  )
+})
+
 console.log('\n— Coverage report —')
 let resolvedCount = 0
 let totalKey = 0

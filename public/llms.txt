@@ -128,6 +128,9 @@ dairy-free), ingredients with quantities, numbered steps, and optional tips.
 - [Prawn Balchão (बाल्चाव)](https://dinner-spinner.sohab.dev/recipes/prawn-balchao/) — Goan dry, 45 min, medium
 - [Chicken Xacuti (शाकूती)](https://dinner-spinner.sohab.dev/recipes/chicken-xacuti/) — Goan curry, 70 min, hard
 - [Goan Mushroom Xacuti](https://dinner-spinner.sohab.dev/recipes/goan-mushroom-xacuti/) — Goan curry, 35 min, medium
+- [Goan Mushroom Shagoti](https://dinner-spinner.sohab.dev/recipes/goan-mushroom-shagoti/) — Goan curry, 35 min, medium
+- [Goan Mushroom Caldine](https://dinner-spinner.sohab.dev/recipes/goan-mushroom-caldine/) — Goan curry, 30 min, easy
+- [Goan Mushroom Fry](https://dinner-spinner.sohab.dev/recipes/goan-mushroom-fry/) — Goan dry, 30 min, easy
 - [Goan Fish Curry](https://dinner-spinner.sohab.dev/recipes/goan-fish-curry/) — Goan curry, 40 min, easy
 - [Goan Fish Recheado](https://dinner-spinner.sohab.dev/recipes/goan-fish-recheado/) — Goan dry, 45 min, medium
 - [Goan Egg Drop Curry](https://dinner-spinner.sohab.dev/recipes/goan-egg-drop-curry/) — Goan curry, 45 min, easy
